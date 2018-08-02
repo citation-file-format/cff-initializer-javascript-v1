@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js" ></script>
+<link rel="stylesheet" href="./cffinit.css">
+</head>
+
+<body>
+    <div id="app">
+    <ul>
+        <li>authors <button v-on:click='add_author' title='Add author'>+</button>
+            <ul>
+                <li-author 
+                v-for='author in authors'
+                v-bind:author="author" 
+                v-bind:key="author.id"/>
+            </ul>
+        </li>
+        <li>cff-version <input v-model="cff_version" placeholder="1.0.3"/></li>
+        <li>date-released <input v-model="date_released" placeholder="dd-mm-yyyy"/></li>
+        <li>doi <input v-model="doi" placeholder=""/></li>
+        <li>keywords <button v-on:click='add_keyword' title='Add keyword'>+</button>
+            <ul>
+                <li-keyword
+                v-for='keyword in keywords'
+                v-bind:keyword="keyword"
+                v-bind:key="keyword.id"/>
+            </ul>
+        </li>
+        <li>license: <input v-model="license" /></li>
+        <li>message <input v-model="message" /></li>
+        <li>repository-code <input v-model="repository_code" /></li>
+        <li>title <input v-model="title" /></li>
+        <li>version <input v-model="version" /></li>
+    </ul>
+    <textarea rows="15" readonly="true">{{ compose_cff }}</textarea>
+</div>
+<script type="text/javascript" src="./cffinit.js" ></script>
+</body>
+
+</html>
