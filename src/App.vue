@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import author from './author.vue'
-import keyword from './keyword.vue'
+import author from './author.vue';
+import keyword from './keyword.vue';
 export default {
     name: 'app',
     components: {
@@ -57,32 +57,32 @@ export default {
     },
     computed: {
         compose_cff: function () {
-            var lines = []
-            lines.push('# YAML 1.2')
-            lines.push('---')
-            lines.push('authors: ')
+            var lines = [];
+            lines.push('# YAML 1.2');
+            lines.push('---');
+            lines.push('authors: ');
             for (let author of this.authors) {
-                lines.push('  -')
-                lines.push('    affiliation: ' + author.affiliation)
-                lines.push('    family-names: ' + author.family_names)
-                lines.push('    given-names: ' + author.given_names)
-                lines.push('    name-particle: ' + author.name_particle)
-                lines.push('    name-suffix: ' + author.name_suffix)
-                lines.push('    orcid: ' + author.orcid)
+                lines.push('  -');
+                lines.push('    affiliation: ' + author.affiliation);
+                lines.push('    family-names: ' + author.family_names);
+                lines.push('    given-names: ' + author.given_names);
+                lines.push('    name-particle: ' + author.name_particle);
+                lines.push('    name-suffix: ' + author.name_suffix);
+                lines.push('    orcid: ' + author.orcid);
             }
-            lines.push('cff-version: ' + this.cff_version)
-            lines.push('date-released: ' + this.date_released)
-            lines.push('doi: ' + this.doi)
-            lines.push('keywords: ')
+            lines.push('cff-version: ' + this.cff_version);
+            lines.push('date-released: ' + this.date_released);
+            lines.push('doi: ' + this.doi);
+            lines.push('keywords: ');
             for (let keyword of this.keywords) {
-                lines.push('  - ' + keyword.text)
+                lines.push('  - ' + keyword.text);
             }
-            lines.push('license: ' + this.license)
-            lines.push('message: ' + this.message)
-            lines.push('repository-code: ' + this.repository_code)
-            lines.push('title: ' + this.title)
-            lines.push('version: ' + this.version)
-            return lines.join('\n')
+            lines.push('license: ' + this.license);
+            lines.push('message: ' + this.message);
+            lines.push('repository-code: ' + this.repository_code);
+            lines.push('title: ' + this.title);
+            lines.push('version: ' + this.version);
+            return lines.join('\n');
         }
     },
     methods: {
@@ -106,7 +106,7 @@ export default {
             })
         }
     }
-}
+};
 </script>
 
 

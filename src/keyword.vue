@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import by_position from './sort_by_position'
+import by_position from './sort_by_position';
 export default {
     name: 'keyword',
     methods: {
@@ -48,7 +48,7 @@ export default {
         }
     },
     props: ['keyword']
-}
+};
 </script>
 
 <style>

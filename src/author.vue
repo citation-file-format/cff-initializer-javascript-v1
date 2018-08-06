@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import by_position from './sort_by_position'
+import by_position from './sort_by_position';
 export default {
     name: 'author',
     data: function () {
@@ -58,7 +58,7 @@ export default {
         }
     },
     props: ['author']
-}
+};
 </script>
 
 <style>
