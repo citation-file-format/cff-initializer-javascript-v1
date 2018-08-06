@@ -16,3 +16,6 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+Project was bootstrapped with https://github.com/vuejs-templates/webpack-simple
