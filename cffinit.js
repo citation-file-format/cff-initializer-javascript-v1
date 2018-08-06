@@ -13,50 +13,50 @@ let by_position = function (a, b) {
 
 // Define a new component called li-author
 Vue.component('li-author', {
-	props: ['author'],
+    props: ['author'],
     template: `
     <li>
         <button v-on:click='remove' title='Remove this author'>-</button>
-		<button v-on:click='move_up' title='Move this author up'>&uarr;</button>
+        <button v-on:click='move_up' title='Move this author up'>&uarr;</button>
         <button v-on:click='move_down' title='Move this author down'>&darr;</button>
-	    <ul>
-        	<li>given-names<input v-model="author.given_names"/></li>
-			<li>name-particle<input v-model="author.name_particle"/></li>
+        <ul>
+            <li>given-names<input v-model="author.given_names"/></li>
+            <li>name-particle<input v-model="author.name_particle"/></li>
             <li>family-names<input v-model="author.family_names"/></li>
             <li>name-suffix<input v-model="author.name_suffix"/></li>
             <li>orcid<input v-model="author.orcid"/></li>
             <li>affiliation<input v-model="author.affiliation"/></li>
-		</ul>
-	</li>`,
+        </ul>
+    </li>`,
     methods: {
-    	// methods that manipulate the authors array via $parent should be part
+        // methods that manipulate the authors array via $parent should be part
         // of some parent and be called via an event; also shouldn't replicate indexing
-       	remove: function () {
-        	let id = this.author.id;
+        remove: function () {
+            let id = this.author.id;
             this.$parent.authors = this.$parent.authors.filter(function (author) {
-            	return author.id !== id;
+                return author.id !== id;
             })
         },
-    	move_up: function () {
-        	let id = this.author.id;
+        move_up: function () {
+            let id = this.author.id;
             let position = this.$parent.authors.findIndex(function (author) {
-            	return author.id == id;
+                return author.id == id;
             });
-            if (position > 0) { 
-            	let p0 = this.$parent.authors[position].position;
+            if (position > 0) {
+                let p0 = this.$parent.authors[position].position;
                 let p1 = this.$parent.authors[position - 1].position;
                 this.$parent.authors[position].position = p1;
                 this.$parent.authors[position - 1].position = p0;
             }
             this.$parent.authors.sort(by_position);
         },
-    	move_down: function () {
-        	let id = this.author.id;
+        move_down: function () {
+            let id = this.author.id;
             let position = this.$parent.authors.findIndex(function (author) {
-            	return author.id == id;
+                return author.id == id;
             });
-            if (position < this.$parent.authors.length - 1) { 
-            	let p0 = this.$parent.authors[position].position
+            if (position < this.$parent.authors.length - 1) {
+                let p0 = this.$parent.authors[position].position
                 let p1 = this.$parent.authors[position + 1].position
                 this.$parent.authors[position].position = p1;
                 this.$parent.authors[position + 1].position = p0;
@@ -68,42 +68,42 @@ Vue.component('li-author', {
 
 
 Vue.component('li-keyword', {
-	props: ['keyword'],
+    props: ['keyword'],
     template: `
     <li>
         <button v-on:click='remove' title='Remove this keyword'>-</button>
         <button v-on:click='move_up' title='Move this keyword up'>&uarr;</button>
         <button v-on:click='move_down' title='Move this keyword down'>&darr;</button>
         <input v-model='keyword.text'/>
-	</li>`,
+    </li>`,
     methods: {
-    	// methods that manipulate the keywords array via $parent should be part
+        // methods that manipulate the keywords array via $parent should be part
         // of some parent and be called via an event; also shouldn't replicate indexing
-    	remove: function () {
-        	let id = this.keyword.id;
+        remove: function () {
+            let id = this.keyword.id;
             this.$parent.keywords = this.$parent.keywords.filter(function (keyword) {
-            	return keyword.id !== id;
+                return keyword.id !== id;
             })
         },
-    	move_up: function () {
-        	let id = this.keyword.id;
+        move_up: function () {
+            let id = this.keyword.id;
             let position = this.$parent.keywords.findIndex(function (keyword) {
-            	return keyword.id == id;
+                return keyword.id == id;
             });
-            if (position > 0) { 
-            	let p0 = this.$parent.keywords[position].position;
+            if (position > 0) {
+                let p0 = this.$parent.keywords[position].position;
                 let p1 = this.$parent.keywords[position - 1].position;
                 this.$parent.keywords[position].position = p1;
                 this.$parent.keywords[position - 1].position = p0;
             }
             this.$parent.keywords.sort(by_position);
         },
-    	move_down: function () {
-        	let id = this.keyword.id;
+        move_down: function () {
+            let id = this.keyword.id;
             let position = this.$parent.keywords.findIndex(function (keyword) {
-            	return keyword.id == id;
+                return keyword.id == id;
             });
-            if (position < this.$parent.keywords.length - 1) { 
+            if (position < this.$parent.keywords.length - 1) {
                 let p0 = this.$parent.keywords[position].position;
                 let p1 = this.$parent.keywords[position + 1].position;
                 this.$parent.keywords[position].position = p1;
@@ -115,9 +115,9 @@ Vue.component('li-keyword', {
 })
 
 var app = new Vue({
-	el: "#app",
+    el: "#app",
     data: {
-    	author_id: -1,
+        author_id: -1,
         authors: [],
         cff_version: '1.0.3',
         date_released: '~',
@@ -129,19 +129,19 @@ var app = new Vue({
         repository_code: 'https://github.com/<org>/<repo>',
         title: '~',
         version: '~'
-	},
+    },
     computed: {
         compose_cff: function () {
             var lines = []
             lines.push('# YAML 1.2')
             lines.push('---')
-            lines.push('authors: ')      
+            lines.push('authors: ')
             for (let author of this.authors) {
                 lines.push('  -')
                 lines.push('    affiliation: ' + author.affiliation)
                 lines.push('    family-names: ' + author.family_names)
                 lines.push('    given-names: ' + author.given_names)
-                lines.push('    name-particle: ' + author.name_particle)        
+                lines.push('    name-particle: ' + author.name_particle)
                 lines.push('    name-suffix: ' + author.name_suffix)
                 lines.push('    orcid: ' + author.orcid)
             }
@@ -150,7 +150,7 @@ var app = new Vue({
             lines.push('doi: ' + this.doi)
             lines.push('keywords: ')
             for (let keyword of this.keywords) {
-                lines.push('  - ' + keyword.text)            	
+                lines.push('  - ' + keyword.text)
             }
             lines.push('license: ' + this.license)
             lines.push('message: ' + this.message)
@@ -174,13 +174,11 @@ var app = new Vue({
             })
         },
         add_keyword: function () {
-        	this.keywords.push({
-            	id: this.keyword_id += 1,
+            this.keywords.push({
+                id: this.keyword_id += 1,
                 position: this.keywords.length,
-            	text: '~'
+                text: '~'
             })
         }
     }
 })
-
-
