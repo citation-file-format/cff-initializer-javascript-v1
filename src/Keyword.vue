@@ -10,15 +10,13 @@
 <script>
 import by_position from './sort_by_position';
 export default {
-    name: 'keyword',
+    name: 'Keyword',
     methods: {
         // methods that manipulate the keywords array via $parent should be part
         // of some parent and be called via an event; also shouldn't replicate indexing
         remove: function () {
-            let id = this.keyword.id;
-            this.$parent.keywords = this.$parent.keywords.filter(function (keyword) {
-                return keyword.id !== id;
-            })
+            console.log("I want to remove keyword with id " + this.keyword.id);
+            this.$emit('remove-keyword-by-id', this.keyword.id);
         },
         move_up: function () {
             let id = this.keyword.id;
