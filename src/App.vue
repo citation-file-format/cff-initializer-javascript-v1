@@ -29,6 +29,7 @@
             </ul>
         </div>
         <textarea class="cff">{{ compose_cff }}</textarea>
+        <a id="download_button" href="#">Download JSON</a>
     </div>
 </template>
 
