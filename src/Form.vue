@@ -21,7 +21,9 @@
                     v-for='keyword in keywords'
                     v-bind:keyword="keyword"
                     v-bind:key="keyword.id"
-                    v-on:remove-keyword-by-id="remove_keyword"/>
+                    v-on:remove-keyword="remove_keyword"
+                    v-on:move-keyword-up="move_keyword_up"
+                    v-on:move-keyword-down="move_keyword_down"/>
                 </ul>
             </li>
             <li>license: <input v-model="license" /></li>
@@ -131,6 +133,30 @@ export default {
                 this.authors[position - 1].position = p0;
             }
             this.authors.sort(by_position);
+        },
+        move_keyword_down: function (keyword_id) {
+            let position = this.keywords.findIndex(function (keyword) {
+                return keyword.id == keyword_id;
+            });
+            if (position < this.keywords.length - 1) {
+                let p0 = this.keywords[position].position;
+                let p1 = this.keywords[position + 1].position;
+                this.keywords[position].position = p1;
+                this.keywords[position + 1].position = p0;
+            }
+            this.keywords.sort(by_position);
+        },
+        move_keyword_up: function (keyword_id) {
+            let position = this.keywords.findIndex(function (keyword) {
+                return keyword.id == keyword_id;
+            });
+            if (position > 0) {
+                let p0 = this.keywords[position].position;
+                let p1 = this.keywords[position - 1].position;
+                this.keywords[position].position = p1;
+                this.keywords[position - 1].position = p0;
+            }
+            this.keywords.sort(by_position);
         },
         remove_author: function (author_id) {
             this.authors = this.authors.filter(function (author) {
