@@ -1,8 +1,6 @@
 
 
-The web form for creating CITATION.cff files is here https://jspaaks.github.io/cff-initializer-javascript/.
-
-Web form to initialize CITATION.cff files
+Web form to initialize CITATION.cff files. Check out the live version [here](https://jspaaks.github.io/cff-initializer-javascript/).
 
 ## Build Setup
 
@@ -13,8 +11,11 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
+# build for production (with disabled minification)
 npm run build
+
+# npm run build and update the local copy of the gh-pages content in docs/
+npm run ghpages
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
