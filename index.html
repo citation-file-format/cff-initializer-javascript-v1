@@ -1,5 +1,3 @@
-<!-- based on https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/ -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,6 +8,7 @@
     <div id="app"></div>
     <script src="/dist/build.js" type="application/javascript"></script>
     <script type="application/javascript">
+        <!-- based on https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/ -->
         function saveTextAsFile() {
             var textToSave = document.getElementById('app').getElementsByClassName('cff')[0].value;
             var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
