@@ -2,7 +2,7 @@
     <div id="app">
         <div class="container" >
             <Form />
-            <CffText />
+            <!-- <CffText /> -->
         </div>
     </div>
 </template>

@@ -8,12 +8,9 @@
 </template>
 
 <script>
-import by_position from './sort_by_position';
 export default {
     name: 'Keyword',
     methods: {
-        // methods that manipulate the keywords array via $parent should be part
-        // of some parent and be called via an event; also shouldn't replicate indexing
         remove: function () {
             this.$emit('remove-keyword', this.keyword.id);
         },
@@ -24,7 +21,9 @@ export default {
             this.$emit('move-keyword-up', this.keyword.id);
         }
     },
-    props: ['keyword']
+    props: {
+        keyword: Object
+    }
 };
 </script>
 

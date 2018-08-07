@@ -38,7 +38,6 @@
 <script>
 import Author from './Author.vue';
 import Keyword from './Keyword.vue';
-import by_position from './sort_by_position';
 export default {
     components: {
         Author,
@@ -75,20 +74,20 @@ export default {
         }
     },
     data: function () {
-        return {
-            author_id: -1,
-            authors: [],
-            cff_version: '1.0.3',
-            date_released: '~',
-            doi: '10.0000/FIXME',
-            keyword_id: -1,
-            keywords: [],
-            license: 'Apache-2.0',
-            message: 'If you use this software, please cite it using these metadata.',
-            repository_code: 'https://github.com/<org>/<repo>',
-            title: '~',
-            version: '~'
-        }
+            return {
+                author_id: -1,
+                authors: [],
+                cff_version: '1.0.3',
+                date_released: '~',
+                doi: '10.0000/FIXME',
+                keyword_id: -1,
+                keywords: [],
+                license: 'Apache-2.0',
+                message: 'If you use this software, please cite it using these metadata.',
+                repository_code: 'https://github.com/<org>/<repo>',
+                title: '~',
+                version: '~'
+            }
     },
     methods: {
         add_author: function () {
@@ -99,14 +98,12 @@ export default {
                 id: this.author_id += 1,
                 name_particle: '~',
                 name_suffix: '~',
-                orcid: '~',
-                position: this.authors.length
+                orcid: '~'
             })
         },
         add_keyword: function () {
             this.keywords.push({
                 id: this.keyword_id += 1,
-                position: this.keywords.length,
                 text: '~'
             })
         },
@@ -115,48 +112,40 @@ export default {
                 return author.id == author_id;
             });
             if (position < this.authors.length - 1) {
-                let p0 = this.authors[position].position
-                let p1 = this.authors[position + 1].position
-                this.authors[position].position = p1;
-                this.authors[position + 1].position = p0;
+                this.authors = [].concat(this.authors.slice(0, position),
+                                         this.authors.slice(position, position + 2).reverse(),
+                                         this.authors.slice(position + 2))
             }
-            this.authors.sort(by_position);
         },
         move_author_up: function (author_id) {
             let position = this.authors.findIndex(function (author) {
                 return author.id == author_id;
             });
             if (position > 0) {
-                let p0 = this.authors[position].position;
-                let p1 = this.authors[position - 1].position;
-                this.authors[position].position = p1;
-                this.authors[position - 1].position = p0;
+                this.authors = [].concat(this.authors.slice(0, position - 1),
+                                         this.authors.slice(position - 1, position + 1).reverse(),
+                                         this.authors.slice(position + 1))
             }
-            this.authors.sort(by_position);
         },
         move_keyword_down: function (keyword_id) {
             let position = this.keywords.findIndex(function (keyword) {
                 return keyword.id == keyword_id;
             });
             if (position < this.keywords.length - 1) {
-                let p0 = this.keywords[position].position;
-                let p1 = this.keywords[position + 1].position;
-                this.keywords[position].position = p1;
-                this.keywords[position + 1].position = p0;
+                this.keywords = [].concat(this.keywords.slice(0, position),
+                                          this.keywords.slice(position, position + 2).reverse(),
+                                          this.keywords.slice(position + 2))
             }
-            this.keywords.sort(by_position);
         },
         move_keyword_up: function (keyword_id) {
             let position = this.keywords.findIndex(function (keyword) {
                 return keyword.id == keyword_id;
             });
             if (position > 0) {
-                let p0 = this.keywords[position].position;
-                let p1 = this.keywords[position - 1].position;
-                this.keywords[position].position = p1;
-                this.keywords[position - 1].position = p0;
+                this.keywords = [].concat(this.keywords.slice(0, position - 1),
+                                          this.keywords.slice(position - 1, position + 1).reverse(),
+                                          this.keywords.slice(position + 1))
             }
-            this.keywords.sort(by_position);
         },
         remove_author: function (author_id) {
             this.authors = this.authors.filter(function (author) {
@@ -182,19 +171,19 @@ export default {
         flex-grow: 1.0;
         flex-basis: 0.0;
         overflow-y: auto;
-        height: 80vh;
-        padding-bottom: 5px;  /* not sure why but without it the textarea is slightly longer than the form div; (optimized for Google Chrome browser) */
+        height: '80vh';
+        padding-bottom: '5px';  /* not sure why but without it the textarea is slightly longer than the form div; (optimized for Google Chrome browser) */
     }
 
     textarea.msg {
         width: 90%;
-        height: 80px;
+        height: '80px';
         overflow-y: auto;
         resize: vertical;
     }
 
     input {
-        min-width: 400px;
+        min-width: '400px';
     }
 
 
