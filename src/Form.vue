@@ -1,47 +1,27 @@
 <template>
     <div class="form">
         <ul>
-            <li>authors <button v-on:click='add_author' title='Add author'>+</button>
-                <ul>
-                    <Author
-                    v-for='author in authors'
-                    v-bind:author="author"
-                    v-bind:key="author.id"
-                    v-on:remove-author="remove_author"
-                    v-on:move-author-up="move_author_up"
-                    v-on:move-author-down="move_author_down"/>
-                </ul>
-            </li>
-            <li>cff-version <input v-model="cff_version" placeholder="1.0.3"/></li>
-            <li>date-released <input v-model="date_released" placeholder="dd-mm-yyyy"/></li>
+            <Authors v-bind:authors="authors" v-bind:author_id="author_id"/>
+            <!-- <li>cff-version <input v-model="cff_version" placeholder="1.0.3"/></li>
+            <li>date-released <input v-model="date_released" placeholder="dd-mm-yyyy (without quotes)"/></li>
             <li>doi <input v-model="doi" placeholder=""/></li>
-            <li>keywords <button v-on:click='add_keyword' title='Add keyword'>+</button>
-                <ul>
-                    <Keyword
-                    v-for='keyword in keywords'
-                    v-bind:keyword="keyword"
-                    v-bind:key="keyword.id"
-                    v-on:remove-keyword="remove_keyword"
-                    v-on:move-keyword-up="move_keyword_up"
-                    v-on:move-keyword-down="move_keyword_down"/>
-                </ul>
-            </li>
+            <Keywords />
             <li>license: <input v-model="license" /></li>
             <li>message <textarea class="msg" v-model="message" /></li>
             <li>repository-code <input v-model="repository_code" /></li>
             <li>title <input v-model="title" /></li>
-            <li>version <input v-model="version" /></li>
+            <li>version <input v-model="version" /></li> -->
         </ul>
     </div>
 </template>
 
 <script>
-import Author from './Author.vue';
-import Keyword from './Keyword.vue';
+import Authors from './Authors.vue';
+import Keywords from './Keywords.vue';
 export default {
     components: {
-        Author,
-        Keyword
+        Authors,
+        Keywords
     },
     computed: {
         cff: function () {
@@ -74,88 +54,17 @@ export default {
         }
     },
     data: function () {
-            return {
-                author_id: -1,
-                authors: [],
-                cff_version: '1.0.3',
-                date_released: '~',
-                doi: '10.0000/FIXME',
-                keyword_id: -1,
-                keywords: [],
-                license: 'Apache-2.0',
-                message: 'If you use this software, please cite it using these metadata.',
-                repository_code: 'https://github.com/<org>/<repo>',
-                title: '~',
-                version: '~'
-            }
-    },
-    methods: {
-        add_author: function () {
-            this.authors.push({
-                affiliation: '~',
-                family_names: '~',
-                given_names: '~',
-                id: this.author_id += 1,
-                name_particle: '~',
-                name_suffix: '~',
-                orcid: '~'
-            })
-        },
-        add_keyword: function () {
-            this.keywords.push({
-                id: this.keyword_id += 1,
-                text: '~'
-            })
-        },
-        move_author_down: function (author_id) {
-            let position = this.authors.findIndex(function (author) {
-                return author.id == author_id;
-            });
-            if (position < this.authors.length - 1) {
-                this.authors = [].concat(this.authors.slice(0, position),
-                                         this.authors.slice(position, position + 2).reverse(),
-                                         this.authors.slice(position + 2))
-            }
-        },
-        move_author_up: function (author_id) {
-            let position = this.authors.findIndex(function (author) {
-                return author.id == author_id;
-            });
-            if (position > 0) {
-                this.authors = [].concat(this.authors.slice(0, position - 1),
-                                         this.authors.slice(position - 1, position + 1).reverse(),
-                                         this.authors.slice(position + 1))
-            }
-        },
-        move_keyword_down: function (keyword_id) {
-            let position = this.keywords.findIndex(function (keyword) {
-                return keyword.id == keyword_id;
-            });
-            if (position < this.keywords.length - 1) {
-                this.keywords = [].concat(this.keywords.slice(0, position),
-                                          this.keywords.slice(position, position + 2).reverse(),
-                                          this.keywords.slice(position + 2))
-            }
-        },
-        move_keyword_up: function (keyword_id) {
-            let position = this.keywords.findIndex(function (keyword) {
-                return keyword.id == keyword_id;
-            });
-            if (position > 0) {
-                this.keywords = [].concat(this.keywords.slice(0, position - 1),
-                                          this.keywords.slice(position - 1, position + 1).reverse(),
-                                          this.keywords.slice(position + 1))
-            }
-        },
-        remove_author: function (author_id) {
-            this.authors = this.authors.filter(function (author) {
-                return author.id !== author_id;
-            })
-        },
-        remove_keyword: function (keyword_id) {
-            this.keywords = this.keywords.filter(function (keyword) {
-                return keyword.id !== keyword_id;
-            })
+        return {
+            author_id: -1,
+            authors: [1],
+            cff_version: '1.0.3',
+            date_released: '',
+            doi: '10.0000/FIXME',
+            license: 'Apache-2.0',
+            message: 'If you use this software, please cite it using these metadata.',
+            repository_code: 'https://github.com/<org>/<repo>',
+            title: '',
+            version: ''
         }
     },
     name: 'Form'

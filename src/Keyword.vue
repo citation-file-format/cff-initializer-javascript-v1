@@ -9,7 +9,6 @@
 
 <script>
 export default {
-    name: 'Keyword',
     methods: {
         remove: function () {
             this.$emit('remove-keyword', this.keyword.id);
@@ -21,9 +20,10 @@ export default {
             this.$emit('move-keyword-up', this.keyword.id);
         }
     },
+    name: 'Keyword',
     props: {
         keyword: Object
-    }
+    },
 };
 </script>
 

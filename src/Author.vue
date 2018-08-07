@@ -16,13 +16,7 @@
 
 <script>
 export default {
-    name: 'Author',
-    data: function () {
-        return {};
-    },
     methods: {
-        // methods that manipulate the authors array via $parent should be part
-        // of some parent and be called via an event; also shouldn't replicate indexing
         remove: function () {
             this.$emit('remove-author', this.author.id)
         },
@@ -33,6 +27,7 @@ export default {
             this.$emit('move-author-up', this.author.id)
         }
     },
+    name: 'Author',
     props: {
         author: Object
     }
