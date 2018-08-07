@@ -1,32 +1,34 @@
 <template>
-    <div id="app">
-    <ul>
-        <li>authors <button v-on:click='add_author' title='Add author'>+</button>
+    <div id="app" class="container" >
+        <div class="form">
             <ul>
-                <author 
-                v-for='author in authors'
-                v-bind:author="author" 
-                v-bind:key="author.id"/>
+                <li>authors <button v-on:click='add_author' title='Add author'>+</button>
+                    <ul>
+                        <author
+                        v-for='author in authors'
+                        v-bind:author="author"
+                        v-bind:key="author.id"/>
+                    </ul>
+                </li>
+                <li>cff-version <input v-model="cff_version" placeholder="1.0.3"/></li>
+                <li>date-released <input v-model="date_released" placeholder="dd-mm-yyyy"/></li>
+                <li>doi <input v-model="doi" placeholder=""/></li>
+                <li>keywords <button v-on:click='add_keyword' title='Add keyword'>+</button>
+                    <ul>
+                        <keyword
+                        v-for='keyword in keywords'
+                        v-bind:keyword="keyword"
+                        v-bind:key="keyword.id"/>
+                    </ul>
+                </li>
+                <li>license: <input v-model="license" /></li>
+                <li>message <textarea class="msg" v-model="message" /></li>
+                <li>repository-code <input v-model="repository_code" /></li>
+                <li>title <input v-model="title" /></li>
+                <li>version <input v-model="version" /></li>
             </ul>
-        </li>
-        <li>cff-version <input v-model="cff_version" placeholder="1.0.3"/></li>
-        <li>date-released <input v-model="date_released" placeholder="dd-mm-yyyy"/></li>
-        <li>doi <input v-model="doi" placeholder=""/></li>
-        <li>keywords <button v-on:click='add_keyword' title='Add keyword'>+</button>
-            <ul>
-                <keyword
-                v-for='keyword in keywords'
-                v-bind:keyword="keyword"
-                v-bind:key="keyword.id"/>
-            </ul>
-        </li>
-        <li>license: <input v-model="license" /></li>
-        <li>message <input v-model="message" /></li>
-        <li>repository-code <input v-model="repository_code" /></li>
-        <li>title <input v-model="title" /></li>
-        <li>version <input v-model="version" /></li>
-    </ul>
-    <textarea rows="15" readonly="true">{{ compose_cff }}</textarea>
+        </div>
+        <textarea class="cff">{{ compose_cff }}</textarea>
     </div>
 </template>
 
@@ -111,8 +113,50 @@ export default {
 
 
 <style>
-    textarea {
-        width: 100%;
+    body {
+        background-color: #5f6d64;
     }
-</style>
 
+    .container {
+        background-color: none;
+        display: flex;
+        margin-top: 2vh;
+        min-width: 300px;
+    }
+
+    .form {
+        margin-left: 1%;
+        margin-right: 1%;
+        background-color: #a7bcaf;
+        flex-grow: 1.0;
+        flex-basis: 0.0;
+        overflow-y: auto;
+        height: 80vh;
+        padding-bottom: 5px;  /* not sure why but without it the textarea is slightly longer than the form div; (optimized for Google Chrome browser) */
+    }
+
+    textarea.cff {
+        margin-left: 1%;
+        margin-right: 1%;
+        background-color: none;
+        flex-grow: 1.0;
+        flex-basis: 0.0;
+        overflow-y: auto;
+        height: 80vh;
+        readonly: true;
+        resize: none;
+    }
+
+    textarea.msg {
+        width: 90%;
+        height: 80px;
+        overflow-y: auto;
+        resize: vertical;
+    }
+
+    input {
+        min-width: 400px;
+    }
+
+
+</style>
