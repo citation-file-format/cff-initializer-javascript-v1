@@ -548,6 +548,8 @@ module.exports = function normalizeComponent (
 //
 //
 //
+//
+//
 
 
 
@@ -12185,7 +12187,7 @@ process.umask = function() { return 0; };
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(4);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d46f3582_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d5f9ffac_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(25);
 function injectStyle (ssrContext) {
   __webpack_require__(14)
 }
@@ -12205,7 +12207,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d46f3582_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d5f9ffac_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -12226,7 +12228,7 @@ var content = __webpack_require__(15);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("f189b954", content, true, {});
+var update = __webpack_require__(2)("09a951a8", content, true, {});
 
 /***/ }),
 /* 15 */
@@ -12237,7 +12239,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "textarea{width:100%}", ""]);
+exports.push([module.i, "body{background-color:#5f6d64}.container{background-color:none;display:flex;margin-top:2vh;min-width:300px}.form{background-color:#a7bcaf;padding-bottom:5px}.form,textarea.cff{margin-left:1%;margin-right:1%;flex-grow:1.0;flex-basis:0.0;overflow-y:auto;height:80vh}textarea.cff{background-color:none;readonly:true;resize:none}textarea.msg{width:90%;height:80px;overflow-y:auto;resize:vertical}input{min-width:400px}", ""]);
 
 // exports
 
@@ -12428,7 +12430,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('ul',[_c('li',[_vm._v("authors "),_c('button',{attrs:{"title":"Add author"},on:{"click":_vm.add_author}},[_vm._v("+")]),_vm._v(" "),_c('ul',_vm._l((_vm.authors),function(author){return _c('author',{key:author.id,attrs:{"author":author}})}))]),_vm._v(" "),_c('li',[_vm._v("cff-version "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.cff_version),expression:"cff_version"}],attrs:{"placeholder":"1.0.3"},domProps:{"value":(_vm.cff_version)},on:{"input":function($event){if($event.target.composing){ return; }_vm.cff_version=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("date-released "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.date_released),expression:"date_released"}],attrs:{"placeholder":"dd-mm-yyyy"},domProps:{"value":(_vm.date_released)},on:{"input":function($event){if($event.target.composing){ return; }_vm.date_released=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("doi "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.doi),expression:"doi"}],attrs:{"placeholder":""},domProps:{"value":(_vm.doi)},on:{"input":function($event){if($event.target.composing){ return; }_vm.doi=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("keywords "),_c('button',{attrs:{"title":"Add keyword"},on:{"click":_vm.add_keyword}},[_vm._v("+")]),_vm._v(" "),_c('ul',_vm._l((_vm.keywords),function(keyword){return _c('keyword',{key:keyword.id,attrs:{"keyword":keyword}})}))]),_vm._v(" "),_c('li',[_vm._v("license: "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.license),expression:"license"}],domProps:{"value":(_vm.license)},on:{"input":function($event){if($event.target.composing){ return; }_vm.license=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("message "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.message),expression:"message"}],domProps:{"value":(_vm.message)},on:{"input":function($event){if($event.target.composing){ return; }_vm.message=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("repository-code "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.repository_code),expression:"repository_code"}],domProps:{"value":(_vm.repository_code)},on:{"input":function($event){if($event.target.composing){ return; }_vm.repository_code=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("title "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.title),expression:"title"}],domProps:{"value":(_vm.title)},on:{"input":function($event){if($event.target.composing){ return; }_vm.title=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("version "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.version),expression:"version"}],domProps:{"value":(_vm.version)},on:{"input":function($event){if($event.target.composing){ return; }_vm.version=$event.target.value}}})])]),_vm._v(" "),_c('textarea',{attrs:{"rows":"15","readonly":"true"}},[_vm._v(_vm._s(_vm.compose_cff))])])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container",attrs:{"id":"app"}},[_c('div',{staticClass:"form"},[_c('ul',[_c('li',[_vm._v("authors "),_c('button',{attrs:{"title":"Add author"},on:{"click":_vm.add_author}},[_vm._v("+")]),_vm._v(" "),_c('ul',_vm._l((_vm.authors),function(author){return _c('author',{key:author.id,attrs:{"author":author}})}))]),_vm._v(" "),_c('li',[_vm._v("cff-version "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.cff_version),expression:"cff_version"}],attrs:{"placeholder":"1.0.3"},domProps:{"value":(_vm.cff_version)},on:{"input":function($event){if($event.target.composing){ return; }_vm.cff_version=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("date-released "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.date_released),expression:"date_released"}],attrs:{"placeholder":"dd-mm-yyyy"},domProps:{"value":(_vm.date_released)},on:{"input":function($event){if($event.target.composing){ return; }_vm.date_released=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("doi "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.doi),expression:"doi"}],attrs:{"placeholder":""},domProps:{"value":(_vm.doi)},on:{"input":function($event){if($event.target.composing){ return; }_vm.doi=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("keywords "),_c('button',{attrs:{"title":"Add keyword"},on:{"click":_vm.add_keyword}},[_vm._v("+")]),_vm._v(" "),_c('ul',_vm._l((_vm.keywords),function(keyword){return _c('keyword',{key:keyword.id,attrs:{"keyword":keyword}})}))]),_vm._v(" "),_c('li',[_vm._v("license: "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.license),expression:"license"}],domProps:{"value":(_vm.license)},on:{"input":function($event){if($event.target.composing){ return; }_vm.license=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("message "),_c('textarea',{directives:[{name:"model",rawName:"v-model",value:(_vm.message),expression:"message"}],staticClass:"msg",domProps:{"value":(_vm.message)},on:{"input":function($event){if($event.target.composing){ return; }_vm.message=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("repository-code "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.repository_code),expression:"repository_code"}],domProps:{"value":(_vm.repository_code)},on:{"input":function($event){if($event.target.composing){ return; }_vm.repository_code=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("title "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.title),expression:"title"}],domProps:{"value":(_vm.title)},on:{"input":function($event){if($event.target.composing){ return; }_vm.title=$event.target.value}}})]),_vm._v(" "),_c('li',[_vm._v("version "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.version),expression:"version"}],domProps:{"value":(_vm.version)},on:{"input":function($event){if($event.target.composing){ return; }_vm.version=$event.target.value}}})])])]),_vm._v(" "),_c('textarea',{staticClass:"cff"},[_vm._v(_vm._s(_vm.compose_cff))])])}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
