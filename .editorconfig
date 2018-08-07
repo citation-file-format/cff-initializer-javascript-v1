@@ -3,7 +3,7 @@ root = true
 [*]
 charset = utf-8
 
-[*.{js,css,html}]
+[*.{js,css,html,vue}]
 indent_style = space
 indent_size = 4
 trim_trailing_whitespace = true
