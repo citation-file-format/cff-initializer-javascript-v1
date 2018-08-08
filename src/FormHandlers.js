@@ -10,6 +10,10 @@ export function update_doi(payload) {
     console.log('About to update doi with value ' + payload.value)
 }
 
+export function update_message(payload) {
+    console.log('About to update message with value ' + payload.value)
+}
+
 export function update_license(payload) {
     console.log('About to update license with value ' + payload.value)
 }
@@ -24,8 +28,4 @@ export function update_title(payload) {
 
 export function update_version(payload) {
     console.log('About to update version with value ' + payload.value)
-}
-
-export function update_message(payload) {
-    console.log('About to update message with value ' + payload.value)
 }

@@ -25,14 +25,14 @@
 <script>
 export default {
     methods: {
-        remove: function () {
-            this.$emit('remove', this.keyword.id);
-        },
         move_down: function () {
             this.$emit('move-down', this.keyword.id);
         },
         move_up: function () {
             this.$emit('move-up', this.keyword.id);
+        },
+        remove: function () {
+            this.$emit('remove', this.keyword.id);
         },
         update: function (event) {
             this.$emit('update', {

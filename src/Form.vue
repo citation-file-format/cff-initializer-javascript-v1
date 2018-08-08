@@ -111,17 +111,14 @@ export default {
         add_author: function () {
             this.$emit('add-author');
         },
+        add_keyword: function () {
+            this.$emit('add-keyword');
+        },
         move_author_down: function (author_id) {
             this.$emit('move-author-down', author_id)
         },
         move_author_up: function (author_id) {
             this.$emit('move-author-up', author_id)
-        },
-        remove_author: function (author_id) {
-            this.$emit('remove-author', author_id)
-        },
-        add_keyword: function () {
-            this.$emit('add-keyword');
         },
         move_keyword_down: function (keyword_id) {
             this.$emit('move-keyword-down', keyword_id)
@@ -129,11 +126,11 @@ export default {
         move_keyword_up: function (keyword_id) {
             this.$emit('move-keyword-up', keyword_id)
         },
+        remove_author: function (author_id) {
+            this.$emit('remove-author', author_id)
+        },
         remove_keyword: function (keyword_id) {
             this.$emit('remove-keyword', keyword_id)
-        },
-        update_keyword: function (payload) {
-            this.$emit('update-keyword', payload)
         },
         update_cff_version: function (event) {
             let payload = {
@@ -153,6 +150,9 @@ export default {
             };
             this.$emit('update-doi', payload)
         },
+        update_keyword: function (payload) {
+            this.$emit('update-keyword', payload)
+        },
         update_license: function (event) {
             let payload = {
                 value: event.target.value
@@ -171,17 +171,17 @@ export default {
             };
             this.$emit('update-title', payload)
         },
-        update_version: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-version', payload);
-        },
         update_message: function (event) {
             let payload = {
                 value: event.target.value
             };
             this.$emit('update-message', payload);
+        },
+        update_version: function (event) {
+            let payload = {
+                value: event.target.value
+            };
+            this.$emit('update-version', payload);
         }
     },
     name: 'Form',
