@@ -124,10 +124,10 @@ export default {
         update_doi,
         update_keyword,
         update_license,
-        update_message
+        update_message,
         update_repository_code,
         update_title,
-        update_version,
+        update_version
     },
     name: 'App'
 };
