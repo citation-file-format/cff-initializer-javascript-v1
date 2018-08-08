@@ -27,7 +27,7 @@
             <li>
                 date-released
                 <input
-                    placeholder="dd-mm-yyyy without quotes"
+                    placeholder="yyyy-mm-dd without quotes"
                     type="text"
                     v-bind:value="date_released"
                     v-on:keyup="update_date_released($event)"
