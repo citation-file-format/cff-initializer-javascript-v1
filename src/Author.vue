@@ -81,7 +81,6 @@ export default {
             this.$emit('move-up', this.author.id)
         },
         update_affiliation: function (event) {
-            console.log('asdasfasdf');
             let payload = {
                 id: this.author.id,
                 value: event.target.value
