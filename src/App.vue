@@ -1,64 +1,88 @@
 <template>
-    <div id="app" class="container" >
-        <div class="form">
-            <ul>
-                <li>authors <button v-on:click='add_author' title='Add author'>+</button>
-                    <ul>
-                        <author
-                        v-for='author in authors'
-                        v-bind:author="author"
-                        v-bind:key="author.id"/>
-                    </ul>
-                </li>
-                <li>cff-version <input v-model="cff_version" placeholder="1.0.3"/></li>
-                <li>date-released <input v-model="date_released" placeholder="dd-mm-yyyy"/></li>
-                <li>doi <input v-model="doi" placeholder=""/></li>
-                <li>keywords <button v-on:click='add_keyword' title='Add keyword'>+</button>
-                    <ul>
-                        <keyword
-                        v-for='keyword in keywords'
-                        v-bind:keyword="keyword"
-                        v-bind:key="keyword.id"/>
-                    </ul>
-                </li>
-                <li>license: <input v-model="license" /></li>
-                <li>message <textarea class="msg" v-model="message" /></li>
-                <li>repository-code <input v-model="repository_code" /></li>
-                <li>title <input v-model="title" /></li>
-                <li>version <input v-model="version" /></li>
-            </ul>
+    <div id="app">
+        <div class="container">
+            <Form
+                v-bind:author_id="author_id"
+                v-bind:authors="authors"
+                v-bind:cff_version="cff_version"
+                v-bind:date_released="date_released"
+                v-bind:doi="doi"
+                v-bind:keyword_id="keyword_id"
+                v-bind:keywords="keywords"
+                v-bind:license="license"
+                v-bind:message="message"
+                v-bind:repository_code="repository_code"
+                v-bind:title="title"
+                v-bind:version="version"
+                v-on:add-author="add_author"
+                v-on:add-keyword="add_keyword"
+                v-on:move-author-down="move_author_down"
+                v-on:move-author-up="move_author_up"
+                v-on:move-keyword-down="move_keyword_down"
+                v-on:move-keyword-up="move_keyword_up"
+                v-on:remove-author="remove_author"
+                v-on:remove-keyword="remove_keyword"
+                v-on:update-author-given-names="update_author_given_names"
+                v-on:update-author-name-particle="update_author_name_particle"
+                v-on:update-author-family-names="update_author_family_names"
+                v-on:update-author-name-suffix="update_author_name_suffix"
+                v-on:update-author-orcid="update_author_orcid"
+                v-on:update-author-affiliation="update_author_affiliation"
+                v-on:update-cff-version="update_cff_version"
+                v-on:update-date-released="update_date_released"
+                v-on:update-doi="update_doi"
+                v-on:update-keyword="update_keyword"
+                v-on:update-license="update_license"
+                v-on:update-message="update_message"
+                v-on:update-repository-code="update_repository_code"
+                v-on:update-title="update_title"
+                v-on:update-version="update_version"
+            />
+            <CffText v-bind:cff="cff"/>
         </div>
-        <textarea class="cff">{{ compose_cff }}</textarea>
     </div>
 </template>
 
 <script>
-import author from './author.vue';
-import keyword from './keyword.vue';
+
+
+import {add_author,
+        move_author_down,
+        move_author_up,
+        remove_author} from './AuthorsHandlers.js';
+
+import {add_keyword,
+        move_keyword_down,
+        move_keyword_up,
+        remove_keyword} from './KeywordsHandlers.js';
+
+import {update_author_affiliation,
+        update_author_family_names,
+        update_author_given_names,
+        update_author_name_particle,
+        update_author_name_suffix,
+        update_author_orcid} from './AuthorHandler.js';
+
+import {update_cff_version,
+        update_date_released,
+        update_doi,
+        update_license,
+        update_repository_code,
+        update_title,
+        update_version,
+        update_message} from './FormHandlers.js';
+
+import {update_keyword} from './KeywordHandlers.js';
+import CffText from './CffText.vue';
+import Form from './Form.vue';
+
 export default {
-    name: 'app',
     components: {
-        author,
-        keyword
-    },
-    data: function () {
-        return {
-            author_id: -1,
-            authors: [],
-            cff_version: '1.0.3',
-            date_released: '~',
-            doi: '10.0000/FIXME',
-            keyword_id: -1,
-            keywords: [],
-            license: 'Apache-2.0',
-            message: 'If you use this software, please cite it using these metadata.',
-            repository_code: 'https://github.com/<org>/<repo>',
-            title: '~',
-            version: '~'
-        }
+        CffText,
+        Form
     },
     computed: {
-        compose_cff: function () {
+        cff: function () {
             var lines = [];
             lines.push('# YAML 1.2');
             lines.push('---');
@@ -87,27 +111,48 @@ export default {
             return lines.join('\n');
         }
     },
-    methods: {
-        add_author: function () {
-            this.authors.push({
-                affiliation: '~',
-                family_names: '~',
-                given_names: '~',
-                id: this.author_id += 1,
-                name_particle: '~',
-                name_suffix: '~',
-                orcid: '~',
-                position: this.authors.length
-            })
-        },
-        add_keyword: function () {
-            this.keywords.push({
-                id: this.keyword_id += 1,
-                position: this.keywords.length,
-                text: '~'
-            })
+    data: function () {
+        return {
+            author_id: -1,
+            authors: [],
+            cff_version: '1.0.3',
+            date_released: '',
+            doi: '',
+            keyword_id: -1,
+            keywords: [],
+            license: '',
+            message: 'If you use this software, please cite it using these metadata.',
+            repository_code: '',
+            title: '',
+            version: ''
         }
-    }
+    },
+    methods: {
+        add_author,
+        add_keyword,
+        move_author_down,
+        move_author_up,
+        move_keyword_down,
+        move_keyword_up,
+        remove_author,
+        remove_keyword,
+        update_author_affiliation,
+        update_author_family_names,
+        update_author_given_names,
+        update_author_name_particle,
+        update_author_name_suffix,
+        update_author_orcid,
+        update_cff_version,
+        update_date_released,
+        update_doi,
+        update_keyword,
+        update_license,
+        update_message,
+        update_repository_code,
+        update_title,
+        update_version
+    },
+    name: 'App'
 };
 </script>
 
@@ -116,47 +161,10 @@ export default {
     body {
         background-color: #5f6d64;
     }
-
     .container {
         background-color: none;
         display: flex;
         margin-top: 2vh;
         min-width: 300px;
     }
-
-    .form {
-        margin-left: 1%;
-        margin-right: 1%;
-        background-color: #a7bcaf;
-        flex-grow: 1.0;
-        flex-basis: 0.0;
-        overflow-y: auto;
-        height: 80vh;
-        padding-bottom: 5px;  /* not sure why but without it the textarea is slightly longer than the form div; (optimized for Google Chrome browser) */
-    }
-
-    textarea.cff {
-        margin-left: 1%;
-        margin-right: 1%;
-        background-color: none;
-        flex-grow: 1.0;
-        flex-basis: 0.0;
-        overflow-y: auto;
-        height: 80vh;
-        readonly: true;
-        resize: none;
-    }
-
-    textarea.msg {
-        width: 90%;
-        height: 80px;
-        overflow-y: auto;
-        resize: vertical;
-    }
-
-    input {
-        min-width: 400px;
-    }
-
-
 </style>
