@@ -245,4 +245,8 @@ export default {
         resize: vertical;
     }
 
+    input {
+        min-width: 400px;
+    }
+
 </style>
