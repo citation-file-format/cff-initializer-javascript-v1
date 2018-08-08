@@ -1,16 +1,28 @@
 <template>
     <div class="form">
         <ul>
-            <Authors v-bind:authors="authors" v-bind:author_id="author_id"/>
-            <!-- <li>cff-version <input v-model="cff_version" placeholder="1.0.3"/></li>
-            <li>date-released <input v-model="date_released" placeholder="dd-mm-yyyy (without quotes)"/></li>
-            <li>doi <input v-model="doi" placeholder=""/></li>
-            <Keywords />
-            <li>license: <input v-model="license" /></li>
-            <li>message <textarea class="msg" v-model="message" /></li>
-            <li>repository-code <input v-model="repository_code" /></li>
-            <li>title <input v-model="title" /></li>
-            <li>version <input v-model="version" /></li> -->
+            <Authors
+                v-bind:authors="authors"
+                v-on:add-author="add_author"
+                v-on:move-author-down="move_author_down"
+                v-on:move-author-up="move_author_up"
+                v-on:remove-author="remove_author"
+            />
+            <li>cff-version <input type="text" v-bind:cff_version="cff_version" placeholder="1.0.3"/></li>
+            <li>date-released <input type="text" v-bind:date_released="date_released" placeholder="dd-mm-yyyy without quotes"/></li>
+            <li>doi <input type="text" v-bind:doi="doi" placeholder="doi-only, e.g. 10.0000/FIXME"/></li>
+            <Keywords
+                v-bind:keywords="keywords"
+                v-on:add-keyword="add_keyword"
+                v-on:move-keyword-down="move_keyword_down"
+                v-on:move-keyword-up="move_keyword_up"
+                v-on:remove-keyword="remove_keyword"
+            />
+            <li>license: <input type="text" v-bind:license="license" placeholder="e.g. Apache-2.0, MIT"/></li>
+            <li>message <textarea class="msg" v-bind:message="message" /></li>
+            <li>repository-code <input type="text" v-bind:repository_code="repository_code" placeholder="https://github.com/<org>/<repo>"/></li>
+            <li>title <input type="text" v-bind:title="title" /></li>
+            <li>version <input type="text" v-bind:version="version" /></li>
         </ul>
     </div>
 </template>
@@ -18,59 +30,55 @@
 <script>
 import Authors from './Authors.vue';
 import Keywords from './Keywords.vue';
+
 export default {
     components: {
         Authors,
         Keywords
     },
-    computed: {
-        cff: function () {
-            var lines = [];
-            lines.push('# YAML 1.2');
-            lines.push('---');
-            lines.push('authors: ');
-            for (let author of this.authors) {
-                lines.push('  -');
-                lines.push('    affiliation: ' + author.affiliation);
-                lines.push('    family-names: ' + author.family_names);
-                lines.push('    given-names: ' + author.given_names);
-                lines.push('    name-particle: ' + author.name_particle);
-                lines.push('    name-suffix: ' + author.name_suffix);
-                lines.push('    orcid: ' + author.orcid);
-            }
-            lines.push('cff-version: ' + this.cff_version);
-            lines.push('date-released: ' + this.date_released);
-            lines.push('doi: ' + this.doi);
-            lines.push('keywords: ');
-            for (let keyword of this.keywords) {
-                lines.push('  - ' + keyword.text);
-            }
-            lines.push('license: ' + this.license);
-            lines.push('message: ' + this.message);
-            lines.push('repository-code: ' + this.repository_code);
-            lines.push('title: ' + this.title);
-            lines.push('version: ' + this.version);
-            return lines.join('\n');
+    methods: {
+        add_author: function () {
+            this.$emit('add-author');
+        },
+        move_author_down: function (author_id) {
+            this.$emit('move-author-down', author_id)
+        },
+        move_author_up: function (author_id) {
+            this.$emit('move-author-up', author_id)
+        },
+        remove_author: function (author_id) {
+            this.$emit('remove-author', author_id)
+        },
+        add_keyword: function () {
+            this.$emit('add-keyword');
+        },
+        move_keyword_down: function (keyword_id) {
+            this.$emit('move-keyword-down', keyword_id)
+        },
+        move_keyword_up: function (keyword_id) {
+            this.$emit('move-keyword-up', keyword_id)
+        },
+        remove_keyword: function (keyword_id) {
+            this.$emit('remove-keyword', keyword_id)
         }
     },
-    data: function () {
-        return {
-            author_id: -1,
-            authors: [1],
-            cff_version: '1.0.3',
-            date_released: '',
-            doi: '10.0000/FIXME',
-            license: 'Apache-2.0',
-            message: 'If you use this software, please cite it using these metadata.',
-            repository_code: 'https://github.com/<org>/<repo>',
-            title: '',
-            version: ''
-        }
-    },
-    name: 'Form'
+    name: 'Form',
+    props: {
+        author_id: Number,
+        authors: Array,
+        cff_version: String,
+        date_released: String,
+        doi: String,
+        keyword_id: Number,
+        keywords: Array,
+        license: String,
+        message: String,
+        repository_code: String,
+        title: String,
+        version: String
+    }
 };
 </script>
-
 
 <style>
     .form {
@@ -90,10 +98,5 @@ export default {
         overflow-y: auto;
         resize: vertical;
     }
-
-    input {
-        min-width: '400px';
-    }
-
 
 </style>

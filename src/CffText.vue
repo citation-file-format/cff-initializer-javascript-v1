@@ -5,7 +5,9 @@
 <script>
 export default {
     name: 'CffText',
-    props: {cff: String}
+    props: {
+        cff: String
+    }
 };
 </script>
 
