@@ -22,19 +22,19 @@ export default {
     },
     methods: {
         add: function () {
-            this.$emit('add-keyword');
+            this.$emit('add');
         },
         move_down: function (keyword_id) {
-            this.$emit('move-keyword-down', keyword_id)
+            this.$emit('move-down', keyword_id)
         },
         move_up: function (keyword_id) {
-            this.$emit('move-keyword-up', keyword_id)
+            this.$emit('move-up', keyword_id)
         },
         remove: function (keyword_id) {
-            this.$emit('remove-keyword', keyword_id)
+            this.$emit('remove', keyword_id)
         },
         update: function (payload) {
-            this.$emit('update-keyword', payload)
+            this.$emit('update', payload)
         }
     },
     name: 'Keywords',

@@ -46,11 +46,11 @@
 
             <Keywords
                 v-bind:keywords="keywords"
-                v-on:add-keyword="add_keyword"
-                v-on:move-keyword-down="move_keyword_down"
-                v-on:move-keyword-up="move_keyword_up"
-                v-on:remove-keyword="remove_keyword"
-                v-on:update-keyword="update_keyword"
+                v-on:add="add_keyword"
+                v-on:move-down="move_keyword_down"
+                v-on:move-up="move_keyword_up"
+                v-on:remove="remove_keyword"
+                v-on:update="update_keyword"
             />
 
             <li>
