@@ -1,9 +1,23 @@
 <template>
     <li>
-        <button v-on:click='remove' title='Remove this keyword'>-</button>
-        <button v-on:click='move_up' title='Move this keyword up'>&uarr;</button>
-        <button v-on:click='move_down' title='Move this keyword down'>&darr;</button>
-        <input v-bind:value='keyword.text'/>
+        <button
+            v-on:click='remove'
+            title='Remove this keyword'
+        >-</button>
+
+        <button
+            v-on:click='move_up'
+            title='Move this keyword up'
+        >&uarr;</button>
+
+        <button
+            v-on:click='move_down'
+            title='Move this keyword down'
+        >&darr;</button>
+
+        <input
+            v-bind:value='keyword.text'
+        />
     </li>
 </template>
 

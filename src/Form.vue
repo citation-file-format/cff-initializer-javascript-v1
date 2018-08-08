@@ -8,9 +8,33 @@
                 v-on:move-author-up="move_author_up"
                 v-on:remove-author="remove_author"
             />
-            <li>cff-version <input type="text" v-bind:cff_version="cff_version" placeholder="1.0.3"/></li>
-            <li>date-released <input type="text" v-bind:date_released="date_released" placeholder="dd-mm-yyyy without quotes"/></li>
-            <li>doi <input type="text" v-bind:doi="doi" placeholder="doi-only, e.g. 10.0000/FIXME"/></li>
+
+            <li>cff-version
+                <input
+                    placeholder="1.0.3"
+                    type="text"
+                    v-bind:cff_version="cff_version"
+                />
+            </li>
+
+            <li>
+                date-released
+                <input
+                    placeholder="dd-mm-yyyy without quotes"
+                    type="text"
+                    v-bind:date_released="date_released"
+                />
+            </li>
+
+            <li>
+                doi
+                <input
+                    placeholder="doi-only, e.g. 10.0000/FIXME"
+                    type="text"
+                    v-bind:doi="doi"
+                />
+            </li>
+
             <Keywords
                 v-bind:keywords="keywords"
                 v-on:add-keyword="add_keyword"
@@ -18,11 +42,49 @@
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-keyword="remove_keyword"
             />
-            <li>license: <input type="text" v-bind:license="license" placeholder="e.g. Apache-2.0, MIT"/></li>
-            <li>message <textarea class="msg" v-bind:message="message" /></li>
-            <li>repository-code <input type="text" v-bind:repository_code="repository_code" placeholder="https://github.com/<org>/<repo>"/></li>
-            <li>title <input type="text" v-bind:title="title" /></li>
-            <li>version <input type="text" v-bind:version="version" /></li>
+
+            <li>
+                license:
+                <input
+                    placeholder="e.g. Apache-2.0, MIT"
+                    type="text"
+                    v-bind:license="license"
+                />
+            </li>
+
+            <li>
+                message
+                <textarea
+                    class="msg"
+                    v-bind:message="message"
+                />
+            </li>
+
+            <li>
+                repository-code
+                <input
+                    placeholder="https://github.com/<org>/<repo>"
+                    type="text"
+                    v-bind:repository_code="repository_code"
+                />
+            </li>
+
+            <li>
+                title
+                <input
+                    type="text"
+                    v-bind:title="title"
+                />
+            </li>
+
+            <li>
+                version
+                <input
+                    type="text"
+                    v-bind:version="version"
+                />
+            </li>
+
         </ul>
     </div>
 </template>

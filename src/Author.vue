@@ -1,15 +1,51 @@
 <template>
     <li>
-        <button v-on:click='remove' title='Remove this author'>-</button>
-        <button v-on:click='move_up' title='Move this author up'>&uarr;</button>
-        <button v-on:click='move_down' title='Move this author down'>&darr;</button>
+        <button
+            v-on:click='remove'
+            title='Remove this author'
+        >-</button>
+
+        <button
+            v-on:click='move_up'
+            title='Move this author up'
+        >&uarr;</button>
+
+        <button
+            v-on:click='move_down'
+            title='Move this author down'
+        >&darr;</button>
+
         <ul>
-            <li>given-names<input v-bind:value="author.given_names"/></li>
-            <li>name-particle<input v-bind:value="author.name_particle"/></li>
-            <li>family-names<input v-bind:value="author.family_names"/></li>
-            <li>name-suffix<input v-bind:value="author.name_suffix"/></li>
-            <li>orcid<input v-bind:value="author.orcid"/></li>
-            <li>affiliation<input v-bind:value="author.affiliation"/></li>
+            <li>
+                given-names
+                <input v-bind:value="author.given_names" />
+            </li>
+
+            <li>
+                name-particle
+                <input v-bind:value="author.name_particle" />
+            </li>
+
+            <li>
+                family-names
+                <input v-bind:value="author.family_names" />
+            </li>
+
+            <li>
+                name-suffix
+                <input v-bind:value="author.name_suffix" />
+            </li>
+
+            <li>
+                orcid
+                <input v-bind:value="author.orcid" />
+            </li>
+
+            <li>
+                affiliation
+                <input v-bind:value="author.affiliation" />
+            </li>
+
         </ul>
     </li>
 </template>
