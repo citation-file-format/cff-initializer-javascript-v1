@@ -1,5 +1,5 @@
 export function update_cff_version(payload) {
-    this.ccf_version = payload.value;
+    this.cff_version = payload.value;
 }
 
 export function update_date_released(payload) {

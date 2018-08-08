@@ -22,6 +22,12 @@
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-author="remove_author"
                 v-on:remove-keyword="remove_keyword"
+                v-on:update-author-given-names="update_author_given_names"
+                v-on:update-author-name-particle="update_author_name_particle"
+                v-on:update-author-family-names="update_author_family_names"
+                v-on:update-author-name-suffix="update_author_name_suffix"
+                v-on:update-author-orcid="update_author_orcid"
+                v-on:update-author-affiliation="update_author_affiliation"
                 v-on:update-cff-version="update_cff_version"
                 v-on:update-date-released="update_date_released"
                 v-on:update-doi="update_doi"
@@ -39,14 +45,24 @@
 
 <script>
 
+
 import {add_author,
         move_author_down,
         move_author_up,
         remove_author} from './AuthorsHandlers.js';
+
 import {add_keyword,
         move_keyword_down,
         move_keyword_up,
         remove_keyword} from './KeywordsHandlers.js';
+
+import {update_author_affiliation,
+        update_author_family_names,
+        update_author_given_names,
+        update_author_name_particle,
+        update_author_name_suffix,
+        update_author_orcid} from './AuthorHandler.js';
+
 import {update_cff_version,
         update_date_released,
         update_doi,
@@ -55,6 +71,7 @@ import {update_cff_version,
         update_title,
         update_version,
         update_message} from './FormHandlers.js';
+
 import {update_keyword} from './KeywordHandlers.js';
 import CffText from './CffText.vue';
 import Form from './Form.vue';
@@ -119,6 +136,12 @@ export default {
         move_keyword_up,
         remove_author,
         remove_keyword,
+        update_author_affiliation,
+        update_author_family_names,
+        update_author_given_names,
+        update_author_name_particle,
+        update_author_name_suffix,
+        update_author_orcid,
         update_cff_version,
         update_date_released,
         update_doi,

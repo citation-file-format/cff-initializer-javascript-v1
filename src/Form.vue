@@ -3,10 +3,16 @@
         <ul>
             <Authors
                 v-bind:authors="authors"
-                v-on:add-author="add_author"
-                v-on:move-author-down="move_author_down"
-                v-on:move-author-up="move_author_up"
-                v-on:remove-author="remove_author"
+                v-on:add="add_author"
+                v-on:move-down="move_author_down"
+                v-on:move-up="move_author_up"
+                v-on:remove="remove_author"
+                v-on:update-affiliation="update_author_affiliation"
+                v-on:update-family-names="update_author_family_names"
+                v-on:update-given-names="update_author_given_names"
+                v-on:update-name-particle="update_author_name_particle"
+                v-on:update-name-suffix="update_author_name_suffix"
+                v-on:update-orcid="update_author_orcid"
             />
 
             <li>cff-version
@@ -115,61 +121,79 @@ export default {
             this.$emit('add-keyword');
         },
         move_author_down: function (author_id) {
-            this.$emit('move-author-down', author_id)
+            this.$emit('move-author-down', author_id);
         },
         move_author_up: function (author_id) {
-            this.$emit('move-author-up', author_id)
+            this.$emit('move-author-up', author_id);
         },
         move_keyword_down: function (keyword_id) {
-            this.$emit('move-keyword-down', keyword_id)
+            this.$emit('move-keyword-down', keyword_id);
         },
         move_keyword_up: function (keyword_id) {
-            this.$emit('move-keyword-up', keyword_id)
+            this.$emit('move-keyword-up', keyword_id);
         },
         remove_author: function (author_id) {
-            this.$emit('remove-author', author_id)
+            this.$emit('remove-author', author_id);
         },
         remove_keyword: function (keyword_id) {
-            this.$emit('remove-keyword', keyword_id)
+            this.$emit('remove-keyword', keyword_id);
+        },
+        update_author_given_names: function (payload) {
+            this.$emit('update-author-given-names', payload);
+        },
+        update_author_name_particle: function (payload) {
+            this.$emit('update-author-name-particle', payload);
+        },
+        update_author_family_names: function (payload) {
+            this.$emit('update-author-family-names', payload);
+        },
+        update_author_name_suffix: function (payload) {
+            this.$emit('update-author-name-suffix', payload);
+        },
+        update_author_orcid: function (payload) {
+            this.$emit('update-author-orcid', payload);
+        },
+        update_author_affiliation: function (payload) {
+            this.$emit('update-author-affiliation', payload);
         },
         update_cff_version: function (event) {
             let payload = {
                 value: event.target.value
             };
-            this.$emit('update-cff-version', payload)
+            this.$emit('update-cff-version', payload);
         },
         update_date_released: function (event) {
             let payload = {
                 value: event.target.value
             };
-            this.$emit('update-date-released', payload)
+            this.$emit('update-date-released', payload);
         },
         update_doi: function (event) {
             let payload = {
                 value: event.target.value
             };
-            this.$emit('update-doi', payload)
+            this.$emit('update-doi', payload);
         },
         update_keyword: function (payload) {
-            this.$emit('update-keyword', payload)
+            this.$emit('update-keyword', payload);
         },
         update_license: function (event) {
             let payload = {
                 value: event.target.value
             };
-            this.$emit('update-license', payload)
+            this.$emit('update-license', payload);
         },
         update_repository_code: function (event) {
             let payload = {
                 value: event.target.value
             };
-            this.$emit('update-repository-code', payload)
+            this.$emit('update-repository-code', payload);
         },
         update_title: function (event) {
             let payload = {
                 value: event.target.value
             };
-            this.$emit('update-title', payload)
+            this.$emit('update-title', payload);
         },
         update_message: function (event) {
             let payload = {
