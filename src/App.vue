@@ -46,8 +46,7 @@ import {add_author,
 import {add_keyword,
         move_keyword_down,
         move_keyword_up,
-        remove_keyword,
-        update_keyword} from './KeywordsHandlers.js';
+        remove_keyword} from './KeywordsHandlers.js';
 import {update_cff_version,
         update_date_released,
         update_doi,
@@ -56,6 +55,7 @@ import {update_cff_version,
         update_title,
         update_version,
         update_message} from './FormHandlers.js';
+import {update_keyword} from './KeywordHandlers.js';
 import CffText from './CffText.vue';
 import Form from './Form.vue';
 
