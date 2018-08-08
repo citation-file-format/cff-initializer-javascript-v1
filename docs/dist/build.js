@@ -1147,19 +1147,19 @@ module.exports = g;
     },
     methods: {
         add: function () {
-            this.$emit('add-keyword');
+            this.$emit('add');
         },
         move_down: function (keyword_id) {
-            this.$emit('move-keyword-down', keyword_id);
+            this.$emit('move-down', keyword_id);
         },
         move_up: function (keyword_id) {
-            this.$emit('move-keyword-up', keyword_id);
+            this.$emit('move-up', keyword_id);
         },
         remove: function (keyword_id) {
-            this.$emit('remove-keyword', keyword_id);
+            this.$emit('remove', keyword_id);
         },
         update: function (payload) {
-            this.$emit('update-keyword', payload);
+            this.$emit('update', payload);
         }
     },
     name: 'Keywords',
@@ -13005,7 +13005,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Form_vue__ = __webpack_require__(6);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0288ee6a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6b6ed3af_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__ = __webpack_require__(48);
 function injectStyle (ssrContext) {
   __webpack_require__(30)
 }
@@ -13025,7 +13025,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Form_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0288ee6a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6b6ed3af_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -13046,7 +13046,7 @@ var content = __webpack_require__(31);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("357201cd", content, true, {});
+var update = __webpack_require__(1)("0c6e9d8b", content, true, {});
 
 /***/ }),
 /* 31 */
@@ -13217,7 +13217,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Keywords_vue__ = __webpack_require__(9);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_04cea325_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Keywords_vue__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_631b8d0e_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Keywords_vue__ = __webpack_require__(47);
 function injectStyle (ssrContext) {
   __webpack_require__(41)
 }
@@ -13237,7 +13237,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Keywords_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_04cea325_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Keywords_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_631b8d0e_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Keywords_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -13258,7 +13258,7 @@ var content = __webpack_require__(42);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("3b64dabf", content, true, {});
+var update = __webpack_require__(1)("5878e92b", content, true, {});
 
 /***/ }),
 /* 42 */
@@ -13363,7 +13363,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form"},[_c('ul',[_c('Authors',{attrs:{"authors":_vm.authors},on:{"add":_vm.add_author,"move-down":_vm.move_author_down,"move-up":_vm.move_author_up,"remove":_vm.remove_author,"update-affiliation":_vm.update_author_affiliation,"update-family-names":_vm.update_author_family_names,"update-given-names":_vm.update_author_given_names,"update-name-particle":_vm.update_author_name_particle,"update-name-suffix":_vm.update_author_name_suffix,"update-orcid":_vm.update_author_orcid}}),_vm._v(" "),_c('li',[_vm._v("cff-version\n            "),_c('input',{attrs:{"placeholder":"1.0.3","type":"text"},domProps:{"value":_vm.cff_version},on:{"keyup":function($event){_vm.update_cff_version($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            date-released\n            "),_c('input',{attrs:{"placeholder":"yyyy-mm-dd without quotes","type":"text"},domProps:{"value":_vm.date_released},on:{"keyup":function($event){_vm.update_date_released($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            doi\n            "),_c('input',{attrs:{"placeholder":"doi-only, e.g. 10.0000/FIXME","type":"text"},domProps:{"value":_vm.doi},on:{"keyup":function($event){_vm.update_doi($event)}}})]),_vm._v(" "),_c('Keywords',{attrs:{"keywords":_vm.keywords},on:{"add-keyword":_vm.add_keyword,"move-keyword-down":_vm.move_keyword_down,"move-keyword-up":_vm.move_keyword_up,"remove-keyword":_vm.remove_keyword,"update-keyword":_vm.update_keyword}}),_vm._v(" "),_c('li',[_vm._v("\n            license:\n            "),_c('input',{attrs:{"placeholder":"e.g. Apache-2.0, MIT","type":"text"},domProps:{"value":_vm.license},on:{"keyup":function($event){_vm.update_license($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            message\n            "),_c('textarea',{staticClass:"msg",domProps:{"value":_vm.message},on:{"keyup":function($event){_vm.update_message($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            repository-code\n            "),_c('input',{attrs:{"placeholder":"https://github.com/<org>/<repo>","type":"text"},domProps:{"value":_vm.repository_code},on:{"keyup":function($event){_vm.update_repository_code($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            title\n            "),_c('input',{attrs:{"type":"text"},domProps:{"value":_vm.title},on:{"keyup":function($event){_vm.update_title($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            version\n            "),_c('input',{attrs:{"type":"text"},domProps:{"value":_vm.version},on:{"keyup":function($event){_vm.update_version($event)}}})])],1)])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form"},[_c('ul',[_c('Authors',{attrs:{"authors":_vm.authors},on:{"add":_vm.add_author,"move-down":_vm.move_author_down,"move-up":_vm.move_author_up,"remove":_vm.remove_author,"update-affiliation":_vm.update_author_affiliation,"update-family-names":_vm.update_author_family_names,"update-given-names":_vm.update_author_given_names,"update-name-particle":_vm.update_author_name_particle,"update-name-suffix":_vm.update_author_name_suffix,"update-orcid":_vm.update_author_orcid}}),_vm._v(" "),_c('li',[_vm._v("cff-version\n            "),_c('input',{attrs:{"placeholder":"1.0.3","type":"text"},domProps:{"value":_vm.cff_version},on:{"keyup":function($event){_vm.update_cff_version($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            date-released\n            "),_c('input',{attrs:{"placeholder":"yyyy-mm-dd without quotes","type":"text"},domProps:{"value":_vm.date_released},on:{"keyup":function($event){_vm.update_date_released($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            doi\n            "),_c('input',{attrs:{"placeholder":"doi-only, e.g. 10.0000/FIXME","type":"text"},domProps:{"value":_vm.doi},on:{"keyup":function($event){_vm.update_doi($event)}}})]),_vm._v(" "),_c('Keywords',{attrs:{"keywords":_vm.keywords},on:{"add":_vm.add_keyword,"move-down":_vm.move_keyword_down,"move-up":_vm.move_keyword_up,"remove":_vm.remove_keyword,"update":_vm.update_keyword}}),_vm._v(" "),_c('li',[_vm._v("\n            license:\n            "),_c('input',{attrs:{"placeholder":"e.g. Apache-2.0, MIT","type":"text"},domProps:{"value":_vm.license},on:{"keyup":function($event){_vm.update_license($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            message\n            "),_c('textarea',{staticClass:"msg",domProps:{"value":_vm.message},on:{"keyup":function($event){_vm.update_message($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            repository-code\n            "),_c('input',{attrs:{"placeholder":"https://github.com/<org>/<repo>","type":"text"},domProps:{"value":_vm.repository_code},on:{"keyup":function($event){_vm.update_repository_code($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            title\n            "),_c('input',{attrs:{"type":"text"},domProps:{"value":_vm.title},on:{"keyup":function($event){_vm.update_title($event)}}})]),_vm._v(" "),_c('li',[_vm._v("\n            version\n            "),_c('input',{attrs:{"type":"text"},domProps:{"value":_vm.version},on:{"keyup":function($event){_vm.update_version($event)}}})])],1)])}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
