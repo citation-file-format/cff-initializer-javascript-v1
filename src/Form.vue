@@ -210,13 +210,13 @@ export default {
         flex-grow: 1.0;
         flex-basis: 0.0;
         overflow-y: auto;
-        height: '80vh';
-        padding-bottom: '5px';  /* not sure why but without it the textarea is slightly longer than the form div; (optimized for Google Chrome browser) */
+        height: 80vh;
+        padding-bottom: 5px;  /* not sure why but without it the textarea is slightly longer than the form div; (optimized for Google Chrome browser) */
     }
 
     textarea.msg {
         width: 90%;
-        height: '80px';
+        height: 80px;
         overflow-y: auto;
         resize: vertical;
     }
