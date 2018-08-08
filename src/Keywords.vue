@@ -5,9 +5,10 @@
                 v-for='keyword in keywords'
                 v-bind:keyword="keyword"
                 v-bind:key="keyword.id"
-                v-on:remove-keyword="remove"
-                v-on:move-keyword-up="move_up"
-                v-on:move-keyword-down="move_down"
+                v-on:remove="remove"
+                v-on:move-up="move_up"
+                v-on:move-down="move_down"
+                v-on:update="update"
             />
         </ul>
     </li>
@@ -31,6 +32,9 @@ export default {
         },
         remove: function (keyword_id) {
             this.$emit('remove-keyword', keyword_id)
+        },
+        update: function (payload) {
+            this.$emit('update-keyword', payload)
         }
     },
     name: 'Keywords',

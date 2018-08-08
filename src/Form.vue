@@ -13,7 +13,8 @@
                 <input
                     placeholder="1.0.3"
                     type="text"
-                    v-bind:cff_version="cff_version"
+                    v-bind:value="cff_version"
+                    v-on:keyup="update_cff_version($event)"
                 />
             </li>
 
@@ -22,7 +23,8 @@
                 <input
                     placeholder="dd-mm-yyyy without quotes"
                     type="text"
-                    v-bind:date_released="date_released"
+                    v-bind:value="date_released"
+                    v-on:keyup="update_date_released($event)"
                 />
             </li>
 
@@ -31,7 +33,8 @@
                 <input
                     placeholder="doi-only, e.g. 10.0000/FIXME"
                     type="text"
-                    v-bind:doi="doi"
+                    v-bind:value="doi"
+                    v-on:keyup="update_doi($event)"
                 />
             </li>
 
@@ -41,6 +44,7 @@
                 v-on:move-keyword-down="move_keyword_down"
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-keyword="remove_keyword"
+                v-on:update-keyword="update_keyword"
             />
 
             <li>
@@ -48,7 +52,8 @@
                 <input
                     placeholder="e.g. Apache-2.0, MIT"
                     type="text"
-                    v-bind:license="license"
+                    v-bind:value="license"
+                    v-on:keyup="update_license($event)"
                 />
             </li>
 
@@ -56,7 +61,8 @@
                 message
                 <textarea
                     class="msg"
-                    v-bind:message="message"
+                    v-bind:value="message"
+                    v-on:keyup="update_message($event)"
                 />
             </li>
 
@@ -65,7 +71,8 @@
                 <input
                     placeholder="https://github.com/<org>/<repo>"
                     type="text"
-                    v-bind:repository_code="repository_code"
+                    v-bind:value="repository_code"
+                    v-on:keyup="update_repository_code($event)"
                 />
             </li>
 
@@ -73,7 +80,8 @@
                 title
                 <input
                     type="text"
-                    v-bind:title="title"
+                    v-bind:value="title"
+                    v-on:keyup="update_title($event)"
                 />
             </li>
 
@@ -81,7 +89,8 @@
                 version
                 <input
                     type="text"
-                    v-bind:version="version"
+                    v-bind:value="version"
+                    v-on:keyup="update_version($event)"
                 />
             </li>
 
@@ -122,6 +131,57 @@ export default {
         },
         remove_keyword: function (keyword_id) {
             this.$emit('remove-keyword', keyword_id)
+        },
+        update_keyword: function (payload) {
+            this.$emit('update-keyword', payload)
+        },
+        update_cff_version: function (event) {
+            let payload = {
+                value: event.target.value
+            };
+            this.$emit('update-cff-version', payload)
+        },
+        update_date_released: function (event) {
+            let payload = {
+                value: event.target.value
+            };
+            this.$emit('update-date-released', payload)
+        },
+        update_doi: function (event) {
+            let payload = {
+                value: event.target.value
+            };
+            this.$emit('update-doi', payload)
+        },
+        update_license: function (event) {
+            let payload = {
+                value: event.target.value
+            };
+            this.$emit('update-license', payload)
+        },
+        update_repository_code: function (event) {
+            let payload = {
+                value: event.target.value
+            };
+            this.$emit('update-repository-code', payload)
+        },
+        update_title: function (event) {
+            let payload = {
+                value: event.target.value
+            };
+            this.$emit('update-title', payload)
+        },
+        update_version: function (event) {
+            let payload = {
+                value: event.target.value
+            };
+            this.$emit('update-version', payload);
+        },
+        update_message: function (event) {
+            let payload = {
+                value: event.target.value
+            };
+            this.$emit('update-message', payload);
         }
     },
     name: 'Form',

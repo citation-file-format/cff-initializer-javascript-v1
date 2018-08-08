@@ -32,3 +32,12 @@ export function remove_keyword(keyword_id) {
         return keyword.id !== keyword_id;
     })
 }
+
+export function update_keyword(payload) {
+    let obj = this.keywords.find(function (keyword) {
+        return keyword.id == 0
+    });
+    // FIXME
+    console.warn('this feels wrong');
+    obj.text= payload.value;
+}

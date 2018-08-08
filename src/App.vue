@@ -22,6 +22,15 @@
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-author="remove_author"
                 v-on:remove-keyword="remove_keyword"
+                v-on:update-keyword="update_keyword"
+                v-on:update-cff-version="update_cff_version"
+                v-on:update-date-released="update_date_released"
+                v-on:update-doi="update_doi"
+                v-on:update-license="update_license"
+                v-on:update-repository-code="update_repository_code"
+                v-on:update-title="update_title"
+                v-on:update-version="update_version"
+                v-on:update-message="update_message"
             />
             <CffText v-bind:cff="cff"/>
         </div>
@@ -38,6 +47,16 @@ import {move_keyword_down} from './KeywordsHandlers.js';
 import {move_keyword_up} from './KeywordsHandlers.js';
 import {remove_author} from './AuthorsHandlers.js';
 import {remove_keyword} from './KeywordsHandlers.js';
+import {update_keyword} from './KeywordsHandlers.js';
+import {update_cff_version} from './FormHandlers.js';
+import {update_date_released} from './FormHandlers.js';
+import {update_doi} from './FormHandlers.js';
+import {update_license} from './FormHandlers.js';
+import {update_repository_code} from './FormHandlers.js';
+import {update_title} from './FormHandlers.js';
+import {update_version} from './FormHandlers.js';
+import {update_message} from './FormHandlers.js';
+
 import CffText from './CffText.vue';
 import Form from './Form.vue';
 
@@ -100,7 +119,16 @@ export default {
         move_keyword_down,
         move_keyword_up,
         remove_author,
-        remove_keyword
+        remove_keyword,
+        update_keyword,
+        update_cff_version,
+        update_date_released,
+        update_doi,
+        update_license,
+        update_repository_code,
+        update_title,
+        update_version,
+        update_message
     },
     name: 'App'
 };
