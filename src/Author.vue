@@ -73,9 +73,11 @@
                 </p>
                 <input
                     v-bind:value="author.orcid"
+                    v-bind:class="{error: orcid_validation.error }"
                     v-on:keyup="update_orcid($event)"
                 />
-                <p class="message">
+                <p class="message" v-if="orcid_validation.error">
+                    {{orcid_validation.msg}}
                 </p>
             </li>
 
@@ -106,7 +108,12 @@ import {remove,
         update_name_suffix,
         update_orcid} from './AuthorEmitters.js';
 
+import {validate_orcid} from './AuthorValidators.js';
+
 export default {
+    computed: {
+        orcid_validation: validate_orcid
+    },
     methods: {
         remove,
         move_down,
