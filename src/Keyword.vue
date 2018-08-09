@@ -1,18 +1,21 @@
 <template>
     <li>
         <button
-            v-on:click="remove"
+            tabindex="-1"
             title="Remove this keyword"
+            v-on:click="remove"
         >-</button>
 
         <button
-            v-on:click="move_up"
+            tabindex="-1"
             title="Move this keyword up"
+            v-on:click="move_up"
         >&uarr;</button>
 
         <button
-            v-on:click="move_down"
+            tabindex="-1"
             title="Move this keyword down"
+            v-on:click="move_down"
         >&darr;</button>
 
         <input

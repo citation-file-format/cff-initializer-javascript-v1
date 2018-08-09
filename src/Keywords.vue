@@ -1,16 +1,20 @@
 <template>
     <li>
         <p class="caption">
-            keywords <button v-on:click='add' title='Add keyword'>+</button>
+            keywords
+            <button
+                tabindex="-1"
+                title="Add keyword"
+                v-on:click="add">+</button>
         </p>
         <ul>
             <Keyword
-                v-for='keyword in keywords'
-                v-bind:keyword="keyword"
                 v-bind:key="keyword.id"
-                v-on:remove="remove"
-                v-on:move-up="move_up"
+                v-bind:keyword="keyword"
+                v-for="keyword in keywords"
                 v-on:move-down="move_down"
+                v-on:move-up="move_up"
+                v-on:remove="remove"
                 v-on:update="update"
             />
         </ul>

@@ -1,18 +1,21 @@
 <template>
     <li>
         <button
-            v-on:click='remove'
-            title='Remove this author'
+            tabindex="-1"
+            title="Remove this author"
+            v-on:click="remove"
         >-</button>
 
         <button
-            v-on:click='move_up'
-            title='Move this author up'
+            tabindex="-1"
+            title="Move this author up"
+            v-on:click="move_up"
         >&uarr;</button>
 
         <button
-            v-on:click='move_down'
-            title='Move this author down'
+            tabindex="-1"
+            title="Move this author down"
+            v-on:click="move_down"
         >&darr;</button>
 
         <ul>
