@@ -1,5 +1,8 @@
 <template>
-    <li>keywords <button v-on:click='add' title='Add keyword'>+</button>
+    <li>
+        <p class="caption">
+            keywords <button v-on:click='add' title='Add keyword'>+</button>
+        </p>
         <ul>
             <Keyword
                 v-for='keyword in keywords'

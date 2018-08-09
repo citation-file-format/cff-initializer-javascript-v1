@@ -1,5 +1,8 @@
 <template>
-    <li>authors <button v-on:click='add' title='Add author'>+</button>
+    <li>
+        <p class="caption">
+            authors <button v-on:click='add' title='Add author'>+</button>
+        </p>
         <ul>
             <Author
                 v-for='author in authors'
