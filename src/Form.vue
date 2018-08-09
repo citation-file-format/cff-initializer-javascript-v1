@@ -34,12 +34,13 @@
                     date-released
                 </p>
                 <input
-                    placeholder="yyyy-mm-dd without quotes"
                     type="text"
+                    v-bind:class="{error: date_released_validation.error }"
                     v-bind:value="date_released"
                     v-on:keyup="update_date_released($event)"
                 />
-                <p class="message">
+                <p class="message" v-if="date_released_validation.error">
+                    {{ date_released_validation.msg }}
                 </p>
             </li>
 
@@ -162,6 +163,7 @@ import {add_author,
         update_message,
         update_version} from './FormEmitters.js';
 
+import {validate_date_released} from './FormValidators.js';
 import Authors from './Authors.vue';
 import Keywords from './Keywords.vue';
 
@@ -169,6 +171,9 @@ export default {
     components: {
         Authors,
         Keywords
+    },
+    computed: {
+        date_released_validation: validate_date_released
     },
     methods: {
         add_author,
