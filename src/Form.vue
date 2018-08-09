@@ -253,6 +253,8 @@ export default {
     }
 
     p.message {
+        font-family: sans-serif;
+        font-size: 80%;
     }
 
 </style>
