@@ -232,7 +232,27 @@ export default {
     }
 
     input {
+        background-color: #ffffff;
+        color: #000000;
+        border-width: 1px;
+        border-style: none;
         min-width: 400px;
+    }
+
+    input.error {
+        background-color: #ffb5b5;
+        color: #000000;
+        border-width: 1px;
+        border-style: solid;
+        border-color: red;
+        min-width: 400px;
+    }
+
+    p.caption {
+        font-family: monospace;
+    }
+
+    p.message {
     }
 
 </style>
