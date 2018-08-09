@@ -40,6 +40,9 @@
             />
             <CffText v-bind:cff="cff"/>
         </div>
+        <div class="container">
+            <button class="download-button" v-on:click="save_text_as_file">Save Text to File</button>
+        </div>
     </div>
 </template>
 
@@ -72,6 +75,7 @@ import {update_cff_version,
         update_version,
         update_message} from './FormHandlers.js';
 
+import {save_text_as_file} from './download.js';
 import {update_keyword} from './KeywordHandlers.js';
 import CffText from './CffText.vue';
 import Form from './Form.vue';
@@ -136,6 +140,7 @@ export default {
         move_keyword_up,
         remove_author,
         remove_keyword,
+        save_text_as_file,
         update_author_affiliation,
         update_author_family_names,
         update_author_given_names,
@@ -162,9 +167,31 @@ export default {
         background-color: #5f6d64;
     }
     .container {
-        background-color: none;
         display: flex;
         margin-top: 2vh;
         min-width: 300px;
+    }
+
+    .download-button {
+        -webkit-transition-duration: 0.2s; /* Safari */
+        background-color: #5daa61;
+        border-color: #222;
+        border-radius: 6px;
+        border-style: solid;
+        border-width: 2px;
+        color: #222;
+        display: inline-block;
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        transition-duration: 0.2s;
+    }
+    .download-button:hover {
+        background-color: #487a4a;
+        border-color: #ccc;
+        color: #ccc;
     }
 </style>

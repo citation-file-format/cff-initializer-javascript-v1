@@ -15,33 +15,46 @@
                 v-on:update-orcid="update_author_orcid"
             />
 
-            <li>cff-version
+            <li>
+                <p class="caption">
+                    cff-version
+                </p>
                 <input
                     placeholder="1.0.3"
                     type="text"
                     v-bind:value="cff_version"
                     v-on:keyup="update_cff_version($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                date-released
+                <p class="caption">
+                    date-released
+                </p>
                 <input
                     placeholder="yyyy-mm-dd without quotes"
                     type="text"
                     v-bind:value="date_released"
                     v-on:keyup="update_date_released($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                doi
+                <p class="caption">
+                    doi
+                </p>
                 <input
                     placeholder="doi-only, e.g. 10.0000/FIXME"
                     type="text"
                     v-bind:value="doi"
                     v-on:keyup="update_doi($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <Keywords
@@ -54,50 +67,70 @@
             />
 
             <li>
-                license:
+                <p class="caption">
+                    license:
+                </p>
                 <input
                     placeholder="e.g. Apache-2.0, MIT"
                     type="text"
                     v-bind:value="license"
                     v-on:keyup="update_license($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                message
+                <p class="caption">
+                    message
+                </p>
                 <textarea
                     class="msg"
                     v-bind:value="message"
                     v-on:keyup="update_message($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                repository-code
+                <p class="caption">
+                    repository-code
+                </p>
                 <input
                     placeholder="https://github.com/<org>/<repo>"
                     type="text"
                     v-bind:value="repository_code"
                     v-on:keyup="update_repository_code($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                title
+                <p class="caption">
+                    title
+                </p>
                 <input
                     type="text"
                     v-bind:value="title"
                     v-on:keyup="update_title($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                version
+                <p class="caption">
+                    version
+                </p>
                 <input
                     type="text"
                     v-bind:value="version"
                     v-on:keyup="update_version($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
         </ul>
@@ -182,21 +215,20 @@ export default {
 
 <style>
     .form {
+        background-color: #a7bcaf;
+        flex-basis: 0.0;
+        flex-grow: 1.0;
+        height: 80vh;
         margin-left: 1%;
         margin-right: 1%;
-        background-color: #a7bcaf;
-        flex-grow: 1.0;
-        flex-basis: 0.0;
         overflow-y: auto;
-        height: 80vh;
-        padding-bottom: 5px;  /* not sure why but without it the textarea is slightly longer than the form div; (optimized for Google Chrome browser) */
     }
 
     textarea.msg {
-        width: 90%;
         height: 80px;
         overflow-y: auto;
         resize: vertical;
+        width: 90%;
     }
 
     input {

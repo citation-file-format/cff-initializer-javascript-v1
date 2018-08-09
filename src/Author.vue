@@ -17,51 +17,75 @@
 
         <ul>
             <li>
-                given-names
+                <p class="caption">
+                    given-names
+                </p>
                 <input
                     v-bind:value="author.given_names"
                     v-on:keyup="update_given_names($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                name-particle
+                <p class="caption">
+                    name-particle
+                </p>
                 <input
                     v-bind:value="author.name_particle"
                     v-on:keyup="update_name_particle($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                family-names
+                <p class="caption">
+                    family-names
+                </p>
                 <input
                     v-bind:value="author.family_names"
                     v-on:keyup="update_family_names($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                name-suffix
+                <p class="caption">
+                    name-suffix
+                </p>
                 <input
                     v-bind:value="author.name_suffix"
                     v-on:keyup="update_name_suffix($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                orcid
+                <p class="caption">
+                    orcid
+                </p>
                 <input
                     v-bind:value="author.orcid"
                     v-on:keyup="update_orcid($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                affiliation
+                <p class="caption">
+                    affiliation
+                </p>
                 <input
                     v-bind:value="author.affiliation"
                     v-on:keyup="update_affiliation($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
         </ul>
