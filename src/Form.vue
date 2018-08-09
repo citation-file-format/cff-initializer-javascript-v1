@@ -105,6 +105,30 @@
 </template>
 
 <script>
+import {add_author,
+        add_keyword,
+        move_author_down,
+        move_author_up,
+        move_keyword_down,
+        move_keyword_up,
+        remove_author,
+        remove_keyword,
+        update_author_given_names,
+        update_author_name_particle,
+        update_author_family_names,
+        update_author_name_suffix,
+        update_author_orcid,
+        update_author_affiliation,
+        update_cff_version,
+        update_date_released,
+        update_doi,
+        update_keyword,
+        update_license,
+        update_repository_code,
+        update_title,
+        update_message,
+        update_version} from './FormEmitters.js';
+
 import Authors from './Authors.vue';
 import Keywords from './Keywords.vue';
 
@@ -114,99 +138,29 @@ export default {
         Keywords
     },
     methods: {
-        add_author: function () {
-            this.$emit('add-author');
-        },
-        add_keyword: function () {
-            this.$emit('add-keyword');
-        },
-        move_author_down: function (author_id) {
-            this.$emit('move-author-down', author_id);
-        },
-        move_author_up: function (author_id) {
-            this.$emit('move-author-up', author_id);
-        },
-        move_keyword_down: function (keyword_id) {
-            this.$emit('move-keyword-down', keyword_id);
-        },
-        move_keyword_up: function (keyword_id) {
-            this.$emit('move-keyword-up', keyword_id);
-        },
-        remove_author: function (author_id) {
-            this.$emit('remove-author', author_id);
-        },
-        remove_keyword: function (keyword_id) {
-            this.$emit('remove-keyword', keyword_id);
-        },
-        update_author_given_names: function (payload) {
-            this.$emit('update-author-given-names', payload);
-        },
-        update_author_name_particle: function (payload) {
-            this.$emit('update-author-name-particle', payload);
-        },
-        update_author_family_names: function (payload) {
-            this.$emit('update-author-family-names', payload);
-        },
-        update_author_name_suffix: function (payload) {
-            this.$emit('update-author-name-suffix', payload);
-        },
-        update_author_orcid: function (payload) {
-            this.$emit('update-author-orcid', payload);
-        },
-        update_author_affiliation: function (payload) {
-            this.$emit('update-author-affiliation', payload);
-        },
-        update_cff_version: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-cff-version', payload);
-        },
-        update_date_released: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-date-released', payload);
-        },
-        update_doi: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-doi', payload);
-        },
-        update_keyword: function (payload) {
-            this.$emit('update-keyword', payload);
-        },
-        update_license: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-license', payload);
-        },
-        update_repository_code: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-repository-code', payload);
-        },
-        update_title: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-title', payload);
-        },
-        update_message: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-message', payload);
-        },
-        update_version: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-version', payload);
-        }
+        add_author,
+        add_keyword,
+        move_author_down,
+        move_author_up,
+        move_keyword_down,
+        move_keyword_up,
+        remove_author,
+        remove_keyword,
+        update_author_given_names,
+        update_author_name_particle,
+        update_author_family_names,
+        update_author_name_suffix,
+        update_author_orcid,
+        update_author_affiliation,
+        update_cff_version,
+        update_date_released,
+        update_doi,
+        update_keyword,
+        update_license,
+        update_repository_code,
+        update_title,
+        update_message,
+        update_version
     },
     name: 'Form',
     props: {

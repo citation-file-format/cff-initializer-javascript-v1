@@ -15,27 +15,24 @@
 </template>
 
 <script>
+import {add,
+        move_down,
+        move_up,
+        remove,
+        update} from './KeywordsEmitters.js';
+
 import Keyword from './Keyword.vue';
+
 export default {
     components: {
         Keyword
     },
     methods: {
-        add: function () {
-            this.$emit('add');
-        },
-        move_down: function (keyword_id) {
-            this.$emit('move-down', keyword_id)
-        },
-        move_up: function (keyword_id) {
-            this.$emit('move-up', keyword_id)
-        },
-        remove: function (keyword_id) {
-            this.$emit('remove', keyword_id)
-        },
-        update: function (payload) {
-            this.$emit('update', payload)
-        }
+        add,
+        move_down,
+        move_up,
+        remove,
+        update
     },
     name: 'Keywords',
     props: {

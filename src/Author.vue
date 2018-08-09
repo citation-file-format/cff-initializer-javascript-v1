@@ -69,59 +69,27 @@
 </template>
 
 <script>
+import {remove,
+        move_down,
+        move_up,
+        update_affiliation,
+        update_family_names,
+        update_given_names,
+        update_name_particle,
+        update_name_suffix,
+        update_orcid} from './AuthorEmitters.js';
+
 export default {
     methods: {
-        remove: function () {
-            this.$emit('remove', this.author.id)
-        },
-        move_down: function () {
-            this.$emit('move-down', this.author.id)
-        },
-        move_up: function () {
-            this.$emit('move-up', this.author.id)
-        },
-        update_affiliation: function (event) {
-            let payload = {
-                id: this.author.id,
-                value: event.target.value
-            };
-            this.$emit('update-affiliation', payload);
-        },
-        update_family_names: function (event) {
-            let payload = {
-                id: this.author.id,
-                value: event.target.value
-            };
-            this.$emit('update-family-names', payload);
-        },
-        update_given_names: function (event) {
-            let payload = {
-                id: this.author.id,
-                value: event.target.value
-            };
-            this.$emit('update-given-names', payload);
-        },
-        update_name_particle: function (event) {
-            let payload = {
-                id: this.author.id,
-                value: event.target.value
-            };
-            this.$emit('update-name-particle', payload);
-        },
-        update_name_suffix: function (event) {
-            let payload = {
-                id: this.author.id,
-                value: event.target.value
-            };
-            this.$emit('update-name-suffix', payload);
-        },
-        update_orcid: function (event) {
-            let payload = {
-                id: this.author.id,
-                value: event.target.value
-            };
-            this.$emit('update-orcid', payload);
-        }
+        remove,
+        move_down,
+        move_up,
+        update_affiliation,
+        update_family_names,
+        update_given_names,
+        update_name_particle,
+        update_name_suffix,
+        update_orcid
     },
     name: 'Author',
     props: {

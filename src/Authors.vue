@@ -20,42 +20,34 @@
 </template>
 
 <script>
+import {add,
+        move_down,
+        move_up,
+        remove,
+        update_affiliation,
+        update_family_names,
+        update_given_names,
+        update_name_particle,
+        update_name_suffix,
+        update_orcid} from './AuthorsEmitters.js';
+
 import Author from './Author.vue';
+
 export default {
     components: {
         Author
     },
     methods: {
-        add: function () {
-            this.$emit('add');
-        },
-        move_down: function (author_id) {
-            this.$emit('move-down', author_id)
-        },
-        move_up: function (author_id) {
-            this.$emit('move-up', author_id)
-        },
-        remove: function (author_id) {
-            this.$emit('remove', author_id)
-        },
-        update_affiliation: function (payload) {
-            this.$emit('update-affiliation', payload)
-        },
-        update_family_names: function (payload) {
-            this.$emit('update-family-names', payload)
-        },
-        update_given_names: function (payload) {
-            this.$emit('update-given-names', payload)
-        },
-        update_name_particle: function (payload) {
-            this.$emit('update-name-particle', payload)
-        },
-        update_name_suffix: function (payload) {
-            this.$emit('update-name-suffix', payload)
-        },
-        update_orcid: function (payload) {
-            this.$emit('update-orcid', payload)
-        },
+        add,
+        move_down,
+        move_up,
+        remove,
+        update_affiliation,
+        update_family_names,
+        update_given_names,
+        update_name_particle,
+        update_name_suffix,
+        update_orcid
     },
     name: 'Authors',
     props: {
