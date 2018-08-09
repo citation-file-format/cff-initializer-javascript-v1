@@ -1,6 +1,11 @@
 <template>
     <div class="cff">
-        <textarea >{{ cff }}</textarea>
+        <textarea
+            readonly
+            tabindex="-1"
+        >
+            {{ cff }}
+        </textarea>
     </div>
 </template>
 
@@ -28,7 +33,6 @@ export default {
         height: 100%;
         overflow-y: auto;
         padding: 0px;
-        readonly: true;
         resize: none;
         width: 100%;
     }
