@@ -3,8 +3,7 @@
         <textarea
             readonly
             tabindex="-1"
-        >
-            {{ cff }}
+        >{{ cff }}
         </textarea>
     </div>
 </template>
