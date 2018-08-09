@@ -10,13 +10,13 @@
             tabindex="-1"
             title="Move this author up"
             v-on:click="move_up"
-        >&uarr;</button>
+        >&#x25B2;</button>
 
         <button
             tabindex="-1"
             title="Move this author down"
             v-on:click="move_down"
-        >&darr;</button>
+        >&#x25BC;</button>
 
         <ul>
             <li>
