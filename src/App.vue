@@ -59,6 +59,8 @@ import {add_keyword,
         move_keyword_up,
         remove_keyword} from './KeywordsHandlers.js';
 
+import {compute_cff} from './compute_cff.js';
+
 import {update_author_affiliation,
         update_author_family_names,
         update_author_given_names,
@@ -79,41 +81,13 @@ import {save_text_as_file} from './download.js';
 import {update_keyword} from './KeywordHandlers.js';
 import CffText from './CffText.vue';
 import Form from './Form.vue';
-
 export default {
     components: {
         CffText,
         Form
     },
     computed: {
-        cff: function () {
-            var lines = [];
-            lines.push('# YAML 1.2');
-            lines.push('---');
-            lines.push('authors: ');
-            for (let author of this.authors) {
-                lines.push('  -');
-                lines.push('    affiliation: ' + author.affiliation);
-                lines.push('    family-names: ' + author.family_names);
-                lines.push('    given-names: ' + author.given_names);
-                lines.push('    name-particle: ' + author.name_particle);
-                lines.push('    name-suffix: ' + author.name_suffix);
-                lines.push('    orcid: ' + author.orcid);
-            }
-            lines.push('cff-version: ' + this.cff_version);
-            lines.push('date-released: ' + this.date_released);
-            lines.push('doi: ' + this.doi);
-            lines.push('keywords: ');
-            for (let keyword of this.keywords) {
-                lines.push('  - ' + keyword.text);
-            }
-            lines.push('license: ' + this.license);
-            lines.push('message: ' + this.message);
-            lines.push('repository-code: ' + this.repository_code);
-            lines.push('title: ' + this.title);
-            lines.push('version: ' + this.version);
-            return lines.join('\n');
-        }
+        cff: compute_cff
     },
     data: function () {
         return {
