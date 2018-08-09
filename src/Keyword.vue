@@ -1,18 +1,21 @@
 <template>
     <li>
         <button
-            v-on:click="remove"
+            tabindex="-1"
             title="Remove this keyword"
+            v-on:click="remove"
         >-</button>
 
         <button
-            v-on:click="move_up"
+            tabindex="-1"
             title="Move this keyword up"
+            v-on:click="move_up"
         >&uarr;</button>
 
         <button
-            v-on:click="move_down"
+            tabindex="-1"
             title="Move this keyword down"
+            v-on:click="move_down"
         >&darr;</button>
 
         <input
@@ -23,23 +26,18 @@
 </template>
 
 <script>
+
+import {move_down,
+        move_up,
+        remove,
+        update} from './KeywordEmitters.js';
+
 export default {
     methods: {
-        move_down: function () {
-            this.$emit('move-down', this.keyword.id);
-        },
-        move_up: function () {
-            this.$emit('move-up', this.keyword.id);
-        },
-        remove: function () {
-            this.$emit('remove', this.keyword.id);
-        },
-        update: function (event) {
-            this.$emit('update', {
-                id: this.keyword.id,
-                value: event.target.value
-            })
-        }
+        move_down,
+        move_up,
+        remove,
+        update
     },
     name: 'Keyword',
     props: {

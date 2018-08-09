@@ -1,5 +1,11 @@
 <template>
-    <textarea class="cff">{{ cff }}</textarea>
+    <div class="cff">
+        <textarea
+            readonly
+            tabindex="-1"
+        >{{ cff }}
+        </textarea>
+    </div>
 </template>
 
 <script>
@@ -13,15 +19,21 @@ export default {
 
 
 <style>
-    textarea.cff {
+    .cff {
+        flex-basis: 0.0;
+        flex-grow: 1.0;
+        height: 80vh;
         margin-left: 1%;
         margin-right: 1%;
-        background-color: none;
-        flex-grow: 1.0;
-        flex-basis: 0.0;
-        overflow-y: auto;
-        height: 80vh;
-        readonly: true;
-        resize: none;
     }
+
+    textarea {
+        border-width: 0px;
+        height: 100%;
+        overflow-y: auto;
+        padding: 0px;
+        resize: none;
+        width: 100%;
+    }
+
 </style>

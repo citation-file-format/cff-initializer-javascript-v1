@@ -15,33 +15,46 @@
                 v-on:update-orcid="update_author_orcid"
             />
 
-            <li>cff-version
+            <li>
+                <p class="caption">
+                    cff-version
+                </p>
                 <input
                     placeholder="1.0.3"
                     type="text"
                     v-bind:value="cff_version"
                     v-on:keyup="update_cff_version($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                date-released
+                <p class="caption">
+                    date-released
+                </p>
                 <input
                     placeholder="yyyy-mm-dd without quotes"
                     type="text"
                     v-bind:value="date_released"
                     v-on:keyup="update_date_released($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                doi
+                <p class="caption">
+                    doi
+                </p>
                 <input
                     placeholder="doi-only, e.g. 10.0000/FIXME"
                     type="text"
                     v-bind:value="doi"
                     v-on:keyup="update_doi($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <Keywords
@@ -54,50 +67,70 @@
             />
 
             <li>
-                license:
+                <p class="caption">
+                    license:
+                </p>
                 <input
                     placeholder="e.g. Apache-2.0, MIT"
                     type="text"
                     v-bind:value="license"
                     v-on:keyup="update_license($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                message
+                <p class="caption">
+                    message
+                </p>
                 <textarea
                     class="msg"
                     v-bind:value="message"
                     v-on:keyup="update_message($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                repository-code
+                <p class="caption">
+                    repository-code
+                </p>
                 <input
                     placeholder="https://github.com/<org>/<repo>"
                     type="text"
                     v-bind:value="repository_code"
                     v-on:keyup="update_repository_code($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                title
+                <p class="caption">
+                    title
+                </p>
                 <input
                     type="text"
                     v-bind:value="title"
                     v-on:keyup="update_title($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
             <li>
-                version
+                <p class="caption">
+                    version
+                </p>
                 <input
                     type="text"
                     v-bind:value="version"
                     v-on:keyup="update_version($event)"
                 />
+                <p class="message">
+                </p>
             </li>
 
         </ul>
@@ -105,6 +138,30 @@
 </template>
 
 <script>
+import {add_author,
+        add_keyword,
+        move_author_down,
+        move_author_up,
+        move_keyword_down,
+        move_keyword_up,
+        remove_author,
+        remove_keyword,
+        update_author_given_names,
+        update_author_name_particle,
+        update_author_family_names,
+        update_author_name_suffix,
+        update_author_orcid,
+        update_author_affiliation,
+        update_cff_version,
+        update_date_released,
+        update_doi,
+        update_keyword,
+        update_license,
+        update_repository_code,
+        update_title,
+        update_message,
+        update_version} from './FormEmitters.js';
+
 import Authors from './Authors.vue';
 import Keywords from './Keywords.vue';
 
@@ -114,99 +171,29 @@ export default {
         Keywords
     },
     methods: {
-        add_author: function () {
-            this.$emit('add-author');
-        },
-        add_keyword: function () {
-            this.$emit('add-keyword');
-        },
-        move_author_down: function (author_id) {
-            this.$emit('move-author-down', author_id);
-        },
-        move_author_up: function (author_id) {
-            this.$emit('move-author-up', author_id);
-        },
-        move_keyword_down: function (keyword_id) {
-            this.$emit('move-keyword-down', keyword_id);
-        },
-        move_keyword_up: function (keyword_id) {
-            this.$emit('move-keyword-up', keyword_id);
-        },
-        remove_author: function (author_id) {
-            this.$emit('remove-author', author_id);
-        },
-        remove_keyword: function (keyword_id) {
-            this.$emit('remove-keyword', keyword_id);
-        },
-        update_author_given_names: function (payload) {
-            this.$emit('update-author-given-names', payload);
-        },
-        update_author_name_particle: function (payload) {
-            this.$emit('update-author-name-particle', payload);
-        },
-        update_author_family_names: function (payload) {
-            this.$emit('update-author-family-names', payload);
-        },
-        update_author_name_suffix: function (payload) {
-            this.$emit('update-author-name-suffix', payload);
-        },
-        update_author_orcid: function (payload) {
-            this.$emit('update-author-orcid', payload);
-        },
-        update_author_affiliation: function (payload) {
-            this.$emit('update-author-affiliation', payload);
-        },
-        update_cff_version: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-cff-version', payload);
-        },
-        update_date_released: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-date-released', payload);
-        },
-        update_doi: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-doi', payload);
-        },
-        update_keyword: function (payload) {
-            this.$emit('update-keyword', payload);
-        },
-        update_license: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-license', payload);
-        },
-        update_repository_code: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-repository-code', payload);
-        },
-        update_title: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-title', payload);
-        },
-        update_message: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-message', payload);
-        },
-        update_version: function (event) {
-            let payload = {
-                value: event.target.value
-            };
-            this.$emit('update-version', payload);
-        }
+        add_author,
+        add_keyword,
+        move_author_down,
+        move_author_up,
+        move_keyword_down,
+        move_keyword_up,
+        remove_author,
+        remove_keyword,
+        update_author_given_names,
+        update_author_name_particle,
+        update_author_family_names,
+        update_author_name_suffix,
+        update_author_orcid,
+        update_author_affiliation,
+        update_cff_version,
+        update_date_released,
+        update_doi,
+        update_keyword,
+        update_license,
+        update_repository_code,
+        update_title,
+        update_message,
+        update_version
     },
     name: 'Form',
     props: {
@@ -228,25 +215,44 @@ export default {
 
 <style>
     .form {
+        background-color: #a7bcaf;
+        flex-basis: 0.0;
+        flex-grow: 1.0;
+        height: 80vh;
         margin-left: 1%;
         margin-right: 1%;
-        background-color: #a7bcaf;
-        flex-grow: 1.0;
-        flex-basis: 0.0;
         overflow-y: auto;
-        height: 80vh;
-        padding-bottom: 5px;  /* not sure why but without it the textarea is slightly longer than the form div; (optimized for Google Chrome browser) */
     }
 
     textarea.msg {
-        width: 90%;
         height: 80px;
         overflow-y: auto;
         resize: vertical;
+        width: 90%;
     }
 
     input {
+        background-color: #ffffff;
+        color: #000000;
+        border-width: 1px;
+        border-style: none;
         min-width: 400px;
+    }
+
+    input.error {
+        background-color: #ffb5b5;
+        color: #000000;
+        border-width: 1px;
+        border-style: solid;
+        border-color: red;
+        min-width: 400px;
+    }
+
+    p.caption {
+        font-family: monospace;
+    }
+
+    p.message {
     }
 
 </style>
