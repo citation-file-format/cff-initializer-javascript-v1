@@ -85,4 +85,8 @@ export default {
         color: #222;
     }
 
+    .add-button:hover {
+        background-color: #ddd;
+    }
+
 </style>
