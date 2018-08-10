@@ -34,12 +34,13 @@
                     date-released
                 </p>
                 <input
-                    placeholder="yyyy-mm-dd without quotes"
                     type="text"
+                    v-bind:class="{error: date_released_validation.error }"
                     v-bind:value="date_released"
                     v-on:keyup="update_date_released($event)"
                 />
-                <p class="message">
+                <p class="message" v-if="date_released_validation.error">
+                    {{ date_released_validation.msg }}
                 </p>
             </li>
 
@@ -50,10 +51,12 @@
                 <input
                     placeholder="doi-only, e.g. 10.0000/FIXME"
                     type="text"
+                    v-bind:class="{error: doi_validation.error }"
                     v-bind:value="doi"
                     v-on:keyup="update_doi($event)"
                 />
-                <p class="message">
+                <p class="message" v-if="doi_validation.error">
+                    {{ doi_validation.msg }}
                 </p>
             </li>
 
@@ -98,12 +101,13 @@
                     repository-code
                 </p>
                 <input
-                    placeholder="https://github.com/<org>/<repo>"
                     type="text"
+                    v-bind:class="{error: repository_code_validation.error }"
                     v-bind:value="repository_code"
                     v-on:keyup="update_repository_code($event)"
                 />
-                <p class="message">
+                <p class="message" v-if="repository_code_validation.error">
+                    {{ repository_code_validation.msg }}
                 </p>
             </li>
 
@@ -162,6 +166,10 @@ import {add_author,
         update_message,
         update_version} from './FormEmitters.js';
 
+import {validate_date_released,
+        validate_doi,
+        validate_repository_code} from './FormValidators.js';
+
 import Authors from './Authors.vue';
 import Keywords from './Keywords.vue';
 
@@ -169,6 +177,11 @@ export default {
     components: {
         Authors,
         Keywords
+    },
+    computed: {
+        date_released_validation: validate_date_released,
+        doi_validation: validate_doi,
+        repository_code_validation: validate_repository_code
     },
     methods: {
         add_author,
@@ -218,7 +231,7 @@ export default {
         background-color: #a7bcaf;
         flex-basis: 0.0;
         flex-grow: 1.0;
-        height: 80vh;
+        height: 86vh;
         margin-left: 1%;
         margin-right: 1%;
         overflow-y: auto;
@@ -237,6 +250,7 @@ export default {
         border-width: 1px;
         border-style: none;
         min-width: 400px;
+        padding:6px;
     }
 
     input.error {

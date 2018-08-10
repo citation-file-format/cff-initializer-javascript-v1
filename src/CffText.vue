@@ -1,6 +1,7 @@
 <template>
     <div class="cff">
         <textarea
+            id="cfftext"
             readonly
             tabindex="-1"
         >{{ cff }}
@@ -22,7 +23,7 @@ export default {
     .cff {
         flex-basis: 0.0;
         flex-grow: 1.0;
-        height: 80vh;
+        height: 86vh;
         margin-left: 1%;
         margin-right: 1%;
     }
@@ -31,7 +32,7 @@ export default {
         border-width: 0px;
         height: 100%;
         overflow-y: auto;
-        padding: 0px;
+        padding: 7px;
         resize: none;
         width: 100%;
     }
