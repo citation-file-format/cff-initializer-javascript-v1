@@ -89,10 +89,12 @@
                 </p>
                 <textarea
                     class="msg"
+                    v-bind:class="{error: message_validation.error }"
                     v-bind:value="message"
                     v-on:keyup="update_message($event)"
                 />
-                <p class="message">
+                <p class="message" v-if="message_validation.error">
+                    {{ message_validation.msg }}
                 </p>
             </li>
 
@@ -168,6 +170,7 @@ import {add_author,
 
 import {validate_date_released,
         validate_doi,
+        validate_message,
         validate_repository_code} from './FormValidators.js';
 
 import Authors from './Authors.vue';
@@ -181,6 +184,7 @@ export default {
     computed: {
         date_released_validation: validate_date_released,
         doi_validation: validate_doi,
+        message_validation: validate_message,
         repository_code_validation: validate_repository_code
     },
     methods: {
@@ -242,6 +246,7 @@ export default {
         overflow-y: auto;
         resize: vertical;
         width: 90%;
+        white-space: pre-line;
     }
 
     input {
@@ -253,7 +258,7 @@ export default {
         padding:6px;
     }
 
-    input.error {
+    input.error, textarea.error {
         background-color: #ffb5b5;
         color: #000000;
         border-width: 1px;

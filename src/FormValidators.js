@@ -40,6 +40,14 @@ export function validate_doi () {
     }
 }
 
+export function validate_message () {
+    let min_length = 30;
+    return {
+        error: this.message.length < min_length,
+        msg: "You must include a message."
+    }
+}
+
 export function validate_repository_code () {
     let re = new RegExp('^(https?|ftp)://((?:[^\\s./$#?]{1,}\\.){1,})([^\\s./$#?]{2,})([/$#?]{1}[^\\s]{0,})?$');
     return {
