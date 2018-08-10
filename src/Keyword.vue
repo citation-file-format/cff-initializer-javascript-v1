@@ -78,4 +78,9 @@ export default {
         color: #222;
         margin-bottom: 10px;
     }
+
+    .move-up-button:hover, .move-down-button:hover, .remove-button:hover {
+        background-color: #ddd;
+    }
+
 </style>

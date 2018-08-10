@@ -164,4 +164,8 @@ export default {
         color: #222;
 
     }
+
+    .move-up-button:hover, .move-down-button:hover, .remove-button:hover {
+        background-color: #ddd;
+    }
 </style>

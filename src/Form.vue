@@ -241,30 +241,33 @@ export default {
         overflow-y: auto;
     }
 
-    textarea.msg {
+    .form input {
+        background-color: #ffffff;
+        border-color: #a7bcaf;
+        border-style: solid;
+        border-width: 2px;
+        color: #000000;
+        min-width: 400px;
+        padding: 6px;
+    }
+
+    .form textarea {
+        border-color: #a7bcaf;
+        border-style: solid;
+        border-width: 2px;
         height: 80px;
         overflow-y: auto;
         resize: vertical;
-        width: 90%;
         white-space: pre-line;
+        width: 90%;
     }
 
-    input {
-        background-color: #ffffff;
-        color: #000000;
-        border-width: 1px;
-        border-style: none;
-        min-width: 400px;
-        padding:6px;
+    .form input:focus, .form textarea:focus {
+        background-color: #ffff93;
     }
 
-    input.error, textarea.error {
-        background-color: #ffb5b5;
-        color: #000000;
-        border-width: 1px;
-        border-style: solid;
+    .form input.error, .form textarea.error {
         border-color: red;
-        min-width: 400px;
     }
 
     p.caption {
@@ -274,6 +277,10 @@ export default {
     p.message {
         font-family: sans-serif;
         font-size: 80%;
+    }
+
+    .form ul {
+        list-style-type: none;
     }
 
 </style>
