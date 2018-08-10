@@ -51,10 +51,12 @@
                 <input
                     placeholder="doi-only, e.g. 10.0000/FIXME"
                     type="text"
+                    v-bind:class="{error: doi_validation.error }"
                     v-bind:value="doi"
                     v-on:keyup="update_doi($event)"
                 />
-                <p class="message">
+                <p class="message" v-if="doi_validation.error">
+                    {{ doi_validation.msg }}
                 </p>
             </li>
 
@@ -163,7 +165,9 @@ import {add_author,
         update_message,
         update_version} from './FormEmitters.js';
 
-import {validate_date_released} from './FormValidators.js';
+import {validate_date_released,
+        validate_doi} from './FormValidators.js';
+
 import Authors from './Authors.vue';
 import Keywords from './Keywords.vue';
 
@@ -173,7 +177,8 @@ export default {
         Keywords
     },
     computed: {
-        date_released_validation: validate_date_released
+        date_released_validation: validate_date_released,
+        doi_validation: validate_doi
     },
     methods: {
         add_author,
