@@ -1,6 +1,8 @@
 export function validate_date_released () {
-
-    let re = new RegExp('[0-9]{4}-[0-9]{2}-[0-9]{2}');
+    let yyyy = '[0-9]{4}';
+    let mm = '(0[1-9]|1[0-2])';
+    let dd = '(0[1-9]|1[0-9]|2[0-9]|3[0-1])';
+    let re = new RegExp('^' + yyyy + '-' + mm + '-' + dd + '$');
     return {
         error: !re.test(this.date_released),
         msg: "Use the yyyy-mm-dd format."
@@ -18,7 +20,6 @@ export function validate_doi () {
     //
     // I added escape to the first dot in each regexp
     // I added escapes to all backslashes
-
     let regexps = [
         new RegExp('^10\\.\\d{4,9}/[-._;()/:a-zA-Z0-9]+$'),
         new RegExp('^10\\.1002/[^\\s]+$'),
@@ -26,7 +27,6 @@ export function validate_doi () {
         new RegExp('^10\\.1021/\\w\\w\\d+\\+$'),
         new RegExp('^10\\.1207/[\\w\\d]+\\&\\d+_\\d+$')
     ];
-
     // store a copy of doi, because this.doi won't be accessible within the map
     // function below:
     let doi = this.doi;
@@ -34,7 +34,6 @@ export function validate_doi () {
         return regexp.test(doi);
     });
     let at_least_one_matches = matches.includes(true);
-
     return {
         error: !at_least_one_matches,
         msg: "Please enter a valid DOI string."
