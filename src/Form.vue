@@ -242,6 +242,7 @@ export default {
         overflow-y: auto;
         resize: vertical;
         width: 90%;
+        white-space: pre-line;
     }
 
     input {

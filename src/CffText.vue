@@ -26,15 +26,18 @@ export default {
         height: 86vh;
         margin-left: 1%;
         margin-right: 1%;
+        box-sizing: border-box;
+        padding: 7px;
+        background-color: #fff;
     }
 
     textarea {
         border-width: 0px;
         height: 100%;
         overflow-y: auto;
-        padding: 7px;
         resize: none;
         width: 100%;
+        white-space: pre;
     }
 
 </style>
