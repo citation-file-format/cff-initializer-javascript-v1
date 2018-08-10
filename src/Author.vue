@@ -1,22 +1,37 @@
 <template>
     <li>
         <button
+            class="remove-button"
             tabindex="-1"
             title="Remove this author"
             v-on:click="remove"
-        >-</button>
+        >
+            <div class="button-spacer">
+            -
+            </div>
+        </button>
 
         <button
+            class="move-up-button"
             tabindex="-1"
             title="Move this author up"
             v-on:click="move_up"
-        >&#x25B2;</button>
+        >
+            <div class="button-spacer">
+                &#x25B2;
+            </div>
+        </button>
 
         <button
+            class="move-down-button"
             tabindex="-1"
             title="Move this author down"
             v-on:click="move_down"
-        >&#x25BC;</button>
+        >
+            <div class="button-spacer">
+                &#x25BC;
+            </div>
+        </button>
 
         <ul>
             <li>
@@ -133,4 +148,20 @@ export default {
 </script>
 
 <style>
+
+    .button-spacer {
+        min-width: 16px;
+    }
+
+    .move-up-button, .move-down-button, .remove-button {
+        background-color: #ccc;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #222;
+        border-radius: 2px;
+        font-size: 100%;
+        padding: 2px 10px;
+        color: #222;
+
+    }
 </style>

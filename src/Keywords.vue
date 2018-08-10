@@ -3,9 +3,14 @@
         <p class="caption">
             keywords
             <button
+                class="add-button"
                 tabindex="-1"
                 title="Add keyword"
-                v-on:click="add">+</button>
+                v-on:click="add">
+                <div class="button-spacer">
+                    +
+                </div>
+            </button>
         </p>
         <ul>
             <Keyword
@@ -49,4 +54,20 @@ export default {
 </script>
 
 <style>
+
+    .button-spacer {
+        min-width: 16px;
+    }
+
+    .add-button {
+        background-color: #ccc;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #222;
+        border-radius: 2px;
+        font-size: 100%;
+        padding: 2px 10px;
+        color: #222;
+    }
+
 </style>
