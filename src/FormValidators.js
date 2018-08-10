@@ -41,8 +41,9 @@ export function validate_doi () {
 }
 
 export function validate_message () {
+    let min_length = 30;
     return {
-        error: this.message.length < 30,
+        error: this.message.length < min_length,
         msg: "You must include a message."
     }
 }
