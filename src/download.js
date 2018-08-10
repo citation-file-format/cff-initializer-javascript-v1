@@ -1,6 +1,6 @@
 // based on https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
 export function save_text_as_file() {
-    var textToSave = document.getElementById('app').getElementsByClassName('cff')[0].value;
+    var textToSave = document.getElementById('cfftext').value;
     var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
     var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
     var fileNameToSaveAs = 'CITATION.cff';
