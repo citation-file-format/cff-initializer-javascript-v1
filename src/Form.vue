@@ -250,6 +250,7 @@ export default {
         border-width: 1px;
         border-style: none;
         min-width: 400px;
+        padding:6px;
     }
 
     input.error {
