@@ -22,7 +22,7 @@ export default {
     .cff {
         flex-basis: 0.0;
         flex-grow: 1.0;
-        height: 80vh;
+        height: 86vh;
         margin-left: 1%;
         margin-right: 1%;
     }
