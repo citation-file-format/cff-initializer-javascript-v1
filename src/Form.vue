@@ -101,12 +101,13 @@
                     repository-code
                 </p>
                 <input
-                    placeholder="https://github.com/<org>/<repo>"
                     type="text"
+                    v-bind:class="{error: repository_code_validation.error }"
                     v-bind:value="repository_code"
                     v-on:keyup="update_repository_code($event)"
                 />
-                <p class="message">
+                <p class="message" v-if="repository_code_validation.error">
+                    {{ repository_code_validation.msg }}
                 </p>
             </li>
 
@@ -166,7 +167,8 @@ import {add_author,
         update_version} from './FormEmitters.js';
 
 import {validate_date_released,
-        validate_doi} from './FormValidators.js';
+        validate_doi,
+        validate_repository_code} from './FormValidators.js';
 
 import Authors from './Authors.vue';
 import Keywords from './Keywords.vue';
@@ -178,7 +180,8 @@ export default {
     },
     computed: {
         date_released_validation: validate_date_released,
-        doi_validation: validate_doi
+        doi_validation: validate_doi,
+        repository_code_validation: validate_repository_code
     },
     methods: {
         add_author,

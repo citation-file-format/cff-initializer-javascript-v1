@@ -39,3 +39,12 @@ export function validate_doi () {
         msg: "Please enter a valid DOI string."
     }
 }
+
+export function validate_repository_code () {
+    let re = new RegExp('^(https?|ftp)://((?:[^\\s./$#?]{1,}\\.){1,})([^\\s./$#?]{2,})([/$#?]{1}[^\\s]{0,})?$');
+    return {
+        error: !re.test(this.repository_code),
+        msg: "Use a valid URL."
+    }
+
+}
