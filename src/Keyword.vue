@@ -35,7 +35,7 @@
 
         <input
             v-bind:value="keyword.text"
-            v-on:keyup="update($event)"
+            v-on:input="update($event)"
         />
     </li>
 </template>
