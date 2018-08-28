@@ -1,0 +1,17 @@
+{
+    "creators": [
+        {
+            "affiliation": "Netherlands eScience Center",
+            "name": "Spaaks, Jurriaan H."
+        }
+    ],
+    "keywords": [
+        "credit",
+        "research software engineering",
+        "citation"
+    ],
+    "license": {
+        "id": "Apache-2.0"
+    },
+    "title": "cffinit"
+}

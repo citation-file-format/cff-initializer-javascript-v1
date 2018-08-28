@@ -1,0 +1,28 @@
+{
+    "@context": [
+        "https://doi.org/10.5063/schema/codemeta-2.0",
+        "http://schema.org"
+    ],
+    "@type": "SoftwareSourceCode",
+    "author": [
+        {
+            "@type": "Person",
+            "affiliation": {
+                "@type": "Organization",
+                "legalName": "Netherlands eScience Center"
+            },
+            "familyName": "Spaaks",
+            "givenName": "Jurriaan H."
+        }
+    ],
+    "codeRepository": "https://github.com/citation-file-format/cff-initializer-javascript",
+    "datePublished": "2018-08-28",
+    "keywords": [
+        "credit",
+        "research software engineering",
+        "citation"
+    ],
+    "license": "http://www.apache.org/licenses/LICENSE-2.0",
+    "name": "cffinit",
+    "version": "1.0.0"
+}
