@@ -1,0 +1,18 @@
+# YAML 1.2
+---
+authors:
+  -
+    affiliation: Netherlands eScience Center
+    family-names: Spaaks
+    given-names: Jurriaan H.
+cff-version: 1.0.3
+date-released: 2018-08-28
+keywords:
+  - credit
+  - research software engineering
+  - citation
+license: Apache-2.0
+message: If you use this software, please cite it using these metadata.
+repository-code: https://github.com/citation-file-format/cff-initializer-javascript
+title: cffinit
+version: 1.0.0
