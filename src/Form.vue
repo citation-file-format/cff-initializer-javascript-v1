@@ -23,7 +23,7 @@
                     placeholder="1.0.3"
                     type="text"
                     v-bind:value="cff_version"
-                    v-on:keyup="update_cff_version($event)"
+                    v-on:input="update_cff_version($event)"
                 />
                 <p class="message">
                 </p>
@@ -37,7 +37,7 @@
                     type="text"
                     v-bind:class="{error: date_released_validation.error }"
                     v-bind:value="date_released"
-                    v-on:keyup="update_date_released($event)"
+                    v-on:input="update_date_released($event)"
                 />
                 <p class="message" v-if="date_released_validation.error">
                     {{ date_released_validation.msg }}
@@ -53,7 +53,7 @@
                     type="text"
                     v-bind:class="{error: doi_validation.error }"
                     v-bind:value="doi"
-                    v-on:keyup="update_doi($event)"
+                    v-on:input="update_doi($event)"
                 />
                 <p class="message" v-if="doi_validation.error">
                     {{ doi_validation.msg }}
@@ -77,7 +77,7 @@
                     placeholder="e.g. Apache-2.0, MIT"
                     type="text"
                     v-bind:value="license"
-                    v-on:keyup="update_license($event)"
+                    v-on:input="update_license($event)"
                 />
                 <p class="message">
                 </p>
@@ -91,7 +91,7 @@
                     class="msg"
                     v-bind:class="{error: message_validation.error }"
                     v-bind:value="message"
-                    v-on:keyup="update_message($event)"
+                    v-on:input="update_message($event)"
                 />
                 <p class="message" v-if="message_validation.error">
                     {{ message_validation.msg }}
@@ -106,7 +106,7 @@
                     type="text"
                     v-bind:class="{error: repository_code_validation.error }"
                     v-bind:value="repository_code"
-                    v-on:keyup="update_repository_code($event)"
+                    v-on:input="update_repository_code($event)"
                 />
                 <p class="message" v-if="repository_code_validation.error">
                     {{ repository_code_validation.msg }}
@@ -120,7 +120,7 @@
                 <input
                     type="text"
                     v-bind:value="title"
-                    v-on:keyup="update_title($event)"
+                    v-on:input="update_title($event)"
                 />
                 <p class="message">
                 </p>
@@ -133,7 +133,7 @@
                 <input
                     type="text"
                     v-bind:value="version"
-                    v-on:keyup="update_version($event)"
+                    v-on:input="update_version($event)"
                 />
                 <p class="message">
                 </p>

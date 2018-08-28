@@ -40,7 +40,7 @@
                 </p>
                 <input
                     v-bind:value="author.given_names"
-                    v-on:keyup="update_given_names($event)"
+                    v-on:input="update_given_names($event)"
                 />
                 <p class="message">
                 </p>
@@ -52,7 +52,7 @@
                 </p>
                 <input
                     v-bind:value="author.name_particle"
-                    v-on:keyup="update_name_particle($event)"
+                    v-on:input="update_name_particle($event)"
                 />
                 <p class="message">
                 </p>
@@ -64,7 +64,7 @@
                 </p>
                 <input
                     v-bind:value="author.family_names"
-                    v-on:keyup="update_family_names($event)"
+                    v-on:input="update_family_names($event)"
                 />
                 <p class="message">
                 </p>
@@ -76,7 +76,7 @@
                 </p>
                 <input
                     v-bind:value="author.name_suffix"
-                    v-on:keyup="update_name_suffix($event)"
+                    v-on:input="update_name_suffix($event)"
                 />
                 <p class="message">
                 </p>
@@ -89,7 +89,7 @@
                 <input
                     v-bind:value="author.orcid"
                     v-bind:class="{error: orcid_validation.error }"
-                    v-on:keyup="update_orcid($event)"
+                    v-on:input="update_orcid($event)"
                 />
                 <p class="message" v-if="orcid_validation.error">
                     {{orcid_validation.msg}}
@@ -102,7 +102,7 @@
                 </p>
                 <input
                     v-bind:value="author.affiliation"
-                    v-on:keyup="update_affiliation($event)"
+                    v-on:input="update_affiliation($event)"
                 />
                 <p class="message">
                 </p>
