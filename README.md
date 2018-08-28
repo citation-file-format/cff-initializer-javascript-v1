@@ -1,6 +1,6 @@
 
 
-Web form to initialize CITATION.cff files. Check out the live version [here](https://jspaaks.github.io/cff-initializer-javascript/).
+Web form to initialize CITATION.cff files. Check out the live version [here](https://citation-file-format.github.io/cff-initializer-javascript/).
 
 ## Build Setup
 
