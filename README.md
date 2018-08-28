@@ -1,4 +1,4 @@
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1404735.svg)](https://doi.org/10.5281/zenodo.1404735)
 
 Web form to initialize CITATION.cff files. Check out the live version [here](https://citation-file-format.github.io/cff-initializer-javascript/).
 
