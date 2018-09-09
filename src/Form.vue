@@ -129,6 +129,8 @@
             <Version
                 v-bind:value="version"
                 v-bind:version="version"
+                v-on:add="add_version"
+                v-on:remove="remove_version"
                 v-on:update="update_version"
             />
 
@@ -139,12 +141,14 @@
 <script>
 import {add_author,
         add_keyword,
+        add_version,
         move_author_down,
         move_author_up,
         move_keyword_down,
         move_keyword_up,
         remove_author,
         remove_keyword,
+        remove_version,
         update_author_given_names,
         update_author_name_particle,
         update_author_family_names,
@@ -185,12 +189,14 @@ export default {
     methods: {
         add_author,
         add_keyword,
+        add_version,
         move_author_down,
         move_author_up,
         move_keyword_down,
         move_keyword_up,
         remove_author,
         remove_keyword,
+        remove_version,
         update_author_given_names,
         update_author_name_particle,
         update_author_family_names,
