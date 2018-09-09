@@ -107,9 +107,6 @@ export function update_message (event) {
     this.$emit('update-message', payload);
 }
 
-export function update_version (event) {
-    let payload = {
-        value: event.target.value
-    };
+export function update_version (payload) {
     this.$emit('update-version', payload);
 }

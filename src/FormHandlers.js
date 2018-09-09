@@ -25,7 +25,3 @@ export function update_repository_code(payload) {
 export function update_title(payload) {
     this.title = payload.value;
 }
-
-export function update_version(payload) {
-    this.version = payload.value;
-}

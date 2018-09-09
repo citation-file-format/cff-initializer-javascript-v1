@@ -74,11 +74,11 @@ import {update_cff_version,
         update_license,
         update_repository_code,
         update_title,
-        update_version,
         update_message} from './FormHandlers.js';
 
 import {save_text_as_file} from './download.js';
 import {update_keyword} from './KeywordHandlers.js';
+import {update_version} from './VersionHandlers.js';
 import CffText from './CffText.vue';
 import Form from './Form.vue';
 export default {
