@@ -62,18 +62,17 @@ export function update_author_affiliation (payload) {
     this.$emit('update-author-affiliation', payload);
 }
 
-export function update_cff_version (event) {
+export function update_date_released (event) {
     let payload = {
         value: event.target.value
     };
-    this.$emit('update-cff-version', payload);
-}
-
-export function update_date_released (payload) {
     this.$emit('update-date-released', payload);
 }
 
-export function update_doi (payload) {
+export function update_doi (event) {
+    let payload = {
+        value: event.target.value
+    };
     this.$emit('update-doi', payload);
 }
 
@@ -81,23 +80,25 @@ export function update_keyword (payload) {
     this.$emit('update-keyword', payload);
 }
 
-export function update_license (payload) {
-    this.$emit('update-license', payload);
-}
-
-export function update_repository_code (payload) {
-    this.$emit('update-repository-code', payload);
-}
-
-export function update_title (payload) {
-    this.$emit('update-title', payload);
-}
-
-export function update_message (event) {
+export function update_license (event) {
     let payload = {
         value: event.target.value
     };
-    this.$emit('update-message', payload);
+    this.$emit('update-license', payload);
+}
+
+export function update_repository_code (event) {
+    let payload = {
+        value: event.target.value
+    };
+    this.$emit('update-repository-code', payload);
+}
+
+export function update_title (event) {
+    let payload = {
+        value: event.target.value
+    };
+    this.$emit('update-title', payload);
 }
 
 export function update_version (payload) {
