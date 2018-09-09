@@ -49,11 +49,15 @@
         <div class="container">
             <button class="download-button" v-on:click="save_text_as_file">Save Text to File</button>
         </div>
+        <div class="github">
+            <a href="https://github.com/citation-file-format/cff-initializer-javascript">
+                <img src="img/github-mark-light-64px.png" width="50px" height="50px">
+            </a>
+        </div>
     </div>
 </template>
 
 <script>
-
 
 import {add_author,
         move_author_down,
@@ -149,6 +153,7 @@ export default {
 <style>
     body {
         background-color: #5f6d64;
+        margin: 0px;
     }
     .container {
         display: flex;
@@ -161,16 +166,20 @@ export default {
     }
 
     .header h1 {
-        font-size: 40px;
+        font-size: 2rem;
         font-family: 'Inconsolata', monospace;
         text-align:center;
         color: #fff;
+        padding-bottom: 1.0rem;
+        margin-bottom: 0.0rem;
     }
     .header h2 {
         font-size: 100%;
         font-family: 'Source Sans Pro', sans-serif;
         text-align:center;
         color: #eee;
+        margin-bottom: 0.0rem;
+        margin-top: 0.0rem;
     }
 
     .download-button {
@@ -195,5 +204,11 @@ export default {
         background-color: #487a4a;
         border-color: #ccc;
         color: #ccc;
+    }
+
+    .github {
+        position: fixed;
+        right: 1%;
+        bottom: 10px;
     }
 </style>

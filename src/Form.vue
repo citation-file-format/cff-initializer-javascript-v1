@@ -165,7 +165,7 @@ export default {
         flex-basis: 0.0;
         flex-grow: 1.0;
         font-family: 'Source Sans Pro', sans-serif;
-        height: 70vh;
+        height: 75vh;
         margin-left: 1%;
         margin-right: 1%;
         overflow-y: auto;
