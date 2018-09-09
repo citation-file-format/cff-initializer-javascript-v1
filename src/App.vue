@@ -1,5 +1,9 @@
 <template>
     <div id="app">
+        <div class="header">
+            <h1>cffinit</h1>
+            <h2>Initialize your CITATION.cff files</h2>
+        </div>
         <div class="container">
             <Form
                 v-bind:author_id="author_id"
@@ -152,6 +156,23 @@ export default {
         min-width: 300px;
     }
 
+    .header {
+        display: block;
+    }
+
+    .header h1 {
+        font-size: 40px;
+        font-family: 'Inconsolata', monospace;
+        text-align:center;
+        color: #fff;
+    }
+    .header h2 {
+        font-size: 100%;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align:center;
+        color: #eee;
+    }
+
     .download-button {
         -webkit-transition-duration: 0.2s; /* Safari */
         background-color: #5daa61;
@@ -161,7 +182,8 @@ export default {
         border-width: 2px;
         color: #222;
         display: inline-block;
-        font-size: 16px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1.0rem;
         margin-left: auto;
         margin-right: auto;
         padding: 15px 32px;

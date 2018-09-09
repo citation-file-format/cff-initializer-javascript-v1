@@ -42,8 +42,6 @@
                     v-bind:value="author.given_names"
                     v-on:input="update_given_names($event)"
                 />
-                <p class="message">
-                </p>
             </li>
 
             <li>
@@ -54,8 +52,6 @@
                     v-bind:value="author.name_particle"
                     v-on:input="update_name_particle($event)"
                 />
-                <p class="message">
-                </p>
             </li>
 
             <li>
@@ -66,8 +62,6 @@
                     v-bind:value="author.family_names"
                     v-on:input="update_family_names($event)"
                 />
-                <p class="message">
-                </p>
             </li>
 
             <li>
@@ -78,8 +72,6 @@
                     v-bind:value="author.name_suffix"
                     v-on:input="update_name_suffix($event)"
                 />
-                <p class="message">
-                </p>
             </li>
 
             <li>
@@ -104,8 +96,6 @@
                     v-bind:value="author.affiliation"
                     v-on:input="update_affiliation($event)"
                 />
-                <p class="message">
-                </p>
             </li>
 
         </ul>

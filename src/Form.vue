@@ -164,7 +164,8 @@ export default {
         background-color: #a7bcaf;
         flex-basis: 0.0;
         flex-grow: 1.0;
-        height: 86vh;
+        font-family: 'Source Sans Pro', sans-serif;
+        height: 70vh;
         margin-left: 1%;
         margin-right: 1%;
         overflow-y: auto;
@@ -176,6 +177,8 @@ export default {
         border-style: solid;
         border-width: 2px;
         color: #000000;
+        font-family: 'Inconsolata', monospace;
+        font-size: 1.0rem;
         min-width: 400px;
         padding: 6px;
     }
@@ -184,6 +187,8 @@ export default {
         border-color: #a7bcaf;
         border-style: solid;
         border-width: 2px;
+        font-family: 'Inconsolata', monospace;
+        font-size: 1.0rem;
         height: 80px;
         overflow-y: auto;
         resize: vertical;
@@ -200,12 +205,17 @@ export default {
     }
 
     p.caption {
-        font-family: monospace;
+        font-family: 'Inconsolata', monospace;
+        font-size: 1.0rem;
+        margin-bottom: 0.5em;
+        margin-top: 1.0em;
     }
 
     p.message {
-        font-family: sans-serif;
-        font-size: 80%;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 0.8rem;
+        margin-bottom: 2.5em;
+        margin-top: 0.5em;
     }
 
     .form ul {

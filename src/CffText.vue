@@ -25,7 +25,7 @@ export default {
         box-sizing: border-box;
         flex-basis: 0.0;
         flex-grow: 1.0;
-        height: 86vh;
+        height: 70vh;
         margin-left: 1%;
         margin-right: 1%;
     }
@@ -37,6 +37,7 @@ export default {
         resize: none;
         white-space: pre;
         width: 100%;
+        box-sizing: border-box;
     }
 
 </style>

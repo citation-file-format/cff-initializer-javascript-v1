@@ -64,8 +64,6 @@
                 v-bind:value="license"
                 v-on:input="update_license($event)"
             />
-            <p class="message">
-            </p>
         </li>
 
         <li>
@@ -92,8 +90,6 @@
                 v-bind:value="title"
                 v-on:input="update_title($event)"
             />
-            <p class="message">
-            </p>
         </li>
 
         <Version
