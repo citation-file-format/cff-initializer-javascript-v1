@@ -1,6 +1,16 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1404735.svg)](https://doi.org/10.5281/zenodo.1404735)
 
-Web form to initialize CITATION.cff files. Check out the live version [here](https://citation-file-format.github.io/cff-initializer-javascript/).
+Web form to initialize CITATION.cff files.
+
+
+# For users
+
+- Check out the live version [here](https://citation-file-format.github.io/cff-initializer-javascript/).
+- For the rationale behind CITATION.cff files, read [the blog](https://www.software.ac.uk/blog/2017-12-12-standard-format-citation-files).
+- For the Citation File Format specification, go [here](https://citation-file-format.github.io/versions).
+- For the Citation File Format home page, go [here](https://citation-file-format.github.io).
+
+# For developers
 
 ## Build Setup
 
