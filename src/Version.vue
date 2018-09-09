@@ -5,19 +5,23 @@
             v-show="has_version"
         >
             version
+            <button
+                class="button remove-button"
+                tabindex="-1"
+                title="Remove version"
+                v-on:click="remove"
+                v-show="has_version"
+            >
+                <div class="button-spacer">-</div>
+            </button>
         </p>
         <button
-            tabindex="-1"
-            title="Remove version"
-            v-on:click="remove"
-            v-show="has_version"
-        >-</button>
-        <button
+            class="button add-button"
             tabindex="-1"
             title="Add version"
             v-on:click="add"
             v-show="!has_version"
-        >Add version</button>
+        >Add <span style="font-family: monospace">version</span></button>
         <input
             type="text"
             v-bind:value="version"
@@ -54,6 +58,34 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.button {
+    background-color: #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #222;
+    border-radius: 2px;
+    font-size: 100%;
+    color: #222;
+}
+
+.button:hover {
+    background-color: #ddd;
+}
+
+.button-spacer {
+    min-width: 16px;
+}
+
+.add-button {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.remove-button {
+    padding: 2px 10px;
+}
 
 </style>
