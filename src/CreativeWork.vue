@@ -1,7 +1,6 @@
 <template>
     <ul class="creative_work">
 
-<!--
         <Authors
             v-bind:authors="authors"
             v-on:add="add_author"
@@ -82,7 +81,7 @@
                 {{ repository_code_validation.msg }}
             </p>
         </li>
--->
+
         <Title
             v-bind:title="title"
             v-on:update="update_title"
