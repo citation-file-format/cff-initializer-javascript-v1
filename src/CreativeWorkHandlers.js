@@ -13,7 +13,3 @@ export function update_license(payload) {
 export function update_repository_code(payload) {
     this.repository_code = payload.value;
 }
-
-export function update_title(payload) {
-    this.title = payload.value;
-}

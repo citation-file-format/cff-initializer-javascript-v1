@@ -49,6 +49,7 @@
                 v-bind:version="version"
                 v-on:add-author="add_author"
                 v-on:add-keyword="add_keyword"
+                v-on:add-title="add_title"
                 v-on:add-version="add_version"
                 v-on:move-author-down="move_author_down"
                 v-on:move-author-up="move_author_up"
@@ -56,6 +57,7 @@
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-author="remove_author"
                 v-on:remove-keyword="remove_keyword"
+                v-on:remove-title="remove_title"
                 v-on:remove-version="remove_version"
                 v-on:update-author-affiliation="update_author_affiliation"
                 v-on:update-author-family-names="update_author_family_names"
@@ -81,6 +83,7 @@ import CreativeWork from './CreativeWork.vue';
 
 import {add_author,
         add_keyword,
+        add_title,
         add_version,
         move_author_down,
         move_author_up,
@@ -88,6 +91,7 @@ import {add_author,
         move_keyword_up,
         remove_author,
         remove_keyword,
+        remove_title,
         remove_version,
         update_author_given_names,
         update_author_name_particle,
@@ -117,6 +121,7 @@ export default {
     methods: {
         add_author,
         add_keyword,
+        add_title,
         add_version,
         move_author_down,
         move_author_up,
@@ -124,6 +129,7 @@ export default {
         move_keyword_up,
         remove_author,
         remove_keyword,
+        remove_title,
         remove_version,
         update_author_given_names,
         update_author_name_particle,
