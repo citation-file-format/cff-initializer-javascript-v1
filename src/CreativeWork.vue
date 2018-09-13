@@ -88,7 +88,6 @@
         />
 
         <Version
-            v-bind:value="version"
             v-bind:version="version"
             v-on:add="add_version"
             v-on:remove="remove_version"
