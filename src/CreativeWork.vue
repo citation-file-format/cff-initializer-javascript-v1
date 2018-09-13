@@ -84,6 +84,8 @@
 
         <Title
             v-bind:title="title"
+            v-on:add="add_title"
+            v-on:remove="remove_title"
             v-on:update="update_title"
         />
 
@@ -100,6 +102,7 @@
 <script>
 import {add_author,
         add_keyword,
+        add_title,
         add_version,
         move_author_down,
         move_author_up,
@@ -107,6 +110,7 @@ import {add_author,
         move_keyword_up,
         remove_author,
         remove_keyword,
+        remove_title,
         remove_version,
         update_author_given_names,
         update_author_name_particle,
@@ -146,6 +150,7 @@ export default {
     methods: {
         add_author,
         add_keyword,
+        add_title,
         add_version,
         move_author_down,
         move_author_up,
@@ -153,6 +158,7 @@ export default {
         move_keyword_up,
         remove_author,
         remove_keyword,
+        remove_title,
         remove_version,
         update_author_given_names,
         update_author_name_particle,

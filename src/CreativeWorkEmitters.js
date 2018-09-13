@@ -6,6 +6,10 @@ export function add_keyword () {
     this.$emit('add-keyword');
 }
 
+export function add_title () {
+    this.$emit('add-title');
+}
+
 export function add_version () {
     this.$emit('add-version');
 }
@@ -32,6 +36,10 @@ export function remove_author (author_id) {
 
 export function remove_keyword (keyword_id) {
     this.$emit('remove-keyword', keyword_id);
+}
+
+export function remove_title () {
+    this.$emit('remove-title');
 }
 
 export function remove_version () {

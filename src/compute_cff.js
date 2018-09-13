@@ -22,7 +22,9 @@ export function compute_cff () {
     lines.push('license: ' + this.license);
     lines.push('message: ' + this.message);
     lines.push('repository-code: ' + this.repository_code);
-    lines.push('title: ' + this.title);
+    if (this.title !== undefined) {
+        lines.push('title: ' + this.title);
+    }
     if (this.version !== undefined) {
         lines.push('version: ' + this.version);
     }
