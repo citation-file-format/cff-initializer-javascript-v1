@@ -94,10 +94,7 @@ export function update_repository_code (event) {
     this.$emit('update-repository-code', payload);
 }
 
-export function update_title (event) {
-    let payload = {
-        value: event.target.value
-    };
+export function update_title (payload) {
     this.$emit('update-title', payload);
 }
 

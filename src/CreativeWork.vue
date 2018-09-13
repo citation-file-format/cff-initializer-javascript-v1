@@ -1,5 +1,7 @@
 <template>
     <ul class="creative_work">
+
+<!--
         <Authors
             v-bind:authors="authors"
             v-on:add="add_author"
@@ -80,17 +82,11 @@
                 {{ repository_code_validation.msg }}
             </p>
         </li>
-
-        <li>
-            <p class="caption">
-                title
-            </p>
-            <input
-                type="text"
-                v-bind:value="title"
-                v-on:input="update_title($event)"
-            />
-        </li>
+-->
+        <Title
+            v-bind:title="title"
+            v-on:update="update_title"
+        />
 
         <Version
             v-bind:value="version"
@@ -135,11 +131,13 @@ import {validate_date_released,
 import Authors from './Authors.vue';
 import Keywords from './Keywords.vue';
 import Version from './Version.vue';
+import Title from './Title.vue';
 
 export default {
     components: {
         Authors,
         Keywords,
+        Title,
         Version
     },
     computed: {
