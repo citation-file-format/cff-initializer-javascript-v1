@@ -21,7 +21,7 @@
             title="Add version"
             v-on:click="add"
             v-show="!has_version"
-        >Add <span style="font-family: monospace">version</span></button>
+        >Add <span style="font-family: 'Inconsolata', monospace">version</span></button>
         <input
             type="text"
             v-bind:value="version"
@@ -61,12 +61,14 @@ export default {
 <style scoped>
 .button {
     background-color: #ccc;
-    border-width: 1px;
-    border-style: solid;
     border-color: #222;
     border-radius: 2px;
-    font-size: 100%;
+    border-style: solid;
+    border-width: 1px;
     color: #222;
+    font-size: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.8rem;
 }
 
 .button:hover {
@@ -78,10 +80,11 @@ export default {
 }
 
 .add-button {
+    margin-top: 1em;
+    padding-bottom: 0.5em;
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.5em;
-    padding-bottom: 0.5em;
 }
 
 .remove-button {

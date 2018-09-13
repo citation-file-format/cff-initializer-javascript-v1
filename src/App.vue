@@ -1,5 +1,9 @@
 <template>
     <div id="app">
+        <div class="header">
+            <h1>cffinit</h1>
+            <h2>Initialize your CITATION.cff files</h2>
+        </div>
         <div class="container">
             <Form
                 v-bind:author_id="author_id"
@@ -45,11 +49,15 @@
         <div class="container">
             <button class="download-button" v-on:click="save_text_as_file">Save Text to File</button>
         </div>
+        <div class="github">
+            <a href="https://github.com/citation-file-format/cff-initializer-javascript">
+                <img src="img/github-mark-light-64px.png" width="50px" height="50px">
+            </a>
+        </div>
     </div>
 </template>
 
 <script>
-
 
 import {add_author,
         move_author_down,
@@ -145,11 +153,33 @@ export default {
 <style>
     body {
         background-color: #5f6d64;
+        margin: 0px;
     }
     .container {
         display: flex;
         margin-top: 2vh;
         min-width: 300px;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+        font-family: 'Inconsolata', monospace;
+        text-align:center;
+        color: #fff;
+        padding-bottom: 1.0rem;
+        margin-bottom: 0.0rem;
+    }
+    .header h2 {
+        font-size: 100%;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align:center;
+        color: #eee;
+        margin-bottom: 0.0rem;
+        margin-top: 0.0rem;
     }
 
     .download-button {
@@ -161,7 +191,8 @@ export default {
         border-width: 2px;
         color: #222;
         display: inline-block;
-        font-size: 16px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1.0rem;
         margin-left: auto;
         margin-right: auto;
         padding: 15px 32px;
@@ -173,5 +204,11 @@ export default {
         background-color: #487a4a;
         border-color: #ccc;
         color: #ccc;
+    }
+
+    .github {
+        position: fixed;
+        right: 1%;
+        bottom: 10px;
     }
 </style>

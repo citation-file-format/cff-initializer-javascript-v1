@@ -12,7 +12,7 @@
                 </div>
             </button>
         </p>
-        <ul>
+        <ul class="authors">
             <Author
                 v-bind:author="author"
                 v-bind:key="author.id"
@@ -68,7 +68,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
     .button-spacer {
         min-width: 16px;
@@ -87,6 +87,10 @@ export default {
 
     .add-button:hover {
         background-color: #ddd;
+    }
+
+    .authors {
+        padding-left:0px;
     }
 
 </style>
