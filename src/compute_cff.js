@@ -23,6 +23,8 @@ export function compute_cff () {
     lines.push('message: ' + this.message);
     lines.push('repository-code: ' + this.repository_code);
     lines.push('title: ' + this.title);
-    lines.push('version: ' + this.version);
+    if (this.version !== undefined) {
+        lines.push('version: ' + this.version);
+    }
     return lines.join('\n');
 }

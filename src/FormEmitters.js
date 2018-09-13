@@ -6,6 +6,10 @@ export function add_keyword () {
     this.$emit('add-keyword');
 }
 
+export function add_version () {
+    this.$emit('add-version');
+}
+
 export function move_author_down (author_id) {
     this.$emit('move-author-down', author_id);
 }
@@ -28,6 +32,10 @@ export function remove_author (author_id) {
 
 export function remove_keyword (keyword_id) {
     this.$emit('remove-keyword', keyword_id);
+}
+
+export function remove_version () {
+    this.$emit('remove-version');
 }
 
 export function update_author_given_names (payload) {
@@ -107,9 +115,6 @@ export function update_message (event) {
     this.$emit('update-message', payload);
 }
 
-export function update_version (event) {
-    let payload = {
-        value: event.target.value
-    };
+export function update_version (payload) {
     this.$emit('update-version', payload);
 }

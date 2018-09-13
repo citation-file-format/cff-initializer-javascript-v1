@@ -162,7 +162,6 @@ export default {
         font-size: 100%;
         padding: 2px 10px;
         color: #222;
-
     }
 
     .move-up-button:hover, .move-down-button:hover, .remove-button:hover {
