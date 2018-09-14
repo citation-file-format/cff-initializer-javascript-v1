@@ -1,6 +1,6 @@
 <template>
     <ul class="creative_work">
-
+<!--
         <Authors
             v-bind:authors="authors"
             v-on:add="add_author"
@@ -54,18 +54,13 @@
             v-on:remove="remove_keyword"
             v-on:update="update_keyword"
         />
-
-        <li>
-            <p class="caption">
-                license:
-            </p>
-            <input
-                placeholder="e.g. Apache-2.0, MIT"
-                type="text"
-                v-bind:value="license"
-                v-on:input="update_license($event)"
-            />
-        </li>
+ -->
+        <License
+            v-bind:license="license"
+            v-on:add="add_license"
+            v-on:remove="remove_license"
+            v-on:update="update_license"
+        />
 
         <li>
             <p class="caption">
@@ -102,6 +97,7 @@
 <script>
 import {add_author,
         add_keyword,
+        add_license,
         add_title,
         add_version,
         move_author_down,
@@ -110,6 +106,7 @@ import {add_author,
         move_keyword_up,
         remove_author,
         remove_keyword,
+        remove_license,
         remove_title,
         remove_version,
         update_author_given_names,
@@ -132,6 +129,7 @@ import {validate_date_released,
 
 import Authors from './Authors.vue';
 import Keywords from './Keywords.vue';
+import License from './License.vue';
 import Version from './Version.vue';
 import Title from './Title.vue';
 
@@ -139,6 +137,7 @@ export default {
     components: {
         Authors,
         Keywords,
+        License,
         Title,
         Version
     },
@@ -150,6 +149,7 @@ export default {
     methods: {
         add_author,
         add_keyword,
+        add_license,
         add_title,
         add_version,
         move_author_down,
@@ -158,6 +158,7 @@ export default {
         move_keyword_up,
         remove_author,
         remove_keyword,
+        remove_license,
         remove_title,
         remove_version,
         update_author_given_names,

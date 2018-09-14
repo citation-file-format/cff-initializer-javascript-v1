@@ -20,6 +20,7 @@
                 v-bind:version="version"
                 v-on:add-author="add_author"
                 v-on:add-keyword="add_keyword"
+                v-on:add-license="add_license"
                 v-on:add-title="add_title"
                 v-on:add-version="add_version"
                 v-on:move-author-down="move_author_down"
@@ -28,6 +29,7 @@
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-author="remove_author"
                 v-on:remove-keyword="remove_keyword"
+                v-on:remove-license="remove_license"
                 v-on:remove-title="remove_title"
                 v-on:remove-version="remove_version"
                 v-on:update-author-affiliation="update_author_affiliation"
@@ -71,6 +73,11 @@ import {add_keyword,
         move_keyword_up,
         remove_keyword} from './KeywordsHandlers.js';
 
+import {add as add_license,
+        remove as remove_license,
+        update as update_license} from './LicenseHandlers.js';
+
+
 import {compute_cff} from './compute_cff.js';
 
 import {update_author_affiliation,
@@ -83,7 +90,6 @@ import {update_author_affiliation,
 import {update_cff_version,
         update_date_released,
         update_doi,
-        update_license,
         update_repository_code,
         update_message} from './FormHandlers.js';
 
@@ -126,6 +132,7 @@ export default {
     methods: {
         add_author,
         add_keyword,
+        add_license,
         add_title,
         add_version,
         move_author_down,
@@ -134,6 +141,7 @@ export default {
         move_keyword_up,
         remove_author,
         remove_keyword,
+        remove_license,
         remove_title,
         remove_version,
         save_text_as_file,
