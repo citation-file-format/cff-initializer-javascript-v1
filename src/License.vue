@@ -25,11 +25,17 @@
         <input
             placeholder="e.g. Apache-2.0, MIT"
             type="text"
+            v-bind:class="{error: license_validation.error}"
             v-bind:value="license"
             v-on:input="update($event)"
             v-show="has_license"
         />
-        <p class="message">
+        <p
+            class="message"
+            v-if="license_validation.error"
+            v-show="has_license"
+        >
+            {{ license_validation.msg }}
         </p>
 
     </li>
@@ -40,6 +46,8 @@ import {add,
         remove,
         update} from './LicenseEmitters.js';
 
+import {validate_license} from './LicenseValidators.js';
+
 export default {
     components: {
     },
@@ -47,7 +55,8 @@ export default {
         has_license: function () {
             return this.$props.hasOwnProperty('license') &&
                 this.$props.license !== undefined
-        }
+        },
+        license_validation: validate_license
     },
     methods: {
         add,

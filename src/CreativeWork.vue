@@ -1,6 +1,6 @@
 <template>
     <ul class="creative_work">
-<!--
+
         <Authors
             v-bind:authors="authors"
             v-on:add="add_author"
@@ -54,7 +54,6 @@
             v-on:remove="remove_keyword"
             v-on:update="update_keyword"
         />
- -->
         <License
             v-bind:license="license"
             v-on:add="add_license"
@@ -68,7 +67,7 @@
             </p>
             <input
                 type="text"
-                v-bind:class="{error: repository_code_validation.error }"
+                v-bind:class="{error: repository_code_validation.error}"
                 v-bind:value="repository_code"
                 v-on:input="update_repository_code($event)"
             />
