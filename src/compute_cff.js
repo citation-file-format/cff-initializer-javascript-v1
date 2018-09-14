@@ -19,7 +19,9 @@ export function compute_cff () {
     for (let keyword of this.keywords) {
         lines.push('  - ' + keyword.text);
     }
-    lines.push('license: ' + this.license);
+    if (this.license !== undefined) {
+        lines.push('license: ' + this.license);
+    }
     lines.push('message: ' + this.message);
     lines.push('repository-code: ' + this.repository_code);
     if (this.title !== undefined) {
