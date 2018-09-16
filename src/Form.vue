@@ -50,6 +50,7 @@
                 v-on:add-author="add_author"
                 v-on:add-keyword="add_keyword"
                 v-on:add-license="add_license"
+                v-on:add-repository-code="add_repository_code"
                 v-on:add-title="add_title"
                 v-on:add-version="add_version"
                 v-on:move-author-down="move_author_down"
@@ -59,6 +60,7 @@
                 v-on:remove-author="remove_author"
                 v-on:remove-keyword="remove_keyword"
                 v-on:remove-license="remove_license"
+                v-on:remove-repository-code="remove_repository_code"
                 v-on:remove-title="remove_title"
                 v-on:remove-version="remove_version"
                 v-on:update-author-affiliation="update_author_affiliation"
@@ -86,6 +88,7 @@ import CreativeWork from './CreativeWork.vue';
 import {add_author,
         add_keyword,
         add_license,
+        add_repository_code,
         add_title,
         add_version,
         move_author_down,
@@ -95,6 +98,7 @@ import {add_author,
         remove_author,
         remove_keyword,
         remove_license,
+        remove_repository_code,
         remove_title,
         remove_version,
         update_author_given_names,
@@ -126,6 +130,7 @@ export default {
         add_author,
         add_keyword,
         add_license,
+        add_repository_code,
         add_title,
         add_version,
         move_author_down,
@@ -135,6 +140,7 @@ export default {
         remove_author,
         remove_keyword,
         remove_license,
+        remove_repository_code,
         remove_title,
         remove_version,
         update_author_given_names,

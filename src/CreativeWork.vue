@@ -54,6 +54,7 @@
             v-on:remove="remove_keyword"
             v-on:update="update_keyword"
         />
+
         <License
             v-bind:license="license"
             v-on:add="add_license"
@@ -61,20 +62,12 @@
             v-on:update="update_license"
         />
 
-        <li>
-            <p class="caption">
-                repository-code
-            </p>
-            <input
-                type="text"
-                v-bind:class="{error: repository_code_validation.error}"
-                v-bind:value="repository_code"
-                v-on:input="update_repository_code($event)"
-            />
-            <p class="message" v-if="repository_code_validation.error">
-                {{ repository_code_validation.msg }}
-            </p>
-        </li>
+        <RepositoryCode
+            v-bind:repository_code="repository_code"
+            v-on:add="add_repository_code"
+            v-on:remove="remove_repository_code"
+            v-on:update="update_repository_code"
+        />
 
         <Title
             v-bind:title="title"
@@ -97,6 +90,7 @@
 import {add_author,
         add_keyword,
         add_license,
+        add_repository_code,
         add_title,
         add_version,
         move_author_down,
@@ -106,6 +100,7 @@ import {add_author,
         remove_author,
         remove_keyword,
         remove_license,
+        remove_repository_code,
         remove_title,
         remove_version,
         update_author_given_names,
@@ -123,12 +118,12 @@ import {add_author,
         update_version} from './CreativeWorkEmitters.js';
 
 import {validate_date_released,
-        validate_doi,
-        validate_repository_code} from './CreativeWorkValidators.js';
+        validate_doi} from './CreativeWorkValidators.js';
 
 import Authors from './Authors.vue';
 import Keywords from './Keywords.vue';
 import License from './License.vue';
+import RepositoryCode from './RepositoryCode';
 import Version from './Version.vue';
 import Title from './Title.vue';
 
@@ -137,18 +132,19 @@ export default {
         Authors,
         Keywords,
         License,
+        RepositoryCode,
         Title,
         Version
     },
     computed: {
         date_released_validation: validate_date_released,
-        doi_validation: validate_doi,
-        repository_code_validation: validate_repository_code
+        doi_validation: validate_doi
     },
     methods: {
         add_author,
         add_keyword,
         add_license,
+        add_repository_code,
         add_title,
         add_version,
         move_author_down,
@@ -158,6 +154,7 @@ export default {
         remove_author,
         remove_keyword,
         remove_license,
+        remove_repository_code,
         remove_title,
         remove_version,
         update_author_given_names,

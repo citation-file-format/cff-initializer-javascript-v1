@@ -10,6 +10,10 @@ export function add_license () {
     this.$emit('add-license');
 }
 
+export function add_repository_code () {
+    this.$emit('add-repository-code');
+}
+
 export function add_title () {
     this.$emit('add-title');
 }
@@ -44,6 +48,10 @@ export function remove_keyword (keyword_id) {
 
 export function remove_license () {
     this.$emit('remove-license');
+}
+
+export function remove_repository_code () {
+    this.$emit('remove-repository-code');
 }
 
 export function remove_title () {
