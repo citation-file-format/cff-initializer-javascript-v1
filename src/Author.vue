@@ -33,6 +33,10 @@
             </div>
         </button>
 
+        <p>
+            {{ this.fullname}}
+        </p>
+
         <ul>
             <li>
                 <p class="caption">
@@ -117,7 +121,23 @@ import {validate_orcid} from './AuthorValidators.js';
 
 export default {
     computed: {
-        orcid_validation: validate_orcid
+        orcid_validation: validate_orcid,
+        fullname: function () {
+            let name_parts = [];
+            if (this.author.hasOwnProperty('given_names') && this.author.given_names !== '') {
+                name_parts.push(this.author.given_names);
+            }
+            if (this.author.hasOwnProperty('name_particle') && this.author.name_particle !== '') {
+                name_parts.push(this.author.name_particle);
+            }
+            if (this.author.hasOwnProperty('family_names') && this.author.family_names !== '') {
+                name_parts.push(this.author.family_names);
+            }
+            if (this.author.hasOwnProperty('name_suffix') && this.author.name_suffix !== '') {
+                name_parts.push(this.author.name_suffix);
+            }
+            return name_parts.join(' ');
+        }
     },
     methods: {
         remove,
