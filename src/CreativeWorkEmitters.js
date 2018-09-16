@@ -10,6 +10,10 @@ export function add_license () {
     this.$emit('add-license');
 }
 
+export function add_repository_code () {
+    this.$emit('add-repository-code');
+}
+
 export function add_title () {
     this.$emit('add-title');
 }
@@ -44,6 +48,10 @@ export function remove_keyword (keyword_id) {
 
 export function remove_license () {
     this.$emit('remove-license');
+}
+
+export function remove_repository_code () {
+    this.$emit('remove-repository-code');
 }
 
 export function remove_title () {
@@ -100,10 +108,7 @@ export function update_license (payload) {
     this.$emit('update-license', payload);
 }
 
-export function update_repository_code (event) {
-    let payload = {
-        value: event.target.value
-    };
+export function update_repository_code (payload) {
     this.$emit('update-repository-code', payload);
 }
 

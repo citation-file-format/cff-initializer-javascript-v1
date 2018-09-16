@@ -22,13 +22,20 @@ export function compute_cff () {
     if (this.license !== undefined) {
         lines.push('license: ' + this.license);
     }
+
     lines.push('message: ' + this.message);
-    lines.push('repository-code: ' + this.repository_code);
+
+    if (this.repository_code !== undefined) {
+        lines.push('repository-code: ' + this.repository_code);
+    }
+
     if (this.title !== undefined) {
         lines.push('title: ' + this.title);
     }
+
     if (this.version !== undefined) {
         lines.push('version: ' + this.version);
     }
+
     return lines.join('\n');
 }

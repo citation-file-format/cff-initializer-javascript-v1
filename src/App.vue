@@ -21,6 +21,7 @@
                 v-on:add-author="add_author"
                 v-on:add-keyword="add_keyword"
                 v-on:add-license="add_license"
+                v-on:add-repository-code="add_repository_code"
                 v-on:add-title="add_title"
                 v-on:add-version="add_version"
                 v-on:move-author-down="move_author_down"
@@ -30,6 +31,7 @@
                 v-on:remove-author="remove_author"
                 v-on:remove-keyword="remove_keyword"
                 v-on:remove-license="remove_license"
+                v-on:remove-repository-code="remove_repository_code"
                 v-on:remove-title="remove_title"
                 v-on:remove-version="remove_version"
                 v-on:update-author-affiliation="update_author_affiliation"
@@ -77,6 +79,9 @@ import {add as add_license,
         remove as remove_license,
         update as update_license} from './LicenseHandlers.js';
 
+import {add as add_repository_code,
+        remove as remove_repository_code,
+        update as update_repository_code} from './RepositoryCodeHandlers.js';
 
 import {compute_cff} from './compute_cff.js';
 
@@ -90,10 +95,10 @@ import {update_author_affiliation,
 import {update_cff_version,
         update_date_released,
         update_doi,
-        update_repository_code,
         update_message} from './FormHandlers.js';
 
 import {save_text_as_file} from './download.js';
+
 import {update_keyword} from './KeywordHandlers.js';
 
 import {add_title,
@@ -103,8 +108,11 @@ import {add_title,
 import {add_version,
         remove_version,
         update_version} from './VersionHandlers.js';
+
 import CffText from './CffText.vue';
+
 import Form from './Form.vue';
+
 export default {
     components: {
         CffText,
@@ -122,9 +130,9 @@ export default {
             doi: '',
             keyword_id: -1,
             keywords: [],
-            license: '',
+            license: undefined,
             message: 'If you use this software, please cite it using these metadata.',
-            repository_code: '',
+            repository_code: undefined,
             title: undefined,
             version: undefined
         }
@@ -133,6 +141,7 @@ export default {
         add_author,
         add_keyword,
         add_license,
+        add_repository_code,
         add_title,
         add_version,
         move_author_down,
@@ -142,6 +151,7 @@ export default {
         remove_author,
         remove_keyword,
         remove_license,
+        remove_repository_code,
         remove_title,
         remove_version,
         save_text_as_file,
