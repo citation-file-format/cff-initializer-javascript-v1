@@ -34,7 +34,7 @@
         </button>
 
         <p>
-            {{ this.fullname}}
+            {{ this.fullname }}
         </p>
 
         <ul>

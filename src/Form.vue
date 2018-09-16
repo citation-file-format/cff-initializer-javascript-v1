@@ -14,10 +14,12 @@
                 <input
                     placeholder="1.0.3"
                     type="text"
+                    v-bind:class="{error: cff_version_validation.error }"
                     v-bind:value="cff_version"
                     v-on:input="update_cff_version($event)"
                 />
-                <p class="message">
+                <p class="message" v-if="cff_version_validation.error">
+                    {{ cff_version_validation.msg }}
                 </p>
             </li>
 
@@ -117,7 +119,8 @@ import {add_author,
         update_message,
         update_version} from './FormEmitters.js';
 
-import {validate_message} from './FormValidators.js';
+import {validate_message,
+        validate_cff_version} from './FormValidators.js';
 
 export default {
     components: {
@@ -125,6 +128,7 @@ export default {
     },
     computed: {
         message_validation: validate_message,
+        cff_version_validation: validate_cff_version
     },
     methods: {
         add_author,
