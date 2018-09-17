@@ -19,6 +19,7 @@
                 v-bind:title="title"
                 v-bind:version="version"
                 v-on:add-author="add_author"
+                v-on:add-date-released="add_date_released"
                 v-on:add-doi="add_doi"
                 v-on:add-keyword="add_keyword"
                 v-on:add-license="add_license"
@@ -30,6 +31,7 @@
                 v-on:move-keyword-down="move_keyword_down"
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-author="remove_author"
+                v-on:remove-date-released="remove_date_released"
                 v-on:remove-doi="remove_doi"
                 v-on:remove-keyword="remove_keyword"
                 v-on:remove-license="remove_license"
@@ -77,6 +79,10 @@ import {add_keyword,
         move_keyword_up,
         remove_keyword} from './KeywordsHandlers.js';
 
+import {add as add_date_released,
+        remove as remove_date_released,
+        update as update_date_released} from './DateReleasedHandlers.js';
+
 import {add as add_doi,
         remove as remove_doi,
         update as update_doi} from './DoiHandlers.js';
@@ -99,7 +105,6 @@ import {update_author_affiliation,
         update_author_orcid} from './AuthorHandler.js';
 
 import {update_cff_version,
-        update_date_released,
         update_message} from './FormHandlers.js';
 
 import {save_text_as_file} from './download.js';
@@ -131,7 +136,7 @@ export default {
             author_id: -1,
             authors: [],
             cff_version: '1.0.3',
-            date_released: '',
+            date_released: undefined,
             doi: undefined,
             keyword_id: -1,
             keywords: [],
@@ -144,6 +149,7 @@ export default {
     },
     methods: {
         add_author,
+        add_date_released,
         add_doi,
         add_keyword,
         add_license,
@@ -155,6 +161,7 @@ export default {
         move_keyword_down,
         move_keyword_up,
         remove_author,
+        remove_date_released,
         remove_doi,
         remove_keyword,
         remove_license,
