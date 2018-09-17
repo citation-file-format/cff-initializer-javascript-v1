@@ -50,6 +50,7 @@
                 v-bind:title="title"
                 v-bind:version="version"
                 v-on:add-author="add_author"
+                v-on:add-date-released="add_date_released"
                 v-on:add-doi="add_doi"
                 v-on:add-keyword="add_keyword"
                 v-on:add-license="add_license"
@@ -61,6 +62,7 @@
                 v-on:move-keyword-down="move_keyword_down"
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-author="remove_author"
+                v-on:remove-date-released="remove_date_released"
                 v-on:remove-doi="remove_doi"
                 v-on:remove-keyword="remove_keyword"
                 v-on:remove-license="remove_license"
@@ -90,6 +92,7 @@
 import CreativeWork from './CreativeWork.vue';
 
 import {add_author,
+        add_date_released,
         add_doi,
         add_keyword,
         add_license,
@@ -101,6 +104,7 @@ import {add_author,
         move_keyword_down,
         move_keyword_up,
         remove_author,
+        remove_date_released,
         remove_doi,
         remove_keyword,
         remove_license,
@@ -136,6 +140,7 @@ export default {
     },
     methods: {
         add_author,
+        add_date_released,
         add_doi,
         add_keyword,
         add_license,
@@ -147,6 +152,7 @@ export default {
         move_keyword_down,
         move_keyword_up,
         remove_author,
+        remove_date_released,
         remove_doi,
         remove_keyword,
         remove_license,

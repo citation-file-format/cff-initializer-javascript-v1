@@ -15,20 +15,12 @@
             v-on:update-orcid="update_author_orcid"
         />
 
-        <li>
-            <p class="caption">
-                date-released
-            </p>
-            <input
-                type="text"
-                v-bind:class="{error: date_released_validation.error }"
-                v-bind:value="date_released"
-                v-on:input="update_date_released($event)"
-            />
-            <p class="message" v-if="date_released_validation.error">
-                {{ date_released_validation.msg }}
-            </p>
-        </li>
+        <DateReleased
+            v-bind:date_released="date_released"
+            v-on:add="add_date_released"
+            v-on:remove="remove_date_released"
+            v-on:update="update_date_released"
+        />
 
         <Doi
             v-bind:doi="doi"
@@ -79,6 +71,7 @@
 
 <script>
 import {add_author,
+        add_date_released,
         add_doi,
         add_keyword,
         add_license,
@@ -90,6 +83,7 @@ import {add_author,
         move_keyword_down,
         move_keyword_up,
         remove_author,
+        remove_date_released,
         remove_doi,
         remove_keyword,
         remove_license,
@@ -110,9 +104,8 @@ import {add_author,
         update_title,
         update_version} from './CreativeWorkEmitters.js';
 
-import {validate_date_released} from './CreativeWorkValidators.js';
-
 import Authors from './Authors.vue';
+import DateReleased from './DateReleased.vue';
 import Doi from './Doi.vue';
 import Keywords from './Keywords.vue';
 import License from './License.vue';
@@ -123,6 +116,7 @@ import Title from './Title.vue';
 export default {
     components: {
         Authors,
+        DateReleased,
         Doi,
         Keywords,
         License,
@@ -131,10 +125,10 @@ export default {
         Version
     },
     computed: {
-        date_released_validation: validate_date_released
     },
     methods: {
         add_author,
+        add_date_released,
         add_doi,
         add_keyword,
         add_license,
@@ -146,6 +140,7 @@ export default {
         move_keyword_down,
         move_keyword_up,
         remove_author,
+        remove_date_released,
         remove_doi,
         remove_keyword,
         remove_license,

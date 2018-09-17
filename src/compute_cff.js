@@ -13,7 +13,10 @@ export function compute_cff () {
         lines.push('    orcid: "https://orcid.org/' + author.orcid + '"');
     }
     lines.push('cff-version: ' + this.cff_version);
-    lines.push('date-released: ' + this.date_released);
+
+    if (this.date_released !== undefined) {
+        lines.push('date-released: ' + this.date_released);
+    }
 
     if (this.doi !== undefined) {
         lines.push('doi: ' + this.doi);
