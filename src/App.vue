@@ -19,6 +19,7 @@
                 v-bind:title="title"
                 v-bind:version="version"
                 v-on:add-author="add_author"
+                v-on:add-doi="add_doi"
                 v-on:add-keyword="add_keyword"
                 v-on:add-license="add_license"
                 v-on:add-repository-code="add_repository_code"
@@ -29,6 +30,7 @@
                 v-on:move-keyword-down="move_keyword_down"
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-author="remove_author"
+                v-on:remove-doi="remove_doi"
                 v-on:remove-keyword="remove_keyword"
                 v-on:remove-license="remove_license"
                 v-on:remove-repository-code="remove_repository_code"
@@ -75,6 +77,10 @@ import {add_keyword,
         move_keyword_up,
         remove_keyword} from './KeywordsHandlers.js';
 
+import {add as add_doi,
+        remove as remove_doi,
+        update as update_doi} from './DoiHandlers.js';
+
 import {add as add_license,
         remove as remove_license,
         update as update_license} from './LicenseHandlers.js';
@@ -94,7 +100,6 @@ import {update_author_affiliation,
 
 import {update_cff_version,
         update_date_released,
-        update_doi,
         update_message} from './FormHandlers.js';
 
 import {save_text_as_file} from './download.js';
@@ -127,7 +132,7 @@ export default {
             authors: [],
             cff_version: '1.0.3',
             date_released: '',
-            doi: '',
+            doi: undefined,
             keyword_id: -1,
             keywords: [],
             license: undefined,
@@ -139,6 +144,7 @@ export default {
     },
     methods: {
         add_author,
+        add_doi,
         add_keyword,
         add_license,
         add_repository_code,
@@ -149,6 +155,7 @@ export default {
         move_keyword_down,
         move_keyword_up,
         remove_author,
+        remove_doi,
         remove_keyword,
         remove_license,
         remove_repository_code,

@@ -2,6 +2,10 @@ export function add_author () {
     this.$emit('add-author');
 }
 
+export function add_doi () {
+    this.$emit('add-doi');
+}
+
 export function add_keyword () {
     this.$emit('add-keyword');
 }
@@ -44,6 +48,10 @@ export function remove_author (author_id) {
 
 export function remove_keyword (keyword_id) {
     this.$emit('remove-keyword', keyword_id);
+}
+
+export function remove_doi () {
+    this.$emit('remove-doi');
 }
 
 export function remove_license () {
@@ -93,10 +101,7 @@ export function update_date_released (event) {
     this.$emit('update-date-released', payload);
 }
 
-export function update_doi (event) {
-    let payload = {
-        value: event.target.value
-    };
+export function update_doi (payload) {
     this.$emit('update-doi', payload);
 }
 
