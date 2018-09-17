@@ -14,7 +14,11 @@ export function compute_cff () {
     }
     lines.push('cff-version: ' + this.cff_version);
     lines.push('date-released: ' + this.date_released);
-    lines.push('doi: ' + this.doi);
+
+    if (this.doi !== undefined) {
+        lines.push('doi: ' + this.doi);
+    }
+
     lines.push('keywords: ');
     for (let keyword of this.keywords) {
         lines.push('  - ' + keyword.text);

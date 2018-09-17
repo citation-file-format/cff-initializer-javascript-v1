@@ -30,21 +30,12 @@
             </p>
         </li>
 
-        <li>
-            <p class="caption">
-                doi
-            </p>
-            <input
-                placeholder="doi-only, e.g. 10.0000/FIXME"
-                type="text"
-                v-bind:class="{error: doi_validation.error }"
-                v-bind:value="doi"
-                v-on:input="update_doi($event)"
-            />
-            <p class="message" v-if="doi_validation.error">
-                {{ doi_validation.msg }}
-            </p>
-        </li>
+        <Doi
+            v-bind:doi="doi"
+            v-on:add="add_doi"
+            v-on:remove="remove_doi"
+            v-on:update="update_doi"
+        />
 
         <Keywords
             v-bind:keywords="keywords"
@@ -88,6 +79,7 @@
 
 <script>
 import {add_author,
+        add_doi,
         add_keyword,
         add_license,
         add_repository_code,
@@ -98,6 +90,7 @@ import {add_author,
         move_keyword_down,
         move_keyword_up,
         remove_author,
+        remove_doi,
         remove_keyword,
         remove_license,
         remove_repository_code,
@@ -117,10 +110,10 @@ import {add_author,
         update_title,
         update_version} from './CreativeWorkEmitters.js';
 
-import {validate_date_released,
-        validate_doi} from './CreativeWorkValidators.js';
+import {validate_date_released} from './CreativeWorkValidators.js';
 
 import Authors from './Authors.vue';
+import Doi from './Doi.vue';
 import Keywords from './Keywords.vue';
 import License from './License.vue';
 import RepositoryCode from './RepositoryCode';
@@ -130,6 +123,7 @@ import Title from './Title.vue';
 export default {
     components: {
         Authors,
+        Doi,
         Keywords,
         License,
         RepositoryCode,
@@ -137,11 +131,11 @@ export default {
         Version
     },
     computed: {
-        date_released_validation: validate_date_released,
-        doi_validation: validate_doi
+        date_released_validation: validate_date_released
     },
     methods: {
         add_author,
+        add_doi,
         add_keyword,
         add_license,
         add_repository_code,
@@ -152,6 +146,7 @@ export default {
         move_keyword_down,
         move_keyword_up,
         remove_author,
+        remove_doi,
         remove_keyword,
         remove_license,
         remove_repository_code,
