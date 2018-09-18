@@ -35,13 +35,8 @@
 
         <input
             v-bind:value="keyword.text"
-<<<<<<< HEAD
             v-on:input="update_keyword($event)"
-        />
-=======
-            v-on:input="update($event)"
         >
->>>>>>> c8747785da7ef681efe5369e5fc677d8c66c3861
     </li>
 </template>
 
@@ -58,23 +53,11 @@ export default {
         keyword: Object
     },
     methods: {
-<<<<<<< HEAD
         move_keyword_down,
         move_keyword_up,
         remove_keyword,
         update_keyword
-    },
-    name: 'Keyword',
-    props: {
-        keyword: Object
-    },
-=======
-        move_down,
-        move_up,
-        remove,
-        update
     }
->>>>>>> c8747785da7ef681efe5369e5fc677d8c66c3861
 };
 </script>
 

@@ -1,7 +1,7 @@
 export function add() {
     this.keywords.push({
         id: this.keyword_id += 1,
-        text: '~'
+        text: ''
     })
 }
 

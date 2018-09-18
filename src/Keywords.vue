@@ -24,7 +24,6 @@
                 v-for="keyword in keywords"
                 v-bind:key="keyword.id"
                 v-bind:keyword="keyword"
-                v-for="keyword in keywords"
                 v-on:move-keyword-down="move_keyword_down"
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-keyword="remove_keyword"
@@ -60,6 +59,9 @@ export default {
     components: {
         Keyword
     },
+    props: {
+        keywords: Array
+    },
     computed: {
         has_keywords: function () {
             return this.$props.hasOwnProperty('keywords') &&
@@ -74,10 +76,6 @@ export default {
         remove_keyword,
         remove_keywords,
         update_keyword
-    },
-    name: 'Keywords',
-    props: {
-        keywords: Array
     }
 };
 </script>
