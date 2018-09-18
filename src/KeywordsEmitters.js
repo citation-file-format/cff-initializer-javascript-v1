@@ -1,19 +1,27 @@
-export function add () {
-    this.$emit('add');
+export function add_keyword () {
+    this.$emit('add-keyword');
 }
 
-export function move_down (keyword_id) {
-    this.$emit('move-down', keyword_id)
+export function add_keywords () {
+    this.$emit('add-keywords');
 }
 
-export function move_up (keyword_id) {
-    this.$emit('move-up', keyword_id)
+export function move_keyword_down (payload) {
+    this.$emit('move-keyword-down', payload);
 }
 
-export function remove (keyword_id) {
-    this.$emit('remove', keyword_id)
+export function move_keyword_up (payload) {
+    this.$emit('move-keyword-up', payload);
 }
 
-export function update (payload) {
-    this.$emit('update', payload)
+export function remove_keyword (payload) {
+    this.$emit('remove-keyword', payload);
+}
+
+export function remove_keywords () {
+    this.$emit('remove-keywords');
+}
+
+export function update_keyword (payload) {
+    this.$emit('update-keyword', payload)
 }

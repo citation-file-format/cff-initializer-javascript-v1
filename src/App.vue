@@ -22,6 +22,7 @@
                 v-on:add-date-released="add_date_released"
                 v-on:add-doi="add_doi"
                 v-on:add-keyword="add_keyword"
+                v-on:add-keywords="add_keywords"
                 v-on:add-license="add_license"
                 v-on:add-repository-code="add_repository_code"
                 v-on:add-title="add_title"
@@ -34,6 +35,7 @@
                 v-on:remove-date-released="remove_date_released"
                 v-on:remove-doi="remove_doi"
                 v-on:remove-keyword="remove_keyword"
+                v-on:remove-keywords="remove_keywords"
                 v-on:remove-license="remove_license"
                 v-on:remove-repository-code="remove_repository_code"
                 v-on:remove-title="remove_title"
@@ -74,10 +76,14 @@ import {add_author,
         move_author_up,
         remove_author} from './AuthorsHandlers.js';
 
-import {add_keyword,
-        move_keyword_down,
-        move_keyword_up,
-        remove_keyword} from './KeywordsHandlers.js';
+import {add as add_keyword,
+        move_down as move_keyword_down,
+        move_up as move_keyword_up,
+        remove as remove_keyword,
+        update as update_keyword} from './KeywordHandlers.js';
+
+import {add as add_keywords,
+        remove as remove_keywords} from './KeywordsHandlers.js';
 
 import {add as add_date_released,
         remove as remove_date_released,
@@ -109,8 +115,6 @@ import {update_cff_version,
 
 import {save_text_as_file} from './download.js';
 
-import {update_keyword} from './KeywordHandlers.js';
-
 import {add_title,
         remove_title,
         update_title} from './TitleHandlers.js';
@@ -139,7 +143,7 @@ export default {
             date_released: undefined,
             doi: undefined,
             keyword_id: -1,
-            keywords: [],
+            keywords: undefined,
             license: undefined,
             message: 'If you use this software, please cite it using these metadata.',
             repository_code: undefined,
@@ -152,6 +156,7 @@ export default {
         add_date_released,
         add_doi,
         add_keyword,
+        add_keywords,
         add_license,
         add_repository_code,
         add_title,
@@ -164,6 +169,7 @@ export default {
         remove_date_released,
         remove_doi,
         remove_keyword,
+        remove_keywords,
         remove_license,
         remove_repository_code,
         remove_title,

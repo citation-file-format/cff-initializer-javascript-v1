@@ -22,10 +22,13 @@ export function compute_cff () {
         lines.push('doi: ' + this.doi);
     }
 
-    lines.push('keywords: ');
-    for (let keyword of this.keywords) {
-        lines.push('  - ' + keyword.text);
+    if (this.hasOwnProperty("keywords") && this.keywords !== undefined) {
+        lines.push('keywords: ');
+        for (let keyword of this.keywords) {
+            lines.push('  - ' + keyword.text);
+        }
     }
+
     if (this.license !== undefined) {
         lines.push('license: ' + this.license);
     }
