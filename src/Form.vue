@@ -1,6 +1,6 @@
 <template>
     <div class="form">
-        <h1>Required properties</h1>
+        <!-- <h1>Required properties</h1> -->
         <ul>
             <li>
                 <p class="caption">
@@ -87,7 +87,7 @@
                 v-on:update-version="update_version"
             />
         </ul>
-
+<!--
         <h1>Optional properties</h1>
         <ul>
             <li>
@@ -96,7 +96,7 @@
                 </p>
             </li>
         </ul>
-
+ -->
     </div>
 </template>
 

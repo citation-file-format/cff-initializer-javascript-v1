@@ -68,7 +68,7 @@
         <div class="github">
             <a href="https://github.com/citation-file-format/cff-initializer-javascript">
                 <img
-                    src="img/github-mark-light-64px.png"
+                    src="/img/github-mark-light-64px.png"
                     width="50px"
                     height="50px"
                 >
