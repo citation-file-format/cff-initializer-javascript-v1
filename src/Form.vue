@@ -6,6 +6,7 @@
             <CreativeWork>
             <References>
         -->
+        <h1>Required properties</h1>
         <ul>
             <li>
                 <p class="caption">
@@ -83,8 +84,17 @@
                 v-on:update-title="update_title"
                 v-on:update-version="update_version"
             />
-
         </ul>
+
+        <h1>Optional properties</h1>
+        <ul>
+            <li>
+                <p class="caption">
+                    references (TODO)
+                </p>
+            </li>
+        </ul>
+
     </div>
 </template>
 
@@ -254,6 +264,12 @@ export default {
 
     .form ul {
         list-style-type: none;
+    }
+
+    .form h1 {
+        font-size: 1.4rem;
+        padding-left: 40px;
+        color: #222222;
     }
 
 </style>
