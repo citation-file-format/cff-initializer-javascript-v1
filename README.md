@@ -37,3 +37,5 @@ https://alligator.io/vuejs/vue-eslint-plugin/
 
 
 Project was bootstrapped with https://github.com/vuejs-templates/webpack-simple
+
+
