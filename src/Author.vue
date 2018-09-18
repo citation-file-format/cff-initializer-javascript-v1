@@ -34,7 +34,7 @@
         </button>
 
         <p>
-            {{ this.fullname }}
+            {{ fullname }}
         </p>
 
         <ul>
@@ -45,7 +45,7 @@
                 <input
                     v-bind:value="author.given_names"
                     v-on:input="update_given_names($event)"
-                />
+                >
             </li>
 
             <li>
@@ -55,7 +55,7 @@
                 <input
                     v-bind:value="author.name_particle"
                     v-on:input="update_name_particle($event)"
-                />
+                >
             </li>
 
             <li>
@@ -65,7 +65,7 @@
                 <input
                     v-bind:value="author.family_names"
                     v-on:input="update_family_names($event)"
-                />
+                >
             </li>
 
             <li>
@@ -75,7 +75,7 @@
                 <input
                     v-bind:value="author.name_suffix"
                     v-on:input="update_name_suffix($event)"
-                />
+                >
             </li>
 
             <li>
@@ -86,9 +86,11 @@
                     v-bind:value="author.orcid"
                     v-bind:class="{error: orcid_validation.error }"
                     v-on:input="update_orcid($event)"
-                />
-                <p class="message" v-if="orcid_validation.error">
-                    {{orcid_validation.msg}}
+                >
+                <p
+                    v-if="orcid_validation.error"
+                    class="message">
+                        {{ orcid_validation.msg }}
                 </p>
             </li>
 
@@ -99,7 +101,7 @@
                 <input
                     v-bind:value="author.affiliation"
                     v-on:input="update_affiliation($event)"
-                />
+                >
             </li>
 
         </ul>
@@ -120,6 +122,10 @@ import {remove,
 import {validate_orcid} from './AuthorValidators.js';
 
 export default {
+    name: 'Author',
+    props: {
+        author: Object
+    },
     computed: {
         orcid_validation: validate_orcid,
         fullname: function () {
@@ -149,10 +155,6 @@ export default {
         update_name_particle,
         update_name_suffix,
         update_orcid
-    },
-    name: 'Author',
-    props: {
-        author: Object
     }
 };
 </script>

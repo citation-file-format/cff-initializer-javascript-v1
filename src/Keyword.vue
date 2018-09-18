@@ -35,8 +35,13 @@
 
         <input
             v-bind:value="keyword.text"
+<<<<<<< HEAD
             v-on:input="update_keyword($event)"
         />
+=======
+            v-on:input="update($event)"
+        >
+>>>>>>> c8747785da7ef681efe5369e5fc677d8c66c3861
     </li>
 </template>
 
@@ -48,7 +53,12 @@ import {move_keyword_down,
         update_keyword} from './KeywordEmitters.js';
 
 export default {
+    name: 'Keyword',
+    props: {
+        keyword: Object
+    },
     methods: {
+<<<<<<< HEAD
         move_keyword_down,
         move_keyword_up,
         remove_keyword,
@@ -58,6 +68,13 @@ export default {
     props: {
         keyword: Object
     },
+=======
+        move_down,
+        move_up,
+        remove,
+        update
+    }
+>>>>>>> c8747785da7ef681efe5369e5fc677d8c66c3861
 };
 </script>
 

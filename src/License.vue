@@ -1,39 +1,39 @@
 <template>
     <li>
         <p
-            class="caption"
             v-show="has_license"
+            class="caption"
         >
             license:
             <button
+                v-show="has_license"
                 tabindex="-1"
                 title="Remove license"
                 v-on:click="remove"
-                v-show="has_license"
             >
                 remove
             </button>
         </p>
         <button
+            v-show="!has_license"
             tabindex="-1"
             title="Add license"
             v-on:click="add"
-            v-show="!has_license"
         >
             Add license
         </button>
         <input
+            v-show="has_license"
+            v-bind:value="license"
+            v-bind:class="{error: license_validation.error}"
             placeholder="e.g. Apache-2.0, MIT"
             type="text"
-            v-bind:class="{error: license_validation.error}"
-            v-bind:value="license"
             v-on:input="update($event)"
-            v-show="has_license"
-        />
+        >
         <p
-            class="message"
             v-if="license_validation.error"
             v-show="has_license"
+            class="message"
         >
             {{ license_validation.msg }}
         </p>
@@ -49,7 +49,11 @@ import {add,
 import {validate_license} from './LicenseValidators.js';
 
 export default {
+    name: 'License',
     components: {
+    },
+    props: {
+        license: String
     },
     computed: {
         has_license: function () {
@@ -62,10 +66,6 @@ export default {
         add,
         remove,
         update
-    },
-    name: 'License',
-    props: {
-        license: String
     }
 };
 </script>

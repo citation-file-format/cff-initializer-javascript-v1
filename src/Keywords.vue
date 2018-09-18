@@ -21,6 +21,7 @@
         </p>
         <ul>
             <Keyword
+                v-for="keyword in keywords"
                 v-bind:key="keyword.id"
                 v-bind:keyword="keyword"
                 v-for="keyword in keywords"
@@ -55,6 +56,7 @@ import {add_keyword,
 import Keyword from './Keyword.vue';
 
 export default {
+    name: 'Keywords',
     components: {
         Keyword
     },

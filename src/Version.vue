@@ -1,35 +1,34 @@
 <template>
     <li>
         <p
-            class="caption"
             v-show="has_version"
+            class="caption"
         >
             version
             <button
+                v-show="has_version"
                 tabindex="-1"
                 title="Remove version"
                 v-on:click="remove"
-                v-show="has_version"
             >
                 remove
             </button>
         </p>
         <button
+            v-show="!has_version"
             tabindex="-1"
             title="Add version"
             v-on:click="add"
-            v-show="!has_version"
         >
             Add version
         </button>
         <input
-            type="text"
-            v-bind:value="version"
-            v-on:input="update($event)"
             v-show="has_version"
-        />
-        <p class="message">
-        </p>
+            v-bind:value="version"
+            type="text"
+            v-on:input="update($event)"
+        >
+        <p class="message" />
     </li>
 </template>
 
@@ -40,6 +39,10 @@ import {add,
         update} from './VersionEmitters.js';
 
 export default {
+    name: 'Version',
+    props: {
+        version: String
+    },
     computed: {
         has_version: function () {
             return this.$props.hasOwnProperty('version') &&
@@ -50,11 +53,7 @@ export default {
         add,
         remove,
         update
-    },
-    name: 'Version',
-    props: {
-        version: String
-    },
+    }
 };
 </script>
 
