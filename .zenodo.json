@@ -2,13 +2,15 @@
     "creators": [
         {
             "affiliation": "Netherlands eScience Center",
-            "name": "Spaaks, Jurriaan H."
+            "name": "Spaaks, Jurriaan H.",
+            "orcid": "0000-0002-7064-4069"
         }
     ],
     "keywords": [
         "credit",
         "research software engineering",
-        "citation"
+        "citation",
+        "CITATION.cff"
     ],
     "license": {
         "id": "Apache-2.0"
