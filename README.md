@@ -1,7 +1,8 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1404735.svg)](https://doi.org/10.5281/zenodo.1404735)
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1404735.svg)](https://doi.org/10.5281/zenodo.1404735)
+- [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcitation-file-format%2Fcff-initializer-javascript.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcitation-file-format%2Fcff-initializer-javascript?ref=badge_shield)
+- [![Build Status](https://travis-ci.org/citation-file-format/cff-initializer-javascript.svg?branch=master)](https://travis-ci.org/citation-file-format/cff-initializer-javascript)
 
 Web form to initialize CITATION.cff files.
-
 
 # For users
 
@@ -39,3 +40,5 @@ https://alligator.io/vuejs/vue-eslint-plugin/
 Project was bootstrapped with https://github.com/vuejs-templates/webpack-simple
 
 
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcitation-file-format%2Fcff-initializer-javascript.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcitation-file-format%2Fcff-initializer-javascript?ref=badge_large)
