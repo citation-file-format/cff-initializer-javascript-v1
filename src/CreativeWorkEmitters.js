@@ -14,6 +14,10 @@ export function add_keyword () {
     this.$emit('add-keyword');
 }
 
+export function add_keywords () {
+    this.$emit('add-keywords');
+}
+
 export function add_license () {
     this.$emit('add-license');
 }
@@ -52,6 +56,10 @@ export function remove_author (author_id) {
 
 export function remove_keyword (keyword_id) {
     this.$emit('remove-keyword', keyword_id);
+}
+
+export function remove_keywords () {
+    this.$emit('remove-keywords');
 }
 
 export function remove_date_released () {

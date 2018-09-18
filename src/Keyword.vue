@@ -4,7 +4,7 @@
             class="remove-button"
             tabindex="-1"
             title="Remove this keyword"
-            v-on:click="remove"
+            v-on:click="remove_keyword"
         >
             <div class="button-spacer">
                 -
@@ -15,7 +15,7 @@
             class="move-up-button"
             tabindex="-1"
             title="Move this keyword up"
-            v-on:click="move_up"
+            v-on:click="move_keyword_up"
         >
             <div class="button-spacer">
                 &#x25B2;
@@ -26,7 +26,7 @@
             class="move-down-button"
             tabindex="-1"
             title="Move this keyword down"
-            v-on:click="move_down"
+            v-on:click="move_keyword_down"
         >
             <div class="button-spacer">
                 &#x25BC;
@@ -35,17 +35,17 @@
 
         <input
             v-bind:value="keyword.text"
-            v-on:input="update($event)"
+            v-on:input="update_keyword($event)"
         >
     </li>
 </template>
 
 <script>
 
-import {move_down,
-        move_up,
-        remove,
-        update} from './KeywordEmitters.js';
+import {move_keyword_down,
+        move_keyword_up,
+        remove_keyword,
+        update_keyword} from './KeywordEmitters.js';
 
 export default {
     name: 'Keyword',
@@ -53,10 +53,10 @@ export default {
         keyword: Object
     },
     methods: {
-        move_down,
-        move_up,
-        remove,
-        update
+        move_keyword_down,
+        move_keyword_up,
+        remove_keyword,
+        update_keyword
     }
 };
 </script>

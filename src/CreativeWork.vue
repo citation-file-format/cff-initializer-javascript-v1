@@ -31,11 +31,13 @@
 
         <Keywords
             v-bind:keywords="keywords"
-            v-on:add="add_keyword"
-            v-on:move-down="move_keyword_down"
-            v-on:move-up="move_keyword_up"
-            v-on:remove="remove_keyword"
-            v-on:update="update_keyword"
+            v-on:add-keyword="add_keyword"
+            v-on:add-keywords="add_keywords"
+            v-on:move-keyword-down="move_keyword_down"
+            v-on:move-keyword-up="move_keyword_up"
+            v-on:remove-keyword="remove_keyword"
+            v-on:remove-keywords="remove_keywords"
+            v-on:update-keyword="update_keyword"
         />
 
         <License
@@ -74,6 +76,7 @@ import {add_author,
         add_date_released,
         add_doi,
         add_keyword,
+        add_keywords,
         add_license,
         add_repository_code,
         add_title,
@@ -86,6 +89,7 @@ import {add_author,
         remove_date_released,
         remove_doi,
         remove_keyword,
+        remove_keywords,
         remove_license,
         remove_repository_code,
         remove_title,
@@ -144,6 +148,7 @@ export default {
         add_date_released,
         add_doi,
         add_keyword,
+        add_keywords,
         add_license,
         add_repository_code,
         add_title,
@@ -156,6 +161,7 @@ export default {
         remove_date_released,
         remove_doi,
         remove_keyword,
+        remove_keywords,
         remove_license,
         remove_repository_code,
         remove_title,
