@@ -114,6 +114,7 @@ import Version from './Version.vue';
 import Title from './Title.vue';
 
 export default {
+    name: 'CreativeWork',
     components: {
         Authors,
         DateReleased,
@@ -123,6 +124,18 @@ export default {
         RepositoryCode,
         Title,
         Version
+    },
+    props: {
+        author_id: Number,
+        authors: Array,
+        date_released: String,
+        doi: String,
+        keyword_id: Number,
+        keywords: Array,
+        license: String,
+        repository_code: String,
+        title: String,
+        version: String
     },
     computed: {
     },
@@ -160,19 +173,6 @@ export default {
         update_repository_code,
         update_title,
         update_version
-    },
-    name: 'CreativeWork',
-    props: {
-        author_id: Number,
-        authors: Array,
-        date_released: String,
-        doi: String,
-        keyword_id: Number,
-        keywords: Array,
-        license: String,
-        repository_code: String,
-        title: String,
-        version: String
     }
 };
 </script>

@@ -36,7 +36,7 @@
         <input
             v-bind:value="keyword.text"
             v-on:input="update($event)"
-        />
+        >
     </li>
 </template>
 
@@ -48,16 +48,16 @@ import {move_down,
         update} from './KeywordEmitters.js';
 
 export default {
+    name: 'Keyword',
+    props: {
+        keyword: Object
+    },
     methods: {
         move_down,
         move_up,
         remove,
         update
-    },
-    name: 'Keyword',
-    props: {
-        keyword: Object
-    },
+    }
 };
 </script>
 

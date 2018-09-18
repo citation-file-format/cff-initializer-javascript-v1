@@ -2,10 +2,10 @@
     <div class="cff">
         <textarea
             id="cfftext"
+            v-model="cff"
             readonly
             tabindex="-1"
-        >{{ cff }}
-        </textarea>
+        />
     </div>
 </template>
 

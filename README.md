@@ -30,5 +30,12 @@ npm run ghpages
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+## linting
+
+The rules are in ``.eslintrc``, the setup is described here: 
+https://alligator.io/vuejs/vue-eslint-plugin/
+
 
 Project was bootstrapped with https://github.com/vuejs-templates/webpack-simple
+
+

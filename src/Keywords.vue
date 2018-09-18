@@ -14,9 +14,9 @@
         </p>
         <ul>
             <Keyword
+                v-for="keyword in keywords"
                 v-bind:key="keyword.id"
                 v-bind:keyword="keyword"
-                v-for="keyword in keywords"
                 v-on:move-down="move_down"
                 v-on:move-up="move_up"
                 v-on:remove="remove"
@@ -36,8 +36,12 @@ import {add,
 import Keyword from './Keyword.vue';
 
 export default {
+    name: 'Keywords',
     components: {
         Keyword
+    },
+    props: {
+        keywords: Array
     },
     methods: {
         add,
@@ -45,10 +49,6 @@ export default {
         move_up,
         remove,
         update
-    },
-    name: 'Keywords',
-    props: {
-        keywords: Array
     }
 };
 </script>

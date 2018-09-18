@@ -1,11 +1,5 @@
 <template>
     <div class="form">
-        <!--
-            <Cffversion>
-            <Message>
-            <CreativeWork>
-            <References>
-        -->
         <h1>Required properties</h1>
         <ul>
             <li>
@@ -13,13 +7,16 @@
                     cff-version
                 </p>
                 <input
-                    placeholder="1.0.3"
-                    type="text"
                     v-bind:class="{error: cff_version_validation.error }"
                     v-bind:value="cff_version"
+                    placeholder="1.0.3"
+                    type="text"
                     v-on:input="update_cff_version($event)"
-                />
-                <p class="message" v-if="cff_version_validation.error">
+                >
+                <p
+                    v-if="cff_version_validation.error"
+                    class="message"
+                >
                     {{ cff_version_validation.msg }}
                 </p>
             </li>
@@ -29,12 +26,15 @@
                     message
                 </p>
                 <textarea
-                    class="msg"
                     v-bind:class="{error: message_validation.error }"
                     v-bind:value="message"
+                    class="msg"
                     v-on:input="update_message($event)"
                 />
-                <p class="message" v-if="message_validation.error">
+                <p
+                    v-if="message_validation.error"
+                    class="message"
+                >
                     {{ message_validation.msg }}
                 </p>
             </li>
@@ -141,8 +141,23 @@ import {validate_message,
         validate_cff_version} from './FormValidators.js';
 
 export default {
+    name: 'Form',
     components: {
         CreativeWork
+    },
+    props: {
+        author_id: Number,
+        authors: Array,
+        cff_version: String,
+        date_released: String,
+        doi: String,
+        keyword_id: Number,
+        keywords: Array,
+        license: String,
+        message: String,
+        repository_code: String,
+        title: String,
+        version: undefined
     },
     computed: {
         message_validation: validate_message,
@@ -184,21 +199,6 @@ export default {
         update_title,
         update_message,
         update_version
-    },
-    name: 'Form',
-    props: {
-        author_id: Number,
-        authors: Array,
-        cff_version: String,
-        date_released: String,
-        doi: String,
-        keyword_id: Number,
-        keywords: Array,
-        license: String,
-        message: String,
-        repository_code: String,
-        title: String,
-        version: undefined
     }
 };
 </script>

@@ -1,38 +1,38 @@
 <template>
     <li>
         <p
-            class="caption"
             v-show="has_date_released"
+            class="caption"
         >
             date-released
             <button
+                v-show="has_date_released"
                 tabindex="-1"
                 title="Remove date-released"
                 v-on:click="remove"
-                v-show="has_date_released"
             >
                 remove
             </button>
         </p>
         <button
+            v-show="!has_date_released"
             tabindex="-1"
             title="Add date-released"
             v-on:click="add"
-            v-show="!has_date_released"
         >
             Add date-released
         </button>
         <input
-            type="text"
+            v-show="has_date_released"
             v-bind:class="{error: validation.error}"
             v-bind:value="date_released"
+            type="text"
             v-on:input="update($event)"
-            v-show="has_date_released"
-        />
+        >
         <p
-            class="message"
             v-if="validation.error"
             v-show="has_date_released"
+            class="message"
         >
             {{ validation.msg }}
         </p>
@@ -48,7 +48,11 @@ import {add,
 import {validate} from './DateReleasedValidators.js';
 
 export default {
+    name: 'DateReleased',
     components: {
+    },
+    props: {
+        date_released: String
     },
     computed: {
         has_date_released: function () {
@@ -61,10 +65,6 @@ export default {
         add,
         remove,
         update
-    },
-    name: 'DateReleased',
-    props: {
-        date_released: String
     }
 };
 </script>

@@ -1,0 +1,13 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/recommended"
+    ],
+    "rules": {
+        "comma-dangle": ["error", "never"],
+        "vue/html-indent": 4,
+        "vue/require-default-prop": false,
+        "vue/v-bind-style": "longform",
+        "vue/v-on-style": "longform"
+    }
+}
