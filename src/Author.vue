@@ -33,6 +33,10 @@
             </div>
         </button>
 
+        <p>
+            {{ fullname }}
+        </p>
+
         <ul>
             <li>
                 <p class="caption">
@@ -41,9 +45,7 @@
                 <input
                     v-bind:value="author.given_names"
                     v-on:input="update_given_names($event)"
-                />
-                <p class="message">
-                </p>
+                >
             </li>
 
             <li>
@@ -53,9 +55,7 @@
                 <input
                     v-bind:value="author.name_particle"
                     v-on:input="update_name_particle($event)"
-                />
-                <p class="message">
-                </p>
+                >
             </li>
 
             <li>
@@ -65,9 +65,7 @@
                 <input
                     v-bind:value="author.family_names"
                     v-on:input="update_family_names($event)"
-                />
-                <p class="message">
-                </p>
+                >
             </li>
 
             <li>
@@ -77,9 +75,7 @@
                 <input
                     v-bind:value="author.name_suffix"
                     v-on:input="update_name_suffix($event)"
-                />
-                <p class="message">
-                </p>
+                >
             </li>
 
             <li>
@@ -90,9 +86,11 @@
                     v-bind:value="author.orcid"
                     v-bind:class="{error: orcid_validation.error }"
                     v-on:input="update_orcid($event)"
-                />
-                <p class="message" v-if="orcid_validation.error">
-                    {{orcid_validation.msg}}
+                >
+                <p
+                    v-if="orcid_validation.error"
+                    class="message">
+                        {{ orcid_validation.msg }}
                 </p>
             </li>
 
@@ -103,9 +101,7 @@
                 <input
                     v-bind:value="author.affiliation"
                     v-on:input="update_affiliation($event)"
-                />
-                <p class="message">
-                </p>
+                >
             </li>
 
         </ul>
@@ -126,8 +122,28 @@ import {remove,
 import {validate_orcid} from './AuthorValidators.js';
 
 export default {
+    name: 'Author',
+    props: {
+        author: Object
+    },
     computed: {
-        orcid_validation: validate_orcid
+        orcid_validation: validate_orcid,
+        fullname: function () {
+            let name_parts = [];
+            if (this.author.hasOwnProperty('given_names') && this.author.given_names !== '') {
+                name_parts.push(this.author.given_names);
+            }
+            if (this.author.hasOwnProperty('name_particle') && this.author.name_particle !== '') {
+                name_parts.push(this.author.name_particle);
+            }
+            if (this.author.hasOwnProperty('family_names') && this.author.family_names !== '') {
+                name_parts.push(this.author.family_names);
+            }
+            if (this.author.hasOwnProperty('name_suffix') && this.author.name_suffix !== '') {
+                name_parts.push(this.author.name_suffix);
+            }
+            return name_parts.join(' ');
+        }
     },
     methods: {
         remove,
@@ -139,10 +155,6 @@ export default {
         update_name_particle,
         update_name_suffix,
         update_orcid
-    },
-    name: 'Author',
-    props: {
-        author: Object
     }
 };
 </script>
@@ -162,7 +174,6 @@ export default {
         font-size: 100%;
         padding: 2px 10px;
         color: #222;
-
     }
 
     .move-up-button:hover, .move-down-button:hover, .remove-button:hover {

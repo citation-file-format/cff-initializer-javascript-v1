@@ -6,6 +6,7 @@
     "@type": "SoftwareSourceCode",
     "author": [
         {
+            "@id": "https://orcid.org/0000-0002-7064-4069",
             "@type": "Person",
             "affiliation": {
                 "@type": "Organization",
@@ -16,13 +17,14 @@
         }
     ],
     "codeRepository": "https://github.com/citation-file-format/cff-initializer-javascript",
-    "datePublished": "2018-08-28",
+    "datePublished": "2018-09-19",
     "keywords": [
         "credit",
         "research software engineering",
-        "citation"
+        "citation",
+        "CITATION.cff"
     ],
     "license": "http://www.apache.org/licenses/LICENSE-2.0",
     "name": "cffinit",
-    "version": "1.0.0"
+    "version": "1.1.0"
 }

@@ -1,5 +1,9 @@
 <template>
     <div id="app">
+        <div class="header">
+            <h1>cffinit</h1>
+            <h2>Initialize your CITATION.cff files</h2>
+        </div>
         <div class="container">
             <Form
                 v-bind:author_id="author_id"
@@ -15,13 +19,27 @@
                 v-bind:title="title"
                 v-bind:version="version"
                 v-on:add-author="add_author"
+                v-on:add-date-released="add_date_released"
+                v-on:add-doi="add_doi"
                 v-on:add-keyword="add_keyword"
+                v-on:add-keywords="add_keywords"
+                v-on:add-license="add_license"
+                v-on:add-repository-code="add_repository_code"
+                v-on:add-title="add_title"
+                v-on:add-version="add_version"
                 v-on:move-author-down="move_author_down"
                 v-on:move-author-up="move_author_up"
                 v-on:move-keyword-down="move_keyword_down"
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-author="remove_author"
+                v-on:remove-date-released="remove_date_released"
+                v-on:remove-doi="remove_doi"
                 v-on:remove-keyword="remove_keyword"
+                v-on:remove-keywords="remove_keywords"
+                v-on:remove-license="remove_license"
+                v-on:remove-repository-code="remove_repository_code"
+                v-on:remove-title="remove_title"
+                v-on:remove-version="remove_version"
                 v-on:update-author-affiliation="update_author_affiliation"
                 v-on:update-author-family-names="update_author_family_names"
                 v-on:update-author-given-names="update_author_given_names"
@@ -41,23 +59,55 @@
             <CffText v-bind:cff="cff"/>
         </div>
         <div class="container">
-            <button class="download-button" v-on:click="save_text_as_file">Save Text to File</button>
+            <button
+                class="download-button"
+                v-on:click="save_text_as_file">
+                Save Text to File
+            </button>
+        </div>
+        <div class="github">
+            <a href="https://github.com/citation-file-format/cff-initializer-javascript">
+                <img
+                    src="img/github-mark-light-64px.png"
+                    width="50px"
+                    height="50px"
+                >
+            </a>
         </div>
     </div>
 </template>
 
 <script>
 
-
 import {add_author,
         move_author_down,
         move_author_up,
         remove_author} from './AuthorsHandlers.js';
 
-import {add_keyword,
-        move_keyword_down,
-        move_keyword_up,
-        remove_keyword} from './KeywordsHandlers.js';
+import {add as add_keyword,
+        move_down as move_keyword_down,
+        move_up as move_keyword_up,
+        remove as remove_keyword,
+        update as update_keyword} from './KeywordHandlers.js';
+
+import {add as add_keywords,
+        remove as remove_keywords} from './KeywordsHandlers.js';
+
+import {add as add_date_released,
+        remove as remove_date_released,
+        update as update_date_released} from './DateReleasedHandlers.js';
+
+import {add as add_doi,
+        remove as remove_doi,
+        update as update_doi} from './DoiHandlers.js';
+
+import {add as add_license,
+        remove as remove_license,
+        update as update_license} from './LicenseHandlers.js';
+
+import {add as add_repository_code,
+        remove as remove_repository_code,
+        update as update_repository_code} from './RepositoryCodeHandlers.js';
 
 import {compute_cff} from './compute_cff.js';
 
@@ -69,51 +119,70 @@ import {update_author_affiliation,
         update_author_orcid} from './AuthorHandler.js';
 
 import {update_cff_version,
-        update_date_released,
-        update_doi,
-        update_license,
-        update_repository_code,
-        update_title,
-        update_version,
         update_message} from './FormHandlers.js';
 
 import {save_text_as_file} from './download.js';
-import {update_keyword} from './KeywordHandlers.js';
+
+import {add_title,
+        remove_title,
+        update_title} from './TitleHandlers.js';
+
+import {add_version,
+        remove_version,
+        update_version} from './VersionHandlers.js';
+
 import CffText from './CffText.vue';
+
 import Form from './Form.vue';
+
 export default {
+    name: 'App',
     components: {
         CffText,
         Form
-    },
-    computed: {
-        cff: compute_cff
     },
     data: function () {
         return {
             author_id: -1,
             authors: [],
             cff_version: '1.0.3',
-            date_released: '',
-            doi: '',
+            date_released: undefined,
+            doi: undefined,
             keyword_id: -1,
-            keywords: [],
-            license: '',
+            keywords: undefined,
+            license: undefined,
             message: 'If you use this software, please cite it using these metadata.',
-            repository_code: '',
-            title: '',
-            version: ''
+            repository_code: undefined,
+            title: undefined,
+            version: undefined
         }
+    },
+    computed: {
+        cff: compute_cff
     },
     methods: {
         add_author,
+        add_date_released,
+        add_doi,
         add_keyword,
+        add_keywords,
+        add_license,
+        add_repository_code,
+        add_title,
+        add_version,
         move_author_down,
         move_author_up,
         move_keyword_down,
         move_keyword_up,
         remove_author,
+        remove_date_released,
+        remove_doi,
         remove_keyword,
+        remove_keywords,
+        remove_license,
+        remove_repository_code,
+        remove_title,
+        remove_version,
         save_text_as_file,
         update_author_affiliation,
         update_author_family_names,
@@ -130,8 +199,7 @@ export default {
         update_repository_code,
         update_title,
         update_version
-    },
-    name: 'App'
+    }
 };
 </script>
 
@@ -139,11 +207,33 @@ export default {
 <style>
     body {
         background-color: #5f6d64;
+        margin: 0px;
     }
     .container {
         display: flex;
         margin-top: 2vh;
         min-width: 300px;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+        font-family: 'Inconsolata', monospace;
+        text-align:center;
+        color: #fff;
+        padding-bottom: 1.0rem;
+        margin-bottom: 0.0rem;
+    }
+    .header h2 {
+        font-size: 100%;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align:center;
+        color: #eee;
+        margin-bottom: 0.0rem;
+        margin-top: 0.0rem;
     }
 
     .download-button {
@@ -155,7 +245,8 @@ export default {
         border-width: 2px;
         color: #222;
         display: inline-block;
-        font-size: 16px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1.0rem;
         margin-left: auto;
         margin-right: auto;
         padding: 15px 32px;
@@ -167,5 +258,11 @@ export default {
         background-color: #487a4a;
         border-color: #ccc;
         color: #ccc;
+    }
+
+    .github {
+        position: fixed;
+        right: 1%;
+        bottom: 10px;
     }
 </style>

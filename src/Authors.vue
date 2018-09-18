@@ -12,11 +12,11 @@
                 </div>
             </button>
         </p>
-        <ul>
+        <ul class="authors">
             <Author
+                v-for="author in authors"
                 v-bind:author="author"
                 v-bind:key="author.id"
-                v-for="author in authors"
                 v-on:move-down="move_down"
                 v-on:move-up="move_up"
                 v-on:remove="remove"
@@ -46,8 +46,12 @@ import {add,
 import Author from './Author.vue';
 
 export default {
+    name: 'Authors',
     components: {
         Author
+    },
+    props: {
+        authors: Array
     },
     methods: {
         add,
@@ -60,15 +64,11 @@ export default {
         update_name_particle,
         update_name_suffix,
         update_orcid
-    },
-    name: 'Authors',
-    props: {
-        authors: Array
     }
 };
 </script>
 
-<style>
+<style scoped>
 
     .button-spacer {
         min-width: 16px;
@@ -87,6 +87,10 @@ export default {
 
     .add-button:hover {
         background-color: #ddd;
+    }
+
+    .authors {
+        padding-left:0px;
     }
 
 </style>

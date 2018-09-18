@@ -1,12 +1,19 @@
 <template>
-    <li>
+    <li v-if="has_keywords">
         <p class="caption">
             keywords
+            <button
+                tabindex="-1"
+                title="Remove keywords"
+                v-on:click="remove_keywords"
+            >
+                remove
+            </button>
             <button
                 class="add-button"
                 tabindex="-1"
                 title="Add keyword"
-                v-on:click="add">
+                v-on:click="add_keyword">
                 <div class="button-spacer">
                     +
                 </div>
@@ -14,41 +21,61 @@
         </p>
         <ul>
             <Keyword
+                v-for="keyword in keywords"
                 v-bind:key="keyword.id"
                 v-bind:keyword="keyword"
-                v-for="keyword in keywords"
-                v-on:move-down="move_down"
-                v-on:move-up="move_up"
-                v-on:remove="remove"
-                v-on:update="update"
+                v-on:move-keyword-down="move_keyword_down"
+                v-on:move-keyword-up="move_keyword_up"
+                v-on:remove-keyword="remove_keyword"
+                v-on:update-keyword="update_keyword"
             />
         </ul>
+    </li>
+    <li v-else>
+        <button
+            tabindex="-1"
+            title="Add keywords"
+            v-on:click="add_keywords"
+        >
+            Add keywords
+        </button>
     </li>
 </template>
 
 <script>
-import {add,
-        move_down,
-        move_up,
-        remove,
-        update} from './KeywordsEmitters.js';
+
+import {add_keyword,
+        add_keywords,
+        move_keyword_down,
+        move_keyword_up,
+        remove_keyword,
+        remove_keywords,
+        update_keyword} from './KeywordsEmitters.js';
 
 import Keyword from './Keyword.vue';
 
 export default {
+    name: 'Keywords',
     components: {
         Keyword
     },
-    methods: {
-        add,
-        move_down,
-        move_up,
-        remove,
-        update
-    },
-    name: 'Keywords',
     props: {
         keywords: Array
+    },
+    computed: {
+        has_keywords: function () {
+            return this.$props.hasOwnProperty('keywords') &&
+                this.$props.keywords !== undefined
+        }
+    },
+    methods: {
+        add_keyword,
+        add_keywords,
+        move_keyword_down,
+        move_keyword_up,
+        remove_keyword,
+        remove_keywords,
+        update_keyword
     }
 };
 </script>
