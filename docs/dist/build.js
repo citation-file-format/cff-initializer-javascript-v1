@@ -13274,7 +13274,7 @@ process.umask = function() { return 0; };
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(4);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3193d1ca_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_02915cf9_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(110);
 function injectStyle (ssrContext) {
   __webpack_require__(24)
 }
@@ -13294,7 +13294,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3193d1ca_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_02915cf9_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -13315,7 +13315,7 @@ var content = __webpack_require__(25);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("8a93f822", content, true, {});
+var update = __webpack_require__(1)("67de8a52", content, true, {});
 
 /***/ }),
 /* 25 */
@@ -13853,7 +13853,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Form_vue__ = __webpack_require__(6);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9fd71ffe_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0d7e4767_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__ = __webpack_require__(109);
 function injectStyle (ssrContext) {
   __webpack_require__(45)
 }
@@ -13873,7 +13873,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Form_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9fd71ffe_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0d7e4767_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -13894,7 +13894,7 @@ var content = __webpack_require__(46);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("12f51c46", content, true, {});
+var update = __webpack_require__(1)("02ea2b74", content, true, {});
 
 /***/ }),
 /* 46 */
@@ -15558,8 +15558,8 @@ function validate_message() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form"},[_c('h1',[_vm._v("Required properties")]),_vm._v(" "),_c('ul',[_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                cff-version\n            ")]),_vm._v(" "),_c('input',{class:{error: _vm.cff_version_validation.error },attrs:{"placeholder":"1.0.3","type":"text"},domProps:{"value":_vm.cff_version},on:{"input":function($event){_vm.update_cff_version($event)}}}),_vm._v(" "),(_vm.cff_version_validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n                "+_vm._s(_vm.cff_version_validation.msg)+"\n            ")]):_vm._e()]),_vm._v(" "),_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                message\n            ")]),_vm._v(" "),_c('textarea',{staticClass:"msg",class:{error: _vm.message_validation.error },domProps:{"value":_vm.message},on:{"input":function($event){_vm.update_message($event)}}}),_vm._v(" "),(_vm.message_validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n                "+_vm._s(_vm.message_validation.msg)+"\n            ")]):_vm._e()]),_vm._v(" "),_c('CreativeWork',{attrs:{"author_id":_vm.author_id,"authors":_vm.authors,"date_released":_vm.date_released,"doi":_vm.doi,"keyword_id":_vm.keyword_id,"keywords":_vm.keywords,"license":_vm.license,"repository_code":_vm.repository_code,"title":_vm.title,"version":_vm.version},on:{"add-author":_vm.add_author,"add-date-released":_vm.add_date_released,"add-doi":_vm.add_doi,"add-keyword":_vm.add_keyword,"add-keywords":_vm.add_keywords,"add-license":_vm.add_license,"add-repository-code":_vm.add_repository_code,"add-title":_vm.add_title,"add-version":_vm.add_version,"move-author-down":_vm.move_author_down,"move-author-up":_vm.move_author_up,"move-keyword-down":_vm.move_keyword_down,"move-keyword-up":_vm.move_keyword_up,"remove-author":_vm.remove_author,"remove-date-released":_vm.remove_date_released,"remove-doi":_vm.remove_doi,"remove-keyword":_vm.remove_keyword,"remove-keywords":_vm.remove_keywords,"remove-license":_vm.remove_license,"remove-repository-code":_vm.remove_repository_code,"remove-title":_vm.remove_title,"remove-version":_vm.remove_version,"update-author-affiliation":_vm.update_author_affiliation,"update-author-family-names":_vm.update_author_family_names,"update-author-given-names":_vm.update_author_given_names,"update-author-name-particle":_vm.update_author_name_particle,"update-author-name-suffix":_vm.update_author_name_suffix,"update-author-orcid":_vm.update_author_orcid,"update-date-released":_vm.update_date_released,"update-doi":_vm.update_doi,"update-keyword":_vm.update_keyword,"update-license":_vm.update_license,"update-repository-code":_vm.update_repository_code,"update-title":_vm.update_title,"update-version":_vm.update_version}})],1),_vm._v(" "),_c('h1',[_vm._v("Optional properties")]),_vm._v(" "),_vm._m(0)])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',[_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                references (TODO)\n            ")])])])}]
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form"},[_c('ul',[_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                    cff-version\n                ")]),_vm._v(" "),_c('input',{class:{error: _vm.cff_version_validation.error },attrs:{"placeholder":"1.0.3","type":"text"},domProps:{"value":_vm.cff_version},on:{"input":function($event){_vm.update_cff_version($event)}}}),_vm._v(" "),(_vm.cff_version_validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n                    "+_vm._s(_vm.cff_version_validation.msg)+"\n                ")]):_vm._e()]),_vm._v(" "),_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                    message\n                ")]),_vm._v(" "),_c('textarea',{staticClass:"msg",class:{error: _vm.message_validation.error },domProps:{"value":_vm.message},on:{"input":function($event){_vm.update_message($event)}}}),_vm._v(" "),(_vm.message_validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n                    "+_vm._s(_vm.message_validation.msg)+"\n                ")]):_vm._e()]),_vm._v(" "),_c('CreativeWork',{attrs:{"author_id":_vm.author_id,"authors":_vm.authors,"date_released":_vm.date_released,"doi":_vm.doi,"keyword_id":_vm.keyword_id,"keywords":_vm.keywords,"license":_vm.license,"repository_code":_vm.repository_code,"title":_vm.title,"version":_vm.version},on:{"add-author":_vm.add_author,"add-date-released":_vm.add_date_released,"add-doi":_vm.add_doi,"add-keyword":_vm.add_keyword,"add-keywords":_vm.add_keywords,"add-license":_vm.add_license,"add-repository-code":_vm.add_repository_code,"add-title":_vm.add_title,"add-version":_vm.add_version,"move-author-down":_vm.move_author_down,"move-author-up":_vm.move_author_up,"move-keyword-down":_vm.move_keyword_down,"move-keyword-up":_vm.move_keyword_up,"remove-author":_vm.remove_author,"remove-date-released":_vm.remove_date_released,"remove-doi":_vm.remove_doi,"remove-keyword":_vm.remove_keyword,"remove-keywords":_vm.remove_keywords,"remove-license":_vm.remove_license,"remove-repository-code":_vm.remove_repository_code,"remove-title":_vm.remove_title,"remove-version":_vm.remove_version,"update-author-affiliation":_vm.update_author_affiliation,"update-author-family-names":_vm.update_author_family_names,"update-author-given-names":_vm.update_author_given_names,"update-author-name-particle":_vm.update_author_name_particle,"update-author-name-suffix":_vm.update_author_name_suffix,"update-author-orcid":_vm.update_author_orcid,"update-date-released":_vm.update_date_released,"update-doi":_vm.update_doi,"update-keyword":_vm.update_keyword,"update-license":_vm.update_license,"update-repository-code":_vm.update_repository_code,"update-title":_vm.update_title,"update-version":_vm.update_version}})],1)])}
+var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
@@ -15569,7 +15569,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"container"},[_c('Form',{attrs:{"author_id":_vm.author_id,"authors":_vm.authors,"cff_version":_vm.cff_version,"date_released":_vm.date_released,"doi":_vm.doi,"keyword_id":_vm.keyword_id,"keywords":_vm.keywords,"license":_vm.license,"message":_vm.message,"repository_code":_vm.repository_code,"title":_vm.title,"version":_vm.version},on:{"add-author":_vm.add_author,"add-date-released":_vm.add_date_released,"add-doi":_vm.add_doi,"add-keyword":_vm.add_keyword,"add-keywords":_vm.add_keywords,"add-license":_vm.add_license,"add-repository-code":_vm.add_repository_code,"add-title":_vm.add_title,"add-version":_vm.add_version,"move-author-down":_vm.move_author_down,"move-author-up":_vm.move_author_up,"move-keyword-down":_vm.move_keyword_down,"move-keyword-up":_vm.move_keyword_up,"remove-author":_vm.remove_author,"remove-date-released":_vm.remove_date_released,"remove-doi":_vm.remove_doi,"remove-keyword":_vm.remove_keyword,"remove-keywords":_vm.remove_keywords,"remove-license":_vm.remove_license,"remove-repository-code":_vm.remove_repository_code,"remove-title":_vm.remove_title,"remove-version":_vm.remove_version,"update-author-affiliation":_vm.update_author_affiliation,"update-author-family-names":_vm.update_author_family_names,"update-author-given-names":_vm.update_author_given_names,"update-author-name-particle":_vm.update_author_name_particle,"update-author-name-suffix":_vm.update_author_name_suffix,"update-author-orcid":_vm.update_author_orcid,"update-cff-version":_vm.update_cff_version,"update-date-released":_vm.update_date_released,"update-doi":_vm.update_doi,"update-keyword":_vm.update_keyword,"update-license":_vm.update_license,"update-message":_vm.update_message,"update-repository-code":_vm.update_repository_code,"update-title":_vm.update_title,"update-version":_vm.update_version}}),_vm._v(" "),_c('CffText',{attrs:{"cff":_vm.cff}})],1),_vm._v(" "),_c('div',{staticClass:"container"},[_c('button',{staticClass:"download-button",on:{"click":_vm.save_text_as_file}},[_vm._v("\n            Save Text to File\n        ")])]),_vm._v(" "),_vm._m(1)])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"header"},[_c('h1',[_vm._v("cffinit")]),_vm._v(" "),_c('h2',[_vm._v("Initialize your CITATION.cff files")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"github"},[_c('a',{attrs:{"href":"https://github.com/citation-file-format/cff-initializer-javascript"}},[_c('img',{attrs:{"src":"img/github-mark-light-64px.png","width":"50px","height":"50px"}})])])}]
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"header"},[_c('h1',[_vm._v("cffinit")]),_vm._v(" "),_c('h2',[_vm._v("Initialize your CITATION.cff files")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"github"},[_c('a',{attrs:{"href":"https://github.com/citation-file-format/cff-initializer-javascript"}},[_c('img',{attrs:{"src":"/img/github-mark-light-64px.png","width":"50px","height":"50px"}})])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
