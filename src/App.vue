@@ -57,11 +57,19 @@
             <CffText v-bind:cff="cff"/>
         </div>
         <div class="container">
-            <button class="download-button" v-on:click="save_text_as_file">Save Text to File</button>
+            <button
+                class="download-button"
+                v-on:click="save_text_as_file">
+                Save Text to File
+            </button>
         </div>
         <div class="github">
             <a href="https://github.com/citation-file-format/cff-initializer-javascript">
-                <img src="img/github-mark-light-64px.png" width="50px" height="50px">
+                <img
+                    src="img/github-mark-light-64px.png"
+                    width="50px"
+                    height="50px"
+                >
             </a>
         </div>
     </div>
@@ -124,12 +132,10 @@ import CffText from './CffText.vue';
 import Form from './Form.vue';
 
 export default {
+    name: 'App',
     components: {
         CffText,
         Form
-    },
-    computed: {
-        cff: compute_cff
     },
     data: function () {
         return {
@@ -146,6 +152,9 @@ export default {
             title: undefined,
             version: undefined
         }
+    },
+    computed: {
+        cff: compute_cff
     },
     methods: {
         add_author,
@@ -184,8 +193,7 @@ export default {
         update_repository_code,
         update_title,
         update_version
-    },
-    name: 'App'
+    }
 };
 </script>
 

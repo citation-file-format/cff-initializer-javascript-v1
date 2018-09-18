@@ -1,39 +1,39 @@
 <template>
     <li>
         <p
-            class="caption"
             v-show="has_doi"
+            class="caption"
         >
             doi
             <button
+                v-show="has_doi"
                 tabindex="-1"
                 title="Remove doi"
                 v-on:click="remove"
-                v-show="has_doi"
             >
                 remove
             </button>
         </p>
         <button
+            v-show="!has_doi"
             tabindex="-1"
             title="Add doi"
             v-on:click="add"
-            v-show="!has_doi"
         >
             Add doi
         </button>
         <input
-            placeholder="doi-only, e.g. 10.0000/FIXME"
-            type="text"
+            v-show="has_doi"
             v-bind:class="{error: validation.error }"
             v-bind:value="doi"
+            placeholder="doi-only, e.g. 10.0000/FIXME"
+            type="text"
             v-on:input="update($event)"
-            v-show="has_doi"
-        />
+        >
         <p
-            class="message"
             v-if="validation.error"
             v-show="has_doi"
+            class="message"
         >
             {{ validation.msg }}
         </p>
@@ -48,7 +48,11 @@ import {add,
 import {validate} from './DoiValidators.js';
 
 export default {
+    name: 'Doi',
     components: {
+    },
+    props: {
+        doi: String
     },
     computed: {
         validation: validate,
@@ -61,10 +65,6 @@ export default {
         add,
         remove,
         update
-    },
-    name: 'Doi',
-    props: {
-        doi: String
     }
 };
 </script>
