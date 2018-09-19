@@ -1,11 +1,11 @@
-export function add_version() {
+export function add() {
     this.version = "";
 }
 
-export function remove_version() {
+export function remove() {
     this.version = undefined;
 }
 
-export function update_version(payload) {
+export function update(payload) {
     this.version = payload.value;
 }

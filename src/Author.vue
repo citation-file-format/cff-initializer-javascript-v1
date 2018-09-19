@@ -38,6 +38,13 @@
         </p>
 
         <ul>
+            <Affiliation
+                v-bind:affiliation="author.affiliation"
+                v-on:add="add_affiliation"
+                v-on:remove="remove_affiliation"
+                v-on:update="update_affiliation"
+            />
+
             <li>
                 <p class="caption">
                     given-names
@@ -48,15 +55,12 @@
                 >
             </li>
 
-            <li>
-                <p class="caption">
-                    name-particle
-                </p>
-                <input
-                    v-bind:value="author.name_particle"
-                    v-on:input="update_name_particle($event)"
-                >
-            </li>
+            <NameParticle
+                v-bind:name_particle="author.name_particle"
+                v-on:add="add_name_particle"
+                v-on:remove="remove_name_particle"
+                v-on:update="update_name_particle"
+            />
 
             <li>
                 <p class="caption">
@@ -68,48 +72,40 @@
                 >
             </li>
 
-            <li>
-                <p class="caption">
-                    name-suffix
-                </p>
-                <input
-                    v-bind:value="author.name_suffix"
-                    v-on:input="update_name_suffix($event)"
-                >
-            </li>
+            <NameSuffix
+                v-bind:name_suffix="author.name_suffix"
+                v-on:add="add_name_suffix"
+                v-on:remove="remove_name_suffix"
+                v-on:update="update_name_suffix"
+            />
 
-            <li>
-                <p class="caption">
-                    orcid
-                </p>
-                <input
-                    v-bind:value="author.orcid"
-                    v-bind:class="{error: orcid_validation.error }"
-                    v-on:input="update_orcid($event)"
-                >
-                <p
-                    v-if="orcid_validation.error"
-                    class="message">
-                        {{ orcid_validation.msg }}
-                </p>
-            </li>
-
-            <li>
-                <p class="caption">
-                    affiliation
-                </p>
-                <input
-                    v-bind:value="author.affiliation"
-                    v-on:input="update_affiliation($event)"
-                >
-            </li>
+            <AuthorOrcid
+                v-bind:orcid="author.orcid"
+                v-on:add="add_orcid"
+                v-on:remove="remove_orcid"
+                v-on:update="update_orcid"
+            />
 
         </ul>
     </li>
 </template>
 
 <script>
-import {remove,
+
+import Affiliation from './Affiliation.vue';
+import AuthorOrcid from './Orcid.vue';
+import NameParticle from './NameParticle.vue';
+import NameSuffix from './NameSuffix.vue';
+
+import {add_affiliation,
+        add_orcid,
+        add_name_particle,
+        add_name_suffix,
+        remove,
+        remove_affiliation,
+        remove_orcid,
+        remove_name_particle,
+        remove_name_suffix,
         move_down,
         move_up,
         update_affiliation,
@@ -119,15 +115,18 @@ import {remove,
         update_name_suffix,
         update_orcid} from './AuthorEmitters.js';
 
-import {validate_orcid} from './AuthorValidators.js';
-
 export default {
     name: 'Author',
+    components: {
+        Affiliation,
+        AuthorOrcid,
+        NameParticle,
+        NameSuffix
+    },
     props: {
         author: Object
     },
     computed: {
-        orcid_validation: validate_orcid,
         fullname: function () {
             let name_parts = [];
             if (this.author.hasOwnProperty('given_names') && this.author.given_names !== '') {
@@ -146,7 +145,15 @@ export default {
         }
     },
     methods: {
+        add_affiliation,
+        add_orcid,
+        add_name_particle,
+        add_name_suffix,
         remove,
+        remove_affiliation,
+        remove_orcid,
+        remove_name_particle,
+        remove_name_suffix,
         move_down,
         move_up,
         update_affiliation,
@@ -159,7 +166,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
     .button-spacer {
         min-width: 16px;
@@ -179,4 +186,10 @@ export default {
     .move-up-button:hover, .move-down-button:hover, .remove-button:hover {
         background-color: #ddd;
     }
+
+    ul {
+        padding-bottom: 2em;
+    }
+
+
 </style>

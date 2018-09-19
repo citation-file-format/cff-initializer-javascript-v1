@@ -18,12 +18,16 @@
                 v-bind:repository_code="repository_code"
                 v-bind:title="title"
                 v-bind:version="version"
+                v-on:add-affiliation="add_affiliation"
                 v-on:add-author="add_author"
                 v-on:add-date-released="add_date_released"
                 v-on:add-doi="add_doi"
                 v-on:add-keyword="add_keyword"
                 v-on:add-keywords="add_keywords"
                 v-on:add-license="add_license"
+                v-on:add-name-particle="add_name_particle"
+                v-on:add-name-suffix="add_name_suffix"
+                v-on:add-orcid="add_orcid"
                 v-on:add-repository-code="add_repository_code"
                 v-on:add-title="add_title"
                 v-on:add-version="add_version"
@@ -32,20 +36,24 @@
                 v-on:move-keyword-down="move_keyword_down"
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-author="remove_author"
+                v-on:remove-affiliation="remove_affiliation"
                 v-on:remove-date-released="remove_date_released"
                 v-on:remove-doi="remove_doi"
                 v-on:remove-keyword="remove_keyword"
                 v-on:remove-keywords="remove_keywords"
                 v-on:remove-license="remove_license"
+                v-on:remove-name-particle="remove_name_particle"
+                v-on:remove-name-suffix="remove_name_suffix"
+                v-on:remove-orcid="remove_orcid"
                 v-on:remove-repository-code="remove_repository_code"
                 v-on:remove-title="remove_title"
                 v-on:remove-version="remove_version"
-                v-on:update-author-affiliation="update_author_affiliation"
-                v-on:update-author-family-names="update_author_family_names"
-                v-on:update-author-given-names="update_author_given_names"
-                v-on:update-author-name-particle="update_author_name_particle"
-                v-on:update-author-name-suffix="update_author_name_suffix"
-                v-on:update-author-orcid="update_author_orcid"
+                v-on:update-affiliation="update_affiliation"
+                v-on:update-family-names="update_family_names"
+                v-on:update-given-names="update_given_names"
+                v-on:update-name-particle="update_name_particle"
+                v-on:update-name-suffix="update_name_suffix"
+                v-on:update-orcid="update_orcid"
                 v-on:update-cff-version="update_cff_version"
                 v-on:update-date-released="update_date_released"
                 v-on:update-doi="update_doi"
@@ -79,6 +87,14 @@
 
 <script>
 
+import {add as add_affiliation,
+        remove as remove_affiliation,
+        update as update_affiliation} from './AffiliationHandlers.js';
+
+import {add as add_name_particle,
+        remove as remove_name_particle,
+        update as update_name_particle} from './NameParticleHandlers.js';
+
 import {add_author,
         move_author_down,
         move_author_up,
@@ -111,25 +127,29 @@ import {add as add_repository_code,
 
 import {compute_cff} from './compute_cff.js';
 
-import {update_author_affiliation,
-        update_author_family_names,
-        update_author_given_names,
-        update_author_name_particle,
-        update_author_name_suffix,
-        update_author_orcid} from './AuthorHandler.js';
+import {update_family_names,
+        update_given_names} from './AuthorHandler.js';
+
+import {add as add_orcid,
+        remove as remove_orcid,
+        update as update_orcid} from './OrcidHandlers.js';
+
+import {add as add_name_suffix,
+        remove as remove_name_suffix,
+        update as update_name_suffix} from './NameSuffixHandlers.js';
 
 import {update_cff_version,
         update_message} from './FormHandlers.js';
 
 import {save_text_as_file} from './download.js';
 
-import {add_title,
-        remove_title,
-        update_title} from './TitleHandlers.js';
+import {add as add_title,
+        remove as remove_title,
+        update as update_title} from './TitleHandlers.js';
 
-import {add_version,
-        remove_version,
-        update_version} from './VersionHandlers.js';
+import {add as add_version,
+        remove as remove_version,
+        update as update_version} from './VersionHandlers.js';
 
 import CffText from './CffText.vue';
 
@@ -161,12 +181,16 @@ export default {
         cff: compute_cff
     },
     methods: {
+        add_affiliation,
         add_author,
         add_date_released,
         add_doi,
         add_keyword,
         add_keywords,
+        add_name_particle,
+        add_name_suffix,
         add_license,
+        add_orcid,
         add_repository_code,
         add_title,
         add_version,
@@ -174,22 +198,26 @@ export default {
         move_author_up,
         move_keyword_down,
         move_keyword_up,
+        remove_affiliation,
         remove_author,
         remove_date_released,
         remove_doi,
         remove_keyword,
         remove_keywords,
         remove_license,
+        remove_name_particle,
+        remove_name_suffix,
+        remove_orcid,
         remove_repository_code,
         remove_title,
         remove_version,
         save_text_as_file,
-        update_author_affiliation,
-        update_author_family_names,
-        update_author_given_names,
-        update_author_name_particle,
-        update_author_name_suffix,
-        update_author_orcid,
+        update_affiliation,
+        update_family_names,
+        update_given_names,
+        update_name_particle,
+        update_name_suffix,
+        update_orcid,
         update_cff_version,
         update_date_released,
         update_doi,

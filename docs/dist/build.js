@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -165,7 +165,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(26)
+var listToStyles = __webpack_require__(30)
 
 /*
 type StyleObject = {
@@ -514,21 +514,25 @@ module.exports = g;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AuthorsHandlers_js__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__KeywordHandlers_js__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__KeywordsHandlers_js__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__DateReleasedHandlers_js__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__DoiHandlers_js__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__LicenseHandlers_js__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__RepositoryCodeHandlers_js__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__compute_cff_js__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__AuthorHandler_js__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__FormHandlers_js__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__download_js__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__TitleHandlers_js__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__VersionHandlers_js__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__CffText_vue__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Form_vue__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AffiliationHandlers_js__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NameParticleHandlers_js__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__AuthorsHandlers_js__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__KeywordHandlers_js__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__KeywordsHandlers_js__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DateReleasedHandlers_js__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__DoiHandlers_js__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__LicenseHandlers_js__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__RepositoryCodeHandlers_js__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__compute_cff_js__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__AuthorHandler_js__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__OrcidHandlers_js__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__NameSuffixHandlers_js__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__FormHandlers_js__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__download_js__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__TitleHandlers_js__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__VersionHandlers_js__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__CffText_vue__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Form_vue__ = __webpack_require__(52);
 //
 //
 //
@@ -608,6 +612,22 @@ module.exports = g;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
 
 
 
@@ -643,8 +663,8 @@ module.exports = g;
 /* harmony default export */ __webpack_exports__["a"] = ({
         name: 'App',
         components: {
-                CffText: __WEBPACK_IMPORTED_MODULE_13__CffText_vue__["a" /* default */],
-                Form: __WEBPACK_IMPORTED_MODULE_14__Form_vue__["a" /* default */]
+                CffText: __WEBPACK_IMPORTED_MODULE_17__CffText_vue__["a" /* default */],
+                Form: __WEBPACK_IMPORTED_MODULE_18__Form_vue__["a" /* default */]
         },
         data: function () {
                 return {
@@ -663,47 +683,55 @@ module.exports = g;
                 };
         },
         computed: {
-                cff: __WEBPACK_IMPORTED_MODULE_7__compute_cff_js__["a" /* compute_cff */]
+                cff: __WEBPACK_IMPORTED_MODULE_9__compute_cff_js__["a" /* compute_cff */]
         },
         methods: {
-                add_author: __WEBPACK_IMPORTED_MODULE_0__AuthorsHandlers_js__["a" /* add_author */],
-                add_date_released: __WEBPACK_IMPORTED_MODULE_3__DateReleasedHandlers_js__["a" /* add */],
-                add_doi: __WEBPACK_IMPORTED_MODULE_4__DoiHandlers_js__["a" /* add */],
-                add_keyword: __WEBPACK_IMPORTED_MODULE_1__KeywordHandlers_js__["a" /* add */],
-                add_keywords: __WEBPACK_IMPORTED_MODULE_2__KeywordsHandlers_js__["a" /* add */],
-                add_license: __WEBPACK_IMPORTED_MODULE_5__LicenseHandlers_js__["a" /* add */],
-                add_repository_code: __WEBPACK_IMPORTED_MODULE_6__RepositoryCodeHandlers_js__["a" /* add */],
-                add_title: __WEBPACK_IMPORTED_MODULE_11__TitleHandlers_js__["a" /* add_title */],
-                add_version: __WEBPACK_IMPORTED_MODULE_12__VersionHandlers_js__["a" /* add_version */],
-                move_author_down: __WEBPACK_IMPORTED_MODULE_0__AuthorsHandlers_js__["b" /* move_author_down */],
-                move_author_up: __WEBPACK_IMPORTED_MODULE_0__AuthorsHandlers_js__["c" /* move_author_up */],
-                move_keyword_down: __WEBPACK_IMPORTED_MODULE_1__KeywordHandlers_js__["b" /* move_down */],
-                move_keyword_up: __WEBPACK_IMPORTED_MODULE_1__KeywordHandlers_js__["c" /* move_up */],
-                remove_author: __WEBPACK_IMPORTED_MODULE_0__AuthorsHandlers_js__["d" /* remove_author */],
-                remove_date_released: __WEBPACK_IMPORTED_MODULE_3__DateReleasedHandlers_js__["b" /* remove */],
-                remove_doi: __WEBPACK_IMPORTED_MODULE_4__DoiHandlers_js__["b" /* remove */],
-                remove_keyword: __WEBPACK_IMPORTED_MODULE_1__KeywordHandlers_js__["d" /* remove */],
-                remove_keywords: __WEBPACK_IMPORTED_MODULE_2__KeywordsHandlers_js__["b" /* remove */],
-                remove_license: __WEBPACK_IMPORTED_MODULE_5__LicenseHandlers_js__["b" /* remove */],
-                remove_repository_code: __WEBPACK_IMPORTED_MODULE_6__RepositoryCodeHandlers_js__["b" /* remove */],
-                remove_title: __WEBPACK_IMPORTED_MODULE_11__TitleHandlers_js__["b" /* remove_title */],
-                remove_version: __WEBPACK_IMPORTED_MODULE_12__VersionHandlers_js__["b" /* remove_version */],
-                save_text_as_file: __WEBPACK_IMPORTED_MODULE_10__download_js__["a" /* save_text_as_file */],
-                update_author_affiliation: __WEBPACK_IMPORTED_MODULE_8__AuthorHandler_js__["a" /* update_author_affiliation */],
-                update_author_family_names: __WEBPACK_IMPORTED_MODULE_8__AuthorHandler_js__["b" /* update_author_family_names */],
-                update_author_given_names: __WEBPACK_IMPORTED_MODULE_8__AuthorHandler_js__["c" /* update_author_given_names */],
-                update_author_name_particle: __WEBPACK_IMPORTED_MODULE_8__AuthorHandler_js__["d" /* update_author_name_particle */],
-                update_author_name_suffix: __WEBPACK_IMPORTED_MODULE_8__AuthorHandler_js__["e" /* update_author_name_suffix */],
-                update_author_orcid: __WEBPACK_IMPORTED_MODULE_8__AuthorHandler_js__["f" /* update_author_orcid */],
-                update_cff_version: __WEBPACK_IMPORTED_MODULE_9__FormHandlers_js__["a" /* update_cff_version */],
-                update_date_released: __WEBPACK_IMPORTED_MODULE_3__DateReleasedHandlers_js__["c" /* update */],
-                update_doi: __WEBPACK_IMPORTED_MODULE_4__DoiHandlers_js__["c" /* update */],
-                update_keyword: __WEBPACK_IMPORTED_MODULE_1__KeywordHandlers_js__["e" /* update */],
-                update_license: __WEBPACK_IMPORTED_MODULE_5__LicenseHandlers_js__["c" /* update */],
-                update_message: __WEBPACK_IMPORTED_MODULE_9__FormHandlers_js__["b" /* update_message */],
-                update_repository_code: __WEBPACK_IMPORTED_MODULE_6__RepositoryCodeHandlers_js__["c" /* update */],
-                update_title: __WEBPACK_IMPORTED_MODULE_11__TitleHandlers_js__["c" /* update_title */],
-                update_version: __WEBPACK_IMPORTED_MODULE_12__VersionHandlers_js__["c" /* update_version */]
+                add_affiliation: __WEBPACK_IMPORTED_MODULE_0__AffiliationHandlers_js__["a" /* add */],
+                add_author: __WEBPACK_IMPORTED_MODULE_2__AuthorsHandlers_js__["a" /* add_author */],
+                add_date_released: __WEBPACK_IMPORTED_MODULE_5__DateReleasedHandlers_js__["a" /* add */],
+                add_doi: __WEBPACK_IMPORTED_MODULE_6__DoiHandlers_js__["a" /* add */],
+                add_keyword: __WEBPACK_IMPORTED_MODULE_3__KeywordHandlers_js__["a" /* add */],
+                add_keywords: __WEBPACK_IMPORTED_MODULE_4__KeywordsHandlers_js__["a" /* add */],
+                add_name_particle: __WEBPACK_IMPORTED_MODULE_1__NameParticleHandlers_js__["a" /* add */],
+                add_name_suffix: __WEBPACK_IMPORTED_MODULE_12__NameSuffixHandlers_js__["a" /* add */],
+                add_license: __WEBPACK_IMPORTED_MODULE_7__LicenseHandlers_js__["a" /* add */],
+                add_orcid: __WEBPACK_IMPORTED_MODULE_11__OrcidHandlers_js__["a" /* add */],
+                add_repository_code: __WEBPACK_IMPORTED_MODULE_8__RepositoryCodeHandlers_js__["a" /* add */],
+                add_title: __WEBPACK_IMPORTED_MODULE_15__TitleHandlers_js__["a" /* add */],
+                add_version: __WEBPACK_IMPORTED_MODULE_16__VersionHandlers_js__["a" /* add */],
+                move_author_down: __WEBPACK_IMPORTED_MODULE_2__AuthorsHandlers_js__["b" /* move_author_down */],
+                move_author_up: __WEBPACK_IMPORTED_MODULE_2__AuthorsHandlers_js__["c" /* move_author_up */],
+                move_keyword_down: __WEBPACK_IMPORTED_MODULE_3__KeywordHandlers_js__["b" /* move_down */],
+                move_keyword_up: __WEBPACK_IMPORTED_MODULE_3__KeywordHandlers_js__["c" /* move_up */],
+                remove_affiliation: __WEBPACK_IMPORTED_MODULE_0__AffiliationHandlers_js__["b" /* remove */],
+                remove_author: __WEBPACK_IMPORTED_MODULE_2__AuthorsHandlers_js__["d" /* remove_author */],
+                remove_date_released: __WEBPACK_IMPORTED_MODULE_5__DateReleasedHandlers_js__["b" /* remove */],
+                remove_doi: __WEBPACK_IMPORTED_MODULE_6__DoiHandlers_js__["b" /* remove */],
+                remove_keyword: __WEBPACK_IMPORTED_MODULE_3__KeywordHandlers_js__["d" /* remove */],
+                remove_keywords: __WEBPACK_IMPORTED_MODULE_4__KeywordsHandlers_js__["b" /* remove */],
+                remove_license: __WEBPACK_IMPORTED_MODULE_7__LicenseHandlers_js__["b" /* remove */],
+                remove_name_particle: __WEBPACK_IMPORTED_MODULE_1__NameParticleHandlers_js__["b" /* remove */],
+                remove_name_suffix: __WEBPACK_IMPORTED_MODULE_12__NameSuffixHandlers_js__["b" /* remove */],
+                remove_orcid: __WEBPACK_IMPORTED_MODULE_11__OrcidHandlers_js__["b" /* remove */],
+                remove_repository_code: __WEBPACK_IMPORTED_MODULE_8__RepositoryCodeHandlers_js__["b" /* remove */],
+                remove_title: __WEBPACK_IMPORTED_MODULE_15__TitleHandlers_js__["b" /* remove */],
+                remove_version: __WEBPACK_IMPORTED_MODULE_16__VersionHandlers_js__["b" /* remove */],
+                save_text_as_file: __WEBPACK_IMPORTED_MODULE_14__download_js__["a" /* save_text_as_file */],
+                update_affiliation: __WEBPACK_IMPORTED_MODULE_0__AffiliationHandlers_js__["c" /* update */],
+                update_family_names: __WEBPACK_IMPORTED_MODULE_10__AuthorHandler_js__["a" /* update_family_names */],
+                update_given_names: __WEBPACK_IMPORTED_MODULE_10__AuthorHandler_js__["b" /* update_given_names */],
+                update_name_particle: __WEBPACK_IMPORTED_MODULE_1__NameParticleHandlers_js__["c" /* update */],
+                update_name_suffix: __WEBPACK_IMPORTED_MODULE_12__NameSuffixHandlers_js__["c" /* update */],
+                update_orcid: __WEBPACK_IMPORTED_MODULE_11__OrcidHandlers_js__["c" /* update */],
+                update_cff_version: __WEBPACK_IMPORTED_MODULE_13__FormHandlers_js__["a" /* update_cff_version */],
+                update_date_released: __WEBPACK_IMPORTED_MODULE_5__DateReleasedHandlers_js__["c" /* update */],
+                update_doi: __WEBPACK_IMPORTED_MODULE_6__DoiHandlers_js__["c" /* update */],
+                update_keyword: __WEBPACK_IMPORTED_MODULE_3__KeywordHandlers_js__["e" /* update */],
+                update_license: __WEBPACK_IMPORTED_MODULE_7__LicenseHandlers_js__["c" /* update */],
+                update_message: __WEBPACK_IMPORTED_MODULE_13__FormHandlers_js__["b" /* update_message */],
+                update_repository_code: __WEBPACK_IMPORTED_MODULE_8__RepositoryCodeHandlers_js__["c" /* update */],
+                update_title: __WEBPACK_IMPORTED_MODULE_15__TitleHandlers_js__["c" /* update */],
+                update_version: __WEBPACK_IMPORTED_MODULE_16__VersionHandlers_js__["c" /* update */]
         }
 });
 
@@ -736,9 +764,17 @@ module.exports = g;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CreativeWork_vue__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FormValidators_js__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CreativeWork_vue__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FormValidators_js__ = __webpack_require__(139);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -872,43 +908,51 @@ module.exports = g;
         cff_version_validation: __WEBPACK_IMPORTED_MODULE_2__FormValidators_js__["a" /* validate_cff_version */]
     },
     methods: {
-        add_author: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["a" /* add_author */],
-        add_date_released: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["b" /* add_date_released */],
-        add_doi: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["c" /* add_doi */],
-        add_keyword: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["d" /* add_keyword */],
-        add_keywords: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["e" /* add_keywords */],
-        add_license: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["f" /* add_license */],
-        add_repository_code: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["g" /* add_repository_code */],
-        add_title: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["h" /* add_title */],
-        add_version: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["i" /* add_version */],
-        move_author_down: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["j" /* move_author_down */],
-        move_author_up: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["k" /* move_author_up */],
-        move_keyword_down: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["l" /* move_keyword_down */],
-        move_keyword_up: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["m" /* move_keyword_up */],
-        remove_author: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["n" /* remove_author */],
-        remove_date_released: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["o" /* remove_date_released */],
-        remove_doi: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["p" /* remove_doi */],
-        remove_keyword: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["q" /* remove_keyword */],
-        remove_keywords: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["r" /* remove_keywords */],
-        remove_license: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["s" /* remove_license */],
-        remove_repository_code: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["t" /* remove_repository_code */],
-        remove_title: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["u" /* remove_title */],
-        remove_version: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["v" /* remove_version */],
-        update_author_given_names: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["y" /* update_author_given_names */],
-        update_author_name_particle: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["z" /* update_author_name_particle */],
-        update_author_family_names: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["x" /* update_author_family_names */],
-        update_author_name_suffix: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["A" /* update_author_name_suffix */],
-        update_author_orcid: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["B" /* update_author_orcid */],
-        update_author_affiliation: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["w" /* update_author_affiliation */],
-        update_cff_version: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["C" /* update_cff_version */],
-        update_date_released: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["D" /* update_date_released */],
-        update_doi: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["E" /* update_doi */],
-        update_keyword: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["F" /* update_keyword */],
-        update_license: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["G" /* update_license */],
-        update_repository_code: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["I" /* update_repository_code */],
-        update_title: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["J" /* update_title */],
-        update_message: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["H" /* update_message */],
-        update_version: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["K" /* update_version */]
+        add_affiliation: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["a" /* add_affiliation */],
+        add_author: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["b" /* add_author */],
+        add_date_released: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["c" /* add_date_released */],
+        add_doi: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["d" /* add_doi */],
+        add_keyword: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["e" /* add_keyword */],
+        add_keywords: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["f" /* add_keywords */],
+        add_license: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["g" /* add_license */],
+        add_name_particle: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["h" /* add_name_particle */],
+        add_name_suffix: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["i" /* add_name_suffix */],
+        add_orcid: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["j" /* add_orcid */],
+        add_repository_code: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["k" /* add_repository_code */],
+        add_title: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["l" /* add_title */],
+        add_version: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["m" /* add_version */],
+        move_author_down: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["n" /* move_author_down */],
+        move_author_up: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["o" /* move_author_up */],
+        move_keyword_down: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["p" /* move_keyword_down */],
+        move_keyword_up: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["q" /* move_keyword_up */],
+        remove_affiliation: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["r" /* remove_affiliation */],
+        remove_author: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["s" /* remove_author */],
+        remove_date_released: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["t" /* remove_date_released */],
+        remove_doi: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["u" /* remove_doi */],
+        remove_keyword: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["v" /* remove_keyword */],
+        remove_keywords: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["w" /* remove_keywords */],
+        remove_license: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["x" /* remove_license */],
+        remove_name_particle: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["y" /* remove_name_particle */],
+        remove_name_suffix: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["z" /* remove_name_suffix */],
+        remove_orcid: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["A" /* remove_orcid */],
+        remove_repository_code: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["B" /* remove_repository_code */],
+        remove_title: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["C" /* remove_title */],
+        remove_version: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["D" /* remove_version */],
+        update_affiliation: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["E" /* update_affiliation */],
+        update_cff_version: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["F" /* update_cff_version */],
+        update_date_released: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["G" /* update_date_released */],
+        update_doi: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["H" /* update_doi */],
+        update_family_names: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["I" /* update_family_names */],
+        update_given_names: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["J" /* update_given_names */],
+        update_keyword: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["K" /* update_keyword */],
+        update_license: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["L" /* update_license */],
+        update_message: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["M" /* update_message */],
+        update_name_particle: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["N" /* update_name_particle */],
+        update_name_suffix: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["O" /* update_name_suffix */],
+        update_orcid: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["P" /* update_orcid */],
+        update_repository_code: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["Q" /* update_repository_code */],
+        update_title: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["R" /* update_title */],
+        update_version: __WEBPACK_IMPORTED_MODULE_1__FormEmitters_js__["S" /* update_version */]
     }
 });
 
@@ -917,15 +961,23 @@ module.exports = g;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Authors_vue__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__DateReleased_vue__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Doi_vue__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Keywords_vue__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__License_vue__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__RepositoryCode__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Version_vue__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Title_vue__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Authors_vue__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__DateReleased_vue__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Doi_vue__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Keywords_vue__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__License_vue__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__RepositoryCode__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Version_vue__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Title_vue__ = __webpack_require__(132);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1037,41 +1089,49 @@ module.exports = g;
     },
     computed: {},
     methods: {
-        add_author: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["a" /* add_author */],
-        add_date_released: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["b" /* add_date_released */],
-        add_doi: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["c" /* add_doi */],
-        add_keyword: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["d" /* add_keyword */],
-        add_keywords: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["e" /* add_keywords */],
-        add_license: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["f" /* add_license */],
-        add_repository_code: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["g" /* add_repository_code */],
-        add_title: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["h" /* add_title */],
-        add_version: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["i" /* add_version */],
-        move_author_down: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["j" /* move_author_down */],
-        move_author_up: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["k" /* move_author_up */],
-        move_keyword_down: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["l" /* move_keyword_down */],
-        move_keyword_up: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["m" /* move_keyword_up */],
-        remove_author: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["n" /* remove_author */],
-        remove_date_released: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["o" /* remove_date_released */],
-        remove_doi: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["p" /* remove_doi */],
-        remove_keyword: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["q" /* remove_keyword */],
-        remove_keywords: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["r" /* remove_keywords */],
-        remove_license: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["s" /* remove_license */],
-        remove_repository_code: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["t" /* remove_repository_code */],
-        remove_title: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["u" /* remove_title */],
-        remove_version: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["v" /* remove_version */],
-        update_author_given_names: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["y" /* update_author_given_names */],
-        update_author_name_particle: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["z" /* update_author_name_particle */],
-        update_author_family_names: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["x" /* update_author_family_names */],
-        update_author_name_suffix: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["A" /* update_author_name_suffix */],
-        update_author_orcid: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["B" /* update_author_orcid */],
-        update_author_affiliation: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["w" /* update_author_affiliation */],
-        update_date_released: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["C" /* update_date_released */],
-        update_doi: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["D" /* update_doi */],
-        update_keyword: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["E" /* update_keyword */],
-        update_license: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["F" /* update_license */],
-        update_repository_code: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["G" /* update_repository_code */],
-        update_title: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["H" /* update_title */],
-        update_version: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["I" /* update_version */]
+        add_affiliation: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["a" /* add_affiliation */],
+        add_author: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["b" /* add_author */],
+        add_date_released: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["c" /* add_date_released */],
+        add_doi: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["d" /* add_doi */],
+        add_keyword: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["e" /* add_keyword */],
+        add_keywords: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["f" /* add_keywords */],
+        add_name_particle: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["h" /* add_name_particle */],
+        add_name_suffix: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["i" /* add_name_suffix */],
+        add_orcid: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["j" /* add_orcid */],
+        add_license: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["g" /* add_license */],
+        add_repository_code: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["k" /* add_repository_code */],
+        add_title: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["l" /* add_title */],
+        add_version: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["m" /* add_version */],
+        move_author_down: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["n" /* move_author_down */],
+        move_author_up: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["o" /* move_author_up */],
+        move_keyword_down: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["p" /* move_keyword_down */],
+        move_keyword_up: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["q" /* move_keyword_up */],
+        remove_affiliation: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["r" /* remove_affiliation */],
+        remove_author: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["s" /* remove_author */],
+        remove_date_released: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["t" /* remove_date_released */],
+        remove_doi: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["u" /* remove_doi */],
+        remove_keyword: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["v" /* remove_keyword */],
+        remove_keywords: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["w" /* remove_keywords */],
+        remove_license: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["x" /* remove_license */],
+        remove_name_particle: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["y" /* remove_name_particle */],
+        remove_name_suffix: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["z" /* remove_name_suffix */],
+        remove_orcid: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["A" /* remove_orcid */],
+        remove_repository_code: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["B" /* remove_repository_code */],
+        remove_title: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["C" /* remove_title */],
+        remove_version: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["D" /* remove_version */],
+        update_affiliation: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["E" /* update_affiliation */],
+        update_date_released: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["F" /* update_date_released */],
+        update_doi: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["G" /* update_doi */],
+        update_family_names: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["H" /* update_family_names */],
+        update_given_names: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["I" /* update_given_names */],
+        update_keyword: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["J" /* update_keyword */],
+        update_license: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["K" /* update_license */],
+        update_name_particle: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["L" /* update_name_particle */],
+        update_name_suffix: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["M" /* update_name_suffix */],
+        update_orcid: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["N" /* update_orcid */],
+        update_repository_code: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["O" /* update_repository_code */],
+        update_title: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["P" /* update_title */],
+        update_version: __WEBPACK_IMPORTED_MODULE_0__CreativeWorkEmitters_js__["Q" /* update_version */]
     }
 });
 
@@ -1080,8 +1140,16 @@ module.exports = g;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Author_vue__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Author_vue__ = __webpack_require__(63);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1130,15 +1198,23 @@ module.exports = g;
     },
     methods: {
         add: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["a" /* add */],
-        move_down: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["b" /* move_down */],
-        move_up: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["c" /* move_up */],
-        remove: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["d" /* remove */],
-        update_affiliation: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["e" /* update_affiliation */],
-        update_family_names: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["f" /* update_family_names */],
-        update_given_names: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["g" /* update_given_names */],
-        update_name_particle: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["h" /* update_name_particle */],
-        update_name_suffix: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["i" /* update_name_suffix */],
-        update_orcid: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["j" /* update_orcid */]
+        add_affiliation: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["b" /* add_affiliation */],
+        add_name_particle: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["c" /* add_name_particle */],
+        add_name_suffix: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["d" /* add_name_suffix */],
+        add_orcid: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["e" /* add_orcid */],
+        move_down: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["f" /* move_down */],
+        move_up: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["g" /* move_up */],
+        remove: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["h" /* remove */],
+        remove_affiliation: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["i" /* remove_affiliation */],
+        remove_name_particle: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["j" /* remove_name_particle */],
+        remove_name_suffix: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["k" /* remove_name_suffix */],
+        remove_orcid: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["l" /* remove_orcid */],
+        update_affiliation: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["m" /* update_affiliation */],
+        update_family_names: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["n" /* update_family_names */],
+        update_given_names: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["o" /* update_given_names */],
+        update_name_particle: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["p" /* update_name_particle */],
+        update_name_suffix: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["q" /* update_name_suffix */],
+        update_orcid: __WEBPACK_IMPORTED_MODULE_0__AuthorsEmitters_js__["r" /* update_orcid */]
     }
 });
 
@@ -1147,8 +1223,11 @@ module.exports = g;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AuthorEmitters_js__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AuthorValidators_js__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Affiliation_vue__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Orcid_vue__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NameParticle_vue__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__NameSuffix_vue__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__ = __webpack_require__(90);
 //
 //
 //
@@ -1225,6 +1304,157 @@ module.exports = g;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+    name: 'Author',
+    components: {
+        Affiliation: __WEBPACK_IMPORTED_MODULE_0__Affiliation_vue__["a" /* default */],
+        AuthorOrcid: __WEBPACK_IMPORTED_MODULE_1__Orcid_vue__["a" /* default */],
+        NameParticle: __WEBPACK_IMPORTED_MODULE_2__NameParticle_vue__["a" /* default */],
+        NameSuffix: __WEBPACK_IMPORTED_MODULE_3__NameSuffix_vue__["a" /* default */]
+    },
+    props: {
+        author: Object
+    },
+    computed: {
+        fullname: function () {
+            let name_parts = [];
+            if (this.author.hasOwnProperty('given_names') && this.author.given_names !== '') {
+                name_parts.push(this.author.given_names);
+            }
+            if (this.author.hasOwnProperty('name_particle') && this.author.name_particle !== '') {
+                name_parts.push(this.author.name_particle);
+            }
+            if (this.author.hasOwnProperty('family_names') && this.author.family_names !== '') {
+                name_parts.push(this.author.family_names);
+            }
+            if (this.author.hasOwnProperty('name_suffix') && this.author.name_suffix !== '') {
+                name_parts.push(this.author.name_suffix);
+            }
+            return name_parts.join(' ');
+        }
+    },
+    methods: {
+        add_affiliation: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["a" /* add_affiliation */],
+        add_orcid: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["d" /* add_orcid */],
+        add_name_particle: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["b" /* add_name_particle */],
+        add_name_suffix: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["c" /* add_name_suffix */],
+        remove: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["g" /* remove */],
+        remove_affiliation: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["h" /* remove_affiliation */],
+        remove_orcid: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["k" /* remove_orcid */],
+        remove_name_particle: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["i" /* remove_name_particle */],
+        remove_name_suffix: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["j" /* remove_name_suffix */],
+        move_down: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["e" /* move_down */],
+        move_up: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["f" /* move_up */],
+        update_affiliation: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["l" /* update_affiliation */],
+        update_family_names: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["m" /* update_family_names */],
+        update_given_names: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["n" /* update_given_names */],
+        update_name_particle: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["o" /* update_name_particle */],
+        update_name_suffix: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["p" /* update_name_suffix */],
+        update_orcid: __WEBPACK_IMPORTED_MODULE_4__AuthorEmitters_js__["q" /* update_orcid */]
+    }
+});
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AffiliationEmitters_js__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__AffiliationValidators_js__ = __webpack_require__(70);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+    name: 'Affiliation',
+    components: {},
+    props: {
+        affiliation: String
+    },
+    computed: {
+        has_affiliation: function () {
+            return this.$props.hasOwnProperty('affiliation') && this.$props.affiliation !== undefined;
+        },
+        validation: __WEBPACK_IMPORTED_MODULE_1__AffiliationValidators_js__["a" /* validate */]
+    },
+    methods: {
+        add: __WEBPACK_IMPORTED_MODULE_0__AffiliationEmitters_js__["a" /* add */],
+        remove: __WEBPACK_IMPORTED_MODULE_0__AffiliationEmitters_js__["b" /* remove */],
+        update: __WEBPACK_IMPORTED_MODULE_0__AffiliationEmitters_js__["c" /* update */]
+    }
+});
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__OrcidEmitters_js__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__OrcidValidators_js__ = __webpack_require__(76);
 //
 //
 //
@@ -1265,49 +1495,166 @@ module.exports = g;
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'Author',
+    name: 'Orcid',
     props: {
-        author: Object
+        orcid: String
     },
     computed: {
-        orcid_validation: __WEBPACK_IMPORTED_MODULE_1__AuthorValidators_js__["a" /* validate_orcid */],
-        fullname: function () {
-            let name_parts = [];
-            if (this.author.hasOwnProperty('given_names') && this.author.given_names !== '') {
-                name_parts.push(this.author.given_names);
-            }
-            if (this.author.hasOwnProperty('name_particle') && this.author.name_particle !== '') {
-                name_parts.push(this.author.name_particle);
-            }
-            if (this.author.hasOwnProperty('family_names') && this.author.family_names !== '') {
-                name_parts.push(this.author.family_names);
-            }
-            if (this.author.hasOwnProperty('name_suffix') && this.author.name_suffix !== '') {
-                name_parts.push(this.author.name_suffix);
-            }
-            return name_parts.join(' ');
-        }
+        has_orcid: function () {
+            return this.$props.hasOwnProperty('orcid') && this.$props.orcid !== undefined;
+        },
+        validation: __WEBPACK_IMPORTED_MODULE_1__OrcidValidators_js__["a" /* validate */]
     },
     methods: {
-        remove: __WEBPACK_IMPORTED_MODULE_0__AuthorEmitters_js__["c" /* remove */],
-        move_down: __WEBPACK_IMPORTED_MODULE_0__AuthorEmitters_js__["a" /* move_down */],
-        move_up: __WEBPACK_IMPORTED_MODULE_0__AuthorEmitters_js__["b" /* move_up */],
-        update_affiliation: __WEBPACK_IMPORTED_MODULE_0__AuthorEmitters_js__["d" /* update_affiliation */],
-        update_family_names: __WEBPACK_IMPORTED_MODULE_0__AuthorEmitters_js__["e" /* update_family_names */],
-        update_given_names: __WEBPACK_IMPORTED_MODULE_0__AuthorEmitters_js__["f" /* update_given_names */],
-        update_name_particle: __WEBPACK_IMPORTED_MODULE_0__AuthorEmitters_js__["g" /* update_name_particle */],
-        update_name_suffix: __WEBPACK_IMPORTED_MODULE_0__AuthorEmitters_js__["h" /* update_name_suffix */],
-        update_orcid: __WEBPACK_IMPORTED_MODULE_0__AuthorEmitters_js__["i" /* update_orcid */]
+        add: __WEBPACK_IMPORTED_MODULE_0__OrcidEmitters_js__["a" /* add */],
+        remove: __WEBPACK_IMPORTED_MODULE_0__OrcidEmitters_js__["b" /* remove */],
+        update: __WEBPACK_IMPORTED_MODULE_0__OrcidEmitters_js__["c" /* update */]
     }
 });
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__DateReleasedEmitters_js__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__DateReleasedValidators_js__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__NameParticleEmitters_js__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NameParticleValidators_js__ = __webpack_require__(82);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+    name: 'NameParticle',
+    components: {},
+    props: {
+        name_particle: String
+    },
+    computed: {
+        has_name_particle: function () {
+            return this.$props.hasOwnProperty('name_particle') && this.$props.name_particle !== undefined;
+        },
+        validation: __WEBPACK_IMPORTED_MODULE_1__NameParticleValidators_js__["a" /* validate */]
+    },
+    methods: {
+        add: __WEBPACK_IMPORTED_MODULE_0__NameParticleEmitters_js__["a" /* add */],
+        remove: __WEBPACK_IMPORTED_MODULE_0__NameParticleEmitters_js__["b" /* remove */],
+        update: __WEBPACK_IMPORTED_MODULE_0__NameParticleEmitters_js__["c" /* update */]
+    }
+});
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__NameSuffixEmitters_js__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NameSuffixValidators_js__ = __webpack_require__(88);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+    name: 'NameSuffix',
+    components: {},
+    props: {
+        name_suffix: String
+    },
+    computed: {
+        has_name_suffix: function () {
+            return this.$props.hasOwnProperty('name_suffix') && this.$props.name_suffix !== undefined;
+        },
+        validation: __WEBPACK_IMPORTED_MODULE_1__NameSuffixValidators_js__["a" /* validate */]
+    },
+    methods: {
+        add: __WEBPACK_IMPORTED_MODULE_0__NameSuffixEmitters_js__["a" /* add */],
+        remove: __WEBPACK_IMPORTED_MODULE_0__NameSuffixEmitters_js__["b" /* remove */],
+        update: __WEBPACK_IMPORTED_MODULE_0__NameSuffixEmitters_js__["c" /* update */]
+    }
+});
+
+/***/ }),
+/* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__DateReleasedEmitters_js__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__DateReleasedValidators_js__ = __webpack_require__(97);
 //
 //
 //
@@ -1375,12 +1722,12 @@ module.exports = g;
 });
 
 /***/ }),
-/* 11 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__DoiEmitters_js__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__DoiValidators_js__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__DoiEmitters_js__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__DoiValidators_js__ = __webpack_require__(103);
 //
 //
 //
@@ -1448,12 +1795,12 @@ module.exports = g;
 });
 
 /***/ }),
-/* 12 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__KeywordsEmitters_js__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Keyword_vue__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__KeywordsEmitters_js__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Keyword_vue__ = __webpack_require__(109);
 //
 //
 //
@@ -1529,11 +1876,11 @@ module.exports = g;
 });
 
 /***/ }),
-/* 13 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__KeywordEmitters_js__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__KeywordEmitters_js__ = __webpack_require__(112);
 //
 //
 //
@@ -1594,12 +1941,12 @@ module.exports = g;
 });
 
 /***/ }),
-/* 14 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__LicenseEmitters_js__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__LicenseValidators_js__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__LicenseEmitters_js__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__LicenseValidators_js__ = __webpack_require__(119);
 //
 //
 //
@@ -1668,12 +2015,12 @@ module.exports = g;
 });
 
 /***/ }),
-/* 15 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__RepositoryCodeEmitters_js__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__RepositoryCodeValidators_js__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__RepositoryCodeEmitters_js__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__RepositoryCodeValidators_js__ = __webpack_require__(125);
 //
 //
 //
@@ -1740,11 +2087,11 @@ module.exports = g;
 });
 
 /***/ }),
-/* 16 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__VersionEmitters_js__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__VersionEmitters_js__ = __webpack_require__(130);
 //
 //
 //
@@ -1801,11 +2148,11 @@ module.exports = g;
 });
 
 /***/ }),
-/* 17 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TitleEmitters_js__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TitleEmitters_js__ = __webpack_require__(135);
 //
 //
 //
@@ -1860,13 +2207,13 @@ module.exports = g;
 });
 
 /***/ }),
-/* 18 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(27);
 
 
 
@@ -1876,7 +2223,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
 });
 
 /***/ }),
-/* 19 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12812,10 +13159,10 @@ Vue.compile = compileToFunctions;
 
 /* harmony default export */ __webpack_exports__["a"] = (Vue);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(20).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(24).setImmediate))
 
 /***/ }),
-/* 20 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -12871,7 +13218,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(21);
+__webpack_require__(25);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -12885,7 +13232,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 21 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -13075,10 +13422,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(22)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(26)))
 
 /***/ }),
-/* 22 */
+/* 26 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -13268,15 +13615,15 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 23 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(4);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3193d1ca_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3da68ee2_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(141);
 function injectStyle (ssrContext) {
-  __webpack_require__(24)
+  __webpack_require__(28)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -13294,7 +13641,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3193d1ca_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3da68ee2_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -13305,20 +13652,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 24 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(25);
+var content = __webpack_require__(29);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("8a93f822", content, true, {});
+var update = __webpack_require__(1)("171c1852", content, true, {});
 
 /***/ }),
-/* 25 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -13332,7 +13679,7 @@ exports.push([module.i, "body{background-color:#5f6d64;margin:0}.container{displ
 
 
 /***/ }),
-/* 26 */
+/* 30 */
 /***/ (function(module, exports) {
 
 /**
@@ -13365,7 +13712,65 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 27 */
+/* 31 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = add;
+/* harmony export (immutable) */ __webpack_exports__["b"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["c"] = update;
+function add(payload) {
+    let author = this.authors.find(function (author) {
+        return author.id == payload.id;
+    });
+    author.affiliation = '';
+}
+
+function remove(payload) {
+    let author = this.authors.find(function (author) {
+        return author.id == payload.id;
+    });
+    author.affiliation = undefined;
+}
+
+function update(payload) {
+    let author = this.authors.find(function (author) {
+        return author.id == payload.id;
+    });
+    author.affiliation = payload.value;
+}
+
+/***/ }),
+/* 32 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = add;
+/* harmony export (immutable) */ __webpack_exports__["b"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["c"] = update;
+function add(payload) {
+    let author = this.authors.find(author => {
+        return author.id == payload.id;
+    });
+    author.name_particle = '';
+}
+
+function remove(payload) {
+    let author = this.authors.find(author => {
+        return author.id == payload.id;
+    });
+    author.name_particle = undefined;
+}
+
+function update(payload) {
+    let author = this.authors.find(author => {
+        return author.id == payload.id;
+    });
+    author.name_particle = payload.value;
+}
+
+/***/ }),
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13375,13 +13780,13 @@ module.exports = function listToStyles (parentId, list) {
 /* harmony export (immutable) */ __webpack_exports__["d"] = remove_author;
 function add_author() {
     this.authors.push({
-        affiliation: '',
+        affiliation: undefined,
         family_names: '',
         given_names: '',
         id: this.author_id += 1,
-        name_particle: '',
-        name_suffix: '',
-        orcid: ''
+        name_particle: undefined,
+        name_suffix: undefined,
+        orcid: undefined
     });
 }
 
@@ -13410,7 +13815,7 @@ function remove_author(author_id) {
 }
 
 /***/ }),
-/* 28 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13458,7 +13863,7 @@ function update(payload) {
 }
 
 /***/ }),
-/* 29 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13473,7 +13878,7 @@ function remove() {
 }
 
 /***/ }),
-/* 30 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13493,7 +13898,7 @@ function update(payload) {
 }
 
 /***/ }),
-/* 31 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13513,7 +13918,7 @@ function update(payload) {
 }
 
 /***/ }),
-/* 32 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13533,7 +13938,7 @@ function update(payload) {
 }
 
 /***/ }),
-/* 33 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13553,7 +13958,7 @@ function update(payload) {
 }
 
 /***/ }),
-/* 34 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13565,12 +13970,26 @@ function compute_cff() {
     lines.push('authors: ');
     for (let author of this.authors) {
         lines.push('  -');
-        lines.push('    affiliation: ' + author.affiliation);
+
+        if (author.hasOwnProperty("affiliation") && author.affiliation !== undefined) {
+            lines.push('    affiliation: ' + author.affiliation);
+        }
+
         lines.push('    family-names: ' + author.family_names);
+
         lines.push('    given-names: ' + author.given_names);
-        lines.push('    name-particle: ' + author.name_particle);
-        lines.push('    name-suffix: ' + author.name_suffix);
-        lines.push('    orcid: "https://orcid.org/' + author.orcid + '"');
+
+        if (author.hasOwnProperty("name_particle") && author.name_particle !== undefined) {
+            lines.push('    name-particle: ' + author.name_particle);
+        }
+
+        if (author.hasOwnProperty("name_suffix") && author.name_suffix !== undefined) {
+            lines.push('    name-suffix: ' + author.name_suffix);
+        }
+
+        if (author.hasOwnProperty("orcid") && author.orcid !== undefined) {
+            lines.push('    orcid: "https://orcid.org/' + author.orcid + '"');
+        }
     }
     lines.push('cff-version: ' + this.cff_version);
 
@@ -13611,61 +14030,86 @@ function compute_cff() {
 }
 
 /***/ }),
-/* 35 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = update_author_affiliation;
-/* harmony export (immutable) */ __webpack_exports__["b"] = update_author_family_names;
-/* harmony export (immutable) */ __webpack_exports__["c"] = update_author_given_names;
-/* harmony export (immutable) */ __webpack_exports__["d"] = update_author_name_particle;
-/* harmony export (immutable) */ __webpack_exports__["e"] = update_author_name_suffix;
-/* harmony export (immutable) */ __webpack_exports__["f"] = update_author_orcid;
-
-function update_author_affiliation(payload) {
-    let author = this.authors.find(function (author) {
-        return author.id == payload.id;
-    });
-    author.affiliation = payload.value;
-}
-
-function update_author_family_names(payload) {
+/* harmony export (immutable) */ __webpack_exports__["a"] = update_family_names;
+/* harmony export (immutable) */ __webpack_exports__["b"] = update_given_names;
+function update_family_names(payload) {
     let author = this.authors.find(function (author) {
         return author.id == payload.id;
     });
     author.family_names = payload.value;
 }
 
-function update_author_given_names(payload) {
+function update_given_names(payload) {
     let author = this.authors.find(function (author) {
         return author.id == payload.id;
     });
     author.given_names = payload.value;
 }
 
-function update_author_name_particle(payload) {
-    let author = this.authors.find(function (author) {
+/***/ }),
+/* 42 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = add;
+/* harmony export (immutable) */ __webpack_exports__["b"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["c"] = update;
+function add(payload) {
+    let author = this.authors.find(author => {
         return author.id == payload.id;
     });
-    author.name_particle = payload.value;
+    author.orcid = '';
 }
 
-function update_author_name_suffix(payload) {
-    let author = this.authors.find(function (author) {
+function remove(payload) {
+    let author = this.authors.find(author => {
         return author.id == payload.id;
     });
-    author.name_suffix = payload.value;
+    author.orcid = undefined;
 }
 
-function update_author_orcid(payload) {
-    let author = this.authors.find(function (author) {
+function update(payload) {
+    let author = this.authors.find(author => {
         return author.id == payload.id;
     });
     author.orcid = payload.value;
 }
 
 /***/ }),
-/* 36 */
+/* 43 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = add;
+/* harmony export (immutable) */ __webpack_exports__["b"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["c"] = update;
+function add(payload) {
+    let author = this.authors.find(author => {
+        return author.id == payload.id;
+    });
+    author.name_suffix = '';
+}
+
+function remove(payload) {
+    let author = this.authors.find(author => {
+        return author.id == payload.id;
+    });
+    author.name_suffix = undefined;
+}
+
+function update(payload) {
+    let author = this.authors.find(author => {
+        return author.id == payload.id;
+    });
+    author.name_suffix = payload.value;
+}
+
+/***/ }),
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13705,7 +14149,7 @@ function update_title(payload) {
 }
 
 /***/ }),
-/* 37 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13733,55 +14177,55 @@ function destroyClickedElement(event) {
 }
 
 /***/ }),
-/* 38 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = add_title;
-/* harmony export (immutable) */ __webpack_exports__["b"] = remove_title;
-/* harmony export (immutable) */ __webpack_exports__["c"] = update_title;
-function add_title() {
+/* harmony export (immutable) */ __webpack_exports__["a"] = add;
+/* harmony export (immutable) */ __webpack_exports__["b"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["c"] = update;
+function add() {
     this.title = "";
 }
 
-function remove_title() {
+function remove() {
     this.title = undefined;
 }
 
-function update_title(payload) {
+function update(payload) {
     this.title = payload.value;
 }
 
 /***/ }),
-/* 39 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = add_version;
-/* harmony export (immutable) */ __webpack_exports__["b"] = remove_version;
-/* harmony export (immutable) */ __webpack_exports__["c"] = update_version;
-function add_version() {
+/* harmony export (immutable) */ __webpack_exports__["a"] = add;
+/* harmony export (immutable) */ __webpack_exports__["b"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["c"] = update;
+function add() {
     this.version = "";
 }
 
-function remove_version() {
+function remove() {
     this.version = undefined;
 }
 
-function update_version(payload) {
+function update(payload) {
     this.version = payload.value;
 }
 
 /***/ }),
-/* 40 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CffText_vue__ = __webpack_require__(5);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_13b39792_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CffText_vue__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_13b39792_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CffText_vue__ = __webpack_require__(51);
 function injectStyle (ssrContext) {
-  __webpack_require__(41)
+  __webpack_require__(49)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -13810,20 +14254,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 41 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(42);
+var content = __webpack_require__(50);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("465aa726", content, true, {});
 
 /***/ }),
-/* 42 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -13837,7 +14281,7 @@ exports.push([module.i, ".cff{background-color:#fff;flex-basis:0.0;flex-grow:1.0
 
 
 /***/ }),
-/* 43 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13847,15 +14291,15 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 44 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Form_vue__ = __webpack_require__(6);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0d7e4767_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_ff5db0b6_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__ = __webpack_require__(140);
 function injectStyle (ssrContext) {
-  __webpack_require__(45)
+  __webpack_require__(53)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -13873,7 +14317,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Form_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0d7e4767_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_ff5db0b6_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Form_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -13884,20 +14328,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 45 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(46);
+var content = __webpack_require__(54);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("02ea2b74", content, true, {});
+var update = __webpack_require__(1)("3d70b1a9", content, true, {});
 
 /***/ }),
-/* 46 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -13911,15 +14355,15 @@ exports.push([module.i, ".form{background-color:#a7bcaf;flex-basis:0.0;flex-grow
 
 
 /***/ }),
-/* 47 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CreativeWork_vue__ = __webpack_require__(7);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3a92147c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CreativeWork_vue__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_571b994c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CreativeWork_vue__ = __webpack_require__(137);
 function injectStyle (ssrContext) {
-  __webpack_require__(48)
+  __webpack_require__(56)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -13932,12 +14376,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-3a92147c"
+var __vue_scopeId__ = "data-v-571b994c"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CreativeWork_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3a92147c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CreativeWork_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_571b994c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CreativeWork_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -13948,20 +14392,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 48 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(49);
+var content = __webpack_require__(57);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("5d02fb92", content, true, {});
+var update = __webpack_require__(1)("46b0863a", content, true, {});
 
 /***/ }),
-/* 49 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -13969,51 +14413,63 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, ".creative_work[data-v-3a92147c]{padding-left:0}", ""]);
+exports.push([module.i, ".creative_work[data-v-571b994c]{padding-left:0}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 50 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = add_author;
-/* harmony export (immutable) */ __webpack_exports__["b"] = add_date_released;
-/* harmony export (immutable) */ __webpack_exports__["c"] = add_doi;
-/* harmony export (immutable) */ __webpack_exports__["d"] = add_keyword;
-/* harmony export (immutable) */ __webpack_exports__["e"] = add_keywords;
-/* harmony export (immutable) */ __webpack_exports__["f"] = add_license;
-/* harmony export (immutable) */ __webpack_exports__["g"] = add_repository_code;
-/* harmony export (immutable) */ __webpack_exports__["h"] = add_title;
-/* harmony export (immutable) */ __webpack_exports__["i"] = add_version;
-/* harmony export (immutable) */ __webpack_exports__["j"] = move_author_down;
-/* harmony export (immutable) */ __webpack_exports__["k"] = move_author_up;
-/* harmony export (immutable) */ __webpack_exports__["l"] = move_keyword_down;
-/* harmony export (immutable) */ __webpack_exports__["m"] = move_keyword_up;
-/* harmony export (immutable) */ __webpack_exports__["n"] = remove_author;
-/* harmony export (immutable) */ __webpack_exports__["q"] = remove_keyword;
-/* harmony export (immutable) */ __webpack_exports__["r"] = remove_keywords;
-/* harmony export (immutable) */ __webpack_exports__["o"] = remove_date_released;
-/* harmony export (immutable) */ __webpack_exports__["p"] = remove_doi;
-/* harmony export (immutable) */ __webpack_exports__["s"] = remove_license;
-/* harmony export (immutable) */ __webpack_exports__["t"] = remove_repository_code;
-/* harmony export (immutable) */ __webpack_exports__["u"] = remove_title;
-/* harmony export (immutable) */ __webpack_exports__["v"] = remove_version;
-/* harmony export (immutable) */ __webpack_exports__["y"] = update_author_given_names;
-/* harmony export (immutable) */ __webpack_exports__["z"] = update_author_name_particle;
-/* harmony export (immutable) */ __webpack_exports__["x"] = update_author_family_names;
-/* harmony export (immutable) */ __webpack_exports__["A"] = update_author_name_suffix;
-/* harmony export (immutable) */ __webpack_exports__["B"] = update_author_orcid;
-/* harmony export (immutable) */ __webpack_exports__["w"] = update_author_affiliation;
-/* harmony export (immutable) */ __webpack_exports__["C"] = update_date_released;
-/* harmony export (immutable) */ __webpack_exports__["D"] = update_doi;
-/* harmony export (immutable) */ __webpack_exports__["E"] = update_keyword;
-/* harmony export (immutable) */ __webpack_exports__["F"] = update_license;
-/* harmony export (immutable) */ __webpack_exports__["G"] = update_repository_code;
-/* harmony export (immutable) */ __webpack_exports__["H"] = update_title;
-/* harmony export (immutable) */ __webpack_exports__["I"] = update_version;
+/* harmony export (immutable) */ __webpack_exports__["a"] = add_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["b"] = add_author;
+/* harmony export (immutable) */ __webpack_exports__["c"] = add_date_released;
+/* harmony export (immutable) */ __webpack_exports__["d"] = add_doi;
+/* harmony export (immutable) */ __webpack_exports__["e"] = add_keyword;
+/* harmony export (immutable) */ __webpack_exports__["f"] = add_keywords;
+/* harmony export (immutable) */ __webpack_exports__["g"] = add_license;
+/* harmony export (immutable) */ __webpack_exports__["h"] = add_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["i"] = add_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["j"] = add_orcid;
+/* harmony export (immutable) */ __webpack_exports__["k"] = add_repository_code;
+/* harmony export (immutable) */ __webpack_exports__["l"] = add_title;
+/* harmony export (immutable) */ __webpack_exports__["m"] = add_version;
+/* harmony export (immutable) */ __webpack_exports__["n"] = move_author_down;
+/* harmony export (immutable) */ __webpack_exports__["o"] = move_author_up;
+/* harmony export (immutable) */ __webpack_exports__["p"] = move_keyword_down;
+/* harmony export (immutable) */ __webpack_exports__["q"] = move_keyword_up;
+/* harmony export (immutable) */ __webpack_exports__["s"] = remove_author;
+/* harmony export (immutable) */ __webpack_exports__["r"] = remove_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["v"] = remove_keyword;
+/* harmony export (immutable) */ __webpack_exports__["w"] = remove_keywords;
+/* harmony export (immutable) */ __webpack_exports__["t"] = remove_date_released;
+/* harmony export (immutable) */ __webpack_exports__["u"] = remove_doi;
+/* harmony export (immutable) */ __webpack_exports__["x"] = remove_license;
+/* harmony export (immutable) */ __webpack_exports__["y"] = remove_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["z"] = remove_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["A"] = remove_orcid;
+/* harmony export (immutable) */ __webpack_exports__["B"] = remove_repository_code;
+/* harmony export (immutable) */ __webpack_exports__["C"] = remove_title;
+/* harmony export (immutable) */ __webpack_exports__["D"] = remove_version;
+/* harmony export (immutable) */ __webpack_exports__["I"] = update_given_names;
+/* harmony export (immutable) */ __webpack_exports__["L"] = update_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["H"] = update_family_names;
+/* harmony export (immutable) */ __webpack_exports__["M"] = update_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["N"] = update_orcid;
+/* harmony export (immutable) */ __webpack_exports__["E"] = update_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["F"] = update_date_released;
+/* harmony export (immutable) */ __webpack_exports__["G"] = update_doi;
+/* harmony export (immutable) */ __webpack_exports__["J"] = update_keyword;
+/* harmony export (immutable) */ __webpack_exports__["K"] = update_license;
+/* harmony export (immutable) */ __webpack_exports__["O"] = update_repository_code;
+/* harmony export (immutable) */ __webpack_exports__["P"] = update_title;
+/* harmony export (immutable) */ __webpack_exports__["Q"] = update_version;
+function add_affiliation(payload) {
+    this.$emit('add-affiliation', payload);
+}
+
 function add_author() {
     this.$emit('add-author');
 }
@@ -14036,6 +14492,18 @@ function add_keywords() {
 
 function add_license() {
     this.$emit('add-license');
+}
+
+function add_name_particle(payload) {
+    this.$emit('add-name-particle', payload);
+}
+
+function add_name_suffix(payload) {
+    this.$emit('add-name-suffix', payload);
+}
+
+function add_orcid(payload) {
+    this.$emit('add-orcid', payload);
 }
 
 function add_repository_code() {
@@ -14070,6 +14538,10 @@ function remove_author(author_id) {
     this.$emit('remove-author', author_id);
 }
 
+function remove_affiliation(payload) {
+    this.$emit('remove-affiliation', payload);
+}
+
 function remove_keyword(keyword_id) {
     this.$emit('remove-keyword', keyword_id);
 }
@@ -14090,6 +14562,18 @@ function remove_license() {
     this.$emit('remove-license');
 }
 
+function remove_name_particle(payload) {
+    this.$emit('remove-name-particle', payload);
+}
+
+function remove_name_suffix(payload) {
+    this.$emit('remove-name-suffix', payload);
+}
+
+function remove_orcid(payload) {
+    this.$emit('remove-orcid', payload);
+}
+
 function remove_repository_code() {
     this.$emit('remove-repository-code');
 }
@@ -14102,28 +14586,28 @@ function remove_version() {
     this.$emit('remove-version');
 }
 
-function update_author_given_names(payload) {
-    this.$emit('update-author-given-names', payload);
+function update_given_names(payload) {
+    this.$emit('update-given-names', payload);
 }
 
-function update_author_name_particle(payload) {
-    this.$emit('update-author-name-particle', payload);
+function update_name_particle(payload) {
+    this.$emit('update-name-particle', payload);
 }
 
-function update_author_family_names(payload) {
-    this.$emit('update-author-family-names', payload);
+function update_family_names(payload) {
+    this.$emit('update-family-names', payload);
 }
 
-function update_author_name_suffix(payload) {
-    this.$emit('update-author-name-suffix', payload);
+function update_name_suffix(payload) {
+    this.$emit('update-name-suffix', payload);
 }
 
-function update_author_orcid(payload) {
-    this.$emit('update-author-orcid', payload);
+function update_orcid(payload) {
+    this.$emit('update-orcid', payload);
 }
 
-function update_author_affiliation(payload) {
-    this.$emit('update-author-affiliation', payload);
+function update_affiliation(payload) {
+    this.$emit('update-affiliation', payload);
 }
 
 function update_date_released(payload) {
@@ -14155,15 +14639,15 @@ function update_version(payload) {
 }
 
 /***/ }),
-/* 51 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Authors_vue__ = __webpack_require__(8);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1b5e3d70_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Authors_vue__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2551b408_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Authors_vue__ = __webpack_require__(92);
 function injectStyle (ssrContext) {
-  __webpack_require__(52)
+  __webpack_require__(60)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -14176,12 +14660,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-1b5e3d70"
+var __vue_scopeId__ = "data-v-2551b408"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Authors_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1b5e3d70_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Authors_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2551b408_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Authors_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -14192,20 +14676,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 52 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(53);
+var content = __webpack_require__(61);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("54f1a772", content, true, {});
+var update = __webpack_require__(1)("3e865020", content, true, {});
 
 /***/ }),
-/* 53 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -14213,28 +14697,52 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, ".button-spacer[data-v-1b5e3d70]{min-width:16px}.add-button[data-v-1b5e3d70]{background-color:#ccc;border:1px solid #222;border-radius:2px;font-size:100%;padding:2px 10px;color:#222}.add-button[data-v-1b5e3d70]:hover{background-color:#ddd}.authors[data-v-1b5e3d70]{padding-left:0}", ""]);
+exports.push([module.i, ".button-spacer[data-v-2551b408]{min-width:16px}.add-button[data-v-2551b408]{background-color:#ccc;border:1px solid #222;border-radius:2px;font-size:100%;padding:2px 10px;color:#222}.add-button[data-v-2551b408]:hover{background-color:#ddd}.authors[data-v-2551b408]{padding-left:0;padding-bottom:2em}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 54 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = add;
-/* harmony export (immutable) */ __webpack_exports__["b"] = move_down;
-/* harmony export (immutable) */ __webpack_exports__["c"] = move_up;
-/* harmony export (immutable) */ __webpack_exports__["d"] = remove;
-/* harmony export (immutable) */ __webpack_exports__["e"] = update_affiliation;
-/* harmony export (immutable) */ __webpack_exports__["f"] = update_family_names;
-/* harmony export (immutable) */ __webpack_exports__["g"] = update_given_names;
-/* harmony export (immutable) */ __webpack_exports__["h"] = update_name_particle;
-/* harmony export (immutable) */ __webpack_exports__["i"] = update_name_suffix;
-/* harmony export (immutable) */ __webpack_exports__["j"] = update_orcid;
+/* harmony export (immutable) */ __webpack_exports__["b"] = add_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["c"] = add_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["d"] = add_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["e"] = add_orcid;
+/* harmony export (immutable) */ __webpack_exports__["f"] = move_down;
+/* harmony export (immutable) */ __webpack_exports__["g"] = move_up;
+/* harmony export (immutable) */ __webpack_exports__["h"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["i"] = remove_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["j"] = remove_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["k"] = remove_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["l"] = remove_orcid;
+/* harmony export (immutable) */ __webpack_exports__["m"] = update_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["n"] = update_family_names;
+/* harmony export (immutable) */ __webpack_exports__["o"] = update_given_names;
+/* harmony export (immutable) */ __webpack_exports__["p"] = update_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["q"] = update_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["r"] = update_orcid;
 function add() {
     this.$emit('add');
+}
+
+function add_affiliation(payload) {
+    this.$emit('add-affiliation', payload);
+}
+
+function add_name_particle(payload) {
+    this.$emit('add-name-particle', payload);
+}
+
+function add_name_suffix(payload) {
+    this.$emit('add-name-suffix', payload);
+}
+
+function add_orcid(payload) {
+    this.$emit('add-orcid', payload);
 }
 
 function move_down(author_id) {
@@ -14247,6 +14755,22 @@ function move_up(author_id) {
 
 function remove(author_id) {
     this.$emit('remove', author_id);
+}
+
+function remove_affiliation(payload) {
+    this.$emit('remove-affiliation', payload);
+}
+
+function remove_name_particle(payload) {
+    this.$emit('remove-name-particle', payload);
+}
+
+function remove_name_suffix(payload) {
+    this.$emit('remove-name-suffix', payload);
+}
+
+function remove_orcid(payload) {
+    this.$emit('remove-orcid', payload);
 }
 
 function update_affiliation(payload) {
@@ -14274,15 +14798,15 @@ function update_orcid(payload) {
 }
 
 /***/ }),
-/* 55 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Author_vue__ = __webpack_require__(9);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_33069248_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Author_vue__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9f8487e0_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Author_vue__ = __webpack_require__(91);
 function injectStyle (ssrContext) {
-  __webpack_require__(56)
+  __webpack_require__(64)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -14295,12 +14819,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-9f8487e0"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Author_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_33069248_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Author_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9f8487e0_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Author_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -14309,208 +14833,100 @@ var Component = normalizeComponent(
 
 /* harmony default export */ __webpack_exports__["a"] = (Component.exports);
 
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(57);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(1)("84a51912", content, true, {});
-
-/***/ }),
-/* 57 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".button-spacer{min-width:16px}.move-down-button,.move-up-button,.remove-button{background-color:#ccc;border:1px solid #222;border-radius:2px;font-size:100%;padding:2px 10px;color:#222}.move-down-button:hover,.move-up-button:hover,.remove-button:hover{background-color:#ddd}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 58 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["c"] = remove;
-/* harmony export (immutable) */ __webpack_exports__["a"] = move_down;
-/* harmony export (immutable) */ __webpack_exports__["b"] = move_up;
-/* harmony export (immutable) */ __webpack_exports__["d"] = update_affiliation;
-/* harmony export (immutable) */ __webpack_exports__["e"] = update_family_names;
-/* harmony export (immutable) */ __webpack_exports__["f"] = update_given_names;
-/* harmony export (immutable) */ __webpack_exports__["g"] = update_name_particle;
-/* harmony export (immutable) */ __webpack_exports__["h"] = update_name_suffix;
-/* harmony export (immutable) */ __webpack_exports__["i"] = update_orcid;
-function remove() {
-    this.$emit('remove', this.author.id);
-}
-
-function move_down() {
-    this.$emit('move-down', this.author.id);
-}
-
-function move_up() {
-    this.$emit('move-up', this.author.id);
-}
-
-function update_affiliation(event) {
-    let payload = {
-        id: this.author.id,
-        value: event.target.value
-    };
-    this.$emit('update-affiliation', payload);
-}
-
-function update_family_names(event) {
-    let payload = {
-        id: this.author.id,
-        value: event.target.value
-    };
-    this.$emit('update-family-names', payload);
-}
-
-function update_given_names(event) {
-    let payload = {
-        id: this.author.id,
-        value: event.target.value
-    };
-    this.$emit('update-given-names', payload);
-}
-
-function update_name_particle(event) {
-    let payload = {
-        id: this.author.id,
-        value: event.target.value
-    };
-    this.$emit('update-name-particle', payload);
-}
-
-function update_name_suffix(event) {
-    let payload = {
-        id: this.author.id,
-        value: event.target.value
-    };
-    this.$emit('update-name-suffix', payload);
-}
-
-function update_orcid(event) {
-    let payload = {
-        id: this.author.id,
-        value: event.target.value
-    };
-    this.$emit('update-orcid', payload);
-}
-
-/***/ }),
-/* 59 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = validate_orcid;
-function validate_orcid() {
-    let re = new RegExp('^[0-9]{4}.[0-9]{4}.[0-9]{4}.[0-9]{3}[0-9X]$');
-    return {
-        error: !re.test(this.author.orcid),
-        msg: "Should have the format 0000.0000.0000.0000"
-    };
-}
-
-/***/ }),
-/* 60 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',[_c('button',{staticClass:"remove-button",attrs:{"tabindex":"-1","title":"Remove this author"},on:{"click":_vm.remove}},[_c('div',{staticClass:"button-spacer"},[_vm._v("\n        -\n        ")])]),_vm._v(" "),_c('button',{staticClass:"move-up-button",attrs:{"tabindex":"-1","title":"Move this author up"},on:{"click":_vm.move_up}},[_c('div',{staticClass:"button-spacer"},[_vm._v("\n            ▲\n        ")])]),_vm._v(" "),_c('button',{staticClass:"move-down-button",attrs:{"tabindex":"-1","title":"Move this author down"},on:{"click":_vm.move_down}},[_c('div',{staticClass:"button-spacer"},[_vm._v("\n            ▼\n        ")])]),_vm._v(" "),_c('p',[_vm._v("\n        "+_vm._s(_vm.fullname)+"\n    ")]),_vm._v(" "),_c('ul',[_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                given-names\n            ")]),_vm._v(" "),_c('input',{domProps:{"value":_vm.author.given_names},on:{"input":function($event){_vm.update_given_names($event)}}})]),_vm._v(" "),_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                name-particle\n            ")]),_vm._v(" "),_c('input',{domProps:{"value":_vm.author.name_particle},on:{"input":function($event){_vm.update_name_particle($event)}}})]),_vm._v(" "),_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                family-names\n            ")]),_vm._v(" "),_c('input',{domProps:{"value":_vm.author.family_names},on:{"input":function($event){_vm.update_family_names($event)}}})]),_vm._v(" "),_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                name-suffix\n            ")]),_vm._v(" "),_c('input',{domProps:{"value":_vm.author.name_suffix},on:{"input":function($event){_vm.update_name_suffix($event)}}})]),_vm._v(" "),_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                orcid\n            ")]),_vm._v(" "),_c('input',{class:{error: _vm.orcid_validation.error },domProps:{"value":_vm.author.orcid},on:{"input":function($event){_vm.update_orcid($event)}}}),_vm._v(" "),(_vm.orcid_validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n                    "+_vm._s(_vm.orcid_validation.msg)+"\n            ")]):_vm._e()]),_vm._v(" "),_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                affiliation\n            ")]),_vm._v(" "),_c('input',{domProps:{"value":_vm.author.affiliation},on:{"input":function($event){_vm.update_affiliation($event)}}})])])])}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-/* 61 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n        authors\n        "),_c('button',{staticClass:"add-button",attrs:{"tabindex":"-1","title":"Add author"},on:{"click":_vm.add}},[_c('div',{staticClass:"button-spacer"},[_vm._v("\n                +\n            ")])])]),_vm._v(" "),_c('ul',{staticClass:"authors"},_vm._l((_vm.authors),function(author){return _c('Author',{key:author.id,attrs:{"author":author},on:{"move-down":_vm.move_down,"move-up":_vm.move_up,"remove":_vm.remove,"update-affiliation":_vm.update_affiliation,"update-family-names":_vm.update_family_names,"update-given-names":_vm.update_given_names,"update-name-particle":_vm.update_name_particle,"update-name-suffix":_vm.update_name_suffix,"update-orcid":_vm.update_orcid}})}))])}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-/* 62 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_DateReleased_vue__ = __webpack_require__(10);
-/* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6f11cde0_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_DateReleased_vue__ = __webpack_require__(67);
-function injectStyle (ssrContext) {
-  __webpack_require__(63)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-
-
-/* template */
-
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_DateReleased_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6f11cde0_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_DateReleased_vue__["a" /* default */],
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-
-/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
-
-
-/***/ }),
-/* 63 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(64);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(1)("1eaae704", content, true, {});
 
 /***/ }),
 /* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(65);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("02bc7a34", content, true, {});
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
 exports = module.exports = __webpack_require__(0)(false);
 // imports
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".button-spacer[data-v-9f8487e0]{min-width:16px}.move-down-button[data-v-9f8487e0],.move-up-button[data-v-9f8487e0],.remove-button[data-v-9f8487e0]{background-color:#ccc;border:1px solid #222;border-radius:2px;font-size:100%;padding:2px 10px;color:#222}.move-down-button[data-v-9f8487e0]:hover,.move-up-button[data-v-9f8487e0]:hover,.remove-button[data-v-9f8487e0]:hover{background-color:#ddd}ul[data-v-9f8487e0]{padding-bottom:2em}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 65 */
+/* 66 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Affiliation_vue__ = __webpack_require__(10);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_c4cc8926_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Affiliation_vue__ = __webpack_require__(71);
+function injectStyle (ssrContext) {
+  __webpack_require__(67)
+}
+var normalizeComponent = __webpack_require__(2)
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-c4cc8926"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Affiliation_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_c4cc8926_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Affiliation_vue__["a" /* default */],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(68);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("07e95ee6", content, true, {});
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "button[data-v-c4cc8926]{margin-bottom:1em;margin-top:1em}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14533,7 +14949,578 @@ function update(event) {
 }
 
 /***/ }),
-/* 66 */
+/* 70 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = validate;
+function validate() {
+    return {
+        error: this.affiliation == '',
+        msg: "Please enter a valid string or remove the property entirely."
+    };
+}
+
+/***/ }),
+/* 71 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.has_affiliation)?_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n        affiliation\n        "),_c('button',{attrs:{"tabindex":"-1","title":"Remove affiliation"},on:{"click":_vm.remove}},[_vm._v("\n            remove\n        ")])]),_vm._v(" "),_c('input',{class:{error: _vm.validation.error },attrs:{"type":"text"},domProps:{"value":_vm.affiliation},on:{"input":function($event){_vm.update($event)}}}),_vm._v(" "),(_vm.validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n        "+_vm._s(_vm.validation.msg)+"\n    ")]):_vm._e()]):_c('li',[_c('button',{attrs:{"tabindex":"-1","title":"Add affiliation"},on:{"click":_vm.add}},[_vm._v("\n        Add affiliation\n    ")])])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+/* 72 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Orcid_vue__ = __webpack_require__(11);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_61cab758_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Orcid_vue__ = __webpack_require__(77);
+function injectStyle (ssrContext) {
+  __webpack_require__(73)
+}
+var normalizeComponent = __webpack_require__(2)
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Orcid_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_61cab758_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Orcid_vue__["a" /* default */],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(74);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("090ebd75", content, true, {});
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = add;
+/* harmony export (immutable) */ __webpack_exports__["b"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["c"] = update;
+function add() {
+    this.$emit('add');
+}
+
+function remove() {
+    this.$emit('remove');
+}
+
+function update(event) {
+    let payload = {
+        value: event.target.value
+    };
+    this.$emit('update', payload);
+}
+
+/***/ }),
+/* 76 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = validate;
+function validate() {
+    let re = new RegExp('^[0-9]{4}.[0-9]{4}.[0-9]{4}.[0-9]{3}[0-9X]$');
+    return {
+        error: !re.test(this.orcid),
+        msg: "Should have the format 0000.0000.0000.0000"
+    };
+}
+
+/***/ }),
+/* 77 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.has_orcid)?_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n        orcid\n        "),_c('button',{attrs:{"tabindex":"-1","title":"Remove orcid"},on:{"click":_vm.remove}},[_vm._v("\n            remove\n        ")])]),_vm._v(" "),_c('input',{class:{error: _vm.validation.error },domProps:{"value":_vm.orcid},on:{"input":function($event){_vm.update($event)}}}),_vm._v(" "),(_vm.validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n            "+_vm._s(_vm.validation.msg)+"\n    ")]):_vm._e()]):_c('li',[_c('button',{attrs:{"tabindex":"-1","title":"Add orcid"},on:{"click":_vm.add}},[_vm._v("\n        Add orcid\n    ")])])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_NameParticle_vue__ = __webpack_require__(12);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0d652251_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_NameParticle_vue__ = __webpack_require__(83);
+function injectStyle (ssrContext) {
+  __webpack_require__(79)
+}
+var normalizeComponent = __webpack_require__(2)
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-0d652251"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_NameParticle_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0d652251_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_NameParticle_vue__["a" /* default */],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(80);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("519c9690", content, true, {});
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "button[data-v-0d652251]{margin-bottom:1em;margin-top:1em}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = add;
+/* harmony export (immutable) */ __webpack_exports__["b"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["c"] = update;
+function add() {
+    this.$emit('add');
+}
+
+function remove() {
+    this.$emit('remove');
+}
+
+function update(event) {
+    let payload = {
+        value: event.target.value
+    };
+    this.$emit('update', payload);
+}
+
+/***/ }),
+/* 82 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = validate;
+function validate() {
+    return {
+        error: this.name_particle == '',
+        msg: "Please enter a valid string or remove the property entirely."
+    };
+}
+
+/***/ }),
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.has_name_particle)?_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n        name-particle\n        "),_c('button',{attrs:{"tabindex":"-1","title":"Remove name-particle"},on:{"click":_vm.remove}},[_vm._v("\n            remove\n        ")])]),_vm._v(" "),_c('input',{class:{error: _vm.validation.error },attrs:{"type":"text"},domProps:{"value":_vm.name_particle},on:{"input":function($event){_vm.update($event)}}}),_vm._v(" "),(_vm.validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n        "+_vm._s(_vm.validation.msg)+"\n    ")]):_vm._e()]):_c('li',[_c('button',{attrs:{"tabindex":"-1","title":"Add name-particle"},on:{"click":_vm.add}},[_vm._v("\n        Add name-particle\n    ")])])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+/* 84 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_NameSuffix_vue__ = __webpack_require__(13);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3b75e5ae_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_NameSuffix_vue__ = __webpack_require__(89);
+function injectStyle (ssrContext) {
+  __webpack_require__(85)
+}
+var normalizeComponent = __webpack_require__(2)
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-3b75e5ae"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_NameSuffix_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3b75e5ae_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_NameSuffix_vue__["a" /* default */],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(86);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("31dcea62", content, true, {});
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "button[data-v-3b75e5ae]{margin-bottom:1em;margin-top:1em}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 87 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = add;
+/* harmony export (immutable) */ __webpack_exports__["b"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["c"] = update;
+function add() {
+    this.$emit('add');
+}
+
+function remove() {
+    this.$emit('remove');
+}
+
+function update(event) {
+    let payload = {
+        value: event.target.value
+    };
+    this.$emit('update', payload);
+}
+
+/***/ }),
+/* 88 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = validate;
+function validate() {
+    return {
+        error: this.name_suffix == '',
+        msg: "Please enter a valid string or remove the property entirely."
+    };
+}
+
+/***/ }),
+/* 89 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.has_name_suffix)?_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n        name-suffix\n        "),_c('button',{attrs:{"tabindex":"-1","title":"Remove name-suffix"},on:{"click":_vm.remove}},[_vm._v("\n            remove\n        ")])]),_vm._v(" "),_c('input',{class:{error: _vm.validation.error },attrs:{"type":"text"},domProps:{"value":_vm.name_suffix},on:{"input":function($event){_vm.update($event)}}}),_vm._v(" "),(_vm.validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n        "+_vm._s(_vm.validation.msg)+"\n    ")]):_vm._e()]):_c('li',[_c('button',{attrs:{"tabindex":"-1","title":"Add name-suffix"},on:{"click":_vm.add}},[_vm._v("\n        Add name-suffix\n    ")])])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+/* 90 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = add_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["d"] = add_orcid;
+/* harmony export (immutable) */ __webpack_exports__["b"] = add_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["c"] = add_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["g"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["h"] = remove_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["k"] = remove_orcid;
+/* harmony export (immutable) */ __webpack_exports__["i"] = remove_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["j"] = remove_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["e"] = move_down;
+/* harmony export (immutable) */ __webpack_exports__["f"] = move_up;
+/* harmony export (immutable) */ __webpack_exports__["l"] = update_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["m"] = update_family_names;
+/* harmony export (immutable) */ __webpack_exports__["n"] = update_given_names;
+/* harmony export (immutable) */ __webpack_exports__["o"] = update_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["p"] = update_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["q"] = update_orcid;
+function add_affiliation() {
+    let payload = { "id": this.author.id };
+    this.$emit('add-affiliation', payload);
+}
+
+function add_orcid() {
+    let payload = { "id": this.author.id };
+    this.$emit('add-orcid', payload);
+}
+
+function add_name_particle() {
+    let payload = { "id": this.author.id };
+    this.$emit('add-name-particle', payload);
+}
+
+function add_name_suffix() {
+    let payload = { "id": this.author.id };
+    this.$emit('add-name-suffix', payload);
+}
+
+function remove() {
+    this.$emit('remove', this.author.id);
+}
+
+function remove_affiliation() {
+    let payload = { "id": this.author.id };
+    this.$emit('remove-affiliation', payload);
+}
+
+function remove_orcid() {
+    let payload = { "id": this.author.id };
+    this.$emit('remove-orcid', payload);
+}
+
+function remove_name_particle() {
+    let payload = { "id": this.author.id };
+    this.$emit('remove-name-particle', payload);
+}
+
+function remove_name_suffix() {
+    let payload = { "id": this.author.id };
+    this.$emit('remove-name-suffix', payload);
+}
+
+function move_down() {
+    this.$emit('move-down', this.author.id);
+}
+
+function move_up() {
+    this.$emit('move-up', this.author.id);
+}
+
+function update_affiliation(old_payload) {
+    let new_payload = Object.assign(old_payload, { "id": this.author.id });
+    this.$emit('update-affiliation', new_payload);
+}
+
+function update_family_names(event) {
+    let payload = {
+        id: this.author.id,
+        value: event.target.value
+    };
+    this.$emit('update-family-names', payload);
+}
+
+function update_given_names(event) {
+    let payload = {
+        id: this.author.id,
+        value: event.target.value
+    };
+    this.$emit('update-given-names', payload);
+}
+
+function update_name_particle(old_payload) {
+    let new_payload = Object.assign(old_payload, { id: this.author.id });
+    this.$emit('update-name-particle', new_payload);
+}
+
+function update_name_suffix(old_payload) {
+    let new_payload = Object.assign(old_payload, { id: this.author.id });
+    this.$emit('update-name-suffix', new_payload);
+}
+
+function update_orcid(old_payload) {
+    let new_payload = Object.assign(old_payload, { "id": this.author.id });
+    this.$emit('update-orcid', new_payload);
+}
+
+/***/ }),
+/* 91 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',[_c('button',{staticClass:"remove-button",attrs:{"tabindex":"-1","title":"Remove this author"},on:{"click":_vm.remove}},[_c('div',{staticClass:"button-spacer"},[_vm._v("\n        -\n        ")])]),_vm._v(" "),_c('button',{staticClass:"move-up-button",attrs:{"tabindex":"-1","title":"Move this author up"},on:{"click":_vm.move_up}},[_c('div',{staticClass:"button-spacer"},[_vm._v("\n            ▲\n        ")])]),_vm._v(" "),_c('button',{staticClass:"move-down-button",attrs:{"tabindex":"-1","title":"Move this author down"},on:{"click":_vm.move_down}},[_c('div',{staticClass:"button-spacer"},[_vm._v("\n            ▼\n        ")])]),_vm._v(" "),_c('p',[_vm._v("\n        "+_vm._s(_vm.fullname)+"\n    ")]),_vm._v(" "),_c('ul',[_c('Affiliation',{attrs:{"affiliation":_vm.author.affiliation},on:{"add":_vm.add_affiliation,"remove":_vm.remove_affiliation,"update":_vm.update_affiliation}}),_vm._v(" "),_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                given-names\n            ")]),_vm._v(" "),_c('input',{domProps:{"value":_vm.author.given_names},on:{"input":function($event){_vm.update_given_names($event)}}})]),_vm._v(" "),_c('NameParticle',{attrs:{"name_particle":_vm.author.name_particle},on:{"add":_vm.add_name_particle,"remove":_vm.remove_name_particle,"update":_vm.update_name_particle}}),_vm._v(" "),_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                family-names\n            ")]),_vm._v(" "),_c('input',{domProps:{"value":_vm.author.family_names},on:{"input":function($event){_vm.update_family_names($event)}}})]),_vm._v(" "),_c('NameSuffix',{attrs:{"name_suffix":_vm.author.name_suffix},on:{"add":_vm.add_name_suffix,"remove":_vm.remove_name_suffix,"update":_vm.update_name_suffix}}),_vm._v(" "),_c('AuthorOrcid',{attrs:{"orcid":_vm.author.orcid},on:{"add":_vm.add_orcid,"remove":_vm.remove_orcid,"update":_vm.update_orcid}})],1)])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+/* 92 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n        authors\n        "),_c('button',{staticClass:"add-button",attrs:{"tabindex":"-1","title":"Add author"},on:{"click":_vm.add}},[_c('div',{staticClass:"button-spacer"},[_vm._v("\n                +\n            ")])])]),_vm._v(" "),_c('ul',{staticClass:"authors"},_vm._l((_vm.authors),function(author){return _c('Author',{key:author.id,attrs:{"author":author},on:{"add-affiliation":_vm.add_affiliation,"add-name-particle":_vm.add_name_particle,"add-name-suffix":_vm.add_name_suffix,"add-orcid":_vm.add_orcid,"move-down":_vm.move_down,"move-up":_vm.move_up,"remove":_vm.remove,"remove-affiliation":_vm.remove_affiliation,"remove-name-particle":_vm.remove_name_particle,"remove-name-suffix":_vm.remove_name_suffix,"remove-orcid":_vm.remove_orcid,"update-affiliation":_vm.update_affiliation,"update-family-names":_vm.update_family_names,"update-given-names":_vm.update_given_names,"update-name-particle":_vm.update_name_particle,"update-name-suffix":_vm.update_name_suffix,"update-orcid":_vm.update_orcid}})}))])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+/* 93 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_DateReleased_vue__ = __webpack_require__(14);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_02f4f83c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_DateReleased_vue__ = __webpack_require__(98);
+function injectStyle (ssrContext) {
+  __webpack_require__(94)
+}
+var normalizeComponent = __webpack_require__(2)
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-02f4f83c"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_DateReleased_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_02f4f83c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_DateReleased_vue__["a" /* default */],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(95);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("4b7435f3", content, true, {});
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 96 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = add;
+/* harmony export (immutable) */ __webpack_exports__["b"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["c"] = update;
+function add() {
+    this.$emit('add');
+}
+
+function remove() {
+    this.$emit('remove');
+}
+
+function update(event) {
+    let payload = {
+        value: event.target.value
+    };
+    this.$emit('update', payload);
+}
+
+/***/ }),
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14550,7 +15537,7 @@ function validate() {
 }
 
 /***/ }),
-/* 67 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14560,15 +15547,15 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 68 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Doi_vue__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Doi_vue__ = __webpack_require__(15);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_953a974c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Doi_vue__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_953a974c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Doi_vue__ = __webpack_require__(104);
 function injectStyle (ssrContext) {
-  __webpack_require__(69)
+  __webpack_require__(100)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -14597,20 +15584,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 69 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(70);
+var content = __webpack_require__(101);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("f59e3c56", content, true, {});
 
 /***/ }),
-/* 70 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -14624,7 +15611,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 71 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14647,7 +15634,7 @@ function update(event) {
 }
 
 /***/ }),
-/* 72 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14678,7 +15665,7 @@ function validate() {
 }
 
 /***/ }),
-/* 73 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14688,15 +15675,15 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 74 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Keywords_vue__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Keywords_vue__ = __webpack_require__(16);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5f559fc4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Keywords_vue__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5f559fc4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Keywords_vue__ = __webpack_require__(114);
 function injectStyle (ssrContext) {
-  __webpack_require__(75)
+  __webpack_require__(106)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -14725,20 +15712,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 75 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(76);
+var content = __webpack_require__(107);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("19266d6b", content, true, {});
 
 /***/ }),
-/* 76 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -14752,7 +15739,7 @@ exports.push([module.i, ".button-spacer{min-width:16px}.add-button{background-co
 
 
 /***/ }),
-/* 77 */
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14792,15 +15779,15 @@ function update_keyword(payload) {
 }
 
 /***/ }),
-/* 78 */
+/* 109 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Keyword_vue__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Keyword_vue__ = __webpack_require__(17);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9b9454de_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Keyword_vue__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9b9454de_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Keyword_vue__ = __webpack_require__(113);
 function injectStyle (ssrContext) {
-  __webpack_require__(79)
+  __webpack_require__(110)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -14829,20 +15816,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 79 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(80);
+var content = __webpack_require__(111);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("31bfad04", content, true, {});
 
 /***/ }),
-/* 80 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -14856,7 +15843,7 @@ exports.push([module.i, ".button-spacer{min-width:16px}.move-down-button,.move-u
 
 
 /***/ }),
-/* 81 */
+/* 112 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14890,7 +15877,7 @@ function update_keyword(event) {
 }
 
 /***/ }),
-/* 82 */
+/* 113 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14900,7 +15887,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 83 */
+/* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14910,15 +15897,15 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 84 */
+/* 115 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_License_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_License_vue__ = __webpack_require__(18);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_08a5b552_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_License_vue__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_08a5b552_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_License_vue__ = __webpack_require__(120);
 function injectStyle (ssrContext) {
-  __webpack_require__(85)
+  __webpack_require__(116)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -14947,20 +15934,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 85 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(86);
+var content = __webpack_require__(117);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("512fc3f6", content, true, {});
 
 /***/ }),
-/* 86 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -14974,7 +15961,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 87 */
+/* 118 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14997,7 +15984,7 @@ function update(event) {
 }
 
 /***/ }),
-/* 88 */
+/* 119 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15011,7 +15998,7 @@ function validate_license() {
 }
 
 /***/ }),
-/* 89 */
+/* 120 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15021,15 +16008,15 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 90 */
+/* 121 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_RepositoryCode_vue__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_RepositoryCode_vue__ = __webpack_require__(19);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_58d088c8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_RepositoryCode_vue__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_58d088c8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_RepositoryCode_vue__ = __webpack_require__(126);
 function injectStyle (ssrContext) {
-  __webpack_require__(91)
+  __webpack_require__(122)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -15058,20 +16045,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 91 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(92);
+var content = __webpack_require__(123);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("18d1e7b6", content, true, {});
 
 /***/ }),
-/* 92 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15085,7 +16072,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 93 */
+/* 124 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15108,7 +16095,7 @@ function update(event) {
 }
 
 /***/ }),
-/* 94 */
+/* 125 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15122,7 +16109,7 @@ function validate() {
 }
 
 /***/ }),
-/* 95 */
+/* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15132,15 +16119,15 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 96 */
+/* 127 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Version_vue__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Version_vue__ = __webpack_require__(20);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_64df5ea6_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Version_vue__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_64df5ea6_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Version_vue__ = __webpack_require__(131);
 function injectStyle (ssrContext) {
-  __webpack_require__(97)
+  __webpack_require__(128)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -15169,20 +16156,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 97 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(98);
+var content = __webpack_require__(129);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("15aacce8", content, true, {});
 
 /***/ }),
-/* 98 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15196,7 +16183,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 99 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15219,7 +16206,7 @@ function update(event) {
 }
 
 /***/ }),
-/* 100 */
+/* 131 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15229,15 +16216,15 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 101 */
+/* 132 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Title_vue__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Title_vue__ = __webpack_require__(21);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9271bd3a_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Title_vue__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9271bd3a_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Title_vue__ = __webpack_require__(136);
 function injectStyle (ssrContext) {
-  __webpack_require__(102)
+  __webpack_require__(133)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -15266,20 +16253,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 102 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(103);
+var content = __webpack_require__(134);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("1c45d2ca", content, true, {});
 
 /***/ }),
-/* 103 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15293,7 +16280,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 104 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15316,7 +16303,7 @@ function update(event) {
 }
 
 /***/ }),
-/* 105 */
+/* 136 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15326,57 +16313,69 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 106 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',{staticClass:"creative_work"},[_c('Authors',{attrs:{"authors":_vm.authors},on:{"add":_vm.add_author,"move-down":_vm.move_author_down,"move-up":_vm.move_author_up,"remove":_vm.remove_author,"update-affiliation":_vm.update_author_affiliation,"update-family-names":_vm.update_author_family_names,"update-given-names":_vm.update_author_given_names,"update-name-particle":_vm.update_author_name_particle,"update-name-suffix":_vm.update_author_name_suffix,"update-orcid":_vm.update_author_orcid}}),_vm._v(" "),_c('DateReleased',{attrs:{"date_released":_vm.date_released},on:{"add":_vm.add_date_released,"remove":_vm.remove_date_released,"update":_vm.update_date_released}}),_vm._v(" "),_c('Doi',{attrs:{"doi":_vm.doi},on:{"add":_vm.add_doi,"remove":_vm.remove_doi,"update":_vm.update_doi}}),_vm._v(" "),_c('Keywords',{attrs:{"keywords":_vm.keywords},on:{"add-keyword":_vm.add_keyword,"add-keywords":_vm.add_keywords,"move-keyword-down":_vm.move_keyword_down,"move-keyword-up":_vm.move_keyword_up,"remove-keyword":_vm.remove_keyword,"remove-keywords":_vm.remove_keywords,"update-keyword":_vm.update_keyword}}),_vm._v(" "),_c('License',{attrs:{"license":_vm.license},on:{"add":_vm.add_license,"remove":_vm.remove_license,"update":_vm.update_license}}),_vm._v(" "),_c('RepositoryCode',{attrs:{"repository_code":_vm.repository_code},on:{"add":_vm.add_repository_code,"remove":_vm.remove_repository_code,"update":_vm.update_repository_code}}),_vm._v(" "),_c('Title',{attrs:{"title":_vm.title},on:{"add":_vm.add_title,"remove":_vm.remove_title,"update":_vm.update_title}}),_vm._v(" "),_c('Version',{attrs:{"version":_vm.version},on:{"add":_vm.add_version,"remove":_vm.remove_version,"update":_vm.update_version}})],1)}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',{staticClass:"creative_work"},[_c('Authors',{attrs:{"authors":_vm.authors},on:{"add":_vm.add_author,"add-affiliation":_vm.add_affiliation,"add-orcid":_vm.add_orcid,"add-name-particle":_vm.add_name_particle,"add-name-suffix":_vm.add_name_suffix,"move-down":_vm.move_author_down,"move-up":_vm.move_author_up,"remove":_vm.remove_author,"remove-affiliation":_vm.remove_affiliation,"remove-orcid":_vm.remove_orcid,"remove-name-particle":_vm.remove_name_particle,"remove-name-suffix":_vm.remove_name_suffix,"update-affiliation":_vm.update_affiliation,"update-family-names":_vm.update_family_names,"update-given-names":_vm.update_given_names,"update-name-particle":_vm.update_name_particle,"update-name-suffix":_vm.update_name_suffix,"update-orcid":_vm.update_orcid}}),_vm._v(" "),_c('DateReleased',{attrs:{"date_released":_vm.date_released},on:{"add":_vm.add_date_released,"remove":_vm.remove_date_released,"update":_vm.update_date_released}}),_vm._v(" "),_c('Doi',{attrs:{"doi":_vm.doi},on:{"add":_vm.add_doi,"remove":_vm.remove_doi,"update":_vm.update_doi}}),_vm._v(" "),_c('Keywords',{attrs:{"keywords":_vm.keywords},on:{"add-keyword":_vm.add_keyword,"add-keywords":_vm.add_keywords,"move-keyword-down":_vm.move_keyword_down,"move-keyword-up":_vm.move_keyword_up,"remove-keyword":_vm.remove_keyword,"remove-keywords":_vm.remove_keywords,"update-keyword":_vm.update_keyword}}),_vm._v(" "),_c('License',{attrs:{"license":_vm.license},on:{"add":_vm.add_license,"remove":_vm.remove_license,"update":_vm.update_license}}),_vm._v(" "),_c('RepositoryCode',{attrs:{"repository_code":_vm.repository_code},on:{"add":_vm.add_repository_code,"remove":_vm.remove_repository_code,"update":_vm.update_repository_code}}),_vm._v(" "),_c('Title',{attrs:{"title":_vm.title},on:{"add":_vm.add_title,"remove":_vm.remove_title,"update":_vm.update_title}}),_vm._v(" "),_c('Version',{attrs:{"version":_vm.version},on:{"add":_vm.add_version,"remove":_vm.remove_version,"update":_vm.update_version}})],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 107 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = add_author;
-/* harmony export (immutable) */ __webpack_exports__["b"] = add_date_released;
-/* harmony export (immutable) */ __webpack_exports__["c"] = add_doi;
-/* harmony export (immutable) */ __webpack_exports__["d"] = add_keyword;
-/* harmony export (immutable) */ __webpack_exports__["e"] = add_keywords;
-/* harmony export (immutable) */ __webpack_exports__["f"] = add_license;
-/* harmony export (immutable) */ __webpack_exports__["g"] = add_repository_code;
-/* harmony export (immutable) */ __webpack_exports__["h"] = add_title;
-/* harmony export (immutable) */ __webpack_exports__["i"] = add_version;
-/* harmony export (immutable) */ __webpack_exports__["j"] = move_author_down;
-/* harmony export (immutable) */ __webpack_exports__["k"] = move_author_up;
-/* harmony export (immutable) */ __webpack_exports__["l"] = move_keyword_down;
-/* harmony export (immutable) */ __webpack_exports__["m"] = move_keyword_up;
-/* harmony export (immutable) */ __webpack_exports__["n"] = remove_author;
-/* harmony export (immutable) */ __webpack_exports__["q"] = remove_keyword;
-/* harmony export (immutable) */ __webpack_exports__["r"] = remove_keywords;
-/* harmony export (immutable) */ __webpack_exports__["o"] = remove_date_released;
-/* harmony export (immutable) */ __webpack_exports__["p"] = remove_doi;
-/* harmony export (immutable) */ __webpack_exports__["s"] = remove_license;
-/* harmony export (immutable) */ __webpack_exports__["t"] = remove_repository_code;
-/* harmony export (immutable) */ __webpack_exports__["u"] = remove_title;
-/* harmony export (immutable) */ __webpack_exports__["v"] = remove_version;
-/* harmony export (immutable) */ __webpack_exports__["y"] = update_author_given_names;
-/* harmony export (immutable) */ __webpack_exports__["z"] = update_author_name_particle;
-/* harmony export (immutable) */ __webpack_exports__["x"] = update_author_family_names;
-/* harmony export (immutable) */ __webpack_exports__["A"] = update_author_name_suffix;
-/* harmony export (immutable) */ __webpack_exports__["B"] = update_author_orcid;
-/* harmony export (immutable) */ __webpack_exports__["w"] = update_author_affiliation;
-/* harmony export (immutable) */ __webpack_exports__["C"] = update_cff_version;
-/* harmony export (immutable) */ __webpack_exports__["D"] = update_date_released;
-/* harmony export (immutable) */ __webpack_exports__["E"] = update_doi;
-/* harmony export (immutable) */ __webpack_exports__["F"] = update_keyword;
-/* harmony export (immutable) */ __webpack_exports__["G"] = update_license;
-/* harmony export (immutable) */ __webpack_exports__["I"] = update_repository_code;
-/* harmony export (immutable) */ __webpack_exports__["J"] = update_title;
-/* harmony export (immutable) */ __webpack_exports__["H"] = update_message;
-/* harmony export (immutable) */ __webpack_exports__["K"] = update_version;
+/* harmony export (immutable) */ __webpack_exports__["a"] = add_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["b"] = add_author;
+/* harmony export (immutable) */ __webpack_exports__["c"] = add_date_released;
+/* harmony export (immutable) */ __webpack_exports__["d"] = add_doi;
+/* harmony export (immutable) */ __webpack_exports__["e"] = add_keyword;
+/* harmony export (immutable) */ __webpack_exports__["f"] = add_keywords;
+/* harmony export (immutable) */ __webpack_exports__["g"] = add_license;
+/* harmony export (immutable) */ __webpack_exports__["h"] = add_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["i"] = add_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["j"] = add_orcid;
+/* harmony export (immutable) */ __webpack_exports__["k"] = add_repository_code;
+/* harmony export (immutable) */ __webpack_exports__["l"] = add_title;
+/* harmony export (immutable) */ __webpack_exports__["m"] = add_version;
+/* harmony export (immutable) */ __webpack_exports__["n"] = move_author_down;
+/* harmony export (immutable) */ __webpack_exports__["o"] = move_author_up;
+/* harmony export (immutable) */ __webpack_exports__["p"] = move_keyword_down;
+/* harmony export (immutable) */ __webpack_exports__["q"] = move_keyword_up;
+/* harmony export (immutable) */ __webpack_exports__["r"] = remove_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["s"] = remove_author;
+/* harmony export (immutable) */ __webpack_exports__["t"] = remove_date_released;
+/* harmony export (immutable) */ __webpack_exports__["u"] = remove_doi;
+/* harmony export (immutable) */ __webpack_exports__["v"] = remove_keyword;
+/* harmony export (immutable) */ __webpack_exports__["w"] = remove_keywords;
+/* harmony export (immutable) */ __webpack_exports__["x"] = remove_license;
+/* harmony export (immutable) */ __webpack_exports__["y"] = remove_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["z"] = remove_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["A"] = remove_orcid;
+/* harmony export (immutable) */ __webpack_exports__["B"] = remove_repository_code;
+/* harmony export (immutable) */ __webpack_exports__["C"] = remove_title;
+/* harmony export (immutable) */ __webpack_exports__["D"] = remove_version;
+/* harmony export (immutable) */ __webpack_exports__["J"] = update_given_names;
+/* harmony export (immutable) */ __webpack_exports__["N"] = update_name_particle;
+/* harmony export (immutable) */ __webpack_exports__["I"] = update_family_names;
+/* harmony export (immutable) */ __webpack_exports__["O"] = update_name_suffix;
+/* harmony export (immutable) */ __webpack_exports__["P"] = update_orcid;
+/* harmony export (immutable) */ __webpack_exports__["E"] = update_affiliation;
+/* harmony export (immutable) */ __webpack_exports__["F"] = update_cff_version;
+/* harmony export (immutable) */ __webpack_exports__["G"] = update_date_released;
+/* harmony export (immutable) */ __webpack_exports__["H"] = update_doi;
+/* harmony export (immutable) */ __webpack_exports__["K"] = update_keyword;
+/* harmony export (immutable) */ __webpack_exports__["L"] = update_license;
+/* harmony export (immutable) */ __webpack_exports__["Q"] = update_repository_code;
+/* harmony export (immutable) */ __webpack_exports__["R"] = update_title;
+/* harmony export (immutable) */ __webpack_exports__["M"] = update_message;
+/* harmony export (immutable) */ __webpack_exports__["S"] = update_version;
+function add_affiliation(payload) {
+    this.$emit('add-affiliation', payload);
+}
+
 function add_author() {
     this.$emit('add-author');
 }
@@ -15399,6 +16398,18 @@ function add_keywords() {
 
 function add_license() {
     this.$emit('add-license');
+}
+
+function add_name_particle(payload) {
+    this.$emit('add-name-particle', payload);
+}
+
+function add_name_suffix(payload) {
+    this.$emit('add-name-suffix', payload);
+}
+
+function add_orcid(payload) {
+    this.$emit('add-orcid', payload);
 }
 
 function add_repository_code() {
@@ -15429,16 +16440,12 @@ function move_keyword_up(keyword_id) {
     this.$emit('move-keyword-up', keyword_id);
 }
 
+function remove_affiliation(payload) {
+    this.$emit('remove-affiliation', payload);
+}
+
 function remove_author(author_id) {
     this.$emit('remove-author', author_id);
-}
-
-function remove_keyword(keyword_id) {
-    this.$emit('remove-keyword', keyword_id);
-}
-
-function remove_keywords() {
-    this.$emit('remove-keywords');
 }
 
 function remove_date_released() {
@@ -15449,8 +16456,28 @@ function remove_doi() {
     this.$emit('remove-doi');
 }
 
+function remove_keyword(keyword_id) {
+    this.$emit('remove-keyword', keyword_id);
+}
+
+function remove_keywords() {
+    this.$emit('remove-keywords');
+}
+
 function remove_license() {
     this.$emit('remove-license');
+}
+
+function remove_name_particle(payload) {
+    this.$emit('remove-name-particle', payload);
+}
+
+function remove_name_suffix(payload) {
+    this.$emit('remove-name-suffix', payload);
+}
+
+function remove_orcid(payload) {
+    this.$emit('remove-orcid', payload);
 }
 
 function remove_repository_code() {
@@ -15465,28 +16492,28 @@ function remove_version() {
     this.$emit('remove-version');
 }
 
-function update_author_given_names(payload) {
-    this.$emit('update-author-given-names', payload);
+function update_given_names(payload) {
+    this.$emit('update-given-names', payload);
 }
 
-function update_author_name_particle(payload) {
-    this.$emit('update-author-name-particle', payload);
+function update_name_particle(payload) {
+    this.$emit('update-name-particle', payload);
 }
 
-function update_author_family_names(payload) {
-    this.$emit('update-author-family-names', payload);
+function update_family_names(payload) {
+    this.$emit('update-family-names', payload);
 }
 
-function update_author_name_suffix(payload) {
-    this.$emit('update-author-name-suffix', payload);
+function update_name_suffix(payload) {
+    this.$emit('update-name-suffix', payload);
 }
 
-function update_author_orcid(payload) {
-    this.$emit('update-author-orcid', payload);
+function update_orcid(payload) {
+    this.$emit('update-orcid', payload);
 }
 
-function update_author_affiliation(payload) {
-    this.$emit('update-author-affiliation', payload);
+function update_affiliation(payload) {
+    this.$emit('update-affiliation', payload);
 }
 
 function update_cff_version(event) {
@@ -15532,7 +16559,7 @@ function update_version(payload) {
 }
 
 /***/ }),
-/* 108 */
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15554,21 +16581,21 @@ function validate_message() {
 }
 
 /***/ }),
-/* 109 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form"},[_c('ul',[_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                    cff-version\n                ")]),_vm._v(" "),_c('input',{class:{error: _vm.cff_version_validation.error },attrs:{"placeholder":"1.0.3","type":"text"},domProps:{"value":_vm.cff_version},on:{"input":function($event){_vm.update_cff_version($event)}}}),_vm._v(" "),(_vm.cff_version_validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n                    "+_vm._s(_vm.cff_version_validation.msg)+"\n                ")]):_vm._e()]),_vm._v(" "),_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                    message\n                ")]),_vm._v(" "),_c('textarea',{staticClass:"msg",class:{error: _vm.message_validation.error },domProps:{"value":_vm.message},on:{"input":function($event){_vm.update_message($event)}}}),_vm._v(" "),(_vm.message_validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n                    "+_vm._s(_vm.message_validation.msg)+"\n                ")]):_vm._e()]),_vm._v(" "),_c('CreativeWork',{attrs:{"author_id":_vm.author_id,"authors":_vm.authors,"date_released":_vm.date_released,"doi":_vm.doi,"keyword_id":_vm.keyword_id,"keywords":_vm.keywords,"license":_vm.license,"repository_code":_vm.repository_code,"title":_vm.title,"version":_vm.version},on:{"add-author":_vm.add_author,"add-date-released":_vm.add_date_released,"add-doi":_vm.add_doi,"add-keyword":_vm.add_keyword,"add-keywords":_vm.add_keywords,"add-license":_vm.add_license,"add-repository-code":_vm.add_repository_code,"add-title":_vm.add_title,"add-version":_vm.add_version,"move-author-down":_vm.move_author_down,"move-author-up":_vm.move_author_up,"move-keyword-down":_vm.move_keyword_down,"move-keyword-up":_vm.move_keyword_up,"remove-author":_vm.remove_author,"remove-date-released":_vm.remove_date_released,"remove-doi":_vm.remove_doi,"remove-keyword":_vm.remove_keyword,"remove-keywords":_vm.remove_keywords,"remove-license":_vm.remove_license,"remove-repository-code":_vm.remove_repository_code,"remove-title":_vm.remove_title,"remove-version":_vm.remove_version,"update-author-affiliation":_vm.update_author_affiliation,"update-author-family-names":_vm.update_author_family_names,"update-author-given-names":_vm.update_author_given_names,"update-author-name-particle":_vm.update_author_name_particle,"update-author-name-suffix":_vm.update_author_name_suffix,"update-author-orcid":_vm.update_author_orcid,"update-date-released":_vm.update_date_released,"update-doi":_vm.update_doi,"update-keyword":_vm.update_keyword,"update-license":_vm.update_license,"update-repository-code":_vm.update_repository_code,"update-title":_vm.update_title,"update-version":_vm.update_version}})],1)])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form"},[_c('ul',[_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                    cff-version\n                ")]),_vm._v(" "),_c('input',{class:{error: _vm.cff_version_validation.error },attrs:{"placeholder":"1.0.3","type":"text"},domProps:{"value":_vm.cff_version},on:{"input":function($event){_vm.update_cff_version($event)}}}),_vm._v(" "),(_vm.cff_version_validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n                    "+_vm._s(_vm.cff_version_validation.msg)+"\n                ")]):_vm._e()]),_vm._v(" "),_c('li',[_c('p',{staticClass:"caption"},[_vm._v("\n                    message\n                ")]),_vm._v(" "),_c('textarea',{staticClass:"msg",class:{error: _vm.message_validation.error },domProps:{"value":_vm.message},on:{"input":function($event){_vm.update_message($event)}}}),_vm._v(" "),(_vm.message_validation.error)?_c('p',{staticClass:"message"},[_vm._v("\n                    "+_vm._s(_vm.message_validation.msg)+"\n                ")]):_vm._e()]),_vm._v(" "),_c('CreativeWork',{attrs:{"author_id":_vm.author_id,"authors":_vm.authors,"date_released":_vm.date_released,"doi":_vm.doi,"keyword_id":_vm.keyword_id,"keywords":_vm.keywords,"license":_vm.license,"repository_code":_vm.repository_code,"title":_vm.title,"version":_vm.version},on:{"add-author":_vm.add_author,"add-affiliation":_vm.add_affiliation,"add-date-released":_vm.add_date_released,"add-doi":_vm.add_doi,"add-keyword":_vm.add_keyword,"add-keywords":_vm.add_keywords,"add-name-particle":_vm.add_name_particle,"add-name-suffix":_vm.add_name_suffix,"add-license":_vm.add_license,"add-orcid":_vm.add_orcid,"add-repository-code":_vm.add_repository_code,"add-title":_vm.add_title,"add-version":_vm.add_version,"move-author-down":_vm.move_author_down,"move-author-up":_vm.move_author_up,"move-keyword-down":_vm.move_keyword_down,"move-keyword-up":_vm.move_keyword_up,"remove-author":_vm.remove_author,"remove-affiliation":_vm.remove_affiliation,"remove-date-released":_vm.remove_date_released,"remove-doi":_vm.remove_doi,"remove-keyword":_vm.remove_keyword,"remove-keywords":_vm.remove_keywords,"remove-license":_vm.remove_license,"remove-name-particle":_vm.remove_name_particle,"remove-name-suffix":_vm.remove_name_suffix,"remove-orcid":_vm.remove_orcid,"remove-repository-code":_vm.remove_repository_code,"remove-title":_vm.remove_title,"remove-version":_vm.remove_version,"update-affiliation":_vm.update_affiliation,"update-family-names":_vm.update_family_names,"update-given-names":_vm.update_given_names,"update-name-particle":_vm.update_name_particle,"update-name-suffix":_vm.update_name_suffix,"update-orcid":_vm.update_orcid,"update-date-released":_vm.update_date_released,"update-doi":_vm.update_doi,"update-keyword":_vm.update_keyword,"update-license":_vm.update_license,"update-repository-code":_vm.update_repository_code,"update-title":_vm.update_title,"update-version":_vm.update_version}})],1)])}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 110 */
+/* 141 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"container"},[_c('Form',{attrs:{"author_id":_vm.author_id,"authors":_vm.authors,"cff_version":_vm.cff_version,"date_released":_vm.date_released,"doi":_vm.doi,"keyword_id":_vm.keyword_id,"keywords":_vm.keywords,"license":_vm.license,"message":_vm.message,"repository_code":_vm.repository_code,"title":_vm.title,"version":_vm.version},on:{"add-author":_vm.add_author,"add-date-released":_vm.add_date_released,"add-doi":_vm.add_doi,"add-keyword":_vm.add_keyword,"add-keywords":_vm.add_keywords,"add-license":_vm.add_license,"add-repository-code":_vm.add_repository_code,"add-title":_vm.add_title,"add-version":_vm.add_version,"move-author-down":_vm.move_author_down,"move-author-up":_vm.move_author_up,"move-keyword-down":_vm.move_keyword_down,"move-keyword-up":_vm.move_keyword_up,"remove-author":_vm.remove_author,"remove-date-released":_vm.remove_date_released,"remove-doi":_vm.remove_doi,"remove-keyword":_vm.remove_keyword,"remove-keywords":_vm.remove_keywords,"remove-license":_vm.remove_license,"remove-repository-code":_vm.remove_repository_code,"remove-title":_vm.remove_title,"remove-version":_vm.remove_version,"update-author-affiliation":_vm.update_author_affiliation,"update-author-family-names":_vm.update_author_family_names,"update-author-given-names":_vm.update_author_given_names,"update-author-name-particle":_vm.update_author_name_particle,"update-author-name-suffix":_vm.update_author_name_suffix,"update-author-orcid":_vm.update_author_orcid,"update-cff-version":_vm.update_cff_version,"update-date-released":_vm.update_date_released,"update-doi":_vm.update_doi,"update-keyword":_vm.update_keyword,"update-license":_vm.update_license,"update-message":_vm.update_message,"update-repository-code":_vm.update_repository_code,"update-title":_vm.update_title,"update-version":_vm.update_version}}),_vm._v(" "),_c('CffText',{attrs:{"cff":_vm.cff}})],1),_vm._v(" "),_c('div',{staticClass:"container"},[_c('button',{staticClass:"download-button",on:{"click":_vm.save_text_as_file}},[_vm._v("\n            Save Text to File\n        ")])]),_vm._v(" "),_vm._m(1)])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"container"},[_c('Form',{attrs:{"author_id":_vm.author_id,"authors":_vm.authors,"cff_version":_vm.cff_version,"date_released":_vm.date_released,"doi":_vm.doi,"keyword_id":_vm.keyword_id,"keywords":_vm.keywords,"license":_vm.license,"message":_vm.message,"repository_code":_vm.repository_code,"title":_vm.title,"version":_vm.version},on:{"add-affiliation":_vm.add_affiliation,"add-author":_vm.add_author,"add-date-released":_vm.add_date_released,"add-doi":_vm.add_doi,"add-keyword":_vm.add_keyword,"add-keywords":_vm.add_keywords,"add-license":_vm.add_license,"add-name-particle":_vm.add_name_particle,"add-name-suffix":_vm.add_name_suffix,"add-orcid":_vm.add_orcid,"add-repository-code":_vm.add_repository_code,"add-title":_vm.add_title,"add-version":_vm.add_version,"move-author-down":_vm.move_author_down,"move-author-up":_vm.move_author_up,"move-keyword-down":_vm.move_keyword_down,"move-keyword-up":_vm.move_keyword_up,"remove-author":_vm.remove_author,"remove-affiliation":_vm.remove_affiliation,"remove-date-released":_vm.remove_date_released,"remove-doi":_vm.remove_doi,"remove-keyword":_vm.remove_keyword,"remove-keywords":_vm.remove_keywords,"remove-license":_vm.remove_license,"remove-name-particle":_vm.remove_name_particle,"remove-name-suffix":_vm.remove_name_suffix,"remove-orcid":_vm.remove_orcid,"remove-repository-code":_vm.remove_repository_code,"remove-title":_vm.remove_title,"remove-version":_vm.remove_version,"update-affiliation":_vm.update_affiliation,"update-family-names":_vm.update_family_names,"update-given-names":_vm.update_given_names,"update-name-particle":_vm.update_name_particle,"update-name-suffix":_vm.update_name_suffix,"update-orcid":_vm.update_orcid,"update-cff-version":_vm.update_cff_version,"update-date-released":_vm.update_date_released,"update-doi":_vm.update_doi,"update-keyword":_vm.update_keyword,"update-license":_vm.update_license,"update-message":_vm.update_message,"update-repository-code":_vm.update_repository_code,"update-title":_vm.update_title,"update-version":_vm.update_version}}),_vm._v(" "),_c('CffText',{attrs:{"cff":_vm.cff}})],1),_vm._v(" "),_c('div',{staticClass:"container"},[_c('button',{staticClass:"download-button",on:{"click":_vm.save_text_as_file}},[_vm._v("\n            Save Text to File\n        ")])]),_vm._v(" "),_vm._m(1)])}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"header"},[_c('h1',[_vm._v("cffinit")]),_vm._v(" "),_c('h2',[_vm._v("Initialize your CITATION.cff files")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"github"},[_c('a',{attrs:{"href":"https://github.com/citation-file-format/cff-initializer-javascript"}},[_c('img',{attrs:{"src":"img/github-mark-light-64px.png","width":"50px","height":"50px"}})])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
