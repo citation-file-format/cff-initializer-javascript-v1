@@ -35,12 +35,12 @@
 <script>
 import {add,
         remove,
-        update} from './AuthorOrcidEmitters.js';
+        update} from './OrcidEmitters.js';
 
-import {validate} from './AuthorOrcidValidators.js';
+import {validate} from './OrcidValidators.js';
 
 export default {
-    name: 'AuthorOrcid',
+    name: 'Orcid',
     props: {
         orcid: String
     },

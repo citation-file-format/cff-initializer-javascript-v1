@@ -1,6 +1,6 @@
 export function add_author () {
     this.authors.push({
-        affiliation: '',
+        affiliation: undefined,
         family_names: '',
         given_names: '',
         id: this.author_id += 1,

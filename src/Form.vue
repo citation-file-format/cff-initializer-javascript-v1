@@ -51,6 +51,7 @@
                 v-bind:title="title"
                 v-bind:version="version"
                 v-on:add-author="add_author"
+                v-on:add-affiliation="add_affiliation"
                 v-on:add-date-released="add_date_released"
                 v-on:add-doi="add_doi"
                 v-on:add-keyword="add_keyword"
@@ -65,6 +66,7 @@
                 v-on:move-keyword-down="move_keyword_down"
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-author="remove_author"
+                v-on:remove-affiliation="remove_affiliation"
                 v-on:remove-date-released="remove_date_released"
                 v-on:remove-doi="remove_doi"
                 v-on:remove-keyword="remove_keyword"
@@ -105,7 +107,8 @@
 <script>
 import CreativeWork from './CreativeWork.vue';
 
-import {add_author,
+import {add_affiliation,
+        add_author,
         add_date_released,
         add_doi,
         add_keyword,
@@ -119,6 +122,7 @@ import {add_author,
         move_author_up,
         move_keyword_down,
         move_keyword_up,
+        remove_affiliation,
         remove_author,
         remove_date_released,
         remove_doi,
@@ -172,6 +176,7 @@ export default {
         cff_version_validation: validate_cff_version
     },
     methods: {
+        add_affiliation,
         add_author,
         add_date_released,
         add_doi,
@@ -186,6 +191,7 @@ export default {
         move_author_up,
         move_keyword_down,
         move_keyword_up,
+        remove_affiliation,
         remove_author,
         remove_date_released,
         remove_doi,

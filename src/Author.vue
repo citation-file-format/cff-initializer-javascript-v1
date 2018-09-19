@@ -38,6 +38,13 @@
         </p>
 
         <ul>
+            <Affiliation
+                v-bind:affiliation="author.affiliation"
+                v-on:add="add_affiliation"
+                v-on:remove="remove_affiliation"
+                v-on:update="update_affiliation"
+            />
+
             <li>
                 <p class="caption">
                     given-names
@@ -85,25 +92,19 @@
                 v-on:update="update_orcid"
             />
 
-            <li>
-                <p class="caption">
-                    affiliation
-                </p>
-                <input
-                    v-bind:value="author.affiliation"
-                    v-on:input="update_affiliation($event)"
-                >
-            </li>
-
         </ul>
     </li>
 </template>
 
 <script>
-import AuthorOrcid from './AuthorOrcid.vue';
+
+import Affiliation from './Affiliation.vue';
+import AuthorOrcid from './Orcid.vue';
 
 import {add_orcid,
+        add_affiliation,
         remove,
+        remove_affiliation,
         remove_orcid,
         move_down,
         move_up,
@@ -117,6 +118,7 @@ import {add_orcid,
 export default {
     name: 'Author',
     components: {
+        Affiliation,
         AuthorOrcid
     },
     props: {
@@ -142,7 +144,9 @@ export default {
     },
     methods: {
         add_orcid,
+        add_affiliation,
         remove,
+        remove_affiliation,
         remove_orcid,
         move_down,
         move_up,
@@ -156,7 +160,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
     .button-spacer {
         min-width: 16px;
@@ -176,4 +180,6 @@ export default {
     .move-up-button:hover, .move-down-button:hover, .remove-button:hover {
         background-color: #ddd;
     }
+
+
 </style>

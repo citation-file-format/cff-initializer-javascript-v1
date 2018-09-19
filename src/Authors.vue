@@ -17,10 +17,12 @@
                 v-for="author in authors"
                 v-bind:author="author"
                 v-bind:key="author.id"
+                v-on:add-affiliation="add_affiliation"
                 v-on:add-orcid="add_orcid"
                 v-on:move-down="move_down"
                 v-on:move-up="move_up"
                 v-on:remove="remove"
+                v-on:remove-affiliation="remove_affiliation"
                 v-on:remove-orcid="remove_orcid"
                 v-on:update-affiliation="update_affiliation"
                 v-on:update-family-names="update_family_names"
@@ -35,10 +37,12 @@
 
 <script>
 import {add,
+        add_affiliation,
         add_orcid,
         move_down,
         move_up,
         remove,
+        remove_affiliation,
         remove_orcid,
         update_affiliation,
         update_family_names,
@@ -59,10 +63,12 @@ export default {
     },
     methods: {
         add,
+        add_affiliation,
         add_orcid,
         move_down,
         move_up,
         remove,
+        remove_affiliation,
         remove_orcid,
         update_affiliation,
         update_family_names,
@@ -97,6 +103,7 @@ export default {
 
     .authors {
         padding-left:0px;
+        padding-bottom: 2em;
     }
 
 </style>

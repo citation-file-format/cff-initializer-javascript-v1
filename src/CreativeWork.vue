@@ -4,10 +4,12 @@
         <Authors
             v-bind:authors="authors"
             v-on:add="add_author"
+            v-on:add-affiliation="add_affiliation"
             v-on:add-orcid="add_orcid"
             v-on:move-down="move_author_down"
             v-on:move-up="move_author_up"
             v-on:remove="remove_author"
+            v-on:remove-affiliation="remove_affiliation"
             v-on:remove-orcid="remove_orcid"
             v-on:update-affiliation="update_affiliation"
             v-on:update-family-names="update_family_names"
@@ -74,7 +76,8 @@
 </template>
 
 <script>
-import {add_author,
+import {add_affiliation,
+        add_author,
         add_date_released,
         add_doi,
         add_keyword,
@@ -88,6 +91,7 @@ import {add_author,
         move_author_up,
         move_keyword_down,
         move_keyword_up,
+        remove_affiliation,
         remove_author,
         remove_date_released,
         remove_doi,
@@ -148,6 +152,7 @@ export default {
     computed: {
     },
     methods: {
+        add_affiliation,
         add_author,
         add_date_released,
         add_doi,
@@ -162,6 +167,7 @@ export default {
         move_author_up,
         move_keyword_down,
         move_keyword_up,
+        remove_affiliation,
         remove_author,
         remove_date_released,
         remove_doi,
