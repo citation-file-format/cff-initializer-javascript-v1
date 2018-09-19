@@ -11,9 +11,17 @@
             </button>
         </p>
         <input
+            v-bind:class="{error: validation.error }"
             v-bind:value="name_suffix"
+            type="text"
             v-on:input="update($event)"
         >
+        <p
+            v-if="validation.error"
+            class="message"
+        >
+            {{ validation.msg }}
+        </p>
     </li>
     <li v-else>
         <button
@@ -32,6 +40,8 @@ import {add,
         remove,
         update} from './NameSuffixEmitters.js';
 
+import {validate} from './NameSuffixValidators.js';
+
 export default {
     name: 'NameSuffix',
     components: {
@@ -43,7 +53,8 @@ export default {
         has_name_suffix: function () {
             return this.$props.hasOwnProperty('name_suffix') &&
                 this.$props.name_suffix !== undefined;
-        }
+        },
+        validation: validate
     },
     methods: {
         add,

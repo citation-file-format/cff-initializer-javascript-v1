@@ -11,9 +11,17 @@
             </button>
         </p>
         <input
+            v-bind:class="{error: validation.error }"
             v-bind:value="name_particle"
+            type="text"
             v-on:input="update($event)"
         >
+        <p
+            v-if="validation.error"
+            class="message"
+        >
+            {{ validation.msg }}
+        </p>
     </li>
     <li v-else>
         <button
@@ -32,6 +40,8 @@ import {add,
         remove,
         update} from './NameParticleEmitters.js';
 
+import {validate} from './NameParticleValidators.js';
+
 export default {
     name: 'NameParticle',
     components: {
@@ -43,7 +53,8 @@ export default {
         has_name_particle: function () {
             return this.$props.hasOwnProperty('name_particle') &&
                 this.$props.name_particle !== undefined;
-        }
+        },
+        validation: validate
     },
     methods: {
         add,
