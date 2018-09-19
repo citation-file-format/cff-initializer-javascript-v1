@@ -25,6 +25,7 @@
                 v-on:add-keyword="add_keyword"
                 v-on:add-keywords="add_keywords"
                 v-on:add-license="add_license"
+                v-on:add-name-suffix="add_name_suffix"
                 v-on:add-orcid="add_orcid"
                 v-on:add-repository-code="add_repository_code"
                 v-on:add-title="add_title"
@@ -40,6 +41,7 @@
                 v-on:remove-keyword="remove_keyword"
                 v-on:remove-keywords="remove_keywords"
                 v-on:remove-license="remove_license"
+                v-on:remove-name-suffix="remove_name_suffix"
                 v-on:remove-orcid="remove_orcid"
                 v-on:remove-repository-code="remove_repository_code"
                 v-on:remove-title="remove_title"
@@ -121,12 +123,15 @@ import {compute_cff} from './compute_cff.js';
 
 import {update_family_names,
         update_given_names,
-        update_name_particle,
-        update_name_suffix} from './AuthorHandler.js';
+        update_name_particle} from './AuthorHandler.js';
 
 import {add as add_orcid,
         remove as remove_orcid,
         update as update_orcid} from './OrcidHandlers.js';
+
+import {add as add_name_suffix,
+        remove as remove_name_suffix,
+        update as update_name_suffix} from './NameSuffixHandlers.js';
 
 import {update_cff_version,
         update_message} from './FormHandlers.js';
@@ -177,6 +182,7 @@ export default {
         add_doi,
         add_keyword,
         add_keywords,
+        add_name_suffix,
         add_license,
         add_orcid,
         add_repository_code,
@@ -193,6 +199,7 @@ export default {
         remove_keyword,
         remove_keywords,
         remove_license,
+        remove_name_suffix,
         remove_orcid,
         remove_repository_code,
         remove_title,

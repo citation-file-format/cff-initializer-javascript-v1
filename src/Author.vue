@@ -75,15 +75,12 @@
                 >
             </li>
 
-            <li>
-                <p class="caption">
-                    name-suffix
-                </p>
-                <input
-                    v-bind:value="author.name_suffix"
-                    v-on:input="update_name_suffix($event)"
-                >
-            </li>
+            <NameSuffix
+                v-bind:name_suffix="author.name_suffix"
+                v-on:add="add_name_suffix"
+                v-on:remove="remove_name_suffix"
+                v-on:update="update_name_suffix"
+            />
 
             <AuthorOrcid
                 v-bind:orcid="author.orcid"
@@ -100,12 +97,15 @@
 
 import Affiliation from './Affiliation.vue';
 import AuthorOrcid from './Orcid.vue';
+import NameSuffix from './NameSuffix.vue';
 
-import {add_orcid,
-        add_affiliation,
+import {add_affiliation,
+        add_orcid,
+        add_name_suffix,
         remove,
         remove_affiliation,
         remove_orcid,
+        remove_name_suffix,
         move_down,
         move_up,
         update_affiliation,
@@ -119,7 +119,8 @@ export default {
     name: 'Author',
     components: {
         Affiliation,
-        AuthorOrcid
+        AuthorOrcid,
+        NameSuffix
     },
     props: {
         author: Object
@@ -143,11 +144,13 @@ export default {
         }
     },
     methods: {
-        add_orcid,
         add_affiliation,
+        add_orcid,
+        add_name_suffix,
         remove,
         remove_affiliation,
         remove_orcid,
+        remove_name_suffix,
         move_down,
         move_up,
         update_affiliation,

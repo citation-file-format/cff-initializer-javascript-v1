@@ -56,6 +56,7 @@
                 v-on:add-doi="add_doi"
                 v-on:add-keyword="add_keyword"
                 v-on:add-keywords="add_keywords"
+                v-on:add-name-suffix="add_name_suffix"
                 v-on:add-license="add_license"
                 v-on:add-orcid="add_orcid"
                 v-on:add-repository-code="add_repository_code"
@@ -72,6 +73,7 @@
                 v-on:remove-keyword="remove_keyword"
                 v-on:remove-keywords="remove_keywords"
                 v-on:remove-license="remove_license"
+                v-on:remove-name-suffix="remove_name_suffix"
                 v-on:remove-orcid="remove_orcid"
                 v-on:remove-repository-code="remove_repository_code"
                 v-on:remove-title="remove_title"
@@ -114,6 +116,7 @@ import {add_affiliation,
         add_keyword,
         add_keywords,
         add_license,
+        add_name_suffix,
         add_orcid,
         add_repository_code,
         add_title,
@@ -129,6 +132,7 @@ import {add_affiliation,
         remove_keyword,
         remove_keywords,
         remove_license,
+        remove_name_suffix,
         remove_orcid,
         remove_repository_code,
         remove_title,
@@ -183,6 +187,7 @@ export default {
         add_keyword,
         add_keywords,
         add_license,
+        add_name_suffix,
         add_orcid,
         add_repository_code,
         add_title,
@@ -198,6 +203,7 @@ export default {
         remove_keyword,
         remove_keywords,
         remove_license,
+        remove_name_suffix,
         remove_orcid,
         remove_repository_code,
         remove_title,
