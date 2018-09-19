@@ -184,5 +184,9 @@ export default {
         background-color: #ddd;
     }
 
+    ul {
+        padding-bottom: 2em;
+    }
+
 
 </style>
