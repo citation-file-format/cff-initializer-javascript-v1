@@ -38,7 +38,7 @@
         </p>
 
         <ul>
-            <!-- <li>
+            <li>
                 <p class="caption">
                     given-names
                 </p>
@@ -76,7 +76,7 @@
                     v-bind:value="author.name_suffix"
                     v-on:input="update_name_suffix($event)"
                 >
-            </li> -->
+            </li>
 
             <AuthorOrcid
                 v-bind:orcid="author.orcid"
