@@ -11,17 +11,3 @@ export function update_given_names(payload) {
     });
     author.given_names = payload.value;
 }
-
-export function update_name_particle(payload) {
-    let author = this.authors.find(function (author) {
-        return author.id == payload.id;
-    });
-    author.name_particle = payload.value;
-}
-
-export function update_name_suffix(payload) {
-    let author = this.authors.find(function (author) {
-        return author.id == payload.id;
-    });
-    author.name_suffix = payload.value;
-}

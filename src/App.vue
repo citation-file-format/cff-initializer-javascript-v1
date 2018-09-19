@@ -25,6 +25,7 @@
                 v-on:add-keyword="add_keyword"
                 v-on:add-keywords="add_keywords"
                 v-on:add-license="add_license"
+                v-on:add-name-particle="add_name_particle"
                 v-on:add-name-suffix="add_name_suffix"
                 v-on:add-orcid="add_orcid"
                 v-on:add-repository-code="add_repository_code"
@@ -41,6 +42,7 @@
                 v-on:remove-keyword="remove_keyword"
                 v-on:remove-keywords="remove_keywords"
                 v-on:remove-license="remove_license"
+                v-on:remove-name-particle="remove_name_particle"
                 v-on:remove-name-suffix="remove_name_suffix"
                 v-on:remove-orcid="remove_orcid"
                 v-on:remove-repository-code="remove_repository_code"
@@ -89,6 +91,10 @@ import {add as add_affiliation,
         remove as remove_affiliation,
         update as update_affiliation} from './AffiliationHandlers.js';
 
+import {add as add_name_particle,
+        remove as remove_name_particle,
+        update as update_name_particle} from './NameParticleHandlers.js';
+
 import {add_author,
         move_author_down,
         move_author_up,
@@ -122,8 +128,7 @@ import {add as add_repository_code,
 import {compute_cff} from './compute_cff.js';
 
 import {update_family_names,
-        update_given_names,
-        update_name_particle} from './AuthorHandler.js';
+        update_given_names} from './AuthorHandler.js';
 
 import {add as add_orcid,
         remove as remove_orcid,
@@ -182,6 +187,7 @@ export default {
         add_doi,
         add_keyword,
         add_keywords,
+        add_name_particle,
         add_name_suffix,
         add_license,
         add_orcid,
@@ -199,6 +205,7 @@ export default {
         remove_keyword,
         remove_keywords,
         remove_license,
+        remove_name_particle,
         remove_name_suffix,
         remove_orcid,
         remove_repository_code,

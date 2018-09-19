@@ -1,27 +1,27 @@
-<template >
-    <li v-if="has_name_suffix">
+<template>
+    <li v-if="has_name_particle">
         <p class="caption">
-            name-suffix
+            name-particle
             <button
                 tabindex="-1"
-                title="Remove name-suffix"
+                title="Remove name-particle"
                 v-on:click="remove"
             >
                 remove
             </button>
         </p>
         <input
-            v-bind:value="name_suffix"
+            v-bind:value="name_particle"
             v-on:input="update($event)"
         >
     </li>
     <li v-else>
         <button
             tabindex="-1"
-            title="Add name-suffix"
+            title="Add name-particle"
             v-on:click="add"
         >
-            Add name-suffix
+            Add name-particle
         </button>
     </li>
 </template>
@@ -30,19 +30,19 @@
 
 import {add,
         remove,
-        update} from './NameSuffixEmitters.js';
+        update} from './NameParticleEmitters.js';
 
 export default {
-    name: 'NameSuffix',
+    name: 'NameParticle',
     components: {
     },
     props: {
-        name_suffix: String
+        name_particle: String
     },
     computed: {
-        has_name_suffix: function () {
-            return this.$props.hasOwnProperty('name_suffix') &&
-                this.$props.name_suffix !== undefined;
+        has_name_particle: function () {
+            return this.$props.hasOwnProperty('name_particle') &&
+                this.$props.name_particle !== undefined;
         }
     },
     methods: {
