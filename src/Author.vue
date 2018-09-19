@@ -160,7 +160,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
     .button-spacer {
         min-width: 16px;
@@ -180,4 +180,6 @@ export default {
     .move-up-button:hover, .move-down-button:hover, .remove-button:hover {
         background-color: #ddd;
     }
+
+
 </style>

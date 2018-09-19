@@ -103,6 +103,7 @@ export default {
 
     .authors {
         padding-left:0px;
+        padding-bottom: 2em;
     }
 
 </style>
