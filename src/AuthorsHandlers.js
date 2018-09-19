@@ -4,7 +4,7 @@ export function add_author () {
         family_names: '',
         given_names: '',
         id: this.author_id += 1,
-        name_particle: '',
+        name_particle: undefined,
         name_suffix: undefined,
         orcid: undefined
     })
