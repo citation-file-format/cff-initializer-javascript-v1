@@ -56,6 +56,7 @@
                 v-on:add-keyword="add_keyword"
                 v-on:add-keywords="add_keywords"
                 v-on:add-license="add_license"
+                v-on:add-orcid="add_orcid"
                 v-on:add-repository-code="add_repository_code"
                 v-on:add-title="add_title"
                 v-on:add-version="add_version"
@@ -69,15 +70,16 @@
                 v-on:remove-keyword="remove_keyword"
                 v-on:remove-keywords="remove_keywords"
                 v-on:remove-license="remove_license"
+                v-on:remove-orcid="remove_orcid"
                 v-on:remove-repository-code="remove_repository_code"
                 v-on:remove-title="remove_title"
                 v-on:remove-version="remove_version"
-                v-on:update-author-affiliation="update_author_affiliation"
-                v-on:update-author-family-names="update_author_family_names"
-                v-on:update-author-given-names="update_author_given_names"
-                v-on:update-author-name-particle="update_author_name_particle"
-                v-on:update-author-name-suffix="update_author_name_suffix"
-                v-on:update-author-orcid="update_author_orcid"
+                v-on:update-affiliation="update_affiliation"
+                v-on:update-family-names="update_family_names"
+                v-on:update-given-names="update_given_names"
+                v-on:update-name-particle="update_name_particle"
+                v-on:update-name-suffix="update_name_suffix"
+                v-on:update-orcid="update_orcid"
                 v-on:update-date-released="update_date_released"
                 v-on:update-doi="update_doi"
                 v-on:update-keyword="update_keyword"
@@ -109,6 +111,7 @@ import {add_author,
         add_keyword,
         add_keywords,
         add_license,
+        add_orcid,
         add_repository_code,
         add_title,
         add_version,
@@ -122,23 +125,24 @@ import {add_author,
         remove_keyword,
         remove_keywords,
         remove_license,
+        remove_orcid,
         remove_repository_code,
         remove_title,
         remove_version,
-        update_author_given_names,
-        update_author_name_particle,
-        update_author_family_names,
-        update_author_name_suffix,
-        update_author_orcid,
-        update_author_affiliation,
+        update_affiliation,
         update_cff_version,
         update_date_released,
         update_doi,
+        update_family_names,
+        update_given_names,
         update_keyword,
         update_license,
+        update_message,
+        update_name_particle,
+        update_name_suffix,
+        update_orcid,
         update_repository_code,
         update_title,
-        update_message,
         update_version} from './FormEmitters.js';
 
 import {validate_message,
@@ -174,6 +178,7 @@ export default {
         add_keyword,
         add_keywords,
         add_license,
+        add_orcid,
         add_repository_code,
         add_title,
         add_version,
@@ -187,23 +192,24 @@ export default {
         remove_keyword,
         remove_keywords,
         remove_license,
+        remove_orcid,
         remove_repository_code,
         remove_title,
         remove_version,
-        update_author_given_names,
-        update_author_name_particle,
-        update_author_family_names,
-        update_author_name_suffix,
-        update_author_orcid,
-        update_author_affiliation,
+        update_affiliation,
         update_cff_version,
         update_date_released,
         update_doi,
+        update_family_names,
+        update_given_names,
         update_keyword,
         update_license,
+        update_message,
+        update_name_particle,
+        update_name_suffix,
+        update_orcid,
         update_repository_code,
         update_title,
-        update_message,
         update_version
     }
 };
