@@ -1,3 +1,8 @@
+export function add_affiliation () {
+        let payload = {"id": this.author.id};
+        this.$emit('add-affiliation', payload);
+}
+
 export function add_orcid () {
         let payload = {"id": this.author.id};
         this.$emit('add-orcid', payload);
@@ -5,6 +10,11 @@ export function add_orcid () {
 
 export function remove () {
         this.$emit('remove', this.author.id)
+}
+
+export function remove_affiliation () {
+        let payload = {"id": this.author.id};
+        this.$emit('remove-affiliation', payload);
 }
 
 export function remove_orcid () {
@@ -20,12 +30,9 @@ export function move_up () {
     this.$emit('move-up', this.author.id)
 }
 
-export function update_affiliation (event) {
-    let payload = {
-        id: this.author.id,
-        value: event.target.value
-    };
-    this.$emit('update-affiliation', payload);
+export function update_affiliation (old_payload) {
+    let new_payload = Object.assign(old_payload, {"id": this.author.id});
+    this.$emit('update-affiliation', new_payload);
 }
 
 export function update_family_names (event) {

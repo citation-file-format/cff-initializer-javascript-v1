@@ -1,11 +1,3 @@
-
-export function update_affiliation(payload) {
-    let author = this.authors.find(function (author) {
-        return author.id == payload.id;
-    });
-    author.affiliation = payload.value;
-}
-
 export function update_family_names(payload) {
     let author = this.authors.find(function (author) {
         return author.id == payload.id;

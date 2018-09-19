@@ -5,11 +5,23 @@ export function compute_cff () {
     lines.push('authors: ');
     for (let author of this.authors) {
         lines.push('  -');
-        lines.push('    affiliation: ' + author.affiliation);
+
+        if (author.hasOwnProperty("affiliation") && author.affiliation !== undefined) {
+            lines.push('    affiliation: ' + author.affiliation);
+        }
+
         lines.push('    family-names: ' + author.family_names);
+
         lines.push('    given-names: ' + author.given_names);
-        lines.push('    name-particle: ' + author.name_particle);
-        lines.push('    name-suffix: ' + author.name_suffix);
+
+        if (author.hasOwnProperty("name_particle") && author.name_particle !== undefined) {
+            lines.push('    name-particle: ' + author.name_particle);
+        }
+
+        if (author.hasOwnProperty("name_suffix") && author.name_suffix !== undefined) {
+            lines.push('    name-suffix: ' + author.name_suffix);
+        }
+
         if (author.hasOwnProperty("orcid") && author.orcid !== undefined) {
             lines.push('    orcid: "https://orcid.org/' + author.orcid + '"');
         }

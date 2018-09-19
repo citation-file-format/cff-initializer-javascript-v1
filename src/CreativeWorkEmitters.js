@@ -1,3 +1,7 @@
+export function add_affiliation (payload) {
+    this.$emit('add-affiliation', payload);
+}
+
 export function add_author () {
     this.$emit('add-author');
 }
@@ -56,6 +60,10 @@ export function move_keyword_up (keyword_id) {
 
 export function remove_author (author_id) {
     this.$emit('remove-author', author_id);
+}
+
+export function remove_affiliation (payload) {
+    this.$emit('remove-affiliation', payload);
 }
 
 export function remove_keyword (keyword_id) {
