@@ -8,6 +8,11 @@ export function add_orcid () {
         this.$emit('add-orcid', payload);
 }
 
+export function add_name_suffix () {
+        let payload = {"id": this.author.id};
+        this.$emit('add-name-suffix', payload);
+}
+
 export function remove () {
         this.$emit('remove', this.author.id)
 }
@@ -20,6 +25,11 @@ export function remove_affiliation () {
 export function remove_orcid () {
         let payload = {"id": this.author.id};
         this.$emit('remove-orcid', payload);
+}
+
+export function remove_name_suffix () {
+        let payload = {"id": this.author.id};
+        this.$emit('remove-name-suffix', payload);
 }
 
 export function move_down () {
@@ -59,15 +69,12 @@ export function update_name_particle (event) {
     this.$emit('update-name-particle', payload);
 }
 
-export function update_name_suffix (event) {
-    let payload = {
-        id: this.author.id,
-        value: event.target.value
-    };
-    this.$emit('update-name-suffix', payload);
+export function update_name_suffix (old_payload) {
+    let new_payload = Object.assign(old_payload, {id: this.author.id});
+    this.$emit('update-name-suffix', new_payload);
 }
 
 export function update_orcid (old_payload) {
-        let new_payload = Object.assign(old_payload, {"id": this.author.id});
-        this.$emit('update-orcid', new_payload);
+    let new_payload = Object.assign(old_payload, {"id": this.author.id});
+    this.$emit('update-orcid', new_payload);
 }

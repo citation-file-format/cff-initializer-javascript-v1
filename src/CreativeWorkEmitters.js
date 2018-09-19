@@ -26,6 +26,10 @@ export function add_license () {
     this.$emit('add-license');
 }
 
+export function add_name_suffix (payload) {
+    this.$emit('add-name-suffix', payload);
+}
+
 export function add_orcid (payload) {
     this.$emit('add-orcid', payload);
 }
@@ -86,6 +90,10 @@ export function remove_license () {
     this.$emit('remove-license');
 }
 
+export function remove_name_suffix (payload) {
+    this.$emit('remove-name-suffix', payload);
+}
+
 export function remove_orcid (payload) {
     this.$emit('remove-orcid', payload);
 }
@@ -107,7 +115,7 @@ export function update_given_names (payload) {
 }
 
 export function update_name_particle (payload) {
-    this.$emit('update-author-name-particle', payload);
+    this.$emit('update-name-particle', payload);
 }
 
 export function update_family_names (payload) {
