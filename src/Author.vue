@@ -55,15 +55,12 @@
                 >
             </li>
 
-            <li>
-                <p class="caption">
-                    name-particle
-                </p>
-                <input
-                    v-bind:value="author.name_particle"
-                    v-on:input="update_name_particle($event)"
-                >
-            </li>
+            <NameParticle
+                v-bind:name_particle="author.name_particle"
+                v-on:add="add_name_particle"
+                v-on:remove="remove_name_particle"
+                v-on:update="update_name_particle"
+            />
 
             <li>
                 <p class="caption">
@@ -97,14 +94,17 @@
 
 import Affiliation from './Affiliation.vue';
 import AuthorOrcid from './Orcid.vue';
+import NameParticle from './NameParticle.vue';
 import NameSuffix from './NameSuffix.vue';
 
 import {add_affiliation,
         add_orcid,
+        add_name_particle,
         add_name_suffix,
         remove,
         remove_affiliation,
         remove_orcid,
+        remove_name_particle,
         remove_name_suffix,
         move_down,
         move_up,
@@ -120,6 +120,7 @@ export default {
     components: {
         Affiliation,
         AuthorOrcid,
+        NameParticle,
         NameSuffix
     },
     props: {
@@ -146,10 +147,12 @@ export default {
     methods: {
         add_affiliation,
         add_orcid,
+        add_name_particle,
         add_name_suffix,
         remove,
         remove_affiliation,
         remove_orcid,
+        remove_name_particle,
         remove_name_suffix,
         move_down,
         move_up,

@@ -26,6 +26,10 @@ export function add_license () {
     this.$emit('add-license');
 }
 
+export function add_name_particle (payload) {
+    this.$emit('add-name-particle', payload);
+}
+
 export function add_name_suffix (payload) {
     this.$emit('add-name-suffix', payload);
 }
@@ -88,6 +92,10 @@ export function remove_doi () {
 
 export function remove_license () {
     this.$emit('remove-license');
+}
+
+export function remove_name_particle (payload) {
+    this.$emit('remove-name-particle', payload);
 }
 
 export function remove_name_suffix (payload) {
