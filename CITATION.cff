@@ -8,6 +8,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-7064-4069"
 cff-version: 1.0.3
 date-released: 2018-09-19
+doi: 10.5281/zenodo.1404735
 keywords: 
   - credit
   - research software engineering
