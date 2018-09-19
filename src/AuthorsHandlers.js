@@ -6,7 +6,7 @@ export function add_author () {
         id: this.author_id += 1,
         name_particle: '',
         name_suffix: '',
-        orcid: ''
+        orcid: undefined
     })
 }
 

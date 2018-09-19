@@ -22,6 +22,10 @@ export function add_license () {
     this.$emit('add-license');
 }
 
+export function add_orcid (payload) {
+    this.$emit('add-orcid', payload);
+}
+
 export function add_repository_code () {
     this.$emit('add-repository-code');
 }
@@ -74,6 +78,10 @@ export function remove_license () {
     this.$emit('remove-license');
 }
 
+export function remove_orcid (payload) {
+    this.$emit('remove-orcid', payload);
+}
+
 export function remove_repository_code () {
     this.$emit('remove-repository-code');
 }
@@ -86,28 +94,28 @@ export function remove_version () {
     this.$emit('remove-version');
 }
 
-export function update_author_given_names (payload) {
-    this.$emit('update-author-given-names', payload);
+export function update_given_names (payload) {
+    this.$emit('update-given-names', payload);
 }
 
-export function update_author_name_particle (payload) {
+export function update_name_particle (payload) {
     this.$emit('update-author-name-particle', payload);
 }
 
-export function update_author_family_names (payload) {
-    this.$emit('update-author-family-names', payload);
+export function update_family_names (payload) {
+    this.$emit('update-family-names', payload);
 }
 
-export function update_author_name_suffix (payload) {
-    this.$emit('update-author-name-suffix', payload);
+export function update_name_suffix (payload) {
+    this.$emit('update-name-suffix', payload);
 }
 
-export function update_author_orcid (payload) {
-    this.$emit('update-author-orcid', payload);
+export function update_orcid (payload) {
+    this.$emit('update-orcid', payload);
 }
 
-export function update_author_affiliation (payload) {
-    this.$emit('update-author-affiliation', payload);
+export function update_affiliation (payload) {
+    this.$emit('update-affiliation', payload);
 }
 
 export function update_date_released (payload) {

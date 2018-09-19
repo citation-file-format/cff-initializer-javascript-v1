@@ -78,21 +78,12 @@
                 >
             </li>
 
-            <li>
-                <p class="caption">
-                    orcid
-                </p>
-                <input
-                    v-bind:value="author.orcid"
-                    v-bind:class="{error: orcid_validation.error }"
-                    v-on:input="update_orcid($event)"
-                >
-                <p
-                    v-if="orcid_validation.error"
-                    class="message">
-                        {{ orcid_validation.msg }}
-                </p>
-            </li>
+            <AuthorOrcid
+                v-bind:orcid="author.orcid"
+                v-on:add="add_orcid"
+                v-on:remove="remove_orcid"
+                v-on:update="update_orcid"
+            />
 
             <li>
                 <p class="caption">
@@ -109,7 +100,11 @@
 </template>
 
 <script>
-import {remove,
+import AuthorOrcid from './AuthorOrcid.vue';
+
+import {add_orcid,
+        remove,
+        remove_orcid,
         move_down,
         move_up,
         update_affiliation,
@@ -119,15 +114,15 @@ import {remove,
         update_name_suffix,
         update_orcid} from './AuthorEmitters.js';
 
-import {validate_orcid} from './AuthorValidators.js';
-
 export default {
     name: 'Author',
+    components: {
+        AuthorOrcid
+    },
     props: {
         author: Object
     },
     computed: {
-        orcid_validation: validate_orcid,
         fullname: function () {
             let name_parts = [];
             if (this.author.hasOwnProperty('given_names') && this.author.given_names !== '') {
@@ -146,7 +141,9 @@ export default {
         }
     },
     methods: {
+        add_orcid,
         remove,
+        remove_orcid,
         move_down,
         move_up,
         update_affiliation,

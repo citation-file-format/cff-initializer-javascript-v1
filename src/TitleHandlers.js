@@ -1,11 +1,11 @@
-export function add_title() {
+export function add() {
     this.title = "";
 }
 
-export function remove_title() {
+export function remove() {
     this.title = undefined;
 }
 
-export function update_title(payload) {
+export function update(payload) {
     this.title = payload.value;
 }

@@ -2,6 +2,10 @@ export function add () {
     this.$emit('add');
 }
 
+export function add_orcid (payload) {
+    this.$emit('add-orcid', payload);
+}
+
 export function move_down (author_id) {
     this.$emit('move-down', author_id)
 }
@@ -12,6 +16,10 @@ export function move_up (author_id) {
 
 export function remove (author_id) {
     this.$emit('remove', author_id)
+}
+
+export function remove_orcid (payload) {
+    this.$emit('remove-orcid', payload)
 }
 
 export function update_affiliation (payload) {

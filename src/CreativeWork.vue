@@ -4,15 +4,17 @@
         <Authors
             v-bind:authors="authors"
             v-on:add="add_author"
+            v-on:add-orcid="add_orcid"
             v-on:move-down="move_author_down"
             v-on:move-up="move_author_up"
             v-on:remove="remove_author"
-            v-on:update-affiliation="update_author_affiliation"
-            v-on:update-family-names="update_author_family_names"
-            v-on:update-given-names="update_author_given_names"
-            v-on:update-name-particle="update_author_name_particle"
-            v-on:update-name-suffix="update_author_name_suffix"
-            v-on:update-orcid="update_author_orcid"
+            v-on:remove-orcid="remove_orcid"
+            v-on:update-affiliation="update_affiliation"
+            v-on:update-family-names="update_family_names"
+            v-on:update-given-names="update_given_names"
+            v-on:update-name-particle="update_name_particle"
+            v-on:update-name-suffix="update_name_suffix"
+            v-on:update-orcid="update_orcid"
         />
 
         <DateReleased
@@ -78,6 +80,7 @@ import {add_author,
         add_keyword,
         add_keywords,
         add_license,
+        add_orcid,
         add_repository_code,
         add_title,
         add_version,
@@ -91,19 +94,20 @@ import {add_author,
         remove_keyword,
         remove_keywords,
         remove_license,
+        remove_orcid,
         remove_repository_code,
         remove_title,
         remove_version,
-        update_author_given_names,
-        update_author_name_particle,
-        update_author_family_names,
-        update_author_name_suffix,
-        update_author_orcid,
-        update_author_affiliation,
+        update_affiliation,
         update_date_released,
         update_doi,
+        update_family_names,
+        update_given_names,
         update_keyword,
         update_license,
+        update_name_particle,
+        update_name_suffix,
+        update_orcid,
         update_repository_code,
         update_title,
         update_version} from './CreativeWorkEmitters.js';
@@ -149,6 +153,7 @@ export default {
         add_doi,
         add_keyword,
         add_keywords,
+        add_orcid,
         add_license,
         add_repository_code,
         add_title,
@@ -163,19 +168,20 @@ export default {
         remove_keyword,
         remove_keywords,
         remove_license,
+        remove_orcid,
         remove_repository_code,
         remove_title,
         remove_version,
-        update_author_given_names,
-        update_author_name_particle,
-        update_author_family_names,
-        update_author_name_suffix,
-        update_author_orcid,
-        update_author_affiliation,
+        update_affiliation,
         update_date_released,
         update_doi,
+        update_family_names,
+        update_given_names,
         update_keyword,
         update_license,
+        update_name_particle,
+        update_name_suffix,
+        update_orcid,
         update_repository_code,
         update_title,
         update_version

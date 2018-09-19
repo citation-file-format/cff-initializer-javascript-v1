@@ -10,7 +10,9 @@ export function compute_cff () {
         lines.push('    given-names: ' + author.given_names);
         lines.push('    name-particle: ' + author.name_particle);
         lines.push('    name-suffix: ' + author.name_suffix);
-        lines.push('    orcid: "https://orcid.org/' + author.orcid + '"');
+        if (author.hasOwnProperty("orcid") && author.orcid !== undefined) {
+            lines.push('    orcid: "https://orcid.org/' + author.orcid + '"');
+        }
     }
     lines.push('cff-version: ' + this.cff_version);
 
