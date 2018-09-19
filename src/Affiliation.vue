@@ -11,9 +11,17 @@
             </button>
         </p>
         <input
+            v-bind:class="{error: validation.error }"
             v-bind:value="affiliation"
+            type="text"
             v-on:input="update($event)"
         >
+        <p
+            v-if="validation.error"
+            class="message"
+        >
+            {{ validation.msg }}
+        </p>
     </li>
     <li v-else>
         <button
@@ -33,6 +41,8 @@ import {add,
         remove,
         update} from './AffiliationEmitters.js';
 
+import {validate} from './AffiliationValidators.js';
+
 export default {
     name: 'Affiliation',
     components: {
@@ -44,7 +54,8 @@ export default {
         has_affiliation: function () {
             return this.$props.hasOwnProperty('affiliation') &&
                 this.$props.affiliation !== undefined;
-        }
+        },
+        validation: validate
     },
     methods: {
         add,
