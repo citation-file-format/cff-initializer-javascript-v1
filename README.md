@@ -2,11 +2,13 @@
 - [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcitation-file-format%2Fcff-initializer-javascript.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcitation-file-format%2Fcff-initializer-javascript?ref=badge_shield)
 - [![Build Status](https://travis-ci.org/citation-file-format/cff-initializer-javascript.svg?branch=master)](https://travis-ci.org/citation-file-format/cff-initializer-javascript)
 
-Web form to initialize CITATION.cff files.
+# Web form to initialize CITATION.cff files.
+
+![Live version](cffinit-on-ghpages.png)
 
 # For users
 
-- Check out the live version [here](https://citation-file-format.github.io/cff-initializer-javascript/).
+- Check out the **live version** [here](https://citation-file-format.github.io/cff-initializer-javascript/).
 - For the rationale behind CITATION.cff files, read [the blog](https://www.software.ac.uk/blog/2017-12-12-standard-format-citation-files).
 - For the Citation File Format specification, go [here](https://citation-file-format.github.io/versions).
 - For the Citation File Format home page, go [here](https://citation-file-format.github.io).
