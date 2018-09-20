@@ -1,6 +1,13 @@
 <template>
     <ul class="creative_work">
 
+        <Abstract
+            v-bind:abstract="abstract"
+            v-on:add="add_abstract"
+            v-on:remove="remove_abstract"
+            v-on:update="update_abstract"
+        />
+
         <Authors
             v-bind:authors="authors"
             v-on:add="add_author"
@@ -80,7 +87,8 @@
 </template>
 
 <script>
-import {add_affiliation,
+import {add_abstract,
+        add_affiliation,
         add_author,
         add_date_released,
         add_doi,
@@ -97,6 +105,7 @@ import {add_affiliation,
         move_author_up,
         move_keyword_down,
         move_keyword_up,
+        remove_abstract,
         remove_affiliation,
         remove_author,
         remove_date_released,
@@ -110,6 +119,7 @@ import {add_affiliation,
         remove_repository_code,
         remove_title,
         remove_version,
+        update_abstract,
         update_affiliation,
         update_date_released,
         update_doi,
@@ -125,6 +135,7 @@ import {add_affiliation,
         update_version} from './CreativeWorkEmitters.js';
 
 import Authors from './Authors.vue';
+import Abstract from './Abstract.vue';
 import DateReleased from './DateReleased.vue';
 import Doi from './Doi.vue';
 import Keywords from './Keywords.vue';
@@ -136,6 +147,7 @@ import Title from './Title.vue';
 export default {
     name: 'CreativeWork',
     components: {
+        Abstract,
         Authors,
         DateReleased,
         Doi,
@@ -146,6 +158,7 @@ export default {
         Version
     },
     props: {
+        abstract: String,
         author_id: Number,
         authors: Array,
         date_released: String,
@@ -160,6 +173,7 @@ export default {
     computed: {
     },
     methods: {
+        add_abstract,
         add_affiliation,
         add_author,
         add_date_released,
@@ -177,6 +191,7 @@ export default {
         move_author_up,
         move_keyword_down,
         move_keyword_up,
+        remove_abstract,
         remove_affiliation,
         remove_author,
         remove_date_released,
@@ -190,6 +205,7 @@ export default {
         remove_repository_code,
         remove_title,
         remove_version,
+        update_abstract,
         update_affiliation,
         update_date_released,
         update_doi,
