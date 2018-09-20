@@ -2,6 +2,10 @@ export function compute_cff () {
     var lines = [];
     lines.push('# YAML 1.2');
     lines.push('---');
+    if (this.hasOwnProperty("abstract") && this.abstract !== undefined) {
+        lines.push('abstract: ' + this.abstract);
+    }
+
     lines.push('authors: ');
     for (let author of this.authors) {
         lines.push('  -');

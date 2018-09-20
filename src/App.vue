@@ -7,6 +7,7 @@
         <div class="container">
             <Form
                 v-bind:author_id="author_id"
+                v-bind:abstract="abstract"
                 v-bind:authors="authors"
                 v-bind:cff_version="cff_version"
                 v-bind:date_released="date_released"
@@ -18,6 +19,7 @@
                 v-bind:repository_code="repository_code"
                 v-bind:title="title"
                 v-bind:version="version"
+                v-on:add-abstract="add_abstract"
                 v-on:add-affiliation="add_affiliation"
                 v-on:add-author="add_author"
                 v-on:add-date-released="add_date_released"
@@ -35,6 +37,7 @@
                 v-on:move-author-up="move_author_up"
                 v-on:move-keyword-down="move_keyword_down"
                 v-on:move-keyword-up="move_keyword_up"
+                v-on:remove-abstract="remove_abstract"
                 v-on:remove-author="remove_author"
                 v-on:remove-affiliation="remove_affiliation"
                 v-on:remove-date-released="remove_date_released"
@@ -48,6 +51,7 @@
                 v-on:remove-repository-code="remove_repository_code"
                 v-on:remove-title="remove_title"
                 v-on:remove-version="remove_version"
+                v-on:update-abstract="update_abstract"
                 v-on:update-affiliation="update_affiliation"
                 v-on:update-family-names="update_family_names"
                 v-on:update-given-names="update_given_names"
@@ -86,6 +90,10 @@
 </template>
 
 <script>
+
+import {add as add_abstract,
+        remove as remove_abstract,
+        update as update_abstract} from './AbstractHandlers.js';
 
 import {add as add_affiliation,
         remove as remove_affiliation,
@@ -163,6 +171,7 @@ export default {
     },
     data: function () {
         return {
+            abstract: undefined,
             author_id: -1,
             authors: [],
             cff_version: '1.0.3',
@@ -181,6 +190,7 @@ export default {
         cff: compute_cff
     },
     methods: {
+        add_abstract,
         add_affiliation,
         add_author,
         add_date_released,
@@ -198,6 +208,7 @@ export default {
         move_author_up,
         move_keyword_down,
         move_keyword_up,
+        remove_abstract,
         remove_affiliation,
         remove_author,
         remove_date_released,
@@ -212,6 +223,7 @@ export default {
         remove_title,
         remove_version,
         save_text_as_file,
+        update_abstract,
         update_affiliation,
         update_family_names,
         update_given_names,
