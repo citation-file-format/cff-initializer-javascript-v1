@@ -6,6 +6,7 @@
             "orcid": "0000-0002-7064-4069"
         }
     ],
+    "description": "Web form to initialize CITATION.cff files. The live version is hosted here: <a href=\"https://citation-file-format.github.io/cff-initializer-javascript/\">https://citation-file-format.github.io/cff-initializer-javascript/</a>.",
     "keywords": [
         "credit",
         "research software engineering",
