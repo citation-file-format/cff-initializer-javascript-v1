@@ -1,3 +1,7 @@
+export function add_abstract () {
+    this.$emit('add-abstract');
+}
+
 export function add_affiliation (payload) {
     this.$emit('add-affiliation', payload);
 }
@@ -66,6 +70,10 @@ export function move_keyword_up (keyword_id) {
     this.$emit('move-keyword-up', keyword_id);
 }
 
+export function remove_abstract () {
+    this.$emit('remove-abstract');
+}
+
 export function remove_affiliation (payload) {
     this.$emit('remove-affiliation', payload);
 }
@@ -116,6 +124,10 @@ export function remove_title () {
 
 export function remove_version () {
     this.$emit('remove-version');
+}
+
+export function update_abstract (payload) {
+    this.$emit('update-abstract', payload);
 }
 
 export function update_given_names (payload) {
