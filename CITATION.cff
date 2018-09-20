@@ -1,21 +1,22 @@
 # YAML 1.2
 ---
-authors: 
+abstract: "Web form to initialize CITATION.cff files. The live version is hosted here: <a href=\"https://citation-file-format.github.io/cff-initializer-javascript/\">https://citation-file-format.github.io/cff-initializer-javascript/</a>."
+authors:
   -
-    affiliation: Netherlands eScience Center
+    affiliation: "Netherlands eScience Center"
     family-names: Spaaks
-    given-names: Jurriaan H.
+    given-names: "Jurriaan H."
     orcid: "https://orcid.org/0000-0002-7064-4069"
-cff-version: 1.0.3
-date-released: 2018-09-19
+cff-version: "1.0.3"
+date-released: 2018-09-20
 doi: 10.5281/zenodo.1404735
-keywords: 
+keywords:
   - credit
-  - research software engineering
+  - "research software engineering"
   - citation
   - CITATION.cff
 license: Apache-2.0
-message: If you use this software, please cite it using these metadata.
-repository-code: https://github.com/citation-file-format/cff-initializer-javascript
+message: "If you use this software, please cite it using these metadata."
+repository-code: "https://github.com/citation-file-format/cff-initializer-javascript"
 title: cffinit
-version: 1.1.0
+version: "1.2.0"
