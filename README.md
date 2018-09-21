@@ -29,6 +29,10 @@ npm run build
 
 # npm run build and update the local copy of the gh-pages content in docs/
 npm run ghpages
+
+# run eslint on the *.js and *.vue files under src/
+npm run lint
+
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
