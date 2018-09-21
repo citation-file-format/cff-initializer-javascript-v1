@@ -14,12 +14,21 @@ function indent (s) {
     return s.replace(/[\n]/g,'\n    ');
 }
 
+function is_multiline (s) {
+    let re = new RegExp('[\\n|\\r]');
+    return re.test(s);
+}
+
 export function compute_cff () {
     var lines = [];
     lines.push('# YAML 1.2');
     lines.push('---');
     if (this.hasOwnProperty("abstract") && this.abstract !== undefined) {
-        lines.push('abstract: |\n    ' + indent(add_quotes(this.abstract)));
+        if (is_multiline(this.abstract)) {
+            lines.push('abstract: |\n    ' + indent(add_quotes(this.abstract)));
+        } else {
+            lines.push('abstract: ' + add_quotes(this.abstract));
+        }
     }
 
     lines.push('authors: ');
@@ -67,7 +76,11 @@ export function compute_cff () {
         lines.push('license: ' + add_quotes(this.license));
     }
 
-    lines.push('message: |\n    ' + indent(add_quotes(this.message)));
+    if (is_multiline(this.message)) {
+        lines.push('message: |\n    ' + indent(add_quotes(this.message)));
+    } else {
+        lines.push('message: ' + add_quotes(this.message));
+    }
 
     if (this.repository_code !== undefined) {
         lines.push('repository-code: ' + add_quotes(this.repository_code));
