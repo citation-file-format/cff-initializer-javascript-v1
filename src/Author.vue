@@ -188,7 +188,7 @@ export default {
     }
 
     ul {
-        padding-bottom: 2em;
+        padding-bottom: 1em;
     }
 
 

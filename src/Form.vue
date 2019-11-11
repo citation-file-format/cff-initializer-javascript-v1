@@ -45,6 +45,8 @@
                 v-bind:authors="authors"
                 v-bind:date_released="date_released"
                 v-bind:doi="doi"
+                v-bind:identifier_id="identifier_id"
+                v-bind:identifiers="identifiers"
                 v-bind:keyword_id="keyword_id"
                 v-bind:keywords="keywords"
                 v-bind:license="license"
@@ -52,28 +54,34 @@
                 v-bind:title="title"
                 v-bind:version="version"
                 v-on:add-abstract="add_abstract"
-                v-on:add-author="add_author"
                 v-on:add-affiliation="add_affiliation"
+                v-on:add-author="add_author"
                 v-on:add-date-released="add_date_released"
                 v-on:add-doi="add_doi"
+                v-on:add-identifier="add_identifier"
+                v-on:add-identifiers="add_identifiers"
                 v-on:add-keyword="add_keyword"
                 v-on:add-keywords="add_keywords"
+                v-on:add-license="add_license"
                 v-on:add-name-particle="add_name_particle"
                 v-on:add-name-suffix="add_name_suffix"
-                v-on:add-license="add_license"
                 v-on:add-orcid="add_orcid"
                 v-on:add-repository-code="add_repository_code"
                 v-on:add-title="add_title"
                 v-on:add-version="add_version"
                 v-on:move-author-down="move_author_down"
                 v-on:move-author-up="move_author_up"
+                v-on:move-identifier-down="move_identifier_down"
+                v-on:move-identifier-up="move_identifier_up"
                 v-on:move-keyword-down="move_keyword_down"
                 v-on:move-keyword-up="move_keyword_up"
                 v-on:remove-abstract="remove_abstract"
-                v-on:remove-author="remove_author"
                 v-on:remove-affiliation="remove_affiliation"
+                v-on:remove-author="remove_author"
                 v-on:remove-date-released="remove_date_released"
                 v-on:remove-doi="remove_doi"
+                v-on:remove-identifier="remove_identifier"
+                v-on:remove-identifiers="remove_identifiers"
                 v-on:remove-keyword="remove_keyword"
                 v-on:remove-keywords="remove_keywords"
                 v-on:remove-license="remove_license"
@@ -85,15 +93,17 @@
                 v-on:remove-version="remove_version"
                 v-on:update-abstract="update_abstract"
                 v-on:update-affiliation="update_affiliation"
+                v-on:update-date-released="update_date_released"
+                v-on:update-doi="update_doi"
                 v-on:update-family-names="update_family_names"
                 v-on:update-given-names="update_given_names"
+                v-on:update-identifier-type="update_identifier_type"
+                v-on:update-identifier-value="update_identifier_value"
+                v-on:update-keyword="update_keyword"
+                v-on:update-license="update_license"
                 v-on:update-name-particle="update_name_particle"
                 v-on:update-name-suffix="update_name_suffix"
                 v-on:update-orcid="update_orcid"
-                v-on:update-date-released="update_date_released"
-                v-on:update-doi="update_doi"
-                v-on:update-keyword="update_keyword"
-                v-on:update-license="update_license"
                 v-on:update-repository-code="update_repository_code"
                 v-on:update-title="update_title"
                 v-on:update-version="update_version"
@@ -120,6 +130,8 @@ import {add_abstract,
         add_author,
         add_date_released,
         add_doi,
+        add_identifier,
+        add_identifiers,
         add_keyword,
         add_keywords,
         add_license,
@@ -131,12 +143,16 @@ import {add_abstract,
         add_version,
         move_author_down,
         move_author_up,
+        move_identifier_down,
+        move_identifier_up,
         move_keyword_down,
         move_keyword_up,
         remove_abstract,
         remove_affiliation,
         remove_author,
         remove_date_released,
+        remove_identifier,
+        remove_identifiers,
         remove_doi,
         remove_keyword,
         remove_keywords,
@@ -151,6 +167,8 @@ import {add_abstract,
         update_affiliation,
         update_cff_version,
         update_date_released,
+        update_identifier_type,
+        update_identifier_value,
         update_doi,
         update_family_names,
         update_given_names,
@@ -179,6 +197,8 @@ export default {
         cff_version: String,
         date_released: String,
         doi: String,
+        identifier_id: Number,
+        identifiers: Array,
         keyword_id: Number,
         keywords: Array,
         license: String,
@@ -197,6 +217,8 @@ export default {
         add_author,
         add_date_released,
         add_doi,
+        add_identifier,
+        add_identifiers,
         add_keyword,
         add_keywords,
         add_license,
@@ -208,6 +230,8 @@ export default {
         add_version,
         move_author_down,
         move_author_up,
+        move_identifier_down,
+        move_identifier_up,
         move_keyword_down,
         move_keyword_up,
         remove_abstract,
@@ -215,6 +239,8 @@ export default {
         remove_author,
         remove_date_released,
         remove_doi,
+        remove_identifier,
+        remove_identifiers,
         remove_keyword,
         remove_keywords,
         remove_license,
@@ -231,6 +257,8 @@ export default {
         update_doi,
         update_family_names,
         update_given_names,
+        update_identifier_type,
+        update_identifier_value,
         update_keyword,
         update_license,
         update_message,
