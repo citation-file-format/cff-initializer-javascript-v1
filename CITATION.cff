@@ -8,7 +8,7 @@ authors:
     given-names: "Jurriaan H."
     orcid: "https://orcid.org/0000-0002-7064-4069"
 cff-version: "1.0.3"
-date-released: 2018-09-20
+date-released: 2019-11-12
 doi: 10.5281/zenodo.1404735
 keywords:
   - credit
@@ -19,4 +19,4 @@ license: Apache-2.0
 message: "If you use this software, please cite it using these metadata."
 repository-code: "https://github.com/citation-file-format/cff-initializer-javascript"
 title: cffinit
-version: "1.2.0"
+version: "1.4.0"
