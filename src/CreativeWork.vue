@@ -44,6 +44,18 @@
             v-on:update="update_doi"
         />
 
+        <Identifiers
+            v-bind:identifiers="identifiers"
+            v-on:add-identifier="add_identifier"
+            v-on:add-identifiers="add_identifiers"
+            v-on:move-identifier-down="move_identifier_down"
+            v-on:move-identifier-up="move_identifier_up"
+            v-on:remove-identifier="remove_identifier"
+            v-on:remove-identifiers="remove_identifiers"
+            v-on:update-identifier-type="update_identifier_type"
+            v-on:update-identifier-value="update_identifier_value"
+        />
+
         <Keywords
             v-bind:keywords="keywords"
             v-on:add-keyword="add_keyword"
@@ -92,6 +104,8 @@ import {add_abstract,
         add_author,
         add_date_released,
         add_doi,
+        add_identifier,
+        add_identifiers,
         add_keyword,
         add_keywords,
         add_name_particle,
@@ -103,6 +117,8 @@ import {add_abstract,
         add_version,
         move_author_down,
         move_author_up,
+        move_identifier_down,
+        move_identifier_up,
         move_keyword_down,
         move_keyword_up,
         remove_abstract,
@@ -110,6 +126,8 @@ import {add_abstract,
         remove_author,
         remove_date_released,
         remove_doi,
+        remove_identifier,
+        remove_identifiers,
         remove_keyword,
         remove_keywords,
         remove_license,
@@ -125,6 +143,8 @@ import {add_abstract,
         update_doi,
         update_family_names,
         update_given_names,
+        update_identifier_type,
+        update_identifier_value,
         update_keyword,
         update_license,
         update_name_particle,
@@ -138,6 +158,7 @@ import Authors from './Authors.vue';
 import Abstract from './Abstract.vue';
 import DateReleased from './DateReleased.vue';
 import Doi from './Doi.vue';
+import Identifiers from './Identifiers.vue';
 import Keywords from './Keywords.vue';
 import License from './License.vue';
 import RepositoryCode from './RepositoryCode';
@@ -151,6 +172,7 @@ export default {
         Authors,
         DateReleased,
         Doi,
+        Identifiers,
         Keywords,
         License,
         RepositoryCode,
@@ -163,6 +185,8 @@ export default {
         authors: Array,
         date_released: String,
         doi: String,
+        identifier_id: Number,
+        identifiers: Array,
         keyword_id: Number,
         keywords: Array,
         license: String,
@@ -178,6 +202,8 @@ export default {
         add_author,
         add_date_released,
         add_doi,
+        add_identifier,
+        add_identifiers,
         add_keyword,
         add_keywords,
         add_name_particle,
@@ -189,6 +215,8 @@ export default {
         add_version,
         move_author_down,
         move_author_up,
+        move_identifier_down,
+        move_identifier_up,
         move_keyword_down,
         move_keyword_up,
         remove_abstract,
@@ -196,6 +224,8 @@ export default {
         remove_author,
         remove_date_released,
         remove_doi,
+        remove_identifier,
+        remove_identifiers,
         remove_keyword,
         remove_keywords,
         remove_license,
@@ -211,6 +241,8 @@ export default {
         update_doi,
         update_family_names,
         update_given_names,
+        update_identifier_type,
+        update_identifier_value,
         update_keyword,
         update_license,
         update_name_particle,

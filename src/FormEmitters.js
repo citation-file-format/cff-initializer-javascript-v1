@@ -18,6 +18,14 @@ export function add_doi () {
     this.$emit('add-doi');
 }
 
+export function add_identifier () {
+    this.$emit('add-identifier');
+}
+
+export function add_identifiers () {
+    this.$emit('add-identifiers');
+}
+
 export function add_keyword () {
     this.$emit('add-keyword');
 }
@@ -62,6 +70,14 @@ export function move_author_up (author_id) {
     this.$emit('move-author-up', author_id);
 }
 
+export function move_identifier_down (identifier_id) {
+    this.$emit('move-identifier-down', identifier_id);
+}
+
+export function move_identifier_up (identifier_id) {
+    this.$emit('move-identifier-up', identifier_id);
+}
+
 export function move_keyword_down (keyword_id) {
     this.$emit('move-keyword-down', keyword_id);
 }
@@ -88,6 +104,14 @@ export function remove_date_released () {
 
 export function remove_doi () {
     this.$emit('remove-doi');
+}
+
+export function remove_identifier (identifier_id) {
+    this.$emit('remove-identifier', identifier_id);
+}
+
+export function remove_identifiers () {
+    this.$emit('remove-identifiers');
 }
 
 export function remove_keyword (keyword_id) {
@@ -132,6 +156,14 @@ export function update_abstract (payload) {
 
 export function update_given_names (payload) {
     this.$emit('update-given-names', payload);
+}
+
+export function update_identifier_type (payload) {
+    this.$emit('update-identifier-type', payload);
+}
+
+export function update_identifier_value (payload) {
+    this.$emit('update-identifier-value', payload);
 }
 
 export function update_name_particle (payload) {

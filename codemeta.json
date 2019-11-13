@@ -17,8 +17,6 @@
         }
     ],
     "codeRepository": "https://github.com/citation-file-format/cff-initializer-javascript",
-    "datePublished": "2018-09-20",
-    "identifier": "https://doi.org/10.5281/zenodo.1404735",
     "keywords": [
         "credit",
         "research software engineering",
@@ -26,6 +24,5 @@
         "CITATION.cff"
     ],
     "license": "http://www.apache.org/licenses/LICENSE-2.0",
-    "name": "cffinit",
-    "version": "1.2.0"
+    "name": "cffinit"
 }

@@ -65,6 +65,15 @@ export function compute_cff () {
         lines.push('doi: ' + add_quotes(this.doi));
     }
 
+    if (this.hasOwnProperty("identifiers") && this.identifiers !== undefined) {
+        lines.push('identifiers: ');
+        for (let identifier of this.identifiers) {
+            lines.push('  - ');
+            lines.push('    type: ' + add_quotes(identifier.type));
+            lines.push('    value: ' + add_quotes(identifier.value));
+        }
+    }
+
     if (this.hasOwnProperty("keywords") && this.keywords !== undefined) {
         lines.push('keywords: ');
         for (let keyword of this.keywords) {

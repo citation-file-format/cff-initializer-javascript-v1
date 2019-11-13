@@ -1,7 +1,7 @@
 export function validate_cff_version () {
     return {
-        error: this.cff_version !== '1.0.3',
-        msg: "Only CFF version 1.0.3 is supported at the moment."
+        error: this.cff_version !== '1.1.0',
+        msg: "Only CFF version 1.1.0 is supported at the moment."
     }
 }
 
