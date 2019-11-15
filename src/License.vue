@@ -35,9 +35,8 @@
             v-show="has_license"
             class="message"
         >
-            {{ license_validation.msg }}
+            {{ license_validation.msg }} (See the <a href="https://github.com/spdx/license-list-data/blob/6b77c7a2840009663ee0b083523fc0ad25376b57/json/licenses.json">complete list</a>)
         </p>
-
     </li>
 </template>
 
