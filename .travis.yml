@@ -1,6 +1,6 @@
 --- 
 install: 
-  - "npm install --only=dev"
+  - "npm install"
 language: node_js
 node_js: 
   - node
