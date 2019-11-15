@@ -1,13 +1,13 @@
 {
   "name": "cffinit",
   "description": "Web form to initialize CITATION.cff files",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "author": "Jurriaan H. Spaaks <j.spaaks@esciencecenter.nl>",
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "build": "cross-env webpack --mode production --progress --hide-modules",
     "ghpages": "npm run build && cat index.html | sed 's!/dist/build.js!/cff-initializer-javascript/dist/build.js!' > docs/index.html && cp -r dist docs/ && cp -r img docs/ ",
     "lint": "./node_modules/.bin/eslint `find ./src/*.vue` `find ./src/*.js`"
   },
@@ -25,13 +25,14 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
     "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
-    "eslint": "^5.6.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^4.19.1",
     "eslint-plugin-vue": "^4.7.1",
     "file-loader": "^1.1.4",
-    "vue-loader": "^13.0.5",
+    "vue-loader": "^14.2.4",
     "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }
