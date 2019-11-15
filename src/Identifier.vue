@@ -38,15 +38,28 @@
         </p>
         <input
             v-bind:value="identifier.type"
+            v-bind:class="{error: validation_type.error }"
             v-on:input="update_identifier_type($event)"
         >
+        <p
+            v-if="validation_type.error"
+            class="message">
+                {{ validation_type.msg }}
+        </p>
         <p class="caption">
             value
         </p>
         <input
             v-bind:value="identifier.value"
+            v-bind:class="{error: validation_value.error }"
             v-on:input="update_identifier_value($event)"
         >
+        <p
+            v-if="validation_value.error"
+            class="message">
+                {{ validation_value.msg }}
+        </p>
+
     </li>
 </template>
 
@@ -58,10 +71,17 @@ import {move_identifier_down,
         update_identifier_type,
         update_identifier_value} from './IdentifierEmitters.js';
 
+import {validate_type,
+        validate_value} from './IdentifierValidators.js';
+
 export default {
     name: 'Identifier',
     props: {
         identifier: Object
+    },
+    computed: {
+        validation_type: validate_type,
+        validation_value: validate_value
     },
     methods: {
         move_identifier_down,
