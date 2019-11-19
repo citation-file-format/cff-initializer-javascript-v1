@@ -39,8 +39,8 @@
         <input
             v-bind:value="identifier.type"
             v-bind:class="{error: validation_type.error }"
-            v-on:input="update_identifier_type($event)"
             placeholder="doi | swh | url | other"
+            v-on:input="update_identifier_type($event)"
         >
         <p
             v-if="validation_type.error"
