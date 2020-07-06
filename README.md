@@ -6,14 +6,14 @@
 
 ![Live version](cffinit-on-ghpages.png)
 
-# For users
+# Documentation for users
 
 - Check out the **live version** [here](https://citation-file-format.github.io/cff-initializer-javascript/).
 - For the rationale behind CITATION.cff files, read [the blog](https://www.software.ac.uk/blog/2017-12-12-standard-format-citation-files).
 - For the Citation File Format specification, go [here](https://citation-file-format.github.io/versions).
 - For the Citation File Format home page, go [here](https://citation-file-format.github.io).
 
-# For developers
+# Documentation for developers
 
 ## Build Setup
 
@@ -45,6 +45,13 @@ https://alligator.io/vuejs/vue-eslint-plugin/
 
 Project was bootstrapped with https://github.com/vuejs-templates/webpack-simple
 
+## Markdown link checker
+
+If you want to check if the links in your markdown work, run ``markdown-link-check``
+
+```shell
+find . -name '*.md' -not -path './node_modules/*' -exec markdown-link-check '{}' --config .mlc-config.json ';'
+```
 
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcitation-file-format%2Fcff-initializer-javascript.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcitation-file-format%2Fcff-initializer-javascript?ref=badge_large)
