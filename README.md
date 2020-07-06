@@ -51,7 +51,8 @@ Project was bootstrapped with https://github.com/vuejs-templates/webpack-simple
 If you want to check if the links in your markdown work, run ``markdown-link-check``
 
 ```shell
-find . -name '*.md' -not -path './node_modules/*' -exec markdown-link-check '{}' --config .mlc-config.json ';'
+find . -name '*.md' -not -path './node_modules/*' -exec \
+markdown-link-check '{}' --config .mlc-config.json ';'
 ```
 
 ## License
