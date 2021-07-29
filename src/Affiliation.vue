@@ -10,6 +10,10 @@
                 remove
             </button>
         </p>
+        <HelpText
+            text="To specify the affiliation of a person, e.g., a university, research centre, etc."
+            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#exemplary-uses-2"
+        />
         <input
             v-bind:class="{error: validation.error }"
             v-bind:value="affiliation"
@@ -37,6 +41,8 @@
 
 <script>
 
+import HelpText from './HelpText.vue';
+
 import {add,
         remove,
         update} from './AffiliationEmitters.js';
@@ -46,6 +52,7 @@ import {validate} from './AffiliationValidators.js';
 export default {
     name: 'Affiliation',
     components: {
+        HelpText
     },
     props: {
         affiliation: String

@@ -14,6 +14,11 @@
                 remove
             </button>
         </p>
+        <HelpText
+            v-show="has_version"
+            text="The version of the software."
+            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#software-citation-metadata-required"
+        />
         <button
             v-show="!has_version"
             tabindex="-1"
@@ -38,8 +43,13 @@ import {add,
         remove,
         update} from './VersionEmitters.js';
 
+import HelpText from './HelpText.vue';
+
 export default {
     name: 'Version',
+    components: {
+        HelpText
+    },
     props: {
         version: String
     },

@@ -14,6 +14,11 @@
                 remove
             </button>
         </p>
+        <HelpText
+            v-show="has_license"
+            text="The license the software version is licensed under."
+            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#software-citation-metadata-required"
+        />
         <button
             v-show="!has_license"
             tabindex="-1"
@@ -47,9 +52,12 @@ import {add,
 
 import {validate_license} from './LicenseValidators.js';
 
+import HelpText from './HelpText.vue';
+
 export default {
     name: 'License',
     components: {
+        HelpText
     },
     props: {
         license: String

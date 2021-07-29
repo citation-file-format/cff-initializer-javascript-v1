@@ -10,6 +10,10 @@
                 remove
             </button>
         </p>
+        <HelpText
+            text="The person's ORCID iD."
+            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#exemplary-uses-1"
+        />
         <input
             v-bind:value="orcid"
             v-bind:class="{error: validation.error }"
@@ -39,8 +43,13 @@ import {add,
 
 import {validate} from './OrcidValidators.js';
 
+import HelpText from './HelpText.vue';
+
 export default {
     name: 'Orcid',
+    components: {
+        HelpText
+    },
     props: {
         orcid: String
     },

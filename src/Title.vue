@@ -13,6 +13,11 @@
             >remove
             </button>
         </p>
+        <HelpText
+            v-show="has_title"
+            text="The name of the software (may include a specific name for the software version)"
+            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#software-citation-metadata-required"
+        />
         <button
             v-show="!has_title"
             tabindex="-1"
@@ -35,9 +40,12 @@ import {add,
         remove,
         update} from './TitleEmitters.js';
 
+import HelpText from './HelpText.vue';
+
 export default {
     name: 'Title',
     components: {
+        HelpText
     },
     props: {
         title: String

@@ -12,6 +12,10 @@
                 </div>
             </button>
         </p>
+        <HelpText
+            text="The author(s) of the software"
+            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#software-citation-metadata-required"
+        />
         <ul class="authors">
             <Author
                 v-for="author in authors"
@@ -60,11 +64,13 @@ import {add,
         update_orcid} from './AuthorsEmitters.js';
 
 import Author from './Author.vue';
+import HelpText from './HelpText.vue';
 
 export default {
     name: 'Authors',
     components: {
-        Author
+        Author,
+        HelpText
     },
     props: {
         authors: Array

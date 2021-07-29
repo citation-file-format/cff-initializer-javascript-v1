@@ -10,6 +10,10 @@
                 remove
             </button>
         </p>
+        <HelpText
+            text="Specify nobiliary particles and prepositions, such as in Ludwig van Beethoven or Rafael van der Vaart."
+            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#exemplary-uses-2"
+        />
         <input
             v-bind:class="{error: validation.error }"
             v-bind:value="name_particle"
@@ -42,9 +46,12 @@ import {add,
 
 import {validate} from './NameParticleValidators.js';
 
+import HelpText from './HelpText.vue';
+
 export default {
     name: 'NameParticle',
     components: {
+        HelpText
     },
     props: {
         name_particle: String

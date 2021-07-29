@@ -14,6 +14,11 @@
                 remove
             </button>
         </p>
+        <HelpText
+            v-show="has_date_released"
+            text="The release date of the software version."
+            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#software-citation-metadata-required"
+        />
         <button
             v-show="!has_date_released"
             tabindex="-1"
@@ -47,9 +52,12 @@ import {add,
 
 import {validate} from './DateReleasedValidators.js';
 
+import HelpText from './HelpText.vue';
+
 export default {
     name: 'DateReleased',
     components: {
+        HelpText
     },
     props: {
         date_released: String

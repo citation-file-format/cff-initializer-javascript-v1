@@ -10,6 +10,10 @@
                 remove
             </button>
         </p>
+        <HelpText
+            text="A description of the software (version)"
+            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#software-citation-metadata-required"
+        />
         <textarea
             v-bind:class="{error: validation.error }"
             v-bind:value="abstract"
@@ -35,6 +39,8 @@
 
 <script>
 
+import HelpText from './HelpText.vue';
+
 import {add,
         remove,
         update} from './AbstractEmitters.js';
@@ -44,6 +50,7 @@ import {validate} from './AbstractValidators.js';
 export default {
     name: 'Abstract',
     components: {
+        HelpText
     },
     props: {
         abstract: String
