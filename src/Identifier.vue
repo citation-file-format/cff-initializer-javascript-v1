@@ -36,6 +36,10 @@
         <p class="caption">
             type
         </p>
+        <HelpText
+            text="The type of the identifier."
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#identifier-type-strings"
+        />
         <input
             v-bind:value="identifier.type"
             v-bind:class="{error: validation_type.error }"
@@ -75,8 +79,13 @@ import {move_identifier_down,
 import {validate_type,
         validate_value} from './IdentifierValidators.js';
 
+import HelpText from './HelpText.vue';
+
 export default {
     name: 'Identifier',
+    components: {
+        HelpText
+    },
     props: {
         identifier: Object
     },

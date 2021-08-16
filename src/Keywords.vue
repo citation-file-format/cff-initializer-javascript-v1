@@ -19,6 +19,10 @@
                 </div>
             </button>
         </p>
+        <HelpText
+            text="Keywords pertaining to the software version"
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#software-citation-metadata-required"
+        />
         <ul>
             <Keyword
                 v-for="keyword in keywords"
@@ -52,11 +56,13 @@ import {add_keyword,
         remove_keywords,
         update_keyword} from './KeywordsEmitters.js';
 
+import HelpText from './HelpText.vue';
 import Keyword from './Keyword.vue';
 
 export default {
     name: 'Keywords',
     components: {
+        HelpText,
         Keyword
     },
     props: {

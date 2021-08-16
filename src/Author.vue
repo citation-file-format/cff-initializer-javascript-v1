@@ -49,6 +49,10 @@
                 <p class="caption">
                     given-names
                 </p>
+                <HelpText
+                    text="Specify given and any other names."
+                    url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#exemplary-uses-2"
+                />
                 <input
                     v-bind:value="author.given_names"
                     v-on:input="update_given_names($event)"
@@ -66,6 +70,10 @@
                 <p class="caption">
                     family-names
                 </p>
+                <HelpText
+                    text="Specify family names, including combinations of given and patronymic forms."
+                    url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#exemplary-uses-2"
+                />
                 <input
                     v-bind:value="author.family_names"
                     v-on:input="update_family_names($event)"
@@ -94,6 +102,7 @@
 
 import Affiliation from './Affiliation.vue';
 import AuthorOrcid from './Orcid.vue';
+import HelpText from './HelpText.vue';
 import NameParticle from './NameParticle.vue';
 import NameSuffix from './NameSuffix.vue';
 
@@ -120,6 +129,7 @@ export default {
     components: {
         Affiliation,
         AuthorOrcid,
+        HelpText,
         NameParticle,
         NameSuffix
     },

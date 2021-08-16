@@ -10,6 +10,10 @@
                 remove
             </button>
         </p>
+        <HelpText
+            text="Specify suffixes such as Jr. or III."
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#exemplary-uses-2"
+        />
         <input
             v-bind:class="{error: validation.error }"
             v-bind:value="name_suffix"
@@ -42,9 +46,12 @@ import {add,
 
 import {validate} from './NameSuffixValidators.js';
 
+import HelpText from './HelpText.vue';
+
 export default {
     name: 'NameSuffix',
     components: {
+        HelpText
     },
     props: {
         name_suffix: String

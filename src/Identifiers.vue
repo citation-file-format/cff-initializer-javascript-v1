@@ -19,6 +19,10 @@
                 </div>
             </button>
         </p>
+        <HelpText
+            text="Persistent identifiers for the software."
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#identifier-objects"
+        />
         <ul>
             <Identifier
                 v-for="identifier in identifiers"
@@ -54,11 +58,13 @@ import {add_identifier,
         update_identifier_type,
         update_identifier_value} from './IdentifiersEmitters.js';
 
+import HelpText from './HelpText.vue';
 import Identifier from './Identifier.vue';
 
 export default {
     name: 'Identifiers',
     components: {
+        HelpText,
         Identifier
     },
     props: {

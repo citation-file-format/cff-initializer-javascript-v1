@@ -14,6 +14,11 @@
                 remove
             </button>
         </p>
+        <HelpText
+            v-show="has_repository_code"
+            text="The URL to the software version in a source code repository."
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#software-citation-metadata-required"
+        />
         <button
             v-show="!has_repository_code"
             tabindex="-1"
@@ -46,9 +51,12 @@ import {add,
 
 import {validate} from './RepositoryCodeValidators.js';
 
+import HelpText from './HelpText.vue';
+
 export default {
     name: 'RepositoryCode',
     components: {
+        HelpText
     },
     props: {
         repository_code: String
