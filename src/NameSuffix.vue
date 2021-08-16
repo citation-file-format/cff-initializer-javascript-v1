@@ -12,7 +12,7 @@
         </p>
         <HelpText
             text="Specify suffixes such as Jr. or III."
-            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#exemplary-uses-2"
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#exemplary-uses-2"
         />
         <input
             v-bind:class="{error: validation.error }"

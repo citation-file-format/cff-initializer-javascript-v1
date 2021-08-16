@@ -38,7 +38,7 @@
         </p>
         <HelpText
             text="The type of the identifier."
-            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#identifier-type-strings"
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#identifier-type-strings"
         />
         <input
             v-bind:value="identifier.type"

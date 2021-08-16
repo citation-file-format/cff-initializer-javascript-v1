@@ -51,7 +51,7 @@
                 </p>
                 <HelpText
                     text="Specify given and any other names."
-                    url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#exemplary-uses-2"
+                    url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#exemplary-uses-2"
                 />
                 <input
                     v-bind:value="author.given_names"
@@ -72,7 +72,7 @@
                 </p>
                 <HelpText
                     text="Specify family names, including combinations of given and patronymic forms."
-                    url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#exemplary-uses-2"
+                    url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#exemplary-uses-2"
                 />
                 <input
                     v-bind:value="author.family_names"

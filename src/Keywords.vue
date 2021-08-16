@@ -21,7 +21,7 @@
         </p>
         <HelpText
             text="Keywords pertaining to the software version"
-            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#software-citation-metadata-required"
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#software-citation-metadata-required"
         />
         <ul>
             <Keyword

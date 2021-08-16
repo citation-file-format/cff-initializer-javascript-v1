@@ -17,7 +17,7 @@
         <HelpText
             v-show="has_date_released"
             text="The release date of the software version."
-            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#software-citation-metadata-required"
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#software-citation-metadata-required"
         />
         <button
             v-show="!has_date_released"

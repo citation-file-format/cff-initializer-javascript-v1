@@ -17,7 +17,7 @@
         <HelpText
             v-show="has_doi"
             text="The DOI of the work (not the resolver URL, i.e., 10.5281/zenodo.1003150, not http://doi.org/10.5281/zenodo.1003150)"
-            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#software-citation-metadata-required"
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#software-citation-metadata-required"
         />
         <button
             v-show="!has_doi"

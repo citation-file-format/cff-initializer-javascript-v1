@@ -21,7 +21,7 @@
         </p>
         <HelpText
             text="Persistent identifiers for the software."
-            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#identifier-objects"
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#identifier-objects"
         />
         <ul>
             <Identifier

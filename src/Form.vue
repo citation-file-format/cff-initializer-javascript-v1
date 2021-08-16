@@ -8,7 +8,7 @@
                 </p>
                 <HelpText
                     text="The exact version of the Citation File Format that is used for the file."
-                    url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#cff-version-required"
+                    url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#cff-version-required"
                 />
                 <input
                     v-bind:class="{error: cff_version_validation.error }"
@@ -31,7 +31,7 @@
                 </p>
                 <HelpText
                     text="Specify instructions to users on how to cite the software the CITATION.cff file is associated with."
-                    url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#message-required"
+                    url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#message-required"
                 />
                 <textarea
                     v-bind:class="{error: message_validation.error }"

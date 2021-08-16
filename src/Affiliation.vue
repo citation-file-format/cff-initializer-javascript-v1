@@ -12,7 +12,7 @@
         </p>
         <HelpText
             text="To specify the affiliation of a person, e.g., a university, research centre, etc."
-            url="https://github.com/citation-file-format/citation-file-format/blob/main/README.md#exemplary-uses-2"
+            url="https://github.com/citation-file-format/citation-file-format/blob/1.1.0/README.md#exemplary-uses-2"
         />
         <input
             v-bind:class="{error: validation.error }"
