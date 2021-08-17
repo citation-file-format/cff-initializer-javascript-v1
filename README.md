@@ -3,7 +3,13 @@
 - [![Build Status](https://travis-ci.org/citation-file-format/cff-initializer-javascript.svg?branch=master)](https://travis-ci.org/citation-file-format/cff-initializer-javascript)
 - [![Markdown links](https://github.com/citation-file-format/cff-initializer-javascript/workflows/Check%20Markdown%20links/badge.svg)](https://github.com/citation-file-format/cff-initializer-javascript/actions?query=workflow%3A%22Check+Markdown+links%22)
 
-# Web form to initialize CITATION.cff files.
+# Web form to initialize CITATION.cff files
+
+<br />
+
+## Note: we're working on a new version of the cffinit website [here](https://github.com/citation-file-format/cffinit).
+
+<br /><br />
 
 ![Live version](cffinit-on-ghpages.png)
 
