@@ -1,7 +1,7 @@
 {
   "name": "cffinit",
   "description": "Web form to initialize CITATION.cff files",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "author": "Jurriaan H. Spaaks <j.spaaks@esciencecenter.nl>",
   "license": "Apache-2.0",
   "private": true,
