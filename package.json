@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env webpack --mode production --progress --hide-modules",
-    "ghpages": "npm run build && cat index.html | sed 's!/dist/build.js!/cff-initializer-javascript/dist/build.js!' > docs/index.html && cp -r dist docs/ && cp -r img docs/ ",
+    "ghpages": "npm run build && cat index.html | sed 's!/dist/build.js!/cff-initializer-javascript-v1/dist/build.js!' > docs/index.html && cp -r dist docs/ && cp -r img docs/ ",
     "lint": "./node_modules/.bin/eslint `find ./src/*.vue` `find ./src/*.js`"
   },
   "dependencies": {
